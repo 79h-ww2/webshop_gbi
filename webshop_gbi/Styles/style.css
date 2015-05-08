@@ -1,0 +1,198 @@
+body {
+    background: grey ;
+    color: #000305;
+    font-size: 87.5 %; /* Base font size is 14 px */
+    font-family: Arial, 'Lucida Sans Unicode';
+    line-height: 1.5;
+    text-align: left;
+    
+}
+
+.mainContent a, .nav a {
+    text-decoration: none;
+}
+
+.mainContent a:link, .nav a:link, .mainContent a:visited, .nav a:visited {
+    color: #d56509; 
+    
+}
+
+.mainContent a:hover, .nav a:hover, .mainContent  a:active, .nav  a:active {
+    background-color: #d56509;
+    color: #fff;    
+}
+
+.body {
+    margin: 0 auto;
+    width: 1024px;
+    clear: both;
+}
+
+.mainHeader {
+    background:linear-gradient(to bottom right ,#6c7b35 , 	#82a143 , white );
+    position: fixed;
+    width: 1024px;
+    top: 0px;
+}
+
+.mainHeader img {
+    width: 10%;
+    height: auto;
+    margin: 0 0;
+}
+
+/* Hauptmenü */
+.nav{
+   background: linear-gradient(to  bottom, black  , gray); 
+   height: 40px;
+   
+}
+
+.navigation{
+    list-style: circle;
+    margin: 0 auto;
+}
+
+.navigation li {
+    float: left;
+    display: inline;
+}
+
+.nav a:link, .nav a:visited{
+    color: #FFF;
+    display: inline-block;
+    padding: 10px 25px;
+    height: 20px;
+}
+
+.nav a:hover, .nav a:active,
+.nav .active a:link, .nav .active a:visited{
+    background: linear-gradient(to  bottom, #d56509  , white 15%, #d56509); 
+    text-shadow: none;
+    color: #000305;  
+    
+}
+
+/* Drop-Down Menü */
+.navigation li:hover > ul {
+    visibility: visible;
+}
+
+.navigation ul, .navigation ul li ul {
+    visibility: hidden;
+    list-style: none;;
+    background:linear-gradient(to bottom right ,#6c7b35 , 	#82a143);
+    position: absolute;
+      
+}
+
+
+.navigation .Spalte {
+    width: 150px;
+    height: auto;
+    float: left;  
+    display: inline; 
+}
+
+img.logo {
+    width: 100px;
+    height: 100px;
+    margin-left: 15px;  
+}
+
+img:hover {
+    
+}
+
+img.warenkorb {
+    width: 45px;
+    height: 45px;
+    margin-left: 710px;
+    margin-right: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+img.account {
+    width: 40px;
+    height: 40px;
+    margin-left: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    
+}
+
+.mainContent {
+    line-height: 25px;
+   
+    
+}
+
+.content {
+    width: 1024px;  /* 70& wenn Sidebars erwünscht sind
+    /*aktivieren, zwalls Sidebars erwünscht sind
+    float: left;
+    */
+     margin-top: 150px;
+    
+}
+
+.topContent {
+    background-color: #fff;
+    padding: 3% 5%;
+    margin-top: 2px;
+}
+
+.bottomContent {
+    background-color: #fff;
+    padding: 3% 5%;
+    margin-top: 2px;
+}
+
+.post-info {
+    font-style: italic;
+    color: #999;
+    font-size: 98%;
+}
+
+/*aktivieren, zwalls Sidebar erwünscht sind
+.top-sidebar {
+    width: 21%;
+    float: left;
+    background-color: #fff;
+    margin: 2% 0 2% 3%;
+    padding: 2% 3%;
+}
+
+.middle-sidebar {
+    width: 21%;
+    float: left;
+    background-color: #fff;
+    margin-left: 3%;
+     margin-bottom: 2%;
+    padding: 2% 3%;
+}
+
+.bottom-sidebar {
+    width: 21%;
+    float: left;
+    background-color: #fff;
+    margin-left: 3%;
+     margin-bottom: 2%;
+    padding: 2% 3%;
+}
+*/
+
+.mainFooter {
+    width: 100%;
+    height: 40px;
+    float: left;  
+    background:linear-gradient(to top right ,#6c7b35 , 	#82a143 , white );
+}
+
+.mainFooter p {
+    width: 92%;
+    margin:  0px auto;
+    color: #fff;
+    
+}
