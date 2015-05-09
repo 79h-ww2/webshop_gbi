@@ -35,14 +35,56 @@ body {
     top: 0px;
 }
 
-.mainHeader img {
-    width: 10%;
-    height: auto;
-    margin: 0 0;
+.HeaderContent{
+    display: table;
+    width: 100%;
 }
 
-/* Hauptmenü */
-.nav{
+.TableRow {
+    display: table-row;
+    width: 100%;
+}
+
+.logoCell{
+   display: table-cell; 
+   vertical-align: middle;
+   width: 100px;
+}
+
+.searchCell{
+    display: table-cell;
+    vertical-align: middle;
+    width: 600px; 
+}
+
+.warenkorbCell{
+   display: table-cell;
+   vertical-align: middle;
+   width: 100px;
+}
+
+.accountCell{
+   display: table-cell;
+   vertical-align: middle;
+   width: 100px;
+}
+
+img.logo {
+    width: 100px;  
+}
+
+img.warenkorb {
+    width: 45px;
+    height: 45px; }
+
+img.account {
+    width: 40px;
+    height: 40px;
+}
+
+
+/* Hauptmenü und Überschrift Registrierung*/
+.nav,  #registierung h2{
    background: linear-gradient(to  bottom, black  , gray); 
    height: 40px;
    
@@ -68,22 +110,29 @@ body {
 .nav a:hover, .nav a:active,
 .nav .active a:link, .nav .active a:visited{
     background: linear-gradient(to  bottom, #d56509  , white 15%, #d56509); 
-    text-shadow: none;
-    color: #000305;  
+    text-shadow: none;  
+    color: black;
     
 }
 
 /* Drop-Down Menü */
 .navigation li:hover > ul {
     visibility: visible;
+    padding: 0;
 }
 
 .navigation ul, .navigation ul li ul {
     visibility: hidden;
     list-style: none;;
-    background:linear-gradient(to bottom right ,#6c7b35 , 	#82a143);
+    border-top : 12px solid #6c7b35 ;
+    background: linear-gradient(to  bottom, gray  , black);
     position: absolute;
       
+}
+
+.Untermenu{
+    width: 100px;
+    text-align: center;
 }
 
 
@@ -94,33 +143,6 @@ body {
     display: inline; 
 }
 
-img.logo {
-    width: 100px;
-    height: 100px;
-    margin-left: 15px;  
-}
-
-img:hover {
-    
-}
-
-img.warenkorb {
-    width: 45px;
-    height: 45px;
-    margin-left: 710px;
-    margin-right: 25px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-}
-
-img.account {
-    width: 40px;
-    height: 40px;
-    margin-left: 25px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    
-}
 
 .mainContent {
     line-height: 25px;
@@ -129,23 +151,22 @@ img.account {
 }
 
 .content {
-    width: 1024px;  /* 70& wenn Sidebars erwünscht sind
+    width: 994px;  /* 70& wenn Sidebars erwünscht sind
     /*aktivieren, zwalls Sidebars erwünscht sind
     float: left;
     */
      margin-top: 150px;
-    
+    background-color: #fff;
+    padding: 15px;
 }
 
 .topContent {
     background-color: #fff;
-    padding: 3% 5%;
     margin-top: 2px;
 }
 
 .bottomContent {
     background-color: #fff;
-    padding: 3% 5%;
     margin-top: 2px;
 }
 
@@ -195,4 +216,53 @@ img.account {
     margin:  0px auto;
     color: #fff;
     
+}
+
+/* ####################################################################################################### */
+/* Registierung */
+
+#registierung{
+    display:block;
+    margin: 0px auto;
+    width: 480px;
+    padding: 0px;
+    margin-top:10px;
+}
+
+#registierung h2{
+    padding-left: 15px;
+    display: table-cell
+    vertical-align: middle;
+     border-radius: 5px 5px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    -webkit-border-radius: 10px 10px 10px 0px;
+    margin: 0px;
+    vertical-align: middle;
+    color: #fff;
+    display: table-cell;
+     width: 480px;
+}
+
+.reg_form_zeile{
+    padding-left: 20px;
+}
+
+#registierung .form_content{
+    background:linear-gradient(to bottom right ,#6c7b35 ,#82a143 , #788A5F );
+
+    color: #fff;
+    border-radius: 0px 0px 10px 10px;
+    -moz-border-radius: 0px 0px 10px 10px;
+    -webkit-border-radius: 0px 0px 10px 10px;
+    margin-top:0px;
+    padding: 10px;
+}
+
+#registierung input[type=submit]{
+    margin-left: 20px;
+}
+
+.reg_form_zeile label{
+    width: 120px;
+    display:inline-block;
 }

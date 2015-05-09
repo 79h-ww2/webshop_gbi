@@ -1,0 +1,14 @@
+<?php
+    if ( isset ( $_GET['page']) && $_GET['page'] != "" ) {
+    
+        switch ( $_GET['page'] ){
+            case 'reg':
+                include "./Pages/registrierung.php.inc";
+            break;
+        }
+    }
+    else{
+        //Startseite zeigen
+        include "./Pages/startseite.php.inc";
+    }
+?>

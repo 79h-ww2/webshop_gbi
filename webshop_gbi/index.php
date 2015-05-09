@@ -13,9 +13,29 @@
 <body class="body">
 
     <header class="mainHeader">
-    <a href="index.php"> <img src="Images/Design/Logo/fahrrad_pixel.png" class="logo" alt="Starseite"width="100px" height="100px" /></a>
-    <img src="Images/Design/warenkorb.png" class="warenkorb"   />
-    <img src="Images/Design/account.png" class="account" />
+    
+    <div class="HeaderContent">
+        <div class="TableRow">
+            <div class="logoCell">
+                <a href="index.php"> <img src="Images/Design/Logo/fahrrad_pixel.png" alt="Starseite" class="logo" /></a>
+            </div>
+            
+            <div class="searchCell">
+            
+            </div>
+            
+            <div class="warenkorbCell">
+                <img src="Images/Design/warenkorb.png" class="waenkorb"  />
+            </div>
+            
+            <div class="accountCell">
+                <img src="Images/Design/account.png" class="account" />
+            </div>
+            
+        </div>
+        
+    </div>
+    
     
     
     <!-- NAVIGATION -->
@@ -25,31 +45,31 @@
                 
     			<ul>  
         			<div class="Spalte">
-                        <li><a href="#">Modell 1</a></li>
-                        <li><a href="#">Modell 2</a></li>
-                        <li><a href="#">Modell 3</a></li>
-                        <li><a href="#">Modell 4</a></li>
+                        <li><a class="Untermenu" href="#">Modell 1</a></li>
+                        <li><a class="Untermenu" href="#">Modell 2</a></li>
+                        <li><a class="Untermenu" href="#">Modell 3</a></li>
+                        <li><a class="Untermenu" href="#">Modell 4</a></li>
                      </div>
                
         			<div class="Spalte">
-                        <li><a href="#">Modell 5</a></li>
-                        <li><a href="#">Modell 6</a></li>
-                        <li><a href="#">Modell 7</a></li>
-                        <li><a href="#">Modell 8</a></li>
+                        <li><a class="Untermenu" href="#">Modell 5</a></li>
+                        <li><a class="Untermenu" href="#">Modell 6</a></li>
+                        <li><a class="Untermenu" href="#">Modell 7</a></li>
+                        <li><a class="Untermenu" href="#">Modell 8</a></li>
                      </div>
                      
                      <div class="Spalte">
-                        <li><a href="#">Modell 1</a></li>
-                        <li><a href="#">Modell 2</a></li>
-                        <li><a href="#">Modell 3</a></li>
-                        <li><a href="#">Modell 4</a></li>
+                        <li><a class="Untermenu" href="#">Modell 1</a></li>
+                        <li><a class="Untermenu" href="#">Modell 2</a></li>
+                        <li><a class="Untermenu" href="#">Modell 3</a></li>
+                        <li><a class="Untermenu" href="#">Modell 4</a></li>
                      </div>
 
-                    <div class="Spalte">
-                        <li><a href="#">Modell 5</a></li>
-                        <li><a href="#">Modell 6</a></li>
-                        <li><a href="#">Modell 7</a></li>
-                        <li><a href="#">Modell 8</a></li>
+        			<div class="Spalte">
+                        <li><a class="Untermenu" href="#">Modell 5</a></li>
+                        <li><a class="Untermenu" href="#">Modell 6</a></li>
+                        <li><a class="Untermenu" href="#">Modell 7</a></li>
+                        <li><a class="Untermenu" href="#">Modell 8</a></li>
                      </div>
                 </ul>
                 
@@ -68,13 +88,15 @@
     
     <div class="mainContent">
         <div class="content">
-            <article class="topContent">
+			<?php
+                include "./Funktions/PHP/set_page.php.inc";
+            ?>
+            <!--<article class="topContent">
                 <header>
                     <h2><a href="#" title="First Post">Fahrrad des Tages</a> </h2>
                 </header>
                 
                 <footer>
-                    <!-- <p class="post-info">This post is written by Stefan</p>  -->
                 </footer>
                 
                 <content>
@@ -94,35 +116,7 @@
                     At vero eos et accusam et justo duo dolores et ea rebum.
                     Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
                 </content>
-            </article>
-            
-            <article class="bottomContent">
-                <header>
-                    <h2><a href="#" title="Second Post">Meist angesehene Artikel</a> </h2>
-                </header>
-
-                <footer>
-                    <!-- <p class="post-info">This post is written by Stefan</p> -->
-                </footer>
-
-                <content>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                    ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-                    et dolore magna aliquyam erat, sed diam voluptua.
-                    At vero eos et accusam et justo duo dolores et ea rebum.
-                    Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                    ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-                    et dolore magna aliquyam erat, sed diam voluptua.
-                    At vero eos et accusam et justo duo dolores et ea rebum.
-                    Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-                </content>
-            </article>
+            </article>-->
         </div>
     </div>
     
