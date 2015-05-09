@@ -223,7 +223,7 @@ img.account {
 #registierung{
     display:block;
     margin: 0px auto;
-    width: 480px;
+    width: 560px;
     padding: 0px;
     margin-top:10px;
 }
@@ -239,7 +239,7 @@ img.account {
     vertical-align: middle;
     color: #fff;
     display: table-cell;
-     width: 480px;
+     width: 560px;
 }
 
 .reg_form_zeile{
@@ -248,14 +248,8 @@ img.account {
 }
 
 #registierung .form_content{
-    background:linear-gradient(to bottom right ,#6c7b35 ,#82a143 , #788A5F );
-
-    color: #fff;
-    border-radius: 0px 0px 10px 10px;
-    -moz-border-radius: 0px 0px 10px 10px;
-    -webkit-border-radius: 0px 0px 10px 10px;
-    margin-top:0px;
-    padding: 10px;
+	display: table-cell;
+	padding: 10px;
 }
 
 #registierung input[type=submit]{
@@ -291,4 +285,33 @@ label.ort{
 
 .clear_right{
 	clear: right;
+}
+
+.reg_box_aufteilung{
+	display: table;
+	background:linear-gradient(to bottom right ,#6c7b35 ,#82a143 , #788A5F );
+    color: #fff;
+    border-radius: 0px 0px 10px 10px;
+    -moz-border-radius: 0px 0px 10px 10px;
+    -webkit-border-radius: 0px 0px 10px 10px;
+    margin-top:0px;
+    padding: 10px;
+    width: 540px;
+}
+
+.reg_box_iconbereich{
+	display: table-cell;
+	width: 60px;
+	padding-top: 20px;
+	background-image: url('../Images/Design/kunde_plus.png');
+	background-repeat: no-repeat;
+	background-position: 10px 20px;
+}
+
+.reg_box_iconbereich img{
+	display: block;
+}
+
+.TableRow_reg{
+	display: table-row;
 }
