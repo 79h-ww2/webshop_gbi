@@ -120,7 +120,7 @@
         </div>
     </div>
     
-    <!-- aktivieren, zwalls Sidebar gewünscht sind 
+    <!-- aktivieren, zwalls Sidebar gewï¿½nscht sind 
     
     <aside class="top-sidebar">
         <article>
@@ -148,7 +148,7 @@
     <footer class="mainFooter">
         <p>Copyright &copy; 2015 Hs-OWL</p>
     </footer>
-
+	test
 </body>
 
 </html>
