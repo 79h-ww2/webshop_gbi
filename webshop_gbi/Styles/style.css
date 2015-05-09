@@ -83,7 +83,7 @@ img.account {
 }
 
 
-/* Hauptmenü und Überschrift Registrierung*/
+/* HauptmenÃ¼ und Ãœberschrift Registrierung*/
 .nav,  #registierung h2{
    background: linear-gradient(to  bottom, black  , gray); 
    height: 40px;
@@ -115,7 +115,7 @@ img.account {
     
 }
 
-/* Drop-Down Menü */
+/* Drop-Down Menï¿½ */
 .navigation li:hover > ul {
     visibility: visible;
     padding: 0;
@@ -151,11 +151,11 @@ img.account {
 }
 
 .content {
-    width: 994px;  /* 70& wenn Sidebars erwünscht sind
-    /*aktivieren, zwalls Sidebars erwünscht sind
+    /* 70& wenn Sidebars erwï¿½nscht sind
+    /*aktivieren, zwalls Sidebars erwï¿½nscht sind
     float: left;
     */
-     margin-top: 150px;
+    margin-top: 150px;
     background-color: #fff;
     padding: 15px;
 }
@@ -176,7 +176,7 @@ img.account {
     font-size: 98%;
 }
 
-/*aktivieren, zwalls Sidebar erwünscht sind
+/*aktivieren, zwalls Sidebar erwï¿½nscht sind
 .top-sidebar {
     width: 21%;
     float: left;
@@ -218,8 +218,7 @@ img.account {
     
 }
 
-/* ####################################################################################################### */
-/* Registierung */
+/* ############################################## Registierung ############################################## */
 
 #registierung{
     display:block;
@@ -233,9 +232,9 @@ img.account {
     padding-left: 15px;
     display: table-cell
     vertical-align: middle;
-     border-radius: 5px 5px 0px 0px;
-    -moz-border-radius: 5px 5px 0px 0px;
-    -webkit-border-radius: 10px 10px 10px 0px;
+     border-radius: 10px 10px 0px 0px;
+    -moz-border-radius: 10px 10px 0px 0px;
+    -webkit-border-radius: 10px 10px 0px 0px;
     margin: 0px;
     vertical-align: middle;
     color: #fff;
@@ -245,6 +244,7 @@ img.account {
 
 .reg_form_zeile{
     padding-left: 20px;
+    padding-right: 20px;
 }
 
 #registierung .form_content{
@@ -259,10 +259,36 @@ img.account {
 }
 
 #registierung input[type=submit]{
-    margin-left: 20px;
+    float: right;
+    margin-right: 20px;
 }
 
 .reg_form_zeile label{
-    width: 120px;
+    width: 75px;
     display:inline-block;
+}
+
+#registierung .std_reg{
+	width: 160px;
+}
+
+#registierung .lang_reg{
+	width: 260px;
+}
+
+input.hausnr, input.plz{
+	width: 72px;
+}
+
+label.hausnr{
+	margin-left: 10px;
+}
+
+label.ort{
+	margin-left: 45px;
+	width:40px;
+}
+
+.clear_right{
+	clear: right;
 }
