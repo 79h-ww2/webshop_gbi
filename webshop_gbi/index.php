@@ -148,7 +148,6 @@
     <footer class="mainFooter">
         <p>Copyright &copy; 2015 Hs-OWL</p>
     </footer>
-	test
 </body>
 
 </html>
