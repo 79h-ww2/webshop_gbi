@@ -84,7 +84,7 @@ img.account {
 
 
 /* Hauptmenü und Überschrift Registrierung*/
-.nav,  #registierung h2{
+.nav,  #registrierung h2{
    background: linear-gradient(to  bottom, black  , gray); 
    height: 40px;
    
@@ -109,7 +109,7 @@ img.account {
 
 .nav a:hover, .nav a:active,
 .nav .active a:link, .nav .active a:visited{
-    background: linear-gradient(to  bottom, #d56509  , white 15%, #d56509); 
+    background: linear-gradient(to  bottom, #d56509  , orange 15%, #d56509); 
     text-shadow: none;  
     color: black;
     
@@ -220,15 +220,15 @@ img.account {
 
 /* ############################################## Registierung ############################################## */
 
-#registierung{
+#registrierung{
     display:block;
     margin: 0px auto;
-    width: 560px;
+    width: 640px;
     padding: 0px;
     margin-top:10px;
 }
 
-#registierung h2{
+#registrierung h2{
     padding-left: 15px;
     display: table-cell
     vertical-align: middle;
@@ -239,7 +239,7 @@ img.account {
     vertical-align: middle;
     color: #fff;
     display: table-cell;
-     width: 560px;
+     width: 640px;
 }
 
 .reg_form_zeile{
@@ -247,26 +247,45 @@ img.account {
     padding-right: 20px;
 }
 
-#registierung .form_content{
+#registrierung .form_content{
 	display: table-cell;
 	padding: 10px;
 }
 
-#registierung input[type=submit]{
+#registrierung input[type=submit]{
     float: right;
     margin-right: 20px;
 }
 
+/* Buttonformatierung */
+input[type=submit], input[type=button]{
+	border-radius: 6px 6px 6px 6px;
+	-moz-border-radius: 6px 6px 6px 6px;
+	-webkit-border-radius: 6px 6px 6px 6px;
+	color: #fff;
+	padding:6px;
+	padding-left: 15px;
+	padding-right: 15px;
+	background: linear-gradient(to  bottom, black  , gray);
+	border-color: #788A5F;
+}
+
+input[type=submit]:hover , input[type=button]:hover{
+	background: linear-gradient(to  bottom, #d56509  , orange 15%, #d56509); 
+	text-shadow: none;  
+	color: black;
+}
+
 .reg_form_zeile label{
-    width: 75px;
+    width: 120px;
     display:inline-block;
 }
 
-#registierung .std_reg{
+#registrierung .std_reg{
 	width: 160px;
 }
 
-#registierung .lang_reg{
+#registrierung .lang_reg{
 	width: 260px;
 }
 
@@ -276,6 +295,7 @@ input.hausnr, input.plz{
 
 label.hausnr{
 	margin-left: 10px;
+	width: 75px;
 }
 
 label.ort{
@@ -296,12 +316,12 @@ label.ort{
     -webkit-border-radius: 0px 0px 10px 10px;
     margin-top:0px;
     padding: 10px;
-    width: 540px;
+    width: 620px;
 }
 
 .reg_box_iconbereich{
 	display: table-cell;
-	width: 60px;
+	width: 80px;
 	padding-top: 20px;
 	background-image: url('../Images/Design/kunde_plus.png');
 	background-repeat: no-repeat;
@@ -314,4 +334,16 @@ label.ort{
 
 .TableRow_reg{
 	display: table-row;
+}
+
+.text_fehlermeldung{
+	color: #fff;
+	font-weight: bold;
+	background-color: black;
+	padding: 5px;
+	padding-left: 10px;
+	padding-right:10px;
+	border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
 }
