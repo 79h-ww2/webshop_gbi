@@ -10,7 +10,7 @@
 			$return = new Ueberpruefresult();
 						
 			//Array mit allen Feldern, die ausgefüllt sein müssen
-			$felder = array($vorname, $name, $strasse, $plz, $hausnr, $ort, $email, $passwort, $wpasswort);
+			$felder = array($vorname, $name, $strasse, $hausnr, $plz, $ort, $email, $passwort, $wpasswort);
 			$feldnamen = array('vorname', 'name', 'strasse', 'hausnr', 'plz', 'ort', 'email', 'passwort', 'wpasswort');
 			
 			//Array mit Meldungswörtern, die in der Fehlermeldung angezeigt werden sollen
