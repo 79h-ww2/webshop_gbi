@@ -88,8 +88,34 @@
 			return $return;
 		}
 		
+		/**
+		 * überprüft, ob die Email-Adresse schon in der Datenbank existiert
+		 * @param unknown $email Email-Adresse
+		 * @return boolean Rückgabewert, ob die Email-Adresse existiert
+		 */
 		public function email_in_db_vorhanden ($email){
+			
+			//Verbindung zur Datenbank aufbauen
 			$db = datenbank_verbindung_aufbauen();
+			if ( !($db->db_connect()) ) die ("Es konnte keine Verbindung zur Datenbank aufgebaut werden");
+			
+			//Sonderzeichen entfernen, womit der Datenbankserver gehackt werden könnte
+			$email_real_escape_string = $db->db_real_escape_string($email);
+			
+			//erstellen der Datenbank-Query
+			$query = "select count(*) from kunde where Email = '$email_real_escape_string'";
+			
+			//die Query ausführen
+			$result = $db->db_query($query);
+			
+			//Rückgabewert auslesen
+			$gefundeneMenge = "";
+			while ($werte = $db->db_fetch_array($result)){
+				$gefundeneMenge = $werte[0];
+			}
+						
+			
+			return ($gefundeneMenge > 0);
 		}
 	};
 ?>
