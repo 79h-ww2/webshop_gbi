@@ -7,7 +7,7 @@
 	include_once './Classes/datenbank.php.inc';
 
 	//lädt die Webseiten-Kontrolldatei
-	include_once './Funktions/PHP/set_control.php.inc';
+	include_once './Funktions/PHP/set_control.php.inc2';
 ?>
 <!DOCTYPE html>
 <html lang="de">
