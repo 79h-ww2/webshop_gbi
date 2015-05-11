@@ -1,15 +1,13 @@
-<!-- viele neue �nderungen -->
 <?php
 	//zeigt die PHP-Fehlermeldungen an
 	error_reporting(E_ALL);
 	ini_set('display_errors', 1);
-
+	
 	//lädt die Klasse für den Datenbankzugriff
 	include_once './Classes/datenbank.php.inc';
-	
+
 	//lädt die Webseiten-Kontrolldatei
 	include_once './Funktions/PHP/set_control.php.inc';
-	
 ?>
 <!DOCTYPE html>
 <html lang="de">
