@@ -1,3 +1,4 @@
+<!-- viele neue Änderungen -->
 <?php
 	//zeigt die PHP-Fehlermeldungen an
 	error_reporting(E_ALL);
