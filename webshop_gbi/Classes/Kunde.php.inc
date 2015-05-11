@@ -80,6 +80,12 @@
 					$fehlermeldung .= "Die Email-Adresse ist ung&uuml;ltig.";
 					$return->set_feldstatus('email', true);
 				}
+				//überprüft, ob die Email-Adresse nicht schon im System gespeichert ist
+				elseif ($this->email_in_db_vorhanden($email)){
+					$fehlermeldung .= $fehlermeldung == '' ? '' : ' ';
+					$fehlermeldung .= "Die Email-Adresse wird schon von einer anderen Person verwendet.";
+					$return->set_feldstatus('email', true);
+				}
 			}
 			
 			//Übergibt an das Rückgabeobjekt die Fehlermeldung
@@ -114,7 +120,7 @@
 				$gefundeneMenge = $werte[0];
 			}
 						
-			
+			//gibt zurück, ob die Email-Adresse schon im System vorhanden ist
 			return ($gefundeneMenge > 0);
 		}
 	};
