@@ -87,5 +87,9 @@
 			
 			return $return;
 		}
+		
+		public function email_in_db_vorhanden ($email){
+			$db = datenbank_verbindung_aufbauen();
+		}
 	};
 ?>

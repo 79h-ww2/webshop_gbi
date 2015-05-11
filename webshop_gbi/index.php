@@ -5,6 +5,9 @@
 
 	//lÃ¤dt die Webseiten-Kontrolldatei
 	include_once './Funktions/PHP/set_control.php.inc';
+	
+	//lädt die Klasse für den Datenbankzugriff
+	include_once './Classes/datenbank.php.inc';
 ?>
 <!DOCTYPE html>
 <html lang="de">
