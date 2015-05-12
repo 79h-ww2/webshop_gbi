@@ -24,6 +24,15 @@
 		                <input type="text" name="name" maxlength="50"  value="<?php if ($eingabe_ungueltig) echo htmlspecialchars($_POST['name'],ENT_QUOTES,'UTF-8'); ?>" class="lang_reg" <?php if($eingabe_ungueltig && $eingabe_check_result->get_feldstatus('name') ) echo 'style="border-color:red; border-style: solid"';  ?> />
 		            </p>
 		            
+		             <p class="reg_form_zeile" >
+		              	<span>Geschlecht:</span>
+		              	<input type="radio" name="geschlecht" id="maennlich" value="maennlich" checked="checked" />
+		            	<label for="maennlich">m&auml;nnlich</label>
+		            	
+		            	<input type="radio" name="geschlecht" id="weiblich" value="weiblich"  />
+		            	<label for="weiblich">weiblich</label>
+		            </p>
+		            
 		            <p class="reg_form_zeile" >
 		                <label for="strasse" >Stra&szlig;e:</label>
 		                <input type="text" name="strasse" maxlength="50"  value="<?php if ($eingabe_ungueltig) echo htmlspecialchars($_POST['strasse'],ENT_QUOTES,'UTF-8'); ?>" class="std_reg" <?php if( $eingabe_ungueltig && $eingabe_check_result->get_feldstatus('strasse') ) echo 'style="border-color:red; border-style: solid"';  ?> />

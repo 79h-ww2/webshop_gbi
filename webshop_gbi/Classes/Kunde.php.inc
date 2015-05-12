@@ -1,9 +1,22 @@
 <?php
 	include_once './Classes/Ueberpruefresult.php.inc';
+	include_once './Classes/Email.php.inc';
 
 	class Kunden{
 		
-		
+		/**
+		 * überprüft, die Benutzereingabe des Registrierungsfensters 
+		 * @param string $vorname Vorname
+		 * @param string $name Name
+		 * @param string $strasse Strasse
+		 * @param string $plz Postleitzahl
+		 * @param string $hausnr Hausnummer
+		 * @param string $ort Ort
+		 * @param string $email Email-Adresse
+		 * @param string $passwort Passwort
+		 * @param string $wpasswort Wiederholdung des Passworts
+		 * @return Ambigous <boolean, Eingabe gültig>
+		 */
 		public function ueberpruefeEingabe ($vorname, $name, $strasse, $plz, $hausnr, $ort, $email, $passwort, $wpasswort){
 			
 			//Objekt, über das der Funktionsrückgabewert übergeben werden soll
@@ -139,7 +152,7 @@
 		 * @param string $passwort Passwort
 		 * @return Ambigous <number, Kunden-ID>
 		 */
-		public function kunde_registrieren($vorname, $name, $strasse, $hausnr, $plz, $ort, $email, $passwort){
+		public function kunde_registrieren($vorname, $name, $strasse, $hausnr, $plz, $ort, $email, $passwort, $geschlecht){
 			//Verbindung zur Datenbank aufbauen
 			$db = datenbank_verbindung_aufbauen();
 			if ( !($db->db_connect()) ) die ("Es konnte keine Verbindung zur Datenbank aufgebaut werden");
@@ -154,6 +167,7 @@
 			$email= $db->db_real_escape_string($email);
 			$passwort = md5($passwort);
 			$id = $this->generiere_neu_kundennr();
+			$geschlecht = $db->db_real_escape_string($geschlecht);
 			
 			//Query, um den Kunden in der Datenbank anzulegen
 			$query = "
@@ -167,7 +181,8 @@
 					Name,
 					Stand,
 					Passwort,
-					geloescht 
+					geloescht,
+					Geschlecht
 				)values(
 					'$id',
 					'$vorname',
@@ -178,7 +193,8 @@
 					'$name',
 					now(),
 					'$passwort',
-					'nein'
+					'nein',
+					'$geschlecht'
 				);
 			";
 			
@@ -225,6 +241,83 @@
 			//gibt das die letzte Kundennummer mit 1 addiert aus
 			$letzte_id++;
 			return $letzte_id; 
+		}
+		
+		/**
+		 * sendet bei Neuanmeldung am System eine Aktivierung-Email an den Kunden
+		 * @param integer $KId Kundennummer
+		 * @return boolean Email wurde erfolgreich versendet?
+		 */
+		public function sende_aktivierungsemail_registrierung($KId){
+			
+			$erfolgreich = false;
+			
+			$mail = instanziere_email_objekt();
+			
+			//Verbindung zur Datenbank aufbauen
+			$db = datenbank_verbindung_aufbauen();
+			if ( !($db->db_connect()) ) die ("Es konnte keine Verbindung zur Datenbank aufgebaut werden");
+			
+			
+			//Sonderzeichen entfernen
+			$KId = $db->db_real_escape_string($KId);
+			
+			
+			//bestimmt den Kundennamen
+			$query = "
+					select
+						Name, Geschlecht, Email
+					from
+						kunde
+					where
+						KId = '$KId'
+					;
+			";
+			
+			//die Datenbank-Abfrage ausführen
+			$result = $db->db_query($query);
+
+			//Abfrage-Result entgegennehmen
+			$kunde = "";
+			while ($werte = $db->db_fetch_object($result)){
+				$kunde = $werte;
+			}
+			
+			//wenn der Kunde gefunden wurde
+			if ($kunde != ""){
+				//Serveradresse bestimmen
+				$adresse_server = $_SERVER["SERVER_ADDR"];
+					
+				//Pfad zur Webseite bestimmen
+				$pfad_zur_webseite = $_SERVER["PHP_SELF"];
+				
+				//bestimmt an Hand des Ports, ob die Webseite über http oder https betrieben wird
+				$protokoll = ($_SERVER["SERVER_PORT"] == 80) ? "http" : "https";
+				
+				//Kundennummer verschlüsseln
+				$encrypted = base64_encode($KId."---".$kunde->Name);
+					
+				//Aktivierungslink zusammenstellen
+				$aktivierungslink = $protokoll."://".$pfad_zur_webseite."?account-activate=".urldecode($encrypted);
+
+				//Anredesatz erstellen
+				$anrede = ($kunde->Geschlecht == "weiblich") ? "Sehr geehrte Frau " : "Sehr geehrter Herr ";
+				
+				//Email-Nachricht verfassen
+				$nachricht  = $anrede.$kunde->Name.",\r\n";
+				$nachricht .= "vielen Dank für Ihre Registrierung beim Webshop der Global Bike Inc.\r\n";
+				$nachricht .= "Bitte aktivieren Sie ihr Benutzerkonto durch folgenden Link:".$aktivierungslink." .\r\n \r\n";
+				$nachricht .= "Mit freundlichen Grüßen\r\n";
+				$nachricht .= "Ihr Webshop Team der Global Bike Inc.\r\n";
+				
+				//die Email versenden
+				$erfolgreich =  $mail->senden($kunde->Email, "Bestätigungsemail: Abmeldung am Webshop der Global Bike Inc.", $nachricht);
+			}
+						
+			//Datenbankverbindung schließen
+			$db->db_close();
+			
+			return $erfolgreich;
 		}
 	};
 ?>

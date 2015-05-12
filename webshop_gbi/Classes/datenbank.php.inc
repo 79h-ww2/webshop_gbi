@@ -1,6 +1,6 @@
 <?php
 	$url = file_exists('config.php.inc') ? 'config.php.inc' : '../config.php.inc';
-	include ( $url );
+	include_once ( $url );
 
 	function datenbank_verbindung_aufbauen()
 	{

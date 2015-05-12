@@ -4,7 +4,7 @@
 	
 	$eingabe_ungueltig = false;
 	
-	if ( isset($_POST['vorname']) && isset($_POST['name']) && isset($_POST['strasse']) && isset($_POST['plz']) && isset($_POST['hausnr']) && isset($_POST['ort']) && isset($_POST['email']) && isset($_POST['passwort']) && isset($_POST['wpasswort']) )
+	if ( isset($_POST['vorname']) && isset($_POST['name']) && isset($_POST['strasse']) && isset($_POST['plz']) && isset($_POST['hausnr']) && isset($_POST['ort']) && isset($_POST['email']) && isset($_POST['passwort']) && isset($_POST['wpasswort']) && isset($_POST['geschlecht']) )
 	$kunde = new Kunden();
 	
 	//überprüft die Eingabe auf Gültigkeit
@@ -15,6 +15,9 @@
 	if ( !$eingabe_ungueltig ){
 		
 		//Kunde wird zur Datenbank hinzugefügt
-		$id_neuer_kunde = $kunde->kunde_registrieren($_POST['vorname'], $_POST['name'], $_POST['strasse'], $_POST['hausnr'], $_POST['plz'], $_POST['ort'], $_POST['email'], $_POST['passwort']);
+		$id_neuer_kunde = $kunde->kunde_registrieren($_POST['vorname'], $_POST['name'], $_POST['strasse'], $_POST['hausnr'], $_POST['plz'], $_POST['ort'], $_POST['email'], $_POST['passwort'], $_POST['geschlecht']);
+		
+		//Aktivierungs-Email versenden
+		$kunde->sende_aktivierungsemail_registrierung($id_neuer_kunde);
 	}
 ?>
