@@ -13,8 +13,8 @@
 	
 	//wenn keine Eingabe ungültig war wir mit der Registierung angefangen
 	if ( !$eingabe_ungueltig ){
-		/*
-		 * Hiewr folgt Quellcode
-		 */
+		
+		//Kunde wird zur Datenbank hinzugefügt
+		$id_neuer_kunde = $kunde->kunde_registrieren($_POST['vorname'], $_POST['name'], $_POST['strasse'], $_POST['hausnr'], $_POST['plz'], $_POST['ort'], $_POST['email'], $_POST['passwort']);
 	}
 ?>

@@ -119,9 +119,112 @@
 			while ($werte = $db->db_fetch_array($result)){
 				$gefundeneMenge = $werte[0];
 			}
+			
+			//Datenbankverbindung schließen
+			$db->db_close();
 						
 			//gibt zurück, ob die Email-Adresse schon im System vorhanden ist
 			return ($gefundeneMenge > 0);
+		}
+		
+		/**
+		 * erstellt den neuen Kunden
+		 * @param string $vorname Vorname
+		 * @param string $name Name
+		 * @param string $strasse Straße
+		 * @param string $hausnr Hausnummer
+		 * @param string $plz Postleitzahl
+		 * @param string $ort Wohnort
+		 * @param string $email Email-Adresse
+		 * @param string $passwort Passwort
+		 * @return Ambigous <number, Kunden-ID>
+		 */
+		public function kunde_registrieren($vorname, $name, $strasse, $hausnr, $plz, $ort, $email, $passwort){
+			//Verbindung zur Datenbank aufbauen
+			$db = datenbank_verbindung_aufbauen();
+			if ( !($db->db_connect()) ) die ("Es konnte keine Verbindung zur Datenbank aufgebaut werden");
+			
+			//Sonderzeichen entfernen
+			$vorname = $db->db_real_escape_string($vorname);
+			$name = $db->db_real_escape_string($name);
+			$strasse = $db->db_real_escape_string($strasse);
+			$hausnr = $db->db_real_escape_string($hausnr);
+			$plz = $db->db_real_escape_string($plz);
+			$ort = $db->db_real_escape_string($ort);
+			$email= $db->db_real_escape_string($email);
+			$passwort = md5($passwort);
+			$id = $this->generiere_neu_kundennr();
+			
+			//Query, um den Kunden in der Datenbank anzulegen
+			$query = "
+				insert into kunde(
+					KId,
+					Vorname,
+					PLZ,
+					Ort,
+					Email,
+					Strasse,
+					Name,
+					Stand,
+					Passwort,
+					geloescht 
+				)values(
+					'$id',
+					'$vorname',
+					'$plz',
+					'$ort',
+					'$email',
+					'$strasse',
+					'$name',
+					now(),
+					'$passwort',
+					'nein'
+				);
+			";
+			
+			//Kunde zur Datenbank hinzufügen
+			$result = $db->db_query($query);
+			
+			//Datenbankverbindung schließen
+			$db->db_close();
+			
+			//gibt beim Fehler den Wert false zurück bei erfolgreicher Durchführung die ID des neuen Kunden
+			return (!$result) ? false : $id;
+		}
+		
+		/**
+		 * generiert eine neue Kundennummer
+		 * @return Ambigous <number, neue Kundennummer>
+		 */
+		public function generiere_neu_kundennr(){
+			//Verbindung zur Datenbank aufbauen
+			$db = datenbank_verbindung_aufbauen();
+			if ( !($db->db_connect()) ) die ("Es konnte keine Verbindung zur Datenbank aufgebaut werden");
+			
+			//bestimmt die letzte Kundennr., die vergeben wurde
+			$query = "
+					select 
+						KId
+					from
+						kunde
+					order by KId desc
+					limit 0,1; 
+			";
+			
+			//die Datenbank-Abfrage ausführen
+			$result = $db->db_query($query);
+			
+			$letzte_id = 0;
+			while ($wert = $db->db_fetch_object($result)){
+				$letzte_id = $wert->KId;
+			}
+			
+			//Datenbankverbindung schließen
+			$db->db_close();
+			
+			//gibt das die letzte Kundennummer mit 1 addiert aus
+			$letzte_id++;
+			return $letzte_id; 
 		}
 	};
 ?>
