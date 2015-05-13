@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.5.43, for debian-linux-gnu (armv7l)
+-- MySQL dump 10.13  Distrib 5.6.24, for debian-linux-gnu (x86_64)
 --
 -- Host: localhost    Database: webshop
 -- ------------------------------------------------------
--- Server version	5.5.43-0+deb7u1
+-- Server version	5.6.24-0ubuntu2
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -93,11 +93,12 @@ CREATE TABLE `kunde` (
   `Strasse` varchar(50) DEFAULT NULL,
   `Name` varchar(50) DEFAULT NULL,
   `Stand` datetime DEFAULT NULL,
-  `Geschlecht` enum('männlich','weiblich') DEFAULT NULL,
+  `Geschlecht` enum('maennlich','weiblich') DEFAULT NULL,
   `Passwort` varchar(50) DEFAULT NULL,
   `Geburtsdatum` date DEFAULT NULL,
   `geloescht` enum('ja','nein') DEFAULT NULL,
   `hausNr` varchar(5) DEFAULT NULL,
+  `aktiviert` enum('ja','nein') DEFAULT NULL,
   PRIMARY KEY (`KId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -108,6 +109,7 @@ CREATE TABLE `kunde` (
 
 LOCK TABLES `kunde` WRITE;
 /*!40000 ALTER TABLE `kunde` DISABLE KEYS */;
+INSERT INTO `kunde` VALUES (1,'Dagobert','32839','Steinheim','benedikt@webshop-testmail.de',NULL,'Vogelweg','Nymph','2015-05-13 21:21:58','maennlich','161ebd7d45089b3446ee4e0d86dbcf92',NULL,'nein',NULL,'ja'),(2,'Root','11111','Rechenhausen','root@webshop-testmail.de',NULL,'Rechenzentrum','Computer','2015-05-13 21:53:13','maennlich','161ebd7d45089b3446ee4e0d86dbcf92',NULL,'nein',NULL,'ja');
 /*!40000 ALTER TABLE `kunde` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -181,4 +183,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-05-10 22:06:37
+-- Dump completed on 2015-05-14  0:30:02
