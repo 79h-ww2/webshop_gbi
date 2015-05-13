@@ -168,6 +168,7 @@
 			$passwort = md5($passwort);
 			$id = $this->generiere_neu_kundennr();
 			$geschlecht = $db->db_real_escape_string($geschlecht);
+
 			
 			//Query, um den Kunden in der Datenbank anzulegen
 			$query = "
@@ -182,7 +183,8 @@
 					Stand,
 					Passwort,
 					geloescht,
-					Geschlecht
+					Geschlecht,
+					aktiviert
 				)values(
 					'$id',
 					'$vorname',
@@ -194,7 +196,8 @@
 					now(),
 					'$passwort',
 					'nein',
-					'$geschlecht'
+					'$geschlecht',
+					'nein'
 				);
 			";
 			
@@ -286,7 +289,7 @@
 			//wenn der Kunde gefunden wurde
 			if ($kunde != ""){
 				//Serveradresse bestimmen
-				$adresse_server = $_SERVER["SERVER_ADDR"];
+				$adresse_server = $_SERVER["SERVER_NAME"];
 					
 				//Pfad zur Webseite bestimmen
 				$pfad_zur_webseite = $_SERVER["PHP_SELF"];
@@ -295,10 +298,10 @@
 				$protokoll = ($_SERVER["SERVER_PORT"] == 80) ? "http" : "https";
 				
 				//Kundennummer verschlüsseln
-				$encrypted = base64_encode($KId."---".$kunde->Name);
+				$encrypted = base64_encode($KId."---".$kunde->Name."---".time());
 					
 				//Aktivierungslink zusammenstellen
-				$aktivierungslink = $protokoll."://".$pfad_zur_webseite."?account-activate=".urldecode($encrypted);
+				$aktivierungslink = $protokoll."://".$adresse_server.$pfad_zur_webseite."?account-activate=".urldecode($encrypted);
 
 				//Anredesatz erstellen
 				$anrede = ($kunde->Geschlecht == "weiblich") ? "Sehr geehrte Frau " : "Sehr geehrter Herr ";
@@ -318,6 +321,73 @@
 			$db->db_close();
 			
 			return $erfolgreich;
+		}
+		
+		/**
+		 * aktiviert den neu registrierten Kunden
+		 * @param string $aktivierungscode der Aktivierungscode
+		 * @return boolean gibt, aus, ob die Aktivierung erfolgreich war
+		 */
+		public function aktiviere_kunde_durch_aktivierungs_code ($aktivierungscode){
+			
+			//Verbindung zur Datenbank aufbauen
+			$db = datenbank_verbindung_aufbauen();
+			if ( !($db->db_connect()) ) die ("Es konnte keine Verbindung zur Datenbank aufgebaut werden");
+			
+			//Entschlüsselt den Deaktivierungscode
+			$code_elemente_unverschluesselt = explode("---", base64_decode($aktivierungscode));
+			
+			
+			//Sonderzeichen entfernen
+			$KId = $db->db_real_escape_string($code_elemente_unverschluesselt[0]);
+			$Name = $db->db_real_escape_string($code_elemente_unverschluesselt[1]);
+			
+			//DB-Abfrage erstellen
+			$query = "
+				update
+					kunde
+				set 
+					aktiviert='ja'
+				where
+						KId = '$KId'
+					and
+						Name = '$Name'
+					and
+						(aktiviert is null or aktiviert = 'nein')
+				;
+			";
+			
+			//Die DB-Abfrage ausführen
+			$result = $db->db_query($query);
+						
+			//Datenbankverbindung schließen
+			$db->db_close();
+			
+			//den Kunden anmelden
+			$_SESSION['angemeldet'] = $this->get_email_from_kid($KId); 
+			
+			return (!$result) ? false : true;
+		}
+		
+		public  function get_email_from_kid($kid){
+			//Verbindung zur Datenbank aufbauen
+			$db = datenbank_verbindung_aufbauen();
+			if ( !($db->db_connect()) ) die ("Es konnte keine Verbindung zur Datenbank aufgebaut werden");
+			
+			$kid = $db->db_real_escape_string($kid);
+			
+			$query = "select Email from kunde where KId ='$kid'";
+			$result = $db->db_query($query);
+			
+			$email = "";
+			while ( $wert = $db->db_fetch_array($result)){
+				$email = $wert;
+			}
+			
+			//Datenbankverbindung schließen
+			$db->db_close();
+			
+			return $email;
 		}
 	};
 ?>

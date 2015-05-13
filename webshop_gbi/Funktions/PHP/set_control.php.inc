@@ -7,4 +7,9 @@
 			break;
 		}
 	}
+	
+	//aktiviert den neuen Kunden
+	if (isset($_GET['account-activate'])){
+		include_once './Funktions/PHP/kunde_aktivieren.php.inc';
+	}
 ?>

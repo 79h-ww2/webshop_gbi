@@ -44,6 +44,8 @@
 
 			$con = "";
 			$con = new mysqli( $this->server, $this->benutzername, $this->passwort, $this->datenbank );
+			
+			$con->set_charset("utf8");
 
 			$this->db_session = $con;
 

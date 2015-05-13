@@ -1,20 +1,10 @@
-<?php
-	//zeigt die PHP-Fehlermeldungen an
-	error_reporting(E_ALL);
-	ini_set('display_errors', 1);
-	
-	//lädt die Klasse für den Datenbankzugriff
-	include_once './Classes/datenbank.php.inc';
 
-	//lädt die Webseiten-Kontrolldatei
-	include_once './Funktions/PHP/set_control.php.inc';
-?>
 <!DOCTYPE html>
 <html lang="de">
 
 <head>
     <title>Startseite</title>
-    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     
     <link rel="stylesheet" href="Styles/style.css" type="text/css"/>
     <meta name accesskey="viewport" content="width=device-widht, initila-scale=1.0"/>
@@ -22,6 +12,20 @@
 
 
 <body class="body">
+	<?php
+		//zeigt die PHP-Fehlermeldungen an
+		error_reporting(E_ALL);
+		ini_set('display_errors', 1);
+		
+		//lädt die Klasse für den Datenbankzugriff
+		include_once './Classes/datenbank.php.inc';
+	
+		//lädt die Webseiten-Kontrolldatei
+		include_once './Funktions/PHP/set_control.php.inc';
+		
+		//Startet eine neue Sitzung
+		session_start();
+	?>
 
     <header class="mainHeader">
     
