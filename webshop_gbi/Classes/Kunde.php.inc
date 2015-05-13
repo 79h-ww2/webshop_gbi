@@ -369,7 +369,12 @@
 			return (!$result) ? false : true;
 		}
 		
-		public  function get_email_from_kid($kid){
+		/**
+		 * bestimmt die Email-Adresse des Kunden
+		 * @param String $kid Kundennr
+		 * @return String Email-Adresse
+		 */
+		public function get_email_from_kid($kid){
 			//Verbindung zur Datenbank aufbauen
 			$db = datenbank_verbindung_aufbauen();
 			if ( !($db->db_connect()) ) die ("Es konnte keine Verbindung zur Datenbank aufgebaut werden");
@@ -381,7 +386,7 @@
 			
 			$email = "";
 			while ( $wert = $db->db_fetch_array($result)){
-				$email = $wert;
+				$email = $wert[0];
 			}
 			
 			//Datenbankverbindung schließen

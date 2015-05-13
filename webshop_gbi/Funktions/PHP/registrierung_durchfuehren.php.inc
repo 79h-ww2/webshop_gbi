@@ -16,8 +16,17 @@
 		
 		//Kunde wird zur Datenbank hinzugefügt
 		$id_neuer_kunde = $kunde->kunde_registrieren($_POST['vorname'], $_POST['name'], $_POST['strasse'], $_POST['hausnr'], $_POST['plz'], $_POST['ort'], $_POST['email'], $_POST['passwort'], $_POST['geschlecht']);
-		
-		//Aktivierungs-Email versenden
-		$kunde->sende_aktivierungsemail_registrierung($id_neuer_kunde);
+
+		if ($id_neuer_kunde != false){
+			
+			//Aktivierungs-Email versenden
+			$kunde->sende_aktivierungsemail_registrierung($id_neuer_kunde);
+			
+			//Informiert den Kunden über eine Messagebox, dass die Registrierung erfolgreich war und er das Benutzerkonto über den Email-Link aktivieren muss
+			$msgbox->erstelleHTMLQuelltextInfoBox_mit_Meldung('info_reg_erfolgreich', 'Registrierung erfolgreich', 'Ihr Benutzerkonto wurde erfolgreich erstellt. Bitte aktivieren Sie es über die Aktivierungs-Email, die Sie an ihrer angegebenen Email-Adresse erhalten haben sollten.', 'info', '', true);
+		}else{
+			//Informiert den Kunden über eine Messagebox, dass die Registrierung erfolgreich war und er das Benutzerkonto über den Email-Link aktivieren muss
+			$msgbox->erstelleHTMLQuelltextInfoBox_mit_Meldung('info_reg_erfolgreich', 'Fehler', 'Die Registrierung ist fehlgeschlagen', 'error', '', true);
+		}
 	}
 ?>

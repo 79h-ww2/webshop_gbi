@@ -1,0 +1,236 @@
+/* Abdeckung, die das Fenster mit einen halb durchsichtigen Bild übersieht, damit keine anderen Links der Webseite mehr geklickt werden können */
+#meldungsfenster_abdeckung, #popupfenster_abdeckung, #no_javaScript_fensterabdeckung
+{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	display: none;
+	z-index: 90000;
+	background-image: url('../Images/icons_meldungsbox/box_abdunkeln.png');
+}
+
+#popupfenster_abdeckung
+{
+	z-index: 80000;
+}
+
+#no_javaScript_fensterabdeckung{
+	display: block;
+}
+
+.meldungsfenster_frame_groesse_1, .meldungsfenster_frame_no_javaScript
+{
+	display: none;
+	position: fixed;
+	width: 400px;
+	/*height: 230px;*/
+	left: 50%;
+	margin-left: -200px;
+	top: 50%;
+	margin-top: -90px;
+	z-index: 100000;
+	background-color: #6c7b35;
+   	background-image: linear-gradient(to bottom right ,#6c7b35 ,#82a143 , #788A5F );
+
+
+	-moz-border-radius: 5px;
+    	-webkit-border-radius: 5px;
+    	border-radius: 5px;  
+	-webkit-box-shadow:
+		0 0 2px rgba(0, 0, 0, 0.2),
+		0 1px 1px rgba(0, 0, 0, .2),
+		0 3px 0 #fff,
+		0 4px 0 rgba(0, 0, 0, .2),
+		0 6px 0 #fff,  
+		0 7px 0 rgba(0, 0, 0, .2);
+	-moz-box-shadow:
+		0 0 2px rgba(0, 0, 0, 0.2),  
+		1px 1px   0 rgba(0,   0,   0,   .1),
+		3px 3px   0 rgba(255, 255, 255, 1),
+		4px 4px   0 rgba(0,   0,   0,   .1),
+		6px 6px   0 rgba(255, 255, 255, 1),  
+		7px 7px   0 rgba(0,   0,   0,   .1);
+
+	box-shadow:
+		0 0 2px rgba(0, 0, 0, 0.2),  
+		0 1px 1px rgba(0, 0, 0, .2),
+		0 3px 0 #fff,
+		0 4px 0 rgba(0, 0, 0, .2),
+		0 6px 0 #fff,  
+		0 7px 0 rgba(0, 0, 0, .2);
+	border-color: black;
+}
+
+.meldungsfenster_frame_no_javaScript{
+	display:block;
+}
+
+.meldungsfenster_frame_groesse_1_platzhalter
+{
+	display: none;
+	position: fixed;
+	width: 400px;
+	/*height: 230px;*/
+	left: 50%;
+	margin-left: -200px;
+	top: 50%;
+	margin-top: -90px;
+	z-index: 100000;
+	padding-bottom:25px;
+}
+
+
+.meldungsfenster_frame_groesse_1_popup
+{
+	background-color: #6c7b35;
+   	background-image: linear-gradient(to bottom right ,#6c7b35 ,#82a143 , #788A5F );
+
+
+	-moz-border-radius: 5px;
+    	-webkit-border-radius: 5px;
+    	border-radius: 5px;  
+	-webkit-box-shadow:
+		0 0 2px rgba(0, 0, 0, 0.2),
+		0 1px 1px rgba(0, 0, 0, .2),
+		0 3px 0 #fff,
+		0 4px 0 rgba(0, 0, 0, .2),
+		0 6px 0 #fff,  
+		0 7px 0 rgba(0, 0, 0, .2);
+	-moz-box-shadow:
+		0 0 2px rgba(0, 0, 0, 0.2),  
+		1px 1px   0 rgba(0,   0,   0,   .1),
+		3px 3px   0 rgba(255, 255, 255, 1),
+		4px 4px   0 rgba(0,   0,   0,   .1),
+		6px 6px   0 rgba(255, 255, 255, 1),  
+		7px 7px   0 rgba(0,   0,   0,   .1);
+
+	box-shadow:
+		0 0 2px rgba(0, 0, 0, 0.2),  
+		0 1px 1px rgba(0, 0, 0, .2),
+		0 3px 0 #fff,
+		0 4px 0 rgba(0, 0, 0, .2),
+		0 6px 0 #fff,  
+		0 7px 0 rgba(0, 0, 0, .2);
+	border-color: black;
+}
+
+
+.meldungsbox_titelleiste
+{
+	width: 100%;
+	height: 32px;
+	-moz-border-radius: 5px 5px 0px 0px;
+	-webkit-border-radius: 5px 5px 0px 0px;
+	border-radius: 5px 5px 0px 0px;
+	background-color: #147196;
+	background: linear-gradient(to  bottom, black  , gray); 
+	color: white;
+	font-weight: bold;
+}
+
+.meldungsbox_titelleiste_content
+{
+	padding: 5px;
+}
+
+a.schliessen_button_meldungsfenster
+{
+	display: block;
+	float: right;
+	text-decoration: none;
+	color: white;
+}
+
+.clear_right
+{
+	clear:right;
+}
+
+.meldungsbox_content
+{
+	color:white;
+	padding: 15px;
+}
+
+.meldungsbox_icon
+{
+	float: left;
+	display: table-cell;
+	width: 70px;
+}
+
+
+.meldungsbox_content_meassage
+{
+	margin-top: 15px;
+	display: table-cell;
+}
+
+.clear_left
+{
+	clear: left;
+}
+
+.gruppe_button_meldungsbox
+{
+	float: right;
+	margin-top:5px;
+}
+
+a.schliessen_button_meldungsfenster:hover
+{
+	color: orange;
+}
+
+
+.button_meldungsbox
+{
+    width: 120px;
+    cursor: pointer;
+    color: #0A2229;
+    margin-left: 5px;
+}
+
+
+
+.button_meldungsbox:active
+{		
+    outline: none;
+
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;		
+}
+
+.button_meldungsbox::-moz-focus-inner
+{
+    border: none;
+}
+
+.popup_content
+{
+    padding: 15px;
+}
+
+.meldungsbox_content_pause
+{
+	display: table;
+}
+
+.meldungsbox_icon_pause
+{
+	display: table-cell;
+	vertical-align: top;
+	padding: 15px;
+}
+
+.meldungsbox_content_meassage_pause
+{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	width: 306px;
+	font-size: 20px;
+}

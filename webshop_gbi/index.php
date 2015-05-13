@@ -17,6 +17,12 @@
 		error_reporting(E_ALL);
 		ini_set('display_errors', 1);
 		
+		//lädt die Klasse für die Meldungsbox
+		include_once './Classes/meldungsfenster.php.inc';
+		
+		//bildet ein Objekt das MSG-Box
+		$msgbox = new Meldungsfenster(); 
+		
 		//lädt die Klasse für den Datenbankzugriff
 		include_once './Classes/datenbank.php.inc';
 	
@@ -104,13 +110,13 @@
     
     <div class="mainContent">
         <div class="content">
-			<?php
+			<?php			
                 include "./Funktions/PHP/set_page.php.inc";
             ?>
         </div>
     </div>
     
-    <!-- aktivieren, zwalls Sidebar gew�nscht sind 
+    <!-- aktivieren, zwalls Sidebar gewünscht sind 
     
     <aside class="top-sidebar">
         <article>
