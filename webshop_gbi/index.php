@@ -38,7 +38,7 @@
     <div class="HeaderContent">
         <div class="TableRow">
             <div class="logoCell">
-                <a href="index.php"> <img src="Images/Design/Logo/fahrrad_pixel.png" alt="Starseite" class="logo" /></a>
+                <a href="./"> <img src="Images/Design/Logo/fahrrad.png" alt="Starseite" class="logo" /></a>
             </div>
             
             <div class="searchCell">
