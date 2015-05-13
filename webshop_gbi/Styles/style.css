@@ -59,14 +59,29 @@ body {
 
 .warenkorbCell{
    display: table-cell;
-   vertical-align: middle;
-   width: 100px;
+   vertical-align: top;
+   width: 80px;
+   background-image: url('../Images/Design/warenkorb.png');
+   background-repeat: no-repeat;
+   background-position: 15px 35px;
+   padding-left: 18px;
+   padding-top:42px;
+   font-size:12px;
+   color:yellow;
 }
 
 .accountCell{
    display: table-cell;
    vertical-align: middle;
    width: 100px;
+   padding-top: 40px;
+   background-image: url('../Images/Design/account.png');
+   background-repeat: no-repeat;
+   background-position: 0px 35px;
+}
+
+.accountCell:hover{
+	background-image: url('../Images/Design/account_hover.png');
 }
 
 img.logo {
@@ -75,9 +90,6 @@ img.logo {
     margin-left: 15px; 
 }
 
-img.warenkorb {
-    width: 45px;
-    height: 45px; }
 
 img.account {
     width: 40px;
@@ -351,4 +363,31 @@ label.ort{
 	border-radius: 10px 10px 10px 10px;
     -moz-border-radius: 10px 10px 10px 10px;
     -webkit-border-radius: 10px 10px 10px 10px;
+}
+
+.popupRegistrierung{
+	position: fixed;
+	width: 240px;
+	height: 120px;
+	margin-left:-190px;
+	visibility: hidden;
+}
+
+.haken_sprechblase{
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-bottom: 30px solid #545454;
+	margin-left: 195px;
+	width: 0px;
+	height: 0px;
+}
+
+.contentPopupRegistrierung{
+	height: 120px;
+	/*background: transparent linear-gradient(to bottom, #fff 1%, #585858) repeat scroll 0% 0%;*/
+	background-color: #545454;
+}
+
+.accountCell:HOVER > .popupRegistrierung{
+	visibility: visible;
 }

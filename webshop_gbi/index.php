@@ -46,11 +46,10 @@
             </div>
             
             <div class="warenkorbCell">
-                <img src="Images/Design/warenkorb.png" class="waenkorb"  />
+            	100
             </div>
             
             <div class="accountCell">
-                <img src="Images/Design/account.png" class="account" />
                 <?php include 'Pages/popupRegistrierung.php.inc';?>
             </div>
             
