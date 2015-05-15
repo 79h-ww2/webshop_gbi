@@ -369,6 +369,7 @@ label.ort{
 	position: fixed;
 	width: 240px;
 	height: 120px;
+	margin-top: 4px;
 	margin-left:-190px;
 	visibility: hidden;
 }
