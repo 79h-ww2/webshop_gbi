@@ -74,14 +74,17 @@ body {
    display: table-cell;
    vertical-align: middle;
    width: 100px;
-   padding-top: 40px;
+   padding-top: 60px;
    background-image: url('../Images/Design/account.png');
    background-repeat: no-repeat;
-   background-position: 0px 35px;
+   background-position: 12px 35px;
+   color: black;
+   font-size: 14px;
 }
 
 .accountCell:hover{
 	background-image: url('../Images/Design/account_hover.png');
+	color: #FFBF00;
 }
 
 img.logo {
@@ -371,7 +374,7 @@ label.ort{
 	width: 480px;
 	height: 120px;
 	margin-top: 4px;
-	margin-left:-430px;
+	margin-left:-410px;
 	visibility: hidden;
 }
 
@@ -379,7 +382,7 @@ label.ort{
 	border-left: 15px solid transparent;
 	border-right: 15px solid transparent;
 	border-bottom: 30px solid #545454;
-	margin-left: 435px;
+	margin-left: 425px;
 	width: 0px;
 	height: 0px;
 }

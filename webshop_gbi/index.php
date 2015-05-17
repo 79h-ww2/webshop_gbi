@@ -50,6 +50,7 @@
             </div>
             
             <div class="accountCell">
+            	Anmelden
                 <?php include 'Pages/popupRegistrierung.php.inc';?>
             </div>
             
