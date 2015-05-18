@@ -8,25 +8,28 @@
     </footer>
     
     <content>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore 
-        et dolore magna aliquyam erat, sed diam voluptua.
-        At vero eos et accusam et justo duo dolores et ea rebum.
-        Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-        
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-        et dolore magna aliquyam erat, sed diam voluptua.
-        At vero eos et accusam et justo duo dolores et ea rebum.
-        Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    	<img src="Images/Produktbilder/Mustermodell.png" alt="Mustermodell" class="BildMustermodell" />
+    	
+    	<div class="topContentText">
+    		<h3><a href="#" title="Mustermodell">Mustermodell</a></h3>
+    		
+    		<p><strong>Eigenschaften</strong></p>
+    		
+    		
+	        <ul type="disc">
+		        <li>32 Gänge + Rückwärtsgang</li>
+		        <li>Einparkassistent</li>
+		        <li>Allradantrieb</li>
+		        <li>Navigationssystem</li>
+		        <li>Tagfahrlicht</li>
+		        <li>Gratis Wackedackel für jedes Fahrrad :D</li>
+	        </ul>
+    	</div>
+    	
     </content>
 </article>
 
-<article class="topContent">
+<article class="bottomContent">
     <header>
         <h2><a href="#" title="First Post">Meist angesehene Artikel</a> </h2>
     </header>
@@ -36,20 +39,28 @@
     </footer>
     
     <content>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore 
-        et dolore magna aliquyam erat, sed diam voluptua.
-        At vero eos et accusam et justo duo dolores et ea rebum.
-        Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    	<div class="BottomContentTableRow">
+    		<div class="articleCell">
+	    		<img src="Images/Produktbilder/Mustermodell.png" alt="Mustermodell" class="BildMustermodellKlein" />
+	    		<h4><a href="#" title="Mustermodell A">Mustermodell A</a></h3>
+    		</div>
+    		
+    		<div class="articleCell">
+	    		<img src="Images/Produktbilder/Mustermodell.png" alt="Mustermodell" class="BildMustermodellKlein" />
+	    		<h4><a href="#" title="Mustermodell B">Mustermodell B</a></h3>
+    		</div>
+    		
+    		<div class="articleCell">
+	    		<img src="Images/Produktbilder/Mustermodell.png" alt="Mustermodell" class="BildMustermodellKlein" />
+	    		<h4><a href="#" title="Mustermodell C">Mustermodell C</a></h3>
+    		</div>
+    		
+    		<div class="articleCell">
+	    		<img src="Images/Produktbilder/Mustermodell.png" alt="Mustermodell" class="BildMustermodellKlein" />
+	    		<h4><a href="#" title="Mustermodell D">Mustermodell D</a></h3>
+    		</div>
+	    	
+    	</div>
         
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-        et dolore magna aliquyam erat, sed diam voluptua.
-        At vero eos et accusam et justo duo dolores et ea rebum.
-        Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
     </content>
 </article>

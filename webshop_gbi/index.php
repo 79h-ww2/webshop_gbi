@@ -46,7 +46,7 @@
             </div>
             
             <div class="warenkorbCell">
-            	100
+            	100 <!-- Anzahl Artikel im Warenkorb -->
             </div>
             
             <div class="accountCell">
@@ -141,7 +141,8 @@
     -->
     
     <footer class="mainFooter">
-        <p>Copyright &copy; 2015 Hs-OWL</p>
+        <p>copyright &copy; 2015 Hs-OWL</p>
+        <a href="#">Impressum</a>
     </footer>
 </body>
 

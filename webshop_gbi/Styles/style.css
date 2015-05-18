@@ -175,15 +175,50 @@ img.account {
 }
 
 .topContent {
-    background-color: #fff;
-    margin-top: 2px;
+    background-color: #EDFDD5;
+    background:linear-gradient(to bottom, white , 	#EDFDD5 , white );
+	margin: 50px 100px;
+	height: 330px;
+	padding: 5px 0;
+}
+
+.topContent h2 {
+    text-align: center;
+}
+
+.topContentText {
+    float: right;
+    clear: both;
+    width: 350px;
 }
 
 .bottomContent {
     background-color: #fff;
     margin-top: 2px;
+    text-align: center;
 }
 
+.bottomContent h2 {
+	text-align: left;
+}
+.BottomContentTableRow {
+    display: table-row;
+    width: 900px;
+}
+
+.articleCell{
+   display: table-cell; 
+   vertical-align: middle;
+   width: 200px;
+}
+
+.BildMustermodellKlein{
+   width: 150px;
+}
+
+img.BildMustermodell{
+	width: 350px;
+}
 .post-info {
     font-style: italic;
     color: #999;
@@ -223,13 +258,19 @@ img.account {
     height: 40px;
     float: left;  
     background:linear-gradient(to top right ,#6c7b35 , 	#82a143 , white );
+    
 }
 
-.mainFooter p {
-    width: 92%;
-    margin:  0px auto;
+.mainFooter p{
     color: #fff;
-    
+    text-align: center;
+       
+}
+
+.mainFooter a{
+	color: #fff;
+    text-align: right;
+       
 }
 
 /* ############################################## Registierung ############################################## */
