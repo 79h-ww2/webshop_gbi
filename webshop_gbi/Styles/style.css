@@ -373,6 +373,7 @@ label.ort{
 .reg_box_aufteilung{
 	display: table;
 	/*background:linear-gradient(to bottom right ,#6c7b35 ,#82a143 , #788A5F );*/
+	background-color: #82a143;
     color: #fff;
     border-radius: 0px 0px 10px 10px;
     -moz-border-radius: 0px 0px 10px 10px;
