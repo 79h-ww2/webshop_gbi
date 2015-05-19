@@ -513,3 +513,7 @@ input[type="text"], input[type="email"], input[type="password"]{
 #link_button_reg_popup{
 	margin-left: 30px;
 }
+
+.fehlermeldung_anmelden{
+	color: #F78181;
+}
