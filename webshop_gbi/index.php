@@ -58,7 +58,7 @@
                 	}
                 	//wenn er angemeldet ist bekommt der Kunde ein Popup zur Verwaltung seines Profils angezeigt
                 	else{
-                		echo "Profil verwalten";
+                		echo "Profil";
                 		include_once 'Pages/popupProfilVerwalten.php.inc';
                 	}
                 ?>
@@ -74,8 +74,7 @@
     <nav class="nav">
         <ul class="navigation">
             <li><a href="#">Fahrr&auml;der</a> <!-- HIER HINTER DARF KEIN </li> stehn SONST GEHTS NICHT!!! -->
-                
-    			<ul>  
+    			<ul> 
         			<div class="Spalte">
                         <li><a class="Untermenu" href="#">Modell 1</a></li>
                         <li><a class="Untermenu" href="#">Modell 2</a></li>
@@ -119,7 +118,9 @@
     
     <div class="mainContent">
         <div class="content">
-			<?php			
+        	
+			<?php
+				if (isset($_GET['aktion']) && $_GET['aktion']== "abmelden") echo '<h2 class="abmeldungsnachricht" >Sie wurden erfolgreich abgemeldet.</h2>';			
                 include "./Funktions/PHP/set_page.php.inc";
             ?>
         </div>

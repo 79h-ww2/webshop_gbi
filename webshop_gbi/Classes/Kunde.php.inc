@@ -409,6 +409,8 @@
 							Email = '$email'
 						and
 							Passwort = '$passwort_hash'
+						and
+							aktiviert = 'ja'
 					;";
 				
 				$result = $db->db_query($query);

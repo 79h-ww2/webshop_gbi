@@ -1,14 +1,8 @@
 <div class="popupProfil"  >
 	<div class="haken_sprechblase" >
 	</div>
-	<div class="contentPopupRegistrierung" >
-		<ul>
-			<li>
-				Profilverwalten
-			</li>
-			<li>
-				Abmelden
-			</li>
-		</ul>
+	<div class="contentPopupProfil" >
+		<a href="#" title="Profilverwalten">Profilverwalten</a>
+		<a href="./?aktion=abmelden" title="Abmelden">Abmelden</a>
 	</div>
 </div>

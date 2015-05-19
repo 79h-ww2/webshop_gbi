@@ -19,4 +19,16 @@
 	if (isset($_GET['account-activate'])){
 		include_once './Funktions/PHP/kunde_aktivieren.php.inc';
 	}
+	
+	//den Kunden abmelden
+	if (isset($_GET['aktion'])){
+		switch ($_GET['aktion']){
+			
+			//Meldet den Kunden ab
+			case 'abmelden':
+				session_destroy();
+				session_start();
+			break;
+		}
+	}
 ?>

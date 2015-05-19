@@ -64,8 +64,8 @@ body {
    background-image: url('../Images/Design/warenkorb.png');
    background-repeat: no-repeat;
    background-position: 15px 35px;
-   padding-left: 18px;
-   padding-top:42px;
+   padding-left: 21px;
+   padding-top:45px;
    font-size:12px;
    color:yellow;
 }
@@ -140,10 +140,12 @@ img.account {
     padding: 0;
 }
 
+
+
 .navigation ul, .navigation ul li ul {
     visibility: hidden;
     list-style: none;;
-    border-top : 12px solid #6c7b35 ;
+    border-top : 2px solid red;
     background: linear-gradient(to  bottom, gray  , black);
     position: absolute;
       
@@ -429,19 +431,23 @@ label.ort{
 
 .popupProfil{
 	position: fixed;
-	width: 220px;
+	width: 156px;
 	height: 120px;
 	margin-top: 4px;
-	margin-left:-110px;
+	margin-left:-46px;
 	visibility: hidden;
-	text-align: text;
+	text-align: left;
+}
+
+.popupProfil ul li{
+	list-style: none;
 }
 
 .popupProfil .haken_sprechblase{
 	border-left: 15px solid transparent;
 	border-right: 15px solid transparent;
 	border-bottom: 30px solid #545454;
-	margin-left: 155px;
+	margin-left: 91px;
 	width: 0px;
 	height: 0px;
 }
@@ -462,6 +468,12 @@ label.ort{
 	color: white;
 }
 
+.contentPopupProfil{
+	background-color: #545454;
+	padding: 5px;
+	color: white;
+}
+
 .contentPopupRegistrierung label{
 	width: 80px;
 	display: block;
@@ -479,7 +491,7 @@ input[type="text"], input[type="email"], input[type="password"]{
 	border-radius: 4px;
 }
 
-.accountCell:HOVER > .popupRegistrierung{
+.accountCell:HOVER > .popupRegistrierung, .popupRegistrierung:hover{
 	visibility: visible;
 }
 
@@ -547,9 +559,24 @@ input[type="text"], input[type="email"], input[type="password"]{
 	color: #F78181;
 }
 
+.popupProfil a{
+	color: white;
+	display: block;
+	margin-top:10px;
+	padding: 6px;
+	text-decoration: none;
+	text-align: center;
+}
+
+.popupProfil a:hover{
+	color: #000;
+	background: linear-gradient(to  bottom, #d56509  , orange 15%, #d56509); 
+    text-shadow: none;  
+}
+
 /* ##################################### Statusleiste ################################## */
 #status_leiste{
-	background-color: #808080;
+	background-color: #585858;
 	height: 24px;
 	padding-left: 15px;
 	color: #fff;
@@ -559,5 +586,10 @@ input[type="text"], input[type="email"], input[type="password"]{
 	width: 1009px;
 	border-top-style: solid;
 	border-top-width: 1px;
+}
+
+.abmeldungsnachricht{
+	text-align: center;
+	color: green;
 }
 
