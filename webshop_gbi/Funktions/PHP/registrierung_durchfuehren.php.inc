@@ -8,7 +8,7 @@
 	$kunde = new Kunden();
 	
 	//überprüft die Eingabe auf Gültigkeit
-	$eingabe_check_result = $kunde->ueberpruefeEingabe($_POST['vorname'], $_POST['name'], $_POST['strasse'], $_POST['plz'], $_POST['hausnr'], $_POST['ort'], $_POST['email'], $_POST['passwort'], $_POST['wpasswort']);
+	$eingabe_check_result = $kunde->ueberpruefeEingabeReg($_POST['vorname'], $_POST['name'], $_POST['strasse'], $_POST['plz'], $_POST['hausnr'], $_POST['ort'], $_POST['email'], $_POST['passwort'], $_POST['wpasswort']);
 	$eingabe_ungueltig = ($eingabe_check_result->get_fehlermeldung() != '');
 	
 	//wenn keine Eingabe ungültig war wir mit der Registierung angefangen

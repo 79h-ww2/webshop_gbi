@@ -77,9 +77,11 @@ body {
    padding-top: 60px;
    background-image: url('../Images/Design/account.png');
    background-repeat: no-repeat;
-   background-position: 12px 35px;
+   background-position: center 35px;
    color: black;
    font-size: 14px;
+   text-align: center;
+   width: 120px;
 }
 
 .accountCell:hover{
@@ -257,17 +259,20 @@ img.BildMustermodell{
 */
 
 .mainFooter {
-    width: 100%;
+    width: 1024px;
     height: 40px;
-    float: left;  
+    /*float: left;*/  
     background:linear-gradient(to top right ,#6c7b35 , 	#82a143 , #788A5F );
-    
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
 }
 
-.mainFooter p{
-    color: #fff;
-    text-align: center;
-       
+.mainFooter li, .mainFooter ul{
+	list-style: none;
+	display: inline;
+	padding:10px;
+	color: white;
 }
 
 .mainFooter a{
@@ -417,15 +422,35 @@ label.ort{
 	width: 480px;
 	height: 120px;
 	margin-top: 4px;
-	margin-left:-410px;
+	margin-left:-370px;
 	visibility: hidden;
+	text-align: left;
 }
 
-.haken_sprechblase{
+.popupProfil{
+	position: fixed;
+	width: 220px;
+	height: 120px;
+	margin-top: 4px;
+	margin-left:-110px;
+	visibility: hidden;
+	text-align: text;
+}
+
+.popupProfil .haken_sprechblase{
 	border-left: 15px solid transparent;
 	border-right: 15px solid transparent;
 	border-bottom: 30px solid #545454;
-	margin-left: 425px;
+	margin-left: 155px;
+	width: 0px;
+	height: 0px;
+}
+
+.popupRegistrierung .haken_sprechblase{
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-bottom: 30px solid #545454;
+	margin-left: 415px;
 	width: 0px;
 	height: 0px;
 }
@@ -455,6 +480,10 @@ input[type="text"], input[type="email"], input[type="password"]{
 }
 
 .accountCell:HOVER > .popupRegistrierung{
+	visibility: visible;
+}
+
+.accountCell:HOVER > .popupProfil{
 	visibility: visible;
 }
 
@@ -517,3 +546,18 @@ input[type="text"], input[type="email"], input[type="password"]{
 .fehlermeldung_anmelden{
 	color: #F78181;
 }
+
+/* ##################################### Statusleiste ################################## */
+#status_leiste{
+	background-color: #808080;
+	height: 24px;
+	padding-left: 15px;
+	color: #fff;
+	font-size: 12px;
+	display: table-cell;
+	vertical-align: middle;
+	width: 1009px;
+	border-top-style: solid;
+	border-top-width: 1px;
+}
+

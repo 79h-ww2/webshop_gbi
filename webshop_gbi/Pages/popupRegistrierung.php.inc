@@ -1,7 +1,7 @@
-<?php
+<?php 
+	$eingabe_ungueltig_anmeldung = isset($eingabe_ungueltig_anmeldung) ? $eingabe_ungueltig_anmeldung : false;
 ?>
-
-<div class="popupRegistrierung">
+<div class="popupRegistrierung" id="popupRegistrierung" <?php if($eingabe_ungueltig_anmeldung) echo 'style="visibility: visible;"' ?> >
 	<script type="text/javascript" src="./Funktions/JS/anmeldung.js" >
 	</script>
 	<div class="haken_sprechblase" >
@@ -13,13 +13,21 @@
 					<label for="anmedlung_email" >
 						Email:
 					</label>
-					<input type="text" name="anmedlung_email" /> 
+					<input type="text" name="anmedlung_email" value="<?php if ($eingabe_ungueltig_anmeldung) echo htmlspecialchars($_POST['anmedlung_email'],ENT_QUOTES,'UTF-8'); ?>" <?php if( $eingabe_ungueltig_anmeldung && $eingabe_check_result_anmeldung->get_feldstatus('anmedlung_email') ) echo 'style="border-color:red; border-style: solid"';  ?> /> 
 					<label for="anmedlung_passwort" >
 						Passwort:
 					</label>
-					<input type="password" name="anmedlung_passwort" />
+					<input type="password" name="anmedlung_passwort" value="<?php if ($eingabe_ungueltig_anmeldung) echo htmlspecialchars($_POST['anmedlung_passwort'],ENT_QUOTES,'UTF-8'); ?>" <?php if( $eingabe_ungueltig_anmeldung && $eingabe_check_result_anmeldung->get_feldstatus('anmedlung_passwort') ) echo 'style="border-color:red; border-style: solid"';  ?> />
+					
+					<input type="hidden" name="type" value="anmeldung" />
 					
 					<p class="fehlermeldung_anmelden" id="fehlermeldung_anmelden" >
+						<?php
+		            		//zeigt die Fehlermeldung an, wenn nicht alle Felder richtig ausgefüllt wurden
+		            		if ($eingabe_ungueltig_anmeldung){
+		            			echo htmlspecialchars($eingabe_check_result_anmeldung->get_fehlermeldung(),ENT_QUOTES,'UTF-8');
+		            		} 
+		            	?>
 					</p>
 					
 					<input type="submit" name="anmeldung_submit" value="Login" />

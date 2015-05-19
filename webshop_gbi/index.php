@@ -12,10 +12,13 @@
 
 
 <body class="body">
-	<?php
+	<?php	
 		//zeigt die PHP-Fehlermeldungen an
 		error_reporting(E_ALL);
 		ini_set('display_errors', 1);
+		
+		//Startet eine neue Sitzung
+		session_start();
 		
 		//lädt die Klasse für die Meldungsbox
 		include_once './Classes/meldungsfenster.php.inc';
@@ -28,9 +31,6 @@
 	
 		//lädt die Webseiten-Kontrolldatei
 		include_once './Funktions/PHP/set_control.php.inc';
-		
-		//Startet eine neue Sitzung
-		session_start();
 	?>
 
     <header class="mainHeader">
@@ -49,9 +49,19 @@
             	100 <!-- Anzahl Artikel im Warenkorb -->
             </div>
             
-            <div class="accountCell">
-            	Anmelden
-                <?php include 'Pages/popupRegistrierung.php.inc';?>
+            <div class="accountCell" onclick="if(document.getElementById('popupRegistrierung').style.visibility == 'visible') document.getElementById('popupRegistrierung').style.visibility = '';">
+                <?php
+                	//wenn der Kunde noch nicht angemeldet ist, wird hier das Anmelde-Popup angezeigt
+                	if (!(isset($_SESSION['angemeldet']))){
+                		echo "Anmelden";
+                		include 'Pages/popupRegistrierung.php.inc';
+                	}
+                	//wenn er angemeldet ist bekommt der Kunde ein Popup zur Verwaltung seines Profils angezeigt
+                	else{
+                		echo "Profil verwalten";
+                		include_once 'Pages/popupProfilVerwalten.php.inc';
+                	}
+                ?>
             </div>
             
         </div>
@@ -104,8 +114,7 @@
     		<li><a href="https://www.youtube.com/watch?v=eOG90Q8EfRo">HowTo</a></li>
         </ul>
     </nav>
-    
-    
+    <?php if (isset($_SESSION['angemeldet'])) include_once 'Pages/status_leiste.php.inc'; ?>
     </header>
     
     <div class="mainContent">
@@ -142,8 +151,10 @@
     -->
     
     <footer class="mainFooter">
-        <p>copyright &copy; 2015 Hs-OWL</p>
-        <a href="#">Impressum</a>
+    	<ul>
+        	<li>Copyright &copy; 2015 Hs-OWL</li>
+        	<li><a href="#">Impressum</a></li>
+        </ul>
     </footer>
 </body>
 

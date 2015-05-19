@@ -1,8 +1,9 @@
 <?php
 	include_once './Classes/Ueberpruefresult.php.inc';
 	include_once './Classes/Email.php.inc';
+	include_once './Classes/EingabeCheckGrundlegend.php.inc';
 
-	class Kunden{
+	class Kunden extends EingabeCheckGrundlegend{
 		
 		/**
 		 * überprüft, die Benutzereingabe des Registrierungsfensters 
@@ -17,10 +18,10 @@
 		 * @param string $wpasswort Wiederholdung des Passworts
 		 * @return Ambigous <boolean, Eingabe gültig>
 		 */
-		public function ueberpruefeEingabe ($vorname, $name, $strasse, $plz, $hausnr, $ort, $email, $passwort, $wpasswort){
+		public function ueberpruefeEingabeReg ($vorname, $name, $strasse, $plz, $hausnr, $ort, $email, $passwort, $wpasswort){
 			
 			//Objekt, über das der Funktionsrückgabewert übergeben werden soll
-			$return = new Ueberpruefresult();
+			//$return = new Ueberpruefresult();
 						
 			//Array mit allen Feldern, die ausgefüllt sein müssen
 			$felder = array($vorname, $name, $strasse, $hausnr, $plz, $ort, $email, $passwort, $wpasswort);
@@ -32,70 +33,36 @@
 			//Variable, wo die Fehlermeldung zwischengespeichert wird
 			$fehlermeldung = "";
 			
-			//Array, wo alle nicht ausgefüllten Felder gespeichert werden sollen
-			$nicht_ausgefuellte_felder = array();
+			//überprüft, ob alle Inputfelder ausgefüllt sind und erstellt wenn nicht eine Fehlermeldung
+			$return = $this->erstelle_meldung_nicht_alle_felder_ausgefuellt($feldnamen, $meldungswort, $felder);
+			$fehlermeldung = $return->get_fehlermeldung();
 			
-			//überprüft jedes Feld
-			$z = 0;
-			for($i = 0; $i < count($felder); $i++){
-				//wenn das Feld nicht ausgefüllt ist
-				if ($felder[$i] == ""){
-					//fügt das Feld zur Liste der nicht ausgefüllten Felder hinzu
-					$nicht_ausgefuellte_felder[$z] = $meldungswort[$i];
-					$z++;
-					
-					//schaltet das Feld in den Rückgabeobjekt auf fehlerhaft
-					$return->set_feldstatus($feldnamen[$i], true);
-				}
-				//wenn das Feld richtig ausgefüllt ist
-				else{
-					//schaltet das Feld in den Rückgabeobjekt auf nicht fehlerhaft
-					$return->set_feldstatus($feldnamen[$i], false);
-				}
-			}
-			
-			//wenn nicht jedes Feld ausgefüllt ist, wird eine Fehlermeldung generiert
-			if ( count($nicht_ausgefuellte_felder) > 0 ){
-				if ( count($nicht_ausgefuellte_felder) == 1 ){
-					$fehlermeldung = 'Bitte geben Sie '.$nicht_ausgefuellte_felder[0].' an.';
-				}else{
-					for ($j = 0; $j < count($nicht_ausgefuellte_felder); $j++){
-						if ($j == 0){
-							$fehlermeldung = 'Bitte geben Sie '.$nicht_ausgefuellte_felder[$j];
-						}else if ( $j < (count($nicht_ausgefuellte_felder)-1)){
-							$fehlermeldung .= ', '.$nicht_ausgefuellte_felder[$j];
-						}else{
-							$fehlermeldung .= ' und '.$nicht_ausgefuellte_felder[$j].' an.';
-						}
-					}
-				}
-			}
 			//wenn alle Felder ausgefüllt sind, wird überprüft, ob die Eingaben gültig sind
-			else{
+			if ($fehlermeldung == "") {
 				//überprüft, ob die PLZ gültig ist
 				if ( strlen($plz) != 5 ||  is_numeric($plz) == false ){
 					$fehlermeldung .= ($fehlermeldung == '') ? '' : ' ';
-					$fehlermeldung .= "Die Postleitzahl ist ung&uuml;ltig. Bitte geben Sie eine g&uuml;ltige Postleitzahl ein.";
+					$fehlermeldung .= "Die Postleitzahl ist ungültig. Bitte geben Sie eine gültige Postleitzahl ein.";
 					$return->set_feldstatus('plz', true);
 				}
 				
 				//überprüft, ob die Passwörter übereinstimmen
 				if ( $passwort != $wpasswort ){
-					$fehlermeldung .= $fehlermeldung == '' ? '' : ' ';
-					$fehlermeldung += "Die Passw&ouml;rter stimmen nicht überein.";
+					$fehlermeldung .= ($fehlermeldung == '') ? '' : ' ';
+					$fehlermeldung += "Die Passwörter stimmen nicht überein.";
 					$return->set_feldstatus('wpasswort', true);
 					$return->set_feldstatus('passwort', true);
 				}
 				
 				//überprüft, die Email-Adresse
 				if (filter_var($email, FILTER_VALIDATE_EMAIL) == false){
-					$fehlermeldung .= $fehlermeldung == '' ? '' : ' ';
-					$fehlermeldung .= "Die Email-Adresse ist ung&uuml;ltig.";
+					$fehlermeldung .= ($fehlermeldung == '') ? '' : ' ';
+					$fehlermeldung .= "Die Email-Adresse ist ungültig.";
 					$return->set_feldstatus('email', true);
 				}
 				//überprüft, ob die Email-Adresse nicht schon im System gespeichert ist
 				elseif ($this->email_in_db_vorhanden($email)){
-					$fehlermeldung .= $fehlermeldung == '' ? '' : ' ';
+					$fehlermeldung .= ($fehlermeldung == '') ? '' : ' ';
 					$fehlermeldung .= "Die Email-Adresse wird schon von einer anderen Person verwendet.";
 					$return->set_feldstatus('email', true);
 				}
@@ -393,6 +360,76 @@
 			$db->db_close();
 			
 			return $email;
+		}
+		
+		/**
+		 * Überprüft die eingegebenen Daten, die in das Anmeldeformular eingegeben wurden
+		 * @param unknown $email Eingabe: Email-Adresse
+		 * @param unknown $passwort Eingabe: Passwort
+		 * @return Ambigous <string, Ueberpruefresult>
+		 */
+		public function ueberpruefeEingabeAnmeldung ($email, $passwort){
+			//Array mit allen Feldern, die ausgefüllt sein müssen
+			$felder = array($email, $passwort);
+			$feldnamen = array('anmedlung_email', 'anmedlung_passwort');
+				
+			//Array mit Meldungswörtern, die in der Fehlermeldung angezeigt werden sollen
+			$meldungswort = array('ihre Email-Adresse', 'ein Passwort');
+			
+			$fehlermeldung = "";
+			
+			//überprüft, ob alle Inputfelder ausgefüllt sind und erstellt wenn nicht eine Fehlermeldung
+			$return = $this->erstelle_meldung_nicht_alle_felder_ausgefuellt($feldnamen, $meldungswort, $felder);
+			$fehlermeldung = $return->get_fehlermeldung();
+			
+			//überprüft, ob die Email-Adresse gültig ist
+			if ($fehlermeldung == "" && filter_var($email, FILTER_VALIDATE_EMAIL) == false){
+				$fehlermeldung .= ($fehlermeldung == '') ? '' : ' ';
+				$fehlermeldung .= "Die Email-Adresse ist ungültig.";
+				$return->set_feldstatus('anmedlung_email', true);
+			}
+			$return->set_fehlermeldung($fehlermeldung);
+			
+			//überprüft, ob die Login-Daten richtig sind (solange vorher nicht schon ein Fehler aufgetreten ist)
+			
+			if ($fehlermeldung == ""){
+				//Verbindung zur Datenbank aufbauen
+				$db = datenbank_verbindung_aufbauen();
+				if ( !($db->db_connect()) ) die ("Es konnte keine Verbindung zur Datenbank aufgebaut werden");
+				
+				$email = $db->db_real_escape_string($email);
+				$passwort_hash = md5($passwort);
+				
+				$query = "
+					select 
+						count(*) 
+					from 
+						kunde 
+					where 
+							Email = '$email'
+						and
+							Passwort = '$passwort_hash'
+					;";
+				
+				$result = $db->db_query($query);
+				
+				$wert = 0;
+				while ($werte = $db->db_fetch_array($result) ){
+					$wert = $werte[0];
+				}
+				
+				//Datenbankverbindung schließen
+				$db->db_close();
+				
+				//wenn kein Eintrag zu den Login-Daten in der Datenbank gefunden wurde wird eine Fehlermeldung erstellt
+				if ($wert < 1){
+					$return->set_feldstatus('anmedlung_email', true);
+					$return->set_feldstatus('anmedlung_passwort', true);
+					$return->set_fehlermeldung("Die Anmeldung ist fehlgeschlagen. Bitte überprüfen Sie nochmal ihre Anmeldedaten.");
+				}
+			}
+			
+			return $return; 
 		}
 	};
 ?>
