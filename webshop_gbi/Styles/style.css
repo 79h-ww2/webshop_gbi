@@ -18,8 +18,8 @@ body {
 }
 
 .mainContent a:hover, .nav a:hover, .mainContent  a:active, .nav  a:active {
-    background-color: #d56509;
-    color: #fff;    
+    /*background-color: #d56509;*/
+    /*color: #fff;*/    
 }
 
 .body {

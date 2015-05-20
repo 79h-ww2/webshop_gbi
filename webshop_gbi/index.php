@@ -58,7 +58,7 @@
                 	}
                 	//wenn er angemeldet ist bekommt der Kunde ein Popup zur Verwaltung seines Profils angezeigt
                 	else{
-                		echo "Profil";
+                		echo "Mein Konto";
                 		include_once 'Pages/popupProfilVerwalten.php.inc';
                 	}
                 ?>
