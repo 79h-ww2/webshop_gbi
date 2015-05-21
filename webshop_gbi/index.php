@@ -42,7 +42,7 @@
             </div>
             
             <div class="searchCell">
-            
+            	<?php include_once 'Pages/suche_header.php.inc'; ?>
             </div>
             
             <div class="warenkorbCell">

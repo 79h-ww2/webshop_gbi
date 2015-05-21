@@ -48,13 +48,14 @@ body {
 .logoCell{
    display: table-cell; 
    vertical-align: middle;
-   width: 100px;
+   /*width: 240px;*/
 }
 
 .searchCell{
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: top;
     width: 600px; 
+    text-align: left;
 }
 
 .warenkorbCell{
@@ -593,3 +594,48 @@ input[type="text"], input[type="email"], input[type="password"]{
 	color: green;
 }
 
+/* ######################################### Suche ########################################## */
+#link_zur_erweiterten_suche{
+	display: block;
+	padding-top: 5px;
+	text-align: left;
+	color: #000;
+	text-align: center;
+}
+
+#link_zur_erweiterten_suche:hover{
+	color: #FFBF00;
+}
+
+#feld_suche_normal{
+	margin-top: 32px;
+	width: 350px;
+	padding: 4px;
+}
+
+#suchbutton_normal{
+	padding: 3px;
+	margin-left: -1px;
+}
+
+#form_suche_normal_autovervollstaendigung_box{
+	background-color: #fff;
+	height: 100px;
+	position: absolute;
+	width: 358px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	
+	display: none;
+}
+
+#form_suche_normal_autovervollstaendigung_platzhalter{
+	width: 405px;
+	margin: 0px auto;
+}
+
+#form_suche_normal{
+	display: block;
+	width: 405px;
+	margin: 0px auto;
+}
