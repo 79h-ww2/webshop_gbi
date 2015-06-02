@@ -27,7 +27,8 @@
 			//Generierung der Suchabfrage
 			$query = "
 					select 
-						distinct p.Bezeichnung
+						distinct p.Bezeichnung,
+						b.Bezeichnung
 					from
 						produkte p 
 							inner join bauart b on (b.BId = p.bauart)
@@ -44,8 +45,6 @@
 				
 				$teilbedingung .= "
 					(
-								p.Beschreibung like '%".$arr_suchwoerter[$i]."%'
-							or
 								b.Bezeichnung like '%".$arr_suchwoerter[$i]."%'
 							or
 								pk.Bezeichnung like '%".$arr_suchwoerter[$i]."%'
@@ -65,7 +64,9 @@
 			$j = 0;
 			
 			while($zeile = $db->db_fetch_array($result)){
-				$werte[$j] = $zeile[0];
+				$werte[$j] = "";
+				$werte[$j] .= $zeile[1];
+				$werte[$j] .= ($werte[$j] == "") ? $zeile[0] : " ".$zeile[0];
 				$j++;
 			}
 			
