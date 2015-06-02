@@ -12,7 +12,7 @@ body {
     text-decoration: none;
 }
 
-.mainContent a:link, .nav a:link, .mainContent a:visited, .nav a:visited {
+.mainContent a:link, .nav a:link, .mainContent a:visited, .nav a:visited, h2 {
     color: #d56509; 
     
 }

@@ -5,6 +5,9 @@
             case 'reg':
                 include "./Pages/registrierung.php.inc";
             break;
+            case 'such_erg':
+            	include "./Pages/suchergebnis.php.inc";
+            break;
         }
     }
     else{

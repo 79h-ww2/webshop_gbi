@@ -1,6 +1,6 @@
 <article class="topContent">
     <header>
-        <h2><a href="#" title="First Post">Fahrrad des Tages</a> </h2>
+        <h2>Fahrrad des Tages</h2>
     </header>
     
     <footer>
@@ -31,7 +31,7 @@
 
 <article class="bottomContent">
     <header>
-        <h2><a href="#" title="First Post">Meist angesehene Artikel</a> </h2>
+        <h2>Meist angesehene Artikel</h2>
     </header>
     
     <footer>
