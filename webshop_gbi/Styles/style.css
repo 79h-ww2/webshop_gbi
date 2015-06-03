@@ -30,7 +30,7 @@ body {
 
 .mainHeader {
     background:linear-gradient(to bottom right ,#6c7b35 , 	#82a143 , #788A5F );
-    position: fixed;
+    position: absolute;
     width: 1024px;
     top: 0px;
 }
@@ -421,7 +421,7 @@ label.ort{
 }
 
 .popupRegistrierung{
-	position: fixed;
+	position: absolute;
 	width: 480px;
 	height: 120px;
 	margin-top: 4px;
@@ -430,8 +430,25 @@ label.ort{
 	text-align: left;
 }
 
+.popupBewertungProduktauflistung{
+	position: absolute;
+	width: 180px;
+	margin-left: -30px;
+	visibility: hidden;
+	cursor: default;
+}
+
+.popupBewertungProduktauflistung .haken_sprechblase{
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 10px solid #545454;
+	margin-left: 85px;
+	width: 0px;
+	height: 0px;
+}
+
 .popupProfil{
-	position: fixed;
+	position: absolute;
 	width: 156px;
 	height: 120px;
 	margin-top: 4px;
@@ -462,6 +479,20 @@ label.ort{
 	height: 0px;
 }
 
+.popupBewertungProduktauflistungSterneGesamt{
+	text-align: center;
+	border-bottom: solid 1px;
+}
+
+.contentPopupBewertungProduktauflistung .ZeileSterne{
+	margin-top: 5px;
+}
+
+.contentPopupBewertungProduktauflistung .ZeileSterne .beschriftung{
+	display: inline-block;
+	width: 65px;
+}
+
 .contentPopupRegistrierung{
 	/*background: transparent linear-gradient(to bottom, #fff 1%, #585858) repeat scroll 0% 0%;*/
 	background-color: #545454;
@@ -469,7 +500,7 @@ label.ort{
 	color: white;
 }
 
-.contentPopupProfil{
+.contentPopupProfil, .contentPopupBewertungProduktauflistung{
 	background-color: #545454;
 	padding: 5px;
 	color: white;
@@ -657,7 +688,7 @@ input[type="text"], input[type="email"], input[type="password"]{
 .auflistung_produkte{
 	margin-left: 15px;
 	width: 944px;
-	padding: 10px
+	padding: 10px;
 }
 
 .listeneintrag_auflistung_produkte{
@@ -665,11 +696,16 @@ input[type="text"], input[type="email"], input[type="password"]{
 	border-bottom-style: solid;
 	border-bottom-color: #848484;
 	border-bottom-width: 1px;
+	margin-top: 15px;
 }
 
 .listeneintrag_auflistung_produkte_content{
 	display: table;
 	width: 944px;
+}
+
+.listeneintrag_auflistung_produkte_content:hover{
+	background-color: #E6E6E6;
 }
 
 .listeneintrag_auflistung_produkte_bild{
@@ -716,4 +752,23 @@ input[type="text"], input[type="email"], input[type="password"]{
 	font-size: 15px;
 	color: #6E6E6E;
 	text-decoration: line-through;
+}
+
+.listeneintrag_bewertung{
+	float: right;
+	font-size: 15px;
+	color: #6E6E6E;
+	width: 265px;
+	cursor: pointer;
+}
+
+.listeneintrag_bewertung:hover > .popupBewertungProduktauflistung{
+	visibility: visible;
+}
+
+.box_seitennavigation_ergebnis_seiten{
+	border: solid;
+	width: 400px;
+	margin: 0px auto;
+	display: table;
 }
