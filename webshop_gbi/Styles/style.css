@@ -651,3 +651,69 @@ input[type="text"], input[type="email"], input[type="password"]{
 	background: linear-gradient(to  bottom, #d56509  , orange 15%, #d56509); 
     text-shadow: none; 
 }
+
+/* ################ Produkteauflistung ################ */
+
+.auflistung_produkte{
+	margin-left: 15px;
+	width: 944px;
+	padding: 10px
+}
+
+.listeneintrag_auflistung_produkte{
+	padding: 5px;
+	border-bottom-style: solid;
+	border-bottom-color: #848484;
+	border-bottom-width: 1px;
+}
+
+.listeneintrag_auflistung_produkte_content{
+	display: table;
+	width: 944px;
+}
+
+.listeneintrag_auflistung_produkte_bild{
+	display: table-cell;
+	width: 160px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #848484;
+	padding: 5px;
+}
+
+.listeneintrag_auflistung_produkte_beschriftung{
+	display: table-cell;
+	padding-left: 20px;
+	vertical-align: top;
+}
+
+.listeneintrag_auflistung_produkte_beschriftungstext{
+	text-align: left;
+	color: #000;
+	font-size: 18px;
+	display: inline-block;
+}
+
+.menge_exemplare_gruen{
+	color: green;
+}
+
+.listeneintrag_auflistung_kategorie{
+	font-size: 14px;
+	color: #6E6E6E;
+}
+
+.listeneintrag_auflistung_preis{
+	font-weight: bold;
+	color: red;
+	font-size: 17px;
+}
+
+
+.listeneintrag_auflistung_preis_alt{
+	padding-left: 5px;
+	font-weight: normal;
+	font-size: 15px;
+	color: #6E6E6E;
+	text-decoration: line-through;
+}
