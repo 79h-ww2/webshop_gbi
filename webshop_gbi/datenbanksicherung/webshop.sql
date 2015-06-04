@@ -1,4 +1,4 @@
-﻿-- MySQL dump 10.13  Distrib 5.5.43, for debian-linux-gnu (x86_64)
+-- MySQL dump 10.13  Distrib 5.5.43, for debian-linux-gnu (x86_64)
 --
 -- Host: localhost    Database: webshop
 -- ------------------------------------------------------
@@ -83,15 +83,16 @@ DROP TABLE IF EXISTS `kommentare`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `kommentare` (
-  `KId` int(11) NOT NULL,
+  `KId` int(11) NOT NULL AUTO_INCREMENT,
   `Text` text,
   `Ueberschrift` varchar(50) DEFAULT NULL,
   `PId` int(11) DEFAULT NULL,
   `geloescht` enum('ja','nein') DEFAULT NULL,
+  `bewertung` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`KId`),
   KEY `PId` (`PId`),
   CONSTRAINT `kommentare_ibfk_1` FOREIGN KEY (`PId`) REFERENCES `produkte` (`PId`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -100,6 +101,7 @@ CREATE TABLE `kommentare` (
 
 LOCK TABLES `kommentare` WRITE;
 /*!40000 ALTER TABLE `kommentare` DISABLE KEYS */;
+INSERT INTO `kommentare` VALUES (1,'Tolles Fahrrad und pünklich geliefert, aber nicht das Fahrrad, was ich bestellt habe. Das angekommende Fahrrad ist wesentlich besser als das, was ich  bestellt habe und wäre normalerweise teuer gewesen. Wegen der falschen Lieferung nur 4 Sterne.','Tolles Fahrrad, aber nicht meine Bestellung',1,'nein',4);
 /*!40000 ALTER TABLE `kommentare` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -126,6 +128,7 @@ CREATE TABLE `kunde` (
   `geloescht` enum('ja','nein') DEFAULT NULL,
   `aktiviert` enum('ja','nein') DEFAULT NULL,
   `SAP_KId` int(11) DEFAULT NULL,
+  `status` enum('a','l') DEFAULT NULL,
   PRIMARY KEY (`KId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -136,6 +139,7 @@ CREATE TABLE `kunde` (
 
 LOCK TABLES `kunde` WRITE;
 /*!40000 ALTER TABLE `kunde` DISABLE KEYS */;
+INSERT INTO `kunde` VALUES (1,'test','37688','Musterstadt','benedikt@kunde.de',NULL,'test','test','2015-05-22 14:39:17','','202cb962ac59075b964b07152d234b70',NULL,'nein','ja',NULL,NULL),(2,'Benedikt','32839','Steinheim','benedikt@webshop-testmail.de',NULL,'Papiermühlenweg','Brüntrup','2015-06-04 12:05:00','','161ebd7d45089b3446ee4e0d86dbcf92',NULL,'nein','ja',NULL,NULL);
 /*!40000 ALTER TABLE `kunde` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -147,7 +151,7 @@ DROP TABLE IF EXISTS `produktbilder`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `produktbilder` (
-  `BId` int(11) NOT NULL,
+  `BId` int(11) NOT NULL AUTO_INCREMENT,
   `Art` varchar(25) DEFAULT NULL,
   `Pfad` text,
   `PId` int(11) DEFAULT NULL,
@@ -155,7 +159,7 @@ CREATE TABLE `produktbilder` (
   PRIMARY KEY (`BId`),
   KEY `PId` (`PId`),
   CONSTRAINT `produktbilder_ibfk_1` FOREIGN KEY (`PId`) REFERENCES `produkte` (`PId`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -164,6 +168,7 @@ CREATE TABLE `produktbilder` (
 
 LOCK TABLES `produktbilder` WRITE;
 /*!40000 ALTER TABLE `produktbilder` DISABLE KEYS */;
+INSERT INTO `produktbilder` VALUES (1,'Liste','./Images/Produktbilder/1/liste.jpg',1,'nein');
 /*!40000 ALTER TABLE `produktbilder` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -184,15 +189,15 @@ CREATE TABLE `produkte` (
   `Farbe` varchar(20) DEFAULT NULL,
   `Bezeichnung` varchar(50) DEFAULT NULL,
   `Verfuegbare Menge` int(11) DEFAULT NULL,
-  `Bewertung` int(1) DEFAULT NULL,
   `Menge Besuche` int(11) DEFAULT NULL,
   `geloescht` enum('ja','nein') DEFAULT NULL,
   `produktkategorie` int(11) DEFAULT NULL,
+  `preis_alt` float(5,2) DEFAULT NULL,
   PRIMARY KEY (`PId`),
   KEY `bauart` (`bauart`),
   KEY `produktkategorie` (`produktkategorie`),
-  CONSTRAINT `produkte_ibfk_2` FOREIGN KEY (`produktkategorie`) REFERENCES `produktkategorie` (`PTId`),
-  CONSTRAINT `produkte_ibfk_1` FOREIGN KEY (`bauart`) REFERENCES `bauart` (`BId`)
+  CONSTRAINT `produkte_ibfk_1` FOREIGN KEY (`bauart`) REFERENCES `bauart` (`BId`),
+  CONSTRAINT `produkte_ibfk_2` FOREIGN KEY (`produktkategorie`) REFERENCES `produktkategorie` (`PTId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -202,6 +207,7 @@ CREATE TABLE `produkte` (
 
 LOCK TABLES `produkte` WRITE;
 /*!40000 ALTER TABLE `produkte` DISABLE KEYS */;
+INSERT INTO `produkte` VALUES (1,NULL,'Das smarte Rockaway ist ein Freizeitbike, das überall zu Hause ist - von Alltagsstrecken in der Stadt bis auf Ausflugstouren übers Land. Ob auf Feld- und Waldwegen, auf Schotterstraßen oder asphaltierten Radwegen, das Rockaway bringt seinen Fahrer zuverlässig und flott ans Ziel. Auf kleinen Anstiegen findet sich mit der zuverlässigen Shimano Altus 21 Gang Schaltung schnell die passende Übersetzung. In Kombination mit Shimano Umwerfer und Shimano Zahnkranz sorgt dieser Antrieb für nachhaltigen Fahrspaß.\r\n\r\nDie Shimano Schalt- Bremshebelkombination bietet dabei gerade Einsteigern vor allem Komfort und Sicherheit. Die Federgabel von Suntour schluckt kleine Unebenheiten mühelos weg und macht zusammen mit den griffigen Reifen selbst holprige Pisten zum Vergnügen. Dank des komfortablen Sportsattels und der gemäßigt sportlichen Sitzposition, die Rahmengeometrie, Vorbau und Riserlenker vorgeben steigt der Rockawayfahrer auch nach längeren Ausflügen noch entspannt vom Rad. Stabile Laufräder mit Hohlkammerfelgen, ein wartungsfreies Patronen Innenlager und gut greifende V-Brakes runden das Bild ab. Mit dem Rockaway steht für einen wirklich günstigen Preis nicht nur ein guter Rahmen mit einer ausgewogenen Ausstattung zur Verfügung, sondern der Fahrspaß ist bereits schon all inklusive.',14,279.99,NULL,'blau','Serious Rockaway 26\"',2,NULL,'nein',1,NULL);
 /*!40000 ALTER TABLE `produkte` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -238,4 +244,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-05-21 20:50:53
+-- Dump completed on 2015-06-05  1:22:50
