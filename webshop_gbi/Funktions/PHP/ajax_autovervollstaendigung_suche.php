@@ -4,6 +4,7 @@
 		
 		//Suchobjekt instanzieren
 		include_once '../../Classes/datenbank.php.inc';
+		include_once '../../Classes/artikel.php.inc';
 		include_once '../../Classes/suche.php.inc';
 		$suche = new Suche();
 		

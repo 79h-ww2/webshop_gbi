@@ -8,6 +8,8 @@
             case 'such_erg':
             	include "./Pages/suchergebnis.php.inc";
             break;
+            default:
+            	echo "<h2>Gewünschte Seite wurde nicht gefunden.</h2>";
         }
     }
     else{

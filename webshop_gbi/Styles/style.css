@@ -13,13 +13,12 @@ body {
 }
 
 .mainContent a:link, .nav a:link, .mainContent a:visited, .nav a:visited, h2 {
-    color: #d56509; 
+    color: #d56509;
     
 }
 
 .mainContent a:hover, .nav a:hover, .mainContent  a:active, .nav  a:active {
-    /*background-color: #d56509;*/
-    /*color: #fff;*/    
+    color: red;   
 }
 
 .body {
@@ -278,10 +277,14 @@ img.BildMustermodell{
 	color: white;
 }
 
-.mainFooter a{
+.mainFooter a:link, .mainFooter a:VISITED{
 	color: #fff;
     text-align: right;
        
+}
+
+.mainFooter a:hover{
+	color: red;       
 }
 
 /* ############################################## Registierung ############################################## */
@@ -734,6 +737,10 @@ input[type="text"], input[type="email"], input[type="password"]{
 	color: green;
 }
 
+.menge_exemplare_rot{
+	color: red;
+}
+
 .listeneintrag_auflistung_kategorie{
 	font-size: 14px;
 	color: #6E6E6E;
@@ -767,8 +774,69 @@ input[type="text"], input[type="email"], input[type="password"]{
 }
 
 .box_seitennavigation_ergebnis_seiten{
-	border: solid;
 	width: 400px;
 	margin: 0px auto;
 	display: table;
+}
+
+.seite_vor_zurueck_link{
+	width: 90px;
+	padding: 0px;
+	padding-top: 30px;
+	background-repeat: no-repeat;
+	font-size: 12px;
+	text-align: center;
+	display: table-cell;
+	background-position: center 0px;
+}
+
+#seite_zurueck_grau{
+	background-image: url("../Images/Design/fahrrad_zurueck_grau.png");
+	color: grey;
+	cursor: default;
+}
+
+#seite_weiter_grau{
+	background-image: url("../Images/Design/fahrrad_weiter_grau.png");
+	color: grey;
+	cursor: default;
+}
+
+#seite_weiter{
+	background-image: url("../Images/Design/fahrrad_weiter.png");
+	display: table-cell;
+	color:#788A5F;
+}
+
+#seite_weiter:hover{
+	color:#D56509;
+	background-image: url("../Images/Design/fahrrad_weiter_hover.png");
+}
+
+#seite_zurueck{
+	background-image: url("../Images/Design/fahrrad_zurueck.png");
+	display: table-cell;
+	color:#B40404;
+}
+
+#seite_zurueck:hover{
+	color:#D56509;
+	background-image: url("../Images/Design/fahrrad_zurueck_hover.png");
+}
+
+.seiten_nummern{
+	vertical-align: top;
+	text-align: center;
+	display: table-cell;
+	font-size: 18px;
+}
+
+.seiten_nummern a{
+	color: #000;
+}
+
+#akutelleSeite{
+	color: black;
+	font-weight: bold;
+	font-style: italic;
 }

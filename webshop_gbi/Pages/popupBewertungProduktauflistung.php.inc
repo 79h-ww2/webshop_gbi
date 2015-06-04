@@ -1,5 +1,5 @@
 <?php
-	$durchschnittsterne = round(($sterne1*1 + $sterne2*2 + $sterne3*3 + $sterne4*4 + $sterne5*5) /($sterne1 + $sterne2 + $sterne3 + $sterne4 + $sterne5) ,1);
+	$durchschnittsterne = round(($arr_sterne[0]*1 + $arr_sterne[1]*2 + $arr_sterne[2]*3 + $arr_sterne[3]*4 + $arr_sterne[4]*5) /($arr_sterne[0]+ $arr_sterne[1] + $arr_sterne[2] + $arr_sterne[3] + $arr_sterne[4]) ,1);
 ?>
 <div class="popupBewertungProduktauflistung" >
 	<div class="haken_sprechblase" >
