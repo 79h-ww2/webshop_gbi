@@ -50,7 +50,7 @@
 		            
 		            <p class="reg_form_zeile" >
 		                <label for="email">Email:</label>
-		                <input type="email" name="email" maxlength="50"  value="<?php if ($eingabe_ungueltig) echo htmlspecialchars($_POST['email'],ENT_QUOTES,'UTF-8'); ?>" class="lang_reg" <?php if( $eingabe_ungueltig && $eingabe_check_result->get_feldstatus('email') ) echo 'style="border-color:red; border-style: solid"';  ?> />
+		                <input type="text" name="email" maxlength="50"  value="<?php if ($eingabe_ungueltig) echo htmlspecialchars($_POST['email'],ENT_QUOTES,'UTF-8'); ?>" class="lang_reg" <?php if( $eingabe_ungueltig && $eingabe_check_result->get_feldstatus('email') ) echo 'style="border-color:red; border-style: solid"';  ?> />
 		            </p>
 		            
 		            <p class="reg_form_zeile" >

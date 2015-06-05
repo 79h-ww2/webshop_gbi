@@ -1,4 +1,5 @@
 <div class="Datenschutz">
+	<h1>Datenschutz</h1>
 	<p>
 	Wir wissen, dass Ihnen der sorgfältige Umgang mit Ihren persönlichen Informationen wichtig ist.  <br>
 	Deshalb schätzen wir Ihr Vertrauen, dass GBI gewissenhaft mit diesen Informationen umgeht. Mit <br>

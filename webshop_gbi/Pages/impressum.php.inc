@@ -1,4 +1,5 @@
 <div class="Impressum">
+	<h1>Impressum</h1>
 	<p>
 	GBI GmbH <br>
 	An der Wilhemshöhe 44  <br>

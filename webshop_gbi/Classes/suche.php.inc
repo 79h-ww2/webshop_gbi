@@ -108,105 +108,110 @@
 		 */
 		public function nomale_suche_mit_ergebnisauflistung ( $suchwort, $seite ){
 			
-			//Verbindung zur Datenbank aufbauen
-			$db = datenbank_verbindung_aufbauen();
-			if ( !($db->db_connect()) ) die ("Es konnte keine Verbindung zur Datenbank aufgebaut werden");
-				
-			//Sonderzeichen aus den Suchbegriff entfernen
-			$suchwort = $db->db_real_escape_string($suchwort);
-				
-			//Suchwort in einzelne wörter aufteilen
-			$arr_suchwoerter = explode(" ", $suchwort);
-			
-			$seite -= 1; 
-				
-			//Generierung der Suchabfrage
-			$query = "
-					select
-						distinct p.Bezeichnung bezeichnung,
-						b.Bezeichnung kategorie,
-						`Verfuegbare Menge` exemplare,
-						Preis preis,
-						preis_alt,
-						sterne1,
-						sterne2,
-						sterne3,
-						sterne4,
-						sterne5,
-						p.PId,
-						pb.Pfad bild
-					from
-						produkte p
-							left join bauart b on (b.BId = p.bauart)
-							left join produktkategorie pk on (pk.PTId = p.produktkategorie)
-							left join ( select count(*) sterne1, PId from kommentare where bewertung = '1' and geloescht = 'nein' group by PId ) s1 using (PId)
-							left join ( select count(*) sterne2, PId from kommentare where bewertung = '2' and geloescht = 'nein' group by PId ) s2 using (PId)
-							left join ( select count(*) sterne3, PId from kommentare where bewertung = '3' and geloescht = 'nein' group by PId ) s3 using (PId)
-							left join ( select count(*) sterne4, PId from kommentare where bewertung = '4' and geloescht = 'nein' group by PId ) s4 using (PId)
-							left join ( select count(*) sterne5, PId from kommentare where bewertung = '5' and geloescht = 'nein' group by PId ) s5 using (PId)
-							left join produktbilder pb using (PId)
-					where
-						pb.Art = 'Liste'
-			
-			";
-			$teilbedingung = "";
-			$teilbedingung_ = "";
-			if ( count($arr_suchwoerter) > 0) $teilbedingung_ .= " and ";
-				
-				
-			for ($i = 0; $i < count($arr_suchwoerter); $i++){
-			
-				if ($i > 0) $teilbedingung .=" and ";
-			
-				$teilbedingung .= "
-					(
-								b.Bezeichnung like '%".$arr_suchwoerter[$i]."%'
-							or
-								pk.Bezeichnung like '%".$arr_suchwoerter[$i]."%'
-							or
-								p.Bezeichnung like '%".$arr_suchwoerter[$i]."%'
-					)
-				";
-			}
-				
-			$query .= $teilbedingung_.$teilbedingung." order by p.Beschreibung asc";
-
-			$query_mit_seitennr = $query." limit $seite, 10;";
-			
-			//die Suchabfrage durchführen
-			$result = $db->db_query($query_mit_seitennr);
-				
-			//die Rückgabewerte entgegennehmen
 			$werte = array();
-			$j = 0;
-				
-			while($zeile = $db->db_fetch_object($result)){
-				$werte[$j] = $zeile;
-				$j++;
-			}
-			
-			//Bestimmen, wie viele Seiten zum Suchbegriff gefunden werden
-			$query = "
-					select
-						count(distinct p.Bezeichnung)
-					from
-						produkte p
-							left join bauart b on (b.BId = p.bauart)
-							left join produktkategorie pk on (pk.PTId = p.produktkategorie)
-					where		
-			".$teilbedingung;
-			
-			
-			$result = $db->db_query($query);
+			$seite -= 1;
 			$menge_seiten = 0;
-			while ($werte_ = $db->db_fetch_array($result)){
-				$menge_seiten = $werte_[0];
-			}
-
-			$menge_seiten = ceil($menge_seiten/10); //Bestimmt wie viele Seiten benötigt werden, wenn jede Seite nur 10 Einträge enthält
 			
-			//Datenbankverbindung schließen
-			$db->db_close();
+			//wenn ein Suchwort eingegeben wurde
+			if ( $suchwort != ""){
+				//Verbindung zur Datenbank aufbauen
+				$db = datenbank_verbindung_aufbauen();
+				if ( !($db->db_connect()) ) die ("Es konnte keine Verbindung zur Datenbank aufgebaut werden");
+					
+				//Sonderzeichen aus den Suchbegriff entfernen
+				$suchwort = $db->db_real_escape_string($suchwort);
+					
+				//Suchwort in einzelne wörter aufteilen
+				$arr_suchwoerter = explode(" ", $suchwort);
+				
+					
+				//Generierung der Suchabfrage
+				$query = "
+						select
+							distinct p.Bezeichnung bezeichnung,
+							b.Bezeichnung kategorie,
+							`Verfuegbare Menge` exemplare,
+							Preis preis,
+							preis_alt,
+							sterne1,
+							sterne2,
+							sterne3,
+							sterne4,
+							sterne5,
+							p.PId,
+							pb.Pfad bild
+						from
+							produkte p
+								left join bauart b on (b.BId = p.bauart)
+								left join produktkategorie pk on (pk.PTId = p.produktkategorie)
+								left join ( select count(*) sterne1, PId from kommentare where bewertung = '1' and geloescht = 'nein' group by PId ) s1 using (PId)
+								left join ( select count(*) sterne2, PId from kommentare where bewertung = '2' and geloescht = 'nein' group by PId ) s2 using (PId)
+								left join ( select count(*) sterne3, PId from kommentare where bewertung = '3' and geloescht = 'nein' group by PId ) s3 using (PId)
+								left join ( select count(*) sterne4, PId from kommentare where bewertung = '4' and geloescht = 'nein' group by PId ) s4 using (PId)
+								left join ( select count(*) sterne5, PId from kommentare where bewertung = '5' and geloescht = 'nein' group by PId ) s5 using (PId)
+								left join produktbilder pb using (PId)
+						where
+							pb.Art = 'Liste'
+				
+				";
+				$teilbedingung = "";
+				$teilbedingung_ = "";
+				if ( count($arr_suchwoerter) > 0) $teilbedingung_ .= " and ";
+					
+					
+				for ($i = 0; $i < count($arr_suchwoerter); $i++){
+				
+					if ($i > 0) $teilbedingung .=" and ";
+				
+					$teilbedingung .= "
+						(
+									b.Bezeichnung like '%".$arr_suchwoerter[$i]."%'
+								or
+									pk.Bezeichnung like '%".$arr_suchwoerter[$i]."%'
+								or
+									p.Bezeichnung like '%".$arr_suchwoerter[$i]."%'
+						)
+					";
+				}
+					
+				$query .= $teilbedingung_.$teilbedingung." order by p.Beschreibung asc";
+		
+				$query_mit_seitennr = $query." limit $seite, 10;";
+				
+				//die Suchabfrage durchführen
+				$result = $db->db_query($query_mit_seitennr);
+					
+				//die Rückgabewerte entgegennehmen
+				$werte = array();
+				$j = 0;
+					
+				while($zeile = $db->db_fetch_object($result)){
+					$werte[$j] = $zeile;
+					$j++;
+				}
+				
+				//Bestimmen, wie viele Seiten zum Suchbegriff gefunden werden
+				$query = "
+						select
+							count(distinct p.Bezeichnung)
+						from
+							produkte p
+								left join bauart b on (b.BId = p.bauart)
+								left join produktkategorie pk on (pk.PTId = p.produktkategorie)
+						where		
+				".$teilbedingung;
+				
+				
+				$result = $db->db_query($query);
+				while ($werte_ = $db->db_fetch_array($result)){
+					$menge_seiten = $werte_[0];
+				}
+		
+				$menge_seiten = ceil($menge_seiten/10); //Bestimmt wie viele Seiten benötigt werden, wenn jede Seite nur 10 Einträge enthält
+				
+				//Datenbankverbindung schließen
+				$db->db_close();
+			}
 			
 			//Ergebnis auf der Webseite ausgeben
 			$this->erstelle_auflistung_aus_datenbank_reslut_array($werte, ($seite +1), $menge_seiten);
