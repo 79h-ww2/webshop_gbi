@@ -154,7 +154,10 @@
     <footer class="mainFooter">
     	<ul>
         	<li>Copyright &copy; 2015 Hs-OWL</li>
-        	<li><a href="#">Impressum</a></li>
+        	<li><a href="./?page=impressum">Impressum</a></li>
+        	<li><a href="./?page=agb">AGB</a></li>
+        	<li><a href="./?page=datenschutz">Datenschutz</a></li>
+        </ul>
         </ul>
     </footer>
 </body>
