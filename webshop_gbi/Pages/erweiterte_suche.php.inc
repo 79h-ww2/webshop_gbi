@@ -1,3 +1,7 @@
+    <?php
+    	include_once 'Classes/artikel.php.inc';
+    	include_once 'Classes/navigation.php.inc';
+    ?>
     <form method="post" action="#" onsubmit="return vorcheckEingabe();" id="suche_erweitert" name="form_suche_erweitert" >
         <h2>
 		     Erweiterte Suche
@@ -15,8 +19,43 @@
 		            </p>
 		            
 		            <p class="reg_form_zeile" >
-		                <label for="produktbezeichnung">Preispanne:</label>
-		                <input type="text" name="produktbezeichnung"  value="" class="lang_reg" />
+		                <label >Preispanne:</label>
+		                <label for="preis_von" class="label_preisspanne" >von:</label>
+		                <input type="text" name="preis_von" value="" class="bereich_preis" /> &euro;
+		                <label for="preis_bis" class="label_preisspanne kleiner_abstand_vertikal" >bis:</label>
+		                <input type="text" name="preis_bis" value="" class="bereich_preis" /> &euro;
+		            </p>
+		            
+		            <p class="reg_form_zeile" >
+		                <label for="kategorie">Kategorie:</label>
+		                <select name="kategorie"   class="lang_reg">
+		                	<option>alle</option>
+		                	<?php
+		                		$navi = new Navigation();
+		                		$kategorien = $navi->erstelle_array_kategorien();
+		                		foreach ($kategorien as $kategorie){
+		                			if ($kategorie->Bezeichnung != 'Fahrrad'){
+		                				echo "<option>".htmlspecialchars($kategorie->Bezeichnung,ENT_QUOTES,'UTF-8')."</option>\n";
+		                			}else{
+		                				echo "<option selected >".htmlspecialchars($kategorie->Bezeichnung,ENT_QUOTES,'UTF-8')."</option>\n";
+		                			}
+		                		}
+		                	?>
+		                </select>
+		            </p>
+		            
+		            <p class="reg_form_zeile" >
+		                <label for="bauart">Bauart:</label>
+		                <select name="bauart"   class="lang_reg">
+		                	<option>alle</option>
+		                	<?php
+		                		$navi = new Navigation();
+		                		$bauarten = $navi->erstelle_array_bauart();
+		                		foreach ($bauarten as $bauart){
+		                			echo "<option>".htmlspecialchars($bauart->Bezeichnung,ENT_QUOTES,'UTF-8')."</option>\n";
+		                		}
+		                	?>
+		                </select>
 		            </p>
 		            			        
 		        </div>

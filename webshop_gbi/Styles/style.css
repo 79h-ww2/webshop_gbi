@@ -363,7 +363,7 @@ input[type=submit]:hover , input[type=button]:hover, .contentPopupRegistrierung 
 	width: 260px;
 }
 
-input.hausnr, input.plz{
+input.hausnr, input.plz, input.bereich_preis{
 	width: 72px;
 }
 
@@ -523,7 +523,7 @@ label.ort{
 	margin-left: 30px;
 }
 
-input[type="text"], input[type="email"], input[type="password"]{
+input[type="text"], input[type="email"], input[type="password"], select{
 	border-style: solid;
 	border-width: 2px;
 	border-color: black;
@@ -842,4 +842,27 @@ input[type="text"], input[type="email"], input[type="password"]{
 #akutelleSeite{
 	color: black;
 	font-weight: bold;
+}
+
+.bereich_preisspanne{
+	padding-right: 20px;
+	padding-left: 120px
+}
+
+
+label.label_preisspanne{
+	width: auto;
+	padding-right: 5px;
+}
+
+.kleiner_abstand_vertikal{
+	padding-left: 20px;
+}
+
+.AGB, .Impressum, .Datenschutz{
+	padding: 30px;
+}
+
+h1{
+	color: #D56509;
 }
