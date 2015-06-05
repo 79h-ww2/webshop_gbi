@@ -15,8 +15,11 @@
 		            </p>
 		            
 		            <p class="reg_form_zeile" >
-		                <label for="produktbezeichnung">Preispanne:</label>
-		                <input type="text" name="produktbezeichnung"  value="" class="lang_reg" />
+		                <label >Preispanne:</label>
+		                <div class="preisbereich">
+		                	<label for="Preis_von" >von:</label>
+		                	<input name="Preis_von" type="text" />
+		                </div>
 		            </p>
 		            			        
 		        </div>

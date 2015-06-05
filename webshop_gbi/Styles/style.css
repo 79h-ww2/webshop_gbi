@@ -843,3 +843,11 @@ input[type="text"], input[type="email"], input[type="password"]{
 	color: black;
 	font-weight: bold;
 }
+
+.suche_preisspanne{
+	margin-right: 30px;
+}
+
+.preisbereich{
+	margin-left: 120px;
+}
