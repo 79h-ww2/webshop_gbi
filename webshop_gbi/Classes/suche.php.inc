@@ -32,7 +32,6 @@
 					from
 						produkte p 
 							left join bauart b on (b.BId = p.bauart)
-							left join produktkategorie pk on (pk.PTId = p.produktkategorie)
 					where
 						
 			";
@@ -46,8 +45,6 @@
 				$teilbedingung .= "
 					(
 								b.Bezeichnung like '%".$arr_suchwoerter[$i]."%'
-							or
-								pk.Bezeichnung like '%".$arr_suchwoerter[$i]."%'
 							or 
 								p.Bezeichnung like '%".$arr_suchwoerter[$i]."%'
 					)

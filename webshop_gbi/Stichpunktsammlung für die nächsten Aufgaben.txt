@@ -1,0 +1,8 @@
+Erweiterte Suche:
+	Fahrradgröße
+	Preisspanne
+	Kategorie
+	Bauart
+	Frauen/ oder Herrenrad
+	Bewertung
+	Artikelnummer
