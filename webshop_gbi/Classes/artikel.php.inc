@@ -1,5 +1,5 @@
 <?php
-	include_once './Classes/bewertung.php.inc';
+	if (file_exists('./Classes/bewertung.php.inc') ) include_once './Classes/bewertung.php.inc';
 
 	class Artikelauflistung{
 
