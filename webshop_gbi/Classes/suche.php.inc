@@ -217,5 +217,81 @@
 			$this->erstelle_auflistung_aus_datenbank_reslut_array($werte, ($seite +1), $menge_seiten);
 				
 		}
+		
+		
+		public function erweiterte_suche_eingabe_pruefen($produktbezeichnung,$preis_von, $preis_bis, $kategorie, $bauart, $bauvariante, $artikelnr, $marke){
+			$meldung = "";
+			
+			//Objekt, über das der Funktionsrückgabewert übergeben werden soll
+			$return = new Ueberpruefresult();
+			
+			//überprüft, ob mindestens ein Textfeld ausgefüllt sind
+			if ($produktbezeichnung == "" && $preis_von == "" && $preis_bis == "" && $kategorie == "alle" && $bauart == "alle"  && $bauvariante == "alle" && $artikelnr == ""  && $marke =="" ){
+				$meldung = "Bitte füllen Sie mindestens ein Feld aus.";
+				$return->set_fehlermeldung($meldung);
+			}
+			//wenn eine bei der Preisspanne nur eine Textfeld ausgefüllt ist
+			elseif ( $preis_von == "" && $preis_bis != "" || $preis_von != "" && $preis_bis == "" ){
+				//gibt eine Fehlermeldung, aus das beide Felder ausgefüllt sein müssen
+				
+				$return->set_fehlermeldung("Bitte füllen Sie beide Textfelder bei der Preisspanne aus.");
+				
+				//überprüft, welche der Textfelder nicht ausgefüllt ist
+				if ($preis_bis != ""){
+					$return->set_feldstatus('preis_bis', true);
+					$return->set_feldstatus('preis_von', false);
+				}
+				else{
+					$return->set_feldstatus('preis_bis', false);
+					$return->set_feldstatus('preis_von', true);
+				}
+			}
+			//überprüft, ob es sich bei beiden Preisen um Zahlen handelt
+			elseif ( $preis_von != "" && $preis_bis != "" ){
+				
+				$return->set_feldstatus('preis_bis', false);
+				$return->set_feldstatus('preis_von', false);
+				
+				$sind_zahlen = true; //Variablen, die speichert, ob beide Textfelder zahlen enthalten
+				
+				//wenn "Preis von" keine Zahl ist
+				if ( is_numeric($preis_von) == false  ){
+					
+					//Fehlermeldung festlegen
+					$return->set_fehlermeldung("Bitte geben Sie bei der Preisspanne Zahlenwerte an.
+					Die Zahlen müssen folgendermaßen formatiert sein: 1200,99 .");
+
+					//Speichern, dass das Textfeld fehlerhaft ausgefüllt wurde
+					$return->set_feldstatus('preis_von', true);
+					$sind_zahlen = false;
+				}
+				
+				//wenn "Preis bis" keine Zahl ist
+				if ( is_numeric($preis_bis) == false  ){
+
+					//Fehlermeldung festlegen
+					$return->set_fehlermeldung("Bitte geben Sie bei der Preisspanne Zahlenwerte an.
+					Die Zahlen müssen folgendermaßen formatiert sein: 1200,99 .");
+				
+					//Speichern, dass das Textfeld fehlerhaft ausgefüllt wurde
+					$return->set_feldstatus('preis_bis', true);
+					$sind_zahlen = false;
+				}
+				
+				//wenn beides Zahlen sind, wird überprüft, ob die "Preis_von" auch kleiner als die "Preis_bis" ist
+				if ( $sind_zahlen && $preis_von > $preis_bis){
+					//wenn nicht wird eine Fehlermeldung erstellt und die Textfelder als Fehlerhaft markiert
+					$return->set_feldstatus('preis_bis', true);
+					$return->set_feldstatus('preis_von', true);
+					
+					//Fehlermeldung festlegen
+					$return->set_fehlermeldung('Der Mindestpreis muss kleiner als der Maximalpreis sein.' );
+				}
+			}
+			
+			//gibt das Prüfergebnis aus
+			return $return;
+			
+		}
 	}
 ?>

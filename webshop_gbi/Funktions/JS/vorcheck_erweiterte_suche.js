@@ -22,7 +22,7 @@ function vorcheckEingabe(){
 	//alte Fehlermeldungen ausblenden
 	document.getElementById('suche_fehlermeldung').innerHTML = '';
 	
-	//üuberprüft, ob bei der Preisspanne beide Felder ausgefüllt sind
+	//überprüft, ob bei der Preisspanne beide Felder ausgefüllt sind
 	if (form['preis_von'].value != '' && form['preis_bis'].value == '' || form['preis_von'].value == '' && form['preis_bis'].value != ''){
 		document.getElementById('suche_fehlermeldung').innerHTML = 'Bitte füllen Sie beide Textfelder bei der Preisspanne aus.';
 		
@@ -49,7 +49,7 @@ function vorcheckEingabe(){
 	}
 	
 	//wenn gar kein Feld ausgefüllt ist
-	else if (form['produktbezeichnung'].value == '' && form['preis_von'].value == '' && form['preis_bis'].value == '' && form['kategorie'].selectedIndex == 0 && form['bauart'].selectedIndex == 0 && form['bauvariante'].selectedIndex == 0 && form['artikelnr'].value == ''){
+	else if (form['produktbezeichnung'].value == '' && form['preis_von'].value == '' && form['preis_bis'].value == '' && form['kategorie'].selectedIndex == 0 && form['bauart'].selectedIndex == 0 && form['bauvariante'].selectedIndex == 0 && form['artikelnr'].value == '' && form['marke'].value == ''){
 		document.getElementById('suche_fehlermeldung').innerHTML = 'Bitte füllen Sie mindestens ein Feld aus.';
 		fehler = true;
 	}
