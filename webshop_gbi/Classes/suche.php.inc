@@ -218,7 +218,18 @@
 				
 		}
 		
-		
+		/**
+		 * Überprüft, ob die Eingabe bei der erweiterten Suche gültig ist 
+		 * @param unknown $produktbezeichnung Wert des "Produktbeschreibungs"-Felds
+		 * @param unknown $preis_von Wert des "Preis von"-Felds
+		 * @param unknown $preis_bis Wert des "Preis bis"-Felds
+		 * @param unknown $kategorie Wert des "Kategorie"-Dropdownmenü
+		 * @param unknown $bauart Wert des "Bauart"-Dropdownmenü
+		 * @param unknown $bauvariante Wert des "Bauvariante"-Dropdownmenü
+		 * @param unknown $artikelnr Wert des "Atrikelnr"-Felds
+		 * @param unknown $marke Wert des "Marke"-Felds
+		 * @return Ueberpruefresult Prüferprüfungsrückgabe
+		 */
 		public function erweiterte_suche_eingabe_pruefen($produktbezeichnung,$preis_von, $preis_bis, $kategorie, $bauart, $bauvariante, $artikelnr, $marke){
 			$meldung = "";
 			
@@ -254,8 +265,12 @@
 				
 				$sind_zahlen = true; //Variablen, die speichert, ob beide Textfelder zahlen enthalten
 				
+				//Deutsche Gleitkommazahl in Englisch Gleitpunktzahl umwandeln
+				$p_von = str_replace(",", ".", $preis_von);
+				$p_bis = str_replace(",", ".", $preis_bis);
+				
 				//wenn "Preis von" keine Zahl ist
-				if ( is_numeric($preis_von) == false  ){
+				if ( is_numeric($p_von) == false  ){
 					
 					//Fehlermeldung festlegen
 					$return->set_fehlermeldung("Bitte geben Sie bei der Preisspanne Zahlenwerte an.
@@ -267,7 +282,7 @@
 				}
 				
 				//wenn "Preis bis" keine Zahl ist
-				if ( is_numeric($preis_bis) == false  ){
+				if ( is_numeric($p_bis) == false  ){
 
 					//Fehlermeldung festlegen
 					$return->set_fehlermeldung("Bitte geben Sie bei der Preisspanne Zahlenwerte an.
@@ -292,6 +307,151 @@
 			//gibt das Prüfergebnis aus
 			return $return;
 			
+		}
+		
+		public function erweiterte_suche_mit_ergebnisauflistung ($produktbezeichnung,$preis_von, $preis_bis, $kategorie, $bauart, $bauvariante, $artikelnr, $marke, $seite){
+			$seite -= 1;
+			
+			//Verbindung zur Datenbank aufbauen
+			$db = datenbank_verbindung_aufbauen();
+			if ( !($db->db_connect()) ) die ("Es konnte keine Verbindung zur Datenbank aufgebaut werden");
+			
+			//Sonderzeichen entfernen
+			$produktbezeichnung = $db->db_real_escape_string($produktbezeichnung);
+			$preis_bis = $db->db_real_escape_string($preis_bis);
+			$preis_von = $db->db_real_escape_string($preis_von);
+			$kategorie = $db->db_real_escape_string($kategorie);
+			$bauart = $db->db_real_escape_string($bauart);
+			$bauvariante = $db->db_real_escape_string($bauvariante);
+			$artikelnr = $db->db_real_escape_string($artikelnr);
+			$marke = $db->db_real_escape_string($marke);
+				
+			//Suchwort in einzelne wörter aufteilen
+			$arr_produktbezeichnung = explode(" ", $produktbezeichnung);
+			
+				
+			//Generierung der Suchabfrage
+			$query = "
+						select
+							distinct p.Bezeichnung bezeichnung,
+							b.Bezeichnung kategorie,
+							`Verfuegbare Menge` exemplare,
+							Preis preis,
+							preis_alt,
+							sterne1,
+							sterne2,
+							sterne3,
+							sterne4,
+							sterne5,
+							p.PId,
+							pb.Pfad bild
+						from
+							produkte p
+								left join bauart b on (b.BId = p.bauart)
+								left join produktkategorie pk on (pk.PTId = p.produktkategorie)
+								left join ( select count(*) sterne1, PId from kommentare where bewertung = '1' and geloescht = 'nein' group by PId ) s1 using (PId)
+								left join ( select count(*) sterne2, PId from kommentare where bewertung = '2' and geloescht = 'nein' group by PId ) s2 using (PId)
+								left join ( select count(*) sterne3, PId from kommentare where bewertung = '3' and geloescht = 'nein' group by PId ) s3 using (PId)
+								left join ( select count(*) sterne4, PId from kommentare where bewertung = '4' and geloescht = 'nein' group by PId ) s4 using (PId)
+								left join ( select count(*) sterne5, PId from kommentare where bewertung = '5' and geloescht = 'nein' group by PId ) s5 using (PId)
+								left join produktbilder pb using (PId)
+						where
+							pb.Art = 'Liste'
+						and 
+				";
+			$teilbedingung = "";
+			$teilbedingung_ = "";
+
+			//sucht nach der Produktbezeichnung
+			$ein_paar_bedingungen_schon_vorhanden = false;
+			for ($i = 0; $i < count($arr_produktbezeichnung); $i++){
+			
+				if ($ein_paar_bedingungen_schon_vorhanden) $teilbedingung .=" and "; //Wenn schon Bedingungen im Where-Teil stehen wird wird der nächsten Bedingung ein "and" geschrieben
+			
+				$teilbedingung .= "p.Bezeichnung like '%".$arr_produktbezeichnung[$i]."%'";
+				$ein_paar_bedingungen_schon_vorhanden = true;
+			}
+			
+			//wenn eine Preisspanne angegeben wurde, wird nach dieser gesucht
+			if ( $preis_bis != "" && $preis_von != ""){
+				if ($ein_paar_bedingungen_schon_vorhanden) $teilbedingung .=" and "; //Wenn schon Bedingungen im Where-Teil stehen wird wird der nächsten Bedingung ein "and" geschrieben
+				
+				$teilbedingung .= "Preis between '$preis_von' and '$preis_bis'";
+				
+				$ein_paar_bedingungen_schon_vorhanden = true;
+			}
+			
+			//wenn eine Kategorie angegeben wurde, wird nach dieser gesucht
+			if ($kategorie != "alle"){
+				if ($ein_paar_bedingungen_schon_vorhanden) $teilbedingung .=" and "; //Wenn schon Bedingungen im Where-Teil stehen wird wird der nächsten Bedingung ein "and" geschrieben
+				$teilbedingung .= "pk.Bezeichnung = '$kategorie'";
+			}
+			
+			//wenn eine Bauart angegeben wurde, wird nach dieser gesucht
+			if ($bauart != "alle"){
+				if ($ein_paar_bedingungen_schon_vorhanden) $teilbedingung .=" and "; //Wenn schon Bedingungen im Where-Teil stehen wird wird der nächsten Bedingung ein "and" geschrieben
+				$teilbedingung .= "b.Bezeichnung = '$bauart'";
+			}
+			
+			//wenn eine Bauvariante angegeben wurde, wird nach dieser gesucht
+			if ($bauvariante != "alle"){
+				if ($ein_paar_bedingungen_schon_vorhanden) $teilbedingung .=" and "; //Wenn schon Bedingungen im Where-Teil stehen wird wird der nächsten Bedingung ein "and" geschrieben
+				$teilbedingung .= "b.bauvariante = '$bauvariante'";
+			}
+			
+			//wenn eine Bauvariante angegeben wurde, wird nach dieser gesucht
+			if ($artikelnr != ""){
+				if ($ein_paar_bedingungen_schon_vorhanden) $teilbedingung .=" and "; //Wenn schon Bedingungen im Where-Teil stehen wird wird der nächsten Bedingung ein "and" geschrieben
+				$teilbedingung .= "p.PId = '$artikelnr'";
+			}
+			
+			//wenn eine Bauvariante angegeben wurde, wird nach dieser gesucht
+			if ($marke != ""){
+				if ($ein_paar_bedingungen_schon_vorhanden) $teilbedingung .=" and "; //Wenn schon Bedingungen im Where-Teil stehen wird wird der nächsten Bedingung ein "and" geschrieben
+				$teilbedingung .= "p.marke = '$marke'";
+			}
+				
+			$query .= $teilbedingung_.$teilbedingung." order by p.Beschreibung asc";
+			
+			$query_mit_seitennr = $query." limit $seite, 10;";
+			
+			//die Suchabfrage durchführen
+			$result = $db->db_query($query_mit_seitennr);
+				
+			//die Rückgabewerte entgegennehmen
+			$werte = array();
+			$j = 0;
+				
+			while($zeile = $db->db_fetch_object($result)){
+				$werte[$j] = $zeile;
+				$j++;
+			}
+			
+			
+			//Bestimmen, wie viele Seiten zum Suchbegriff gefunden werden
+			$query = "
+						select
+							count(distinct p.Bezeichnung)
+						from
+							produkte p
+								left join bauart b on (b.BId = p.bauart)
+								left join produktkategorie pk on (pk.PTId = p.produktkategorie)
+						where
+				".$teilbedingung;
+
+			$result = $db->db_query($query);
+			while ($werte_ = $db->db_fetch_array($result)){
+				$menge_seiten = $werte_[0];
+			}
+			
+			$menge_seiten = ceil($menge_seiten/10); //Bestimmt wie viele Seiten benötigt werden, wenn jede Seite nur 10 Einträge enthält
+						
+			
+			//Datenbankverbindung schließen
+			$db->db_close();
+
+			//Ergebnis auf der Webseite ausgeben
+			$this->erstelle_auflistung_aus_datenbank_reslut_array($werte, ($seite +1), $menge_seiten);
 		}
 	}
 ?>

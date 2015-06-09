@@ -13,6 +13,6 @@
 
 	if ($suche_vorcheck_fehler->get_fehlermeldung() == ""){
 		//wenn der Vorcheck erfolgreich war, wird zur Suchergebnisanzeige weitergeleitet
-		header("location:./?page=such_erg_erweitert&produktbezeichnung=".$_POST['produktbezeichnung']."&preis_von=".$_POST['preis_von']."&preis_bis=".$_POST['preis_bis']."&kategorie=".$_POST['kategorie']."&bauart=".$_POST['bauart']."&bauvariante=".$_POST['bauvariante']."&artikelnr=".$_POST['artikelnr']."&marke=".$_POST['marke']);
+		header("location:./?page=such_erg&produktbezeichnung=".$_POST['produktbezeichnung']."&preis_von=".$_POST['preis_von']."&preis_bis=".$_POST['preis_bis']."&kategorie=".$_POST['kategorie']."&bauart=".$_POST['bauart']."&bauvariante=".$_POST['bauvariante']."&artikelnr=".$_POST['artikelnr']."&marke=".$_POST['marke']);
 	};
 ?>
