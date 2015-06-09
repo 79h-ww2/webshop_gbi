@@ -92,12 +92,42 @@
 				$ausgabe .= "
 						<div class=\"zeile_suchergebnis_autovervollstaendigung_normale_suche\" onclick=\"
 								document.getElementById('feld_suche_normal').value='".htmlspecialchars($array_suchergebnis[$i],ENT_QUOTES,'UTF-8')."';
-								document.getElementById('form_suche_normal_autovervollstaendigung_box').style.display='';\" >
+								document.getElementById('form_suche_normal_autovervollstaendigung_box').style.display='';
+								//document.forms['form_suche_normal'].submit();
+						\" >
 							".htmlspecialchars($array_suchergebnis[$i],ENT_QUOTES,'UTF-8')."
 						</div>
 				";
 			}
 			
+			return $ausgabe;
+		}
+		
+		
+		/**
+		 * sucht für die Autovervollständigung in der Datenbank nach möglichen Produkten und gibt sie für die Autovervollständigung passend aus
+		 * @param string $suchwort der Suchbegriff
+		 * @return string
+		 */
+		public function erweiterte_suche_autovervollstaendigung ($suchwort){
+				
+			//erstellt ein Array mit den Suchergebnissen
+			$array_suchergebnis = $this->normale_suche_db_abfrage($suchwort);
+				
+			$ausgabe = "";
+				
+			//Schreibt die Suchergebnisse in DIVs
+			for ($i = 0; $i < count($array_suchergebnis); $i++){
+				$ausgabe .= "
+						<div class=\"zeile_suchergebnis_autovervollstaendigung_normale_suche\" onclick=\"
+								document.getElementById('suche_erweitert_produktbezeichnung').value='".htmlspecialchars($array_suchergebnis[$i],ENT_QUOTES,'UTF-8')."';
+								document.getElementById('form_erweiterte_suche_autovervollstaendigung_box').style.display='';
+						\" >
+							".htmlspecialchars($array_suchergebnis[$i],ENT_QUOTES,'UTF-8')."
+						</div>
+				";
+			}
+				
 			return $ausgabe;
 		}
 		
@@ -309,6 +339,18 @@
 			
 		}
 		
+		/**
+		 * führt die erweiterte Suche aus und gibt das Ergebnis aus
+		 * @param unknown $produktbezeichnung Wert des "Produktbeschreibungs"-Felds
+		 * @param unknown $preis_von Wert des "Preis von"-Felds
+		 * @param unknown $preis_bis Wert des "Preis bis"-Felds
+		 * @param unknown $kategorie Wert des "Kategorie"-Dropdownmenü
+		 * @param unknown $bauart Wert des "Bauart"-Dropdownmenü
+		 * @param unknown $bauvariante Wert des "Bauvariante"-Dropdownmenü
+		 * @param unknown $artikelnr Wert des "Atrikelnr"-Felds
+		 * @param unknown $marke Wert des "Marke"-Felds
+		 * @param unknown $seite Die Seite, die angezeigt werden soll
+		 */
 		public function erweiterte_suche_mit_ergebnisauflistung ($produktbezeichnung,$preis_von, $preis_bis, $kategorie, $bauart, $bauvariante, $artikelnr, $marke, $seite){
 			$seite -= 1;
 			
@@ -368,7 +410,15 @@
 			
 				if ($ein_paar_bedingungen_schon_vorhanden) $teilbedingung .=" and "; //Wenn schon Bedingungen im Where-Teil stehen wird wird der nächsten Bedingung ein "and" geschrieben
 			
-				$teilbedingung .= "p.Bezeichnung like '%".$arr_produktbezeichnung[$i]."%'";
+				$teilbedingung .= "
+					(
+								b.Bezeichnung like '%".$arr_produktbezeichnung[$i]."%'
+							or
+								pk.Bezeichnung like '%".$arr_produktbezeichnung[$i]."%'
+							or
+								p.Bezeichnung like '%".$arr_produktbezeichnung[$i]."%'
+					)
+				";
 				$ein_paar_bedingungen_schon_vorhanden = true;
 			}
 			

@@ -13,5 +13,9 @@
 			//fragt bei der Datenbank nach der Autovervollständigung an und gibt das Ergebnis aus
 			echo $suche->normale_suche_autovervollstaendigung($_GET['suchwort']);
 		}
+		//Autovervollständigung erweiterte Suche
+		elseif ($_GET['modus'] == 'erweitert'){
+			echo $suche->erweiterte_suche_autovervollstaendigung ($_GET['suchwort']);
+		}
 	}
 ?>

@@ -17,8 +17,11 @@
 		        
 		            <p class="reg_form_zeile" >
 		                <label for="produktbezeichnung">Produkt- bezeichnung:</label>
-		                <input type="text" name="produktbezeichnung"  value="<?php if(isset($_POST['produktbezeichnung'])) echo htmlspecialchars($_POST['produktbezeichnung'],ENT_QUOTES,'UTF-8'); ?>" class="lang_reg" />
+		                <input type="text" name="produktbezeichnung" id="suche_erweitert_produktbezeichnung" autocomplete="off" onkeyup="autovervollstaendigung_normale_suche(false);" value="<?php if(isset($_POST['produktbezeichnung'])) echo htmlspecialchars($_POST['produktbezeichnung'],ENT_QUOTES,'UTF-8'); ?>" class="lang_reg" />
 		            </p>
+					<div id="form_erweiterte_suche_autovervollstaendigung_box" >
+					</div>
+
 		            
 		            <p class="reg_form_zeile" >
 		                <label >Preispanne:</label>

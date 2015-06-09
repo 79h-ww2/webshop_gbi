@@ -672,6 +672,19 @@ input[type="text"], input[type="email"], input[type="password"], select, input[t
 	margin: 0px auto;
 }
 
+#form_erweiterte_suche_autovervollstaendigung_box{
+	color:black;
+	background-color: #fff;
+	position: absolute;
+	width: 260px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	border: 1px solid;
+	margin: -16px 145px;
+	display: none;
+	font-size: 14px;
+}
+
 #form_suche_normal{
 	display: block;
 	width: 405px;
