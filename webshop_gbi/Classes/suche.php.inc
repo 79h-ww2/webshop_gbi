@@ -157,34 +157,8 @@
 				
 					
 				//Generierung der Suchabfrage
-				$query = "
-						select
-							distinct p.Bezeichnung bezeichnung,
-							b.Bezeichnung kategorie,
-							`Verfuegbare Menge` exemplare,
-							Preis preis,
-							preis_alt,
-							sterne1,
-							sterne2,
-							sterne3,
-							sterne4,
-							sterne5,
-							p.PId,
-							pb.Pfad bild
-						from
-							produkte p
-								left join bauart b on (b.BId = p.bauart)
-								left join produktkategorie pk on (pk.PTId = p.produktkategorie)
-								left join ( select count(*) sterne1, PId from kommentare where bewertung = '1' and geloescht = 'nein' group by PId ) s1 using (PId)
-								left join ( select count(*) sterne2, PId from kommentare where bewertung = '2' and geloescht = 'nein' group by PId ) s2 using (PId)
-								left join ( select count(*) sterne3, PId from kommentare where bewertung = '3' and geloescht = 'nein' group by PId ) s3 using (PId)
-								left join ( select count(*) sterne4, PId from kommentare where bewertung = '4' and geloescht = 'nein' group by PId ) s4 using (PId)
-								left join ( select count(*) sterne5, PId from kommentare where bewertung = '5' and geloescht = 'nein' group by PId ) s5 using (PId)
-								left join produktbilder pb using (PId)
-						where
-							(pb.Art = 'Liste' or pb.Art is null)
 				
-				";
+				$query = $this->anfangszeilenSQLQuery(); //ruft die Projektion des Sql-Query über eine Methode ab, somit muss die nicht bei jeden Suchselecvt neugeschrieben werden
 				$teilbedingung = "";
 				$teilbedingung_ = "";
 				if ( count($arr_suchwoerter) > 0) $teilbedingung_ .= " and ";
@@ -376,34 +350,8 @@
 			
 				
 			//Generierung der Suchabfrage
-			$query = "
-						select
-							distinct p.Bezeichnung bezeichnung,
-							b.Bezeichnung kategorie,
-							`Verfuegbare Menge` exemplare,
-							Preis preis,
-							preis_alt,
-							sterne1,
-							sterne2,
-							sterne3,
-							sterne4,
-							sterne5,
-							p.PId,
-							pb.Pfad bild
-						from
-							produkte p
-								left join bauart b on (b.BId = p.bauart)
-								left join produktkategorie pk on (pk.PTId = p.produktkategorie)
-								left join ( select count(*) sterne1, PId from kommentare where bewertung = '1' and geloescht = 'nein' group by PId ) s1 using (PId)
-								left join ( select count(*) sterne2, PId from kommentare where bewertung = '2' and geloescht = 'nein' group by PId ) s2 using (PId)
-								left join ( select count(*) sterne3, PId from kommentare where bewertung = '3' and geloescht = 'nein' group by PId ) s3 using (PId)
-								left join ( select count(*) sterne4, PId from kommentare where bewertung = '4' and geloescht = 'nein' group by PId ) s4 using (PId)
-								left join ( select count(*) sterne5, PId from kommentare where bewertung = '5' and geloescht = 'nein' group by PId ) s5 using (PId)
-								left join produktbilder pb using (PId)
-						where
-							(pb.Art = 'Liste' or pb.Art is null)
-						and 
-				";
+			$query = $this->anfangszeilenSQLQuery()." and ";
+			
 			$teilbedingung = "";
 			$teilbedingung_ = "";
 
@@ -470,7 +418,6 @@
 			
 			//die Suchabfrage durchführen
 			$result = $db->db_query($query_mit_seitennr);
-			
 			
 				
 			//die Rückgabewerte entgegennehmen
