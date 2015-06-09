@@ -246,6 +246,8 @@
 		 * @return string ersten Zeilen des Query's
 		 */
 		protected function anfangszeilenSQLQuery(){
+			
+			//ließt die für die Auflistung benötigten Felder aus und bestimmt wie oft das Produkt welche Sterne bekommen hat durch zählen, wie oft welche Bewertungsziffer für das Produkt angegeben wurde
 			$query = "
 						select
 							distinct p.Bezeichnung bezeichnung,
