@@ -140,6 +140,7 @@
 			
 			$werte = array();
 			$seite -= 1;
+			$seite_sql = $seite*10;
 			$menge_seiten = 0;
 			
 			//wenn ein Suchwort eingegeben wurde
@@ -181,7 +182,7 @@
 								left join ( select count(*) sterne5, PId from kommentare where bewertung = '5' and geloescht = 'nein' group by PId ) s5 using (PId)
 								left join produktbilder pb using (PId)
 						where
-							pb.Art = 'Liste'
+							(pb.Art = 'Liste' or pb.Art is null)
 				
 				";
 				$teilbedingung = "";
@@ -206,7 +207,8 @@
 					
 				$query .= $teilbedingung_.$teilbedingung." order by p.Beschreibung asc";
 		
-				$query_mit_seitennr = $query." limit $seite, 10;";
+				$query_mit_seitennr = $query." limit $seite_sql, 10;";
+				
 				
 				//die Suchabfrage durchführen
 				$result = $db->db_query($query_mit_seitennr);
@@ -353,6 +355,7 @@
 		 */
 		public function erweiterte_suche_mit_ergebnisauflistung ($produktbezeichnung,$preis_von, $preis_bis, $kategorie, $bauart, $bauvariante, $artikelnr, $marke, $seite){
 			$seite -= 1;
+			$seite_sql = $seite*10;
 			
 			//Verbindung zur Datenbank aufbauen
 			$db = datenbank_verbindung_aufbauen();
@@ -398,7 +401,7 @@
 								left join ( select count(*) sterne5, PId from kommentare where bewertung = '5' and geloescht = 'nein' group by PId ) s5 using (PId)
 								left join produktbilder pb using (PId)
 						where
-							pb.Art = 'Liste'
+							(pb.Art = 'Liste' or pb.Art is null)
 						and 
 				";
 			$teilbedingung = "";
@@ -446,7 +449,7 @@
 			//wenn eine Bauvariante angegeben wurde, wird nach dieser gesucht
 			if ($bauvariante != "alle"){
 				if ($ein_paar_bedingungen_schon_vorhanden) $teilbedingung .=" and "; //Wenn schon Bedingungen im Where-Teil stehen wird wird der nächsten Bedingung ein "and" geschrieben
-				$teilbedingung .= "b.bauvariante = '$bauvariante'";
+				$teilbedingung .= "p.bauvariante = '$bauvariante'";
 			}
 			
 			//wenn eine Bauvariante angegeben wurde, wird nach dieser gesucht
@@ -463,10 +466,12 @@
 				
 			$query .= $teilbedingung_.$teilbedingung." order by p.Beschreibung asc";
 			
-			$query_mit_seitennr = $query." limit $seite, 10;";
+			$query_mit_seitennr = $query." limit $seite_sql, 10;";
 			
 			//die Suchabfrage durchführen
 			$result = $db->db_query($query_mit_seitennr);
+			
+			
 				
 			//die Rückgabewerte entgegennehmen
 			$werte = array();
