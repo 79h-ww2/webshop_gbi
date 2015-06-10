@@ -26,7 +26,7 @@
 		            
 		             <p class="reg_form_zeile" >
 		              	<span>Geschlecht:</span>
-		              	<input type="radio" name="geschlecht" id="maennlich" value="maennlich" checked="checked" />
+		              	<input type="radio" name="geschlecht" id="maennlich" value="männlich" checked="checked" />
 		            	<label for="maennlich">m&auml;nnlich</label>
 		            	
 		            	<input type="radio" name="geschlecht" id="weiblich" value="weiblich"  />

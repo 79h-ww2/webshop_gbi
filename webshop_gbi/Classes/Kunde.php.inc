@@ -166,10 +166,10 @@
 					'nein',
 					'$geschlecht',
 					'nein',
-					$hausnr
+					'$hausnr'
 				);
 			";
-			
+						
 			//Kunde zur Datenbank hinzufügen
 			$result = $db->db_query($query);
 			
