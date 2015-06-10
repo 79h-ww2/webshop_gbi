@@ -151,7 +151,8 @@
 					Passwort,
 					geloescht,
 					Geschlecht,
-					aktiviert
+					aktiviert,
+					Hausnummer
 				)values(
 					'$id',
 					'$vorname',
@@ -164,7 +165,8 @@
 					'$passwort',
 					'nein',
 					'$geschlecht',
-					'nein'
+					'nein',
+					$hausnr
 				);
 			";
 			

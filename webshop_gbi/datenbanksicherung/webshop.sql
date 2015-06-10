@@ -129,6 +129,7 @@ CREATE TABLE `kunde` (
   `aktiviert` enum('ja','nein') DEFAULT NULL,
   `SAP_KId` int(11) DEFAULT NULL,
   `status` enum('a','l') DEFAULT NULL,
+  `Hausnummer` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`KId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -139,7 +140,7 @@ CREATE TABLE `kunde` (
 
 LOCK TABLES `kunde` WRITE;
 /*!40000 ALTER TABLE `kunde` DISABLE KEYS */;
-INSERT INTO `kunde` VALUES (1,'test','37688','Musterstadt','benedikt@kunde.de',NULL,'test','test','2015-05-22 14:39:17','','202cb962ac59075b964b07152d234b70',NULL,'nein','ja',NULL,NULL),(2,'Benedikt','32839','Steinheim','benedikt@webshop-testmail.de',NULL,'Papiermühlenweg','Brüntrup','2015-06-04 12:05:00','','161ebd7d45089b3446ee4e0d86dbcf92',NULL,'nein','ja',NULL,NULL);
+INSERT INTO `kunde` VALUES (1,'test','37688','Musterstadt','benedikt@kunde.de',NULL,'test','test','2015-05-22 14:39:17','','202cb962ac59075b964b07152d234b70',NULL,'nein','ja',NULL,NULL,NULL),(2,'Benedikt','32839','Steinheim','benedikt@webshop-testmail.de',NULL,'Papiermühlenweg','Brüntrup','2015-06-04 12:05:00','','161ebd7d45089b3446ee4e0d86dbcf92',NULL,'nein','ja',NULL,NULL,NULL),(3,'Benedikt','32839','Steinheim','root@kunde.de',NULL,'Papiermühlenweg','Brüntrup','2015-06-10 12:29:02','','161ebd7d45089b3446ee4e0d86dbcf92',NULL,'nein','nein',NULL,NULL,'2');
 /*!40000 ALTER TABLE `kunde` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -247,4 +248,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-06-09 22:07:02
+-- Dump completed on 2015-06-10 12:30:19
