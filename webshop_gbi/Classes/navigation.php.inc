@@ -56,5 +56,32 @@ class Navigation extends  Artikelauflistung{
 	
 		return  $bauarten;
 	}
+	
+	//atuhor Stefan
+	public function FahrradbauartAuflisten($bauart){
+		$query = $this->anfangszeilenSQLQuery(); //Vordefinierten Kopf abspeichern
+		//Verbindung zur Datenbank aufbauen
+		$db = datenbank_verbindung_aufbauen();
+		if ( !($db->db_connect()) ) die ("Es konnte keine Verbindung zur Datenbank aufgebaut werden");
+		
+		$bauart=$db->db_real_escape_string($bauart); //Sonderzeichen aus $bauart entfernen
+		
+		//Anfrage ergänzen
+		$query.= " AND b.BId ='$bauart' ORDER BY p.Bezeichnung asc";
+		
+		$result = $db->db_query($query); //Abfrage ausführen
+		
+		$werte = earray(); 
+		$i = 0;
+		
+		//wir benötig um einzelne Elemente auf der Seite mit Namen anzusprechen
+		while ($temp = $db->db_fetch_object($result)) {
+			$werte[$i] = $temp;
+			$i++;
+		}
+		
+		$db->db_close();
+		
+	}
 }
 ?>

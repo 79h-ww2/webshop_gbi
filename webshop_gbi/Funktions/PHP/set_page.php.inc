@@ -20,6 +20,9 @@
             case 'datenschutz':
             	include './Pages/datenschutz.php.inc';
             break;
+            case 'uebersicht':
+            	include './Pages/uebersicht.php.inc';
+            	break;
             default:
             	echo "<h2>Gewünschte Seite wurde nicht gefunden.</h2>";
         }
