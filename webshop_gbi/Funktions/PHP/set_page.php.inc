@@ -20,6 +20,9 @@
             case 'datenschutz':
             	include './Pages/datenschutz.php.inc';
             break;
+            case 'seriousRockaway26':
+            	include './Pages/seriousRockaway26.php.inc';
+            	break;
             default:
             	echo "<h2>Gewünschte Seite wurde nicht gefunden.</h2>";
         }

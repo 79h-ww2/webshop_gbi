@@ -76,32 +76,13 @@
             <li><a href="#">Fahrr&auml;der</a> <!-- HIER HINTER DARF KEIN </li> stehn SONST GEHTS NICHT!!! -->
     			<ul> 
         			<div class="Spalte">
-                        <li><a class="Untermenu" href="#">Modell 1</a></li>
+                        <li><a class="Untermenu" href="#">E-Bikes</a></li>
                         <li><a class="Untermenu" href="#">Modell 2</a></li>
                         <li><a class="Untermenu" href="#">Modell 3</a></li>
                         <li><a class="Untermenu" href="#">Modell 4</a></li>
                      </div>
                
-        			<div class="Spalte">
-                        <li><a class="Untermenu" href="#">Modell 5</a></li>
-                        <li><a class="Untermenu" href="#">Modell 6</a></li>
-                        <li><a class="Untermenu" href="#">Modell 7</a></li>
-                        <li><a class="Untermenu" href="#">Modell 8</a></li>
-                     </div>
-                     
-                     <div class="Spalte">
-                        <li><a class="Untermenu" href="#">Modell 1</a></li>
-                        <li><a class="Untermenu" href="#">Modell 2</a></li>
-                        <li><a class="Untermenu" href="#">Modell 3</a></li>
-                        <li><a class="Untermenu" href="#">Modell 4</a></li>
-                     </div>
-
-        			<div class="Spalte">
-                        <li><a class="Untermenu" href="#">Modell 5</a></li>
-                        <li><a class="Untermenu" href="#">Modell 6</a></li>
-                        <li><a class="Untermenu" href="#">Modell 7</a></li>
-                        <li><a class="Untermenu" href="#">Modell 8</a></li>
-                     </div>
+     
                 </ul>
                 
                 
@@ -113,6 +94,37 @@
     		<li><a href="https://www.youtube.com/watch?v=eOG90Q8EfRo">HowTo</a></li>
         </ul>
     </nav>
+    
+    
+<!--     <nav class="nav"> -->
+    <?php
+//     include_once 'Classes/navigation.php.inc';
+//     ?>
+<!--         <ul class="navigation"> -->
+<!--            <li><a href="#"> <?php ?>echo $kategorien[0]</a> <!-- HIER HINTER DARF KEIN </li> stehn SONST GEHTS NICHT!!! -->
+<!--     			<ul>  -->
+<!--         			<div class="Spalte"> -->
+<!--                         <li><a class="Untermenu" href="#">Modell 1</a></li> -->
+<!--                         <li><a class="Untermenu" href="#">Modell 2</a></li> -->
+<!--                         <li><a class="Untermenu" href="#">Modell 3</a></li> -->
+<!--                         <li><a class="Untermenu" href="#">Modell 4</a></li> -->
+<!--                      </div> -->
+               
+     
+<!--                 </ul> -->
+                
+                
+                
+<!--             <li><a href="Pages/zubehoer.php">Zubeh&ouml;r</a></li> -->
+<!--             <li><a href="#">Fahrradteile</a></li> -->
+<!--             <li><a href="#">Fahrradbekleidung</a></li> -->
+<!--             <li><a href="#">Marken</a></li> -->
+<!--     		<li><a href="https://www.youtube.com/watch?v=eOG90Q8EfRo">HowTo</a></li> -->
+<!--         </ul> -->
+
+       
+<!--     </nav> -->
+    
     <?php if (isset($_SESSION['angemeldet'])) include_once 'Pages/status_leiste.php.inc'; ?>
     </header>
     
@@ -157,7 +169,6 @@
         	<li><a href="./?page=impressum">Impressum</a></li>
         	<li><a href="./?page=agb">AGB</a></li>
         	<li><a href="./?page=datenschutz">Datenschutz</a></li>
-        </ul>
         </ul>
     </footer>
 </body>

@@ -183,7 +183,7 @@ img.account {
 
 .topContent {
     background-color: #EDFDD5;
-    background:linear-gradient(to bottom, white , 	#EDFDD5 , white );
+    background:linear-gradient(to bottom, white , 	#D9F0B7 , white );
 	margin: 50px 100px;
 	height: 330px;
 	padding: 5px 0;
@@ -197,6 +197,21 @@ img.account {
     float: right;
     clear: both;
     width: 350px;
+}
+
+.middleContent {
+	clear: both;
+	margin-left: 100px;
+	margin-right: 100px;
+}
+.middleContent h2 {
+    text-align: left;
+    
+}
+
+.middleContentText {
+	text-align: left;
+    width: 800px;
 }
 
 .bottomContent {
@@ -223,13 +238,48 @@ img.account {
    width: 150px;
 }
 
+img.BildMustermodellMinatur{
+   width: 75px;
+}
+
 img.BildMustermodell{
-	width: 350px;
+	width: 300px;
 }
 .post-info {
     font-style: italic;
     color: #999;
     font-size: 98%;
+}
+
+
+.detailContent {
+    background-color: #EDFDD5;
+    background:linear-gradient(to bottom, white , 	#D9F0B7, #D9F0B7, #D9F0B7 , white);
+	margin: 50px 100px;
+	height: 500px;
+	padding: 5px 0;
+}
+
+.detailContent h2 {
+    text-align: center;
+}
+
+.detailContentText {
+    float: right;
+    width: 350px;
+    margin: 0 auto;
+}
+.detail-sidebar {
+    display: table-column;
+    width: 100px;
+    float: left;
+}
+
+.detailCell{
+   display: table-cell; 
+   vertical-align: middle;
+   width: 100px;
+   float: left;
 }
 
 /*aktivieren, zwalls Sidebar erw�nscht sind
