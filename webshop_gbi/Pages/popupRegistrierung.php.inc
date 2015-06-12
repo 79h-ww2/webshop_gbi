@@ -17,13 +17,9 @@
 					}
 				?>
 				<form method="post" action="<?php echo $url; ?>" name="anmeldung" onsubmit="return vorcheckEingabe_anmeldung();" >
-					<label for="anmedlung_email" >
-						Email:
-					</label>
+					<label for="anmedlung_email" >Email:</label>
 					<input autocomplete="off" type="text" name="anmedlung_email" value="<?php if ($eingabe_ungueltig_anmeldung) echo htmlspecialchars($_POST['anmedlung_email'],ENT_QUOTES,'UTF-8'); ?>" <?php if( $eingabe_ungueltig_anmeldung && $eingabe_check_result_anmeldung->get_feldstatus('anmedlung_email') ) echo 'style="border-color:red; border-style: solid"';  ?> /> 
-					<label for="anmedlung_passwort" >
-						Passwort:
-					</label>
+					<label for="anmedlung_passwort">Passwort:</label>
 					<input  type="password" name="anmedlung_passwort" value="<?php if ($eingabe_ungueltig_anmeldung) echo htmlspecialchars($_POST['anmedlung_passwort'],ENT_QUOTES,'UTF-8'); ?>" <?php if( $eingabe_ungueltig_anmeldung && $eingabe_check_result_anmeldung->get_feldstatus('anmedlung_passwort') ) echo 'style="border-color:red; border-style: solid"';  ?> />
 					
 					<input type="hidden" name="type" value="anmeldung" />
@@ -48,7 +44,7 @@
 				</form>
 			</div>
 			<div id="popup_reg_registrierungsteil" >
-				<a href="./?page=reg" titel="Registrierung" class="link_button" id="link_button_reg_popup" >
+				<a href="./?page=reg" title="Registrierung" class="link_button" id="link_button_reg_popup" >
 					Registrierung
 				</a>
 			</div>

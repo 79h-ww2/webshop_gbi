@@ -1,7 +1,7 @@
 body {
-    background: grey ;
+    background: grey;
     color: #000305;
-    font-size: 87.5 %; /* Base font size is 14 px */
+    /*font-size: 87.5 %;*/ /* Base font size is 14 px */
     font-family: Arial, 'Lucida Sans Unicode';
     line-height: 1.5;
     text-align: left;
@@ -14,7 +14,7 @@ body {
 
 .mainContent a:link, .nav a:link, .mainContent a:visited, .nav a:visited, h2 {
     color: #d56509;
-    
+  
 }
 
 .mainContent a:hover, .nav a:hover, .mainContent  a:active, .nav  a:active {
@@ -28,10 +28,11 @@ body {
 }
 
 .mainHeader {
-    background:linear-gradient(to bottom right ,#6c7b35 , 	#82a143 , #788A5F );
+	background: #788A5F;
     position: absolute;
     width: 1024px;
     top: 0px;
+    background:linear-gradient(to bottom right ,#6c7b35 , 	#82a143 , #788A5F );
 }
 
 .HeaderContent{
@@ -104,9 +105,8 @@ img.account {
 
 /* Hauptmenü und Überschrift Registrierung*/
 .nav,  #registrierung h2, #suche_erweitert h2{
-   background: linear-gradient(to  bottom, black  , gray); 
    height: 40px;
-   
+   background: linear-gradient(to  bottom, black  , gray); 
 }
 
 .navigation{
@@ -128,9 +128,10 @@ img.account {
 
 .nav a:hover, .nav a:active,
 .nav .active a:link, .nav .active a:visited{
-    background: linear-gradient(to  bottom, #d56509  , orange 15%, #d56509); 
+	background:#d56509; 
     text-shadow: none;  
     color: black;
+    background: linear-gradient(to  bottom, #d56509  , orange 15%, #d56509);
     
 }
 
@@ -140,15 +141,18 @@ img.account {
     padding: 0;
 }
 
+.navigation li:BEFORE > ul{
+	visibility: hidden;
+}
 
 
 .navigation ul, .navigation ul li ul {
     visibility: hidden;
     list-style: none;;
     border-top : 2px solid red;
-    background: linear-gradient(to  bottom, gray  , black);
+    background:black;
     position: absolute;
-      
+    background: linear-gradient(to  bottom, gray  , black); 
 }
 
 .Untermenu{
@@ -183,10 +187,11 @@ img.account {
 
 .topContent {
     background-color: #EDFDD5;
-    background:linear-gradient(to bottom, white , 	#EDFDD5 , white );
+    background: white;
 	margin: 50px 100px;
 	height: 330px;
 	padding: 5px 0;
+	background:linear-gradient(to bottom, white , 	#EDFDD5 , white );
 }
 
 .topContent h2 {
@@ -263,11 +268,12 @@ img.BildMustermodell{
 .mainFooter {
     width: 1024px;
     height: 40px;
-    /*float: left;*/  
-    background:linear-gradient(to top right ,#6c7b35 , 	#82a143 , #788A5F );
+    /*float: left;*/ 
+    background: #788A5F;
     text-align: center;
     display: table-cell;
     vertical-align: middle;
+    background:linear-gradient(to top right ,#6c7b35 , 	#82a143 , #788A5F );
 }
 
 .mainFooter li, .mainFooter ul{
@@ -337,17 +343,19 @@ input[type=submit], input[type=button], .link_button{
 	padding:6px;
 	padding-left: 15px;
 	padding-right: 15px;
-	background: linear-gradient(to  bottom, black  , gray);
+	background:grey;
 	border-color: #788A5F;
 	font-size: 16px;
 	border-style: outset;
+	background: linear-gradient(to  bottom, black  , gray);
 }
 
 input[type=submit]:hover , input[type=button]:hover, .contentPopupRegistrierung input[name="anmeldung_submit"]:hover, .link_button:hover{
-	background: linear-gradient(to  bottom, #d56509  , orange 15%, #d56509); 
+	background: #d56509; 
 	text-shadow: none;  
 	color: black;
 	border-color: orange;
+	background: linear-gradient(to  bottom, #d56509  , orange 15%, #d56509);
 }
 
 .reg_form_zeile label, .reg_form_zeile span{
@@ -543,8 +551,9 @@ input[type="text"], input[type="email"], input[type="password"], select, input[t
 	width: 80px;
 	margin-top: 15px;
 	float: right;
-	background: linear-gradient(to right bottom, #6C7B35, #82A143, #788A5F) repeat scroll 0% 0% transparent;
+	background: #788A5F;
 	margin-left: 0px;
+	background: linear-gradient(to right bottom, #6C7B35, #82A143, #788A5F) repeat scroll 0% 0% transparent;
 }
 
 #passwort_link{
@@ -610,8 +619,9 @@ input[type="text"], input[type="email"], input[type="password"], select, input[t
 
 .popupProfil a:hover{
 	color: #000;
-	background: linear-gradient(to  bottom, #d56509  , orange 15%, #d56509); 
-    text-shadow: none;  
+	background: #d56509; 
+    text-shadow: none;
+    background: linear-gradient(to  bottom, #d56509  , orange 15%, #d56509); 
 }
 
 /* ##################################### Statusleiste ################################## */
@@ -699,9 +709,9 @@ input[type="text"], input[type="email"], input[type="password"], select, input[t
 }
 
 .zeile_suchergebnis_autovervollstaendigung_normale_suche:hover{
-	color: #000;
-	background: linear-gradient(to  bottom, #d56509  , orange 15%, #d56509); 
-    text-shadow: none; 
+	color: #000; 
+    text-shadow: none;
+    background: linear-gradient(to  bottom, #d56509  , orange 15%, #d56509); 
 }
 
 /* ################ Produkteauflistung ################ */

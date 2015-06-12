@@ -7,7 +7,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     
     <link rel="stylesheet" href="Styles/style.css" type="text/css"/>
-    <meta name accesskey="viewport" content="width=device-widht, initila-scale=1.0"/>
 </head>
 
 
@@ -148,6 +147,7 @@
     		<li><a href="https://www.youtube.com/watch?v=eOG90Q8EfRo">HowTo</a></li>-->*/?>
         </ul>
     </nav>
+    <div style="clear:left" ></div>
     <?php if (isset($_SESSION['angemeldet'])) include_once 'Pages/status_leiste.php.inc'; ?>
     </header>
     
@@ -192,7 +192,6 @@
         	<li><a href="./?page=impressum">Impressum</a></li>
         	<li><a href="./?page=agb">AGB</a></li>
         	<li><a href="./?page=datenschutz">Datenschutz</a></li>
-        </ul>
         </ul>
     </footer>
 </body>

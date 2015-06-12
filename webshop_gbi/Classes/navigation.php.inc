@@ -71,7 +71,7 @@ class Navigation extends  Artikelauflistung{
 		
 		$result = $db->db_query($query); //Abfrage ausführen
 		
-		$werte = earray(); 
+		$werte = array(); 
 		$i = 0;
 		
 		//wir benötig um einzelne Elemente auf der Seite mit Namen anzusprechen

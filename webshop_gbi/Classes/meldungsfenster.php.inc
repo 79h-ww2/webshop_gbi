@@ -5,7 +5,7 @@
 		{
 
 			//css der Meldungsbox einbinden
-			echo '<link rel="stylesheet" type="text/css" href="Styles/meldungsfenster.css" >';
+			echo '<link rel="stylesheet" type="text/css" href="Styles/meldungsfenster.css" />';
 
 			//Java-Script einbinden
 			echo '<script type="text/javascript" src="./Funktions/JS/meldungsfenster.js" ></script>';

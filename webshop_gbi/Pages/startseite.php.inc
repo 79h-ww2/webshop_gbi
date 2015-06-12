@@ -2,11 +2,7 @@
     <header>
         <h2>Fahrrad des Tages</h2>
     </header>
-    
-    <footer>
         
-    </footer>
-    
     <content>
     	<img src="Images/Produktbilder/Mustermodell.png" alt="Mustermodell" class="BildMustermodell" />
     	
@@ -42,22 +38,22 @@
     	<div class="BottomContentTableRow">
     		<div class="articleCell">
 	    		<img src="Images/Produktbilder/Mustermodell.png" alt="Mustermodell" class="BildMustermodellKlein" />
-	    		<h4><a href="#" title="Mustermodell A">Mustermodell A</a></h3>
+	    		<h4><a href="#" title="Mustermodell A">Mustermodell A</a></h4>
     		</div>
     		
     		<div class="articleCell">
 	    		<img src="Images/Produktbilder/Mustermodell.png" alt="Mustermodell" class="BildMustermodellKlein" />
-	    		<h4><a href="#" title="Mustermodell B">Mustermodell B</a></h3>
+	    		<h4><a href="#" title="Mustermodell B">Mustermodell B</a></h4>
     		</div>
     		
     		<div class="articleCell">
 	    		<img src="Images/Produktbilder/Mustermodell.png" alt="Mustermodell" class="BildMustermodellKlein" />
-	    		<h4><a href="#" title="Mustermodell C">Mustermodell C</a></h3>
+	    		<h4><a href="#" title="Mustermodell C">Mustermodell C</a></h4>
     		</div>
     		
     		<div class="articleCell">
 	    		<img src="Images/Produktbilder/Mustermodell.png" alt="Mustermodell" class="BildMustermodellKlein" />
-	    		<h4><a href="#" title="Mustermodell D">Mustermodell D</a></h3>
+	    		<h4><a href="#" title="Mustermodell D">Mustermodell D</a></h4>
     		</div>
 	    	
     	</div>
