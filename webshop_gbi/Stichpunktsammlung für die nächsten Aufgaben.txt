@@ -8,3 +8,7 @@
 	o Und Vorgang von Warenkorb zur Bestellung
 * Artikelseite designen und dynamisch füllen
 * Startseite dynamisch füllen
+* Bewertung fertigstellen/ einbinden
+	0 Datenbankänderung beachten, Bewertung befindet sich in der Tabelle Kommentar
+	0 beim Suchergebnis gucken, was schon fertig ist
+	0 konnte Freitag wegen des Fehlen der zuständigen Person nicht gezeigt werden
