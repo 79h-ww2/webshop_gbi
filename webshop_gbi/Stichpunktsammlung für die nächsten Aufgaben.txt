@@ -1,8 +1,10 @@
-Erweiterte Suche:
-	Fahrradgröße
-	Preisspanne
-	Kategorie
-	Bauart
-	Frauen/ oder Herrenrad
-	Bewertung
-	Artikelnummer
+* Profilarbeitungsfunktion implementieren
+* Mobile CSS nochmal ansehen und und funktionierend in die Webseite einbauen
+* Artikelübersichtsseite für Zubehör, Fahrradteil, usw. erstellen
+* Warenkorb fertigstellen/ einbinden
+* Bestellvorgang anfangen, fertigstellen
+* Bestellvorgang vielleicht nochmal aufteilen in zwei Pakete:
+	o Bestellübersicht
+	o Und Vorgang von Warenkorb zur Bestellung
+* Artikelseite designen und dynamisch füllen
+* Startseite dynamisch füllen
