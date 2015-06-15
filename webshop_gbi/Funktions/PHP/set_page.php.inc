@@ -23,6 +23,11 @@
             case 'uebersicht':
             	include './Pages/uebersicht.php.inc';
             	break;
+            	
+            case 'profilbearbeiten':
+            	include './Pages/profilbearbeiten.php.inc';
+            break;
+            	
             default:
             	echo "<h2>Gewünschte Seite wurde nicht gefunden.</h2>";
         }

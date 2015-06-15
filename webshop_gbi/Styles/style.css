@@ -402,13 +402,17 @@ label.ort{
     width: 620px;
 }
 
-.reg_box_iconbereich, .suche_box_iconbereich{
+.reg_box_iconbereich, .suche_box_iconbereich, .adresse_aendern_box_iconbereich{
 	display: table-cell;
 	width: 80px;
 	padding-top: 20px;
 	background-image: url('../Images/Design/kunde_plus.png');
 	background-repeat: no-repeat;
 	background-position: 10px 20px;
+}
+
+.adresse_aendern_box_iconbereich{
+	background-image: url('../Images/Design/adresse_aendern.png');
 }
 
 .suche_box_iconbereich{
