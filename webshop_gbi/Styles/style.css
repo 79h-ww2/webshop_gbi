@@ -104,7 +104,7 @@ img.account {
 
 
 /* Hauptmenü und Überschrift Registrierung*/
-.nav,  #registrierung h2, #suche_erweitert h2{
+.nav,  #registrierung h2, #suche_erweitert h2, #form_adresse_aendern h2, #form_adresse_aendern h2{
    height: 40px;
    background: linear-gradient(to  bottom, black  , gray); 
 }
@@ -296,7 +296,7 @@ img.BildMustermodell{
 /* ############################################## Registierung ############################################## */
 
 
-#registrierung, #suche_erweitert{
+#registrierung, #suche_erweitert, #form_adresse_aendern, #form_adresse_aendern{
     display:block;
     margin: 0px auto;
     width: 640px;
@@ -304,7 +304,7 @@ img.BildMustermodell{
     margin-top:10px;
 }
 
-#registrierung h2, #suche_erweitert h2 {
+#registrierung h2, #suche_erweitert h2, #form_adresse_aendern h2, #form_adresse_aendern h2 {
     padding-left: 15px;
     display: table-cell
     vertical-align: middle;
@@ -324,12 +324,12 @@ img.BildMustermodell{
     padding-right: 20px;
 }
 
-#registrierung .form_content, #suche_erweitert .form_content{
+#registrierung .form_content, #suche_erweitert .form_content, #form_adresse_aendern .form_content, #email_passwort_aendern .form_content{
 	display: table-cell;
 	padding: 10px;
 }
 
-#registrierung input[type=submit], #suche_erweitert input[type=submit]{
+#registrierung input[type=submit], #suche_erweitert input[type=submit], #form_adresse_aendern input[type=submit], #form_adresse_aendern input[type=submit]{
     float: right;
     margin-right: 20px;
 }
@@ -363,11 +363,11 @@ input[type=submit]:hover , input[type=button]:hover, .contentPopupRegistrierung 
     display:inline-block;
 }
 
-#registrierung .std_reg,  #suche_erweitert .std_reg{
+#registrierung .std_reg,  #suche_erweitert .std_reg, #form_adresse_aendern .std_reg, #form_adresse_aendern .std_reg{
 	width: 160px;
 }
 
-#registrierung .lang_reg, #suche_erweitert .lang_reg{
+#registrierung .lang_reg, #suche_erweitert .lang_reg, #form_adresse_aendern .lang_reg, #form_adresse_aendern .lang_reg{
 	width: 260px;
 }
 
@@ -402,7 +402,7 @@ label.ort{
     width: 620px;
 }
 
-.reg_box_iconbereich, .suche_box_iconbereich, .adresse_aendern_box_iconbereich{
+.reg_box_iconbereich, .suche_box_iconbereich, .adresse_aendern_box_iconbereich, .email_aendern_box_iconbereich{
 	display: table-cell;
 	width: 80px;
 	padding-top: 20px;
@@ -413,6 +413,10 @@ label.ort{
 
 .adresse_aendern_box_iconbereich{
 	background-image: url('../Images/Design/adresse_aendern.png');
+}
+
+.email_aendern_box_iconbereich{
+	background-image: url('../Images/Design/email_aendern.png');
 }
 
 .suche_box_iconbereich{

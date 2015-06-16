@@ -1,6 +1,8 @@
     <?php 
  		$eingabe_ungueltig = isset($eingabe_ungueltig) ? $eingabe_ungueltig : false;
  	?>
+ 	<script type="text/javascript" src="./Funktions/JS/vorcheck_std_funktionen.js" >
+    </script>
     <script type="text/javascript" src="./Funktions/JS/registrierung.js" >
     </script>
     <form method="post" action="./?page=reg" onsubmit="return vorcheckEingabe();" id="registrierung" name="form_registrierung" >

@@ -25,7 +25,12 @@
             	break;
             	
             case 'profilbearbeiten':
-            	include './Pages/profilbearbeiten.php.inc';
+            	//profil kann nur bearbeitet werden, wenn der Kunde angemelet ist 
+            	if (isset($_SESSION['angemeldet'])){
+            		include './Pages/profilbearbeiten.php.inc';
+            	}else{
+            		echo "Sie müssen angemeldet sein, um Ihr Profil ändern zu können.";
+            	}
             break;
             	
             default:
