@@ -22,13 +22,15 @@ function isNumeric(input)
 /**
  * Überprüft, ob alle Felder ausgefüllt sind
  * @param felder Array mit den Feldnamen
- * @param meldungswoerter Array mit den Meldungswörtern für die Fehlermeldung
+ * @param meldungswoerter Array mit den Meldungswörtern für die temp_fehlermeldung
  * @param formular Name des Formulars, wo sich die Textfelder befinden
- * @returns Gibt die Fehlermeldung aus, wenn nicht alle Textfelder ausgefüllt sind
+ * @returns Gibt die temp_fehlermeldung aus, wenn nicht alle Textfelder ausgefüllt sind
  */
 function sindAlleFelderAusgefuellt(felder, meldungswort, formular){
 	//Array, wo alle nicht ausgefüllten Felder gespeichert werden sollen
 	var nicht_ausgefuellte_felder = [];
+	
+	var temp_fehlermeldung = '';
 	
 	//überprüft jedes Feld
 	for ( var i = 0; i < felder.length; i++){
@@ -46,22 +48,22 @@ function sindAlleFelderAusgefuellt(felder, meldungswort, formular){
 		}
 	}
 	
-	//wenn nicht jedes Feld ausgefüllt ist, wird eine Fehlermeldung generiert
+	//wenn nicht jedes Feld ausgefüllt ist, wird eine temp_fehlermeldung generiert
 	if (nicht_ausgefuellte_felder.length > 0){
 		if ( nicht_ausgefuellte_felder.length == 1){
-			fehlermeldung = 'Bitte geben Sie ' +  nicht_ausgefuellte_felder[0] + ' an.';
+			temp_fehlermeldung = 'Bitte geben Sie ' +  nicht_ausgefuellte_felder[0] + ' an.';
 		}else{
 			for (var j = 0; j < nicht_ausgefuellte_felder.length; j++){
 				if (j == 0){
-					fehlermeldung = 'Bitte geben Sie ' +  nicht_ausgefuellte_felder[j];
+					temp_fehlermeldung = 'Bitte geben Sie ' +  nicht_ausgefuellte_felder[j];
 				}else if ( j < (nicht_ausgefuellte_felder.length -1)){
-					fehlermeldung += ', ' + nicht_ausgefuellte_felder[j];
+					temp_fehlermeldung += ', ' + nicht_ausgefuellte_felder[j];
 				}else{
-					fehlermeldung += ' und ' + nicht_ausgefuellte_felder[j] + ' an.';
+					temp_fehlermeldung += ' und ' + nicht_ausgefuellte_felder[j] + ' an.';
 				}
 			}
 		}
 	}
 	
-	return fehlermeldung;
+	return temp_fehlermeldung;
 }

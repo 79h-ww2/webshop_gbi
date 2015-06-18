@@ -34,7 +34,7 @@
             break;
             	
             default:
-            	echo "<h2>Gewünschte Seite wurde nicht gefunden.</h2>";
+            	echo "<br/><h2>Gewünschte Seite wurde nicht gefunden.</h2>";
         }
     }
     else{

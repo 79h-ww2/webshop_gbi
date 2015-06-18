@@ -71,7 +71,7 @@
     </form>
     
     
-    <form method="post" action="#" onsubmit="return vorcheckEingabeEmailPasswort();" id="form_adresse_aendern" name="form_email_passwort_aendern" >
+    <form method="post" action="#" onsubmit="return vorcheckEingabeEmailPasswort();" id="form_email_passwort_aendern" name="form_email_passwort_aendern" >
         <h2>
 		     Email-Adresse und Passwort ändern
 		</h2>
