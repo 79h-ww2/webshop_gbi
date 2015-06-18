@@ -1,4 +1,9 @@
-    <?php 
+    <?php
+    	include_once 'Classes/Kunde.php.inc';
+    	$profil = new Kunden();
+    	//Kundennr bestimmen
+    	$kid = $profil->get_kid_from_email($_SESSION['angemeldet']);
+    	
  		$eingabe_ungueltig = isset($eingabe_ungueltig) ? $eingabe_ungueltig : false;
  	?>
  	<script type="text/javascript" src="./Funktions/JS/vorcheck_std_funktionen.js" >
@@ -18,36 +23,45 @@
 		        
 		            <p class="reg_form_zeile" >
 		                <label for="vorname">Vorname:</label>
-		                <input type="text" name="vorname" maxlength="50" value="<?php if ($eingabe_ungueltig) echo htmlspecialchars($_POST['vorname'],ENT_QUOTES,'UTF-8'); ?>" class="lang_reg" <?php if( $eingabe_ungueltig && $eingabe_check_result->get_feldstatus('vorname') ) echo 'style="border-color:red; border-style: solid"';  ?> />
+		                <input type="text" name="vorname" maxlength="50" value="<?php if ($eingabe_ungueltig) {echo htmlspecialchars($_POST['vorname'],ENT_QUOTES,'UTF-8');}else{ echo htmlspecialchars($profil->get_vorname_from_kid($kid),ENT_QUOTES,'UTF-8'); } ?>" class="lang_reg" <?php if( $eingabe_ungueltig && $eingabe_check_result->get_feldstatus('vorname') ) echo 'style="border-color:red; border-style: solid"';  ?> />
 		            </p>
 		            
 		            <p class="reg_form_zeile" >
 		                <label for="name">Name:</label>
-		                <input type="text" name="name" maxlength="50"  value="<?php if ($eingabe_ungueltig) echo htmlspecialchars($_POST['name'],ENT_QUOTES,'UTF-8'); ?>" class="lang_reg" <?php if($eingabe_ungueltig && $eingabe_check_result->get_feldstatus('name') ) echo 'style="border-color:red; border-style: solid"';  ?> />
+		                <input type="text" name="name" maxlength="50"  value="<?php if ($eingabe_ungueltig) { echo htmlspecialchars($_POST['name'],ENT_QUOTES,'UTF-8');}else{ echo htmlspecialchars($profil->get_name_from_kid($kid),ENT_QUOTES,'UTF-8'); } ?>" class="lang_reg" <?php if($eingabe_ungueltig && $eingabe_check_result->get_feldstatus('name') ) echo 'style="border-color:red; border-style: solid"';  ?> />
 		            </p>
 		            
 		             <p class="reg_form_zeile" >
 		              	<span>Geschlecht:</span>
-		              	<input type="radio" name="geschlecht" id="maennlich" value="männlich" checked="checked" />
+		              	<?php
+		              		$gechlecht = "männlich";
+		              		//wenn das Formular schon submitet wurde und ein Feld als ausgefüllt war
+		              		if ( $eingabe_ungueltig){
+		              			$gechlecht = $_POST['geschlecht'];
+		              		}else{ //wenn die Daten aus der Datenbank gelesen werden und das Dokument noch nicht submitted wurde
+		              			$gechlecht = $profil->get_geschlecht_from_kid($kid);
+		              		}
+		              	?>
+		              	<input type="radio" name="geschlecht" id="maennlich" value="männlich" <?php if($gechlecht == 'männlich') echo 'checked="checked"'; ?>  />
 		            	<label for="maennlich">m&auml;nnlich</label>
 		            	
-		            	<input type="radio" name="geschlecht" id="weiblich" value="weiblich"  />
+		            	<input type="radio" name="geschlecht" id="weiblich" value="weiblich" <?php if($gechlecht != 'männlich') echo 'checked="checked"'; ?> />
 		            	<label for="weiblich">weiblich</label>
 		            </p>
 		            
 		            <p class="reg_form_zeile" >
 		                <label for="strasse" >Stra&szlig;e:</label>
-		                <input type="text" name="strasse" maxlength="50"  value="<?php if ($eingabe_ungueltig) echo htmlspecialchars($_POST['strasse'],ENT_QUOTES,'UTF-8'); ?>" class="std_reg" <?php if( $eingabe_ungueltig && $eingabe_check_result->get_feldstatus('strasse') ) echo 'style="border-color:red; border-style: solid"';  ?> />
+		                <input type="text" name="strasse" maxlength="50"  value="<?php if ($eingabe_ungueltig) { echo htmlspecialchars($_POST['strasse'],ENT_QUOTES,'UTF-8');}else{ echo htmlspecialchars($profil->get_strasse_from_kid($kid),ENT_QUOTES,'UTF-8'); } ?>" class="std_reg" <?php if( $eingabe_ungueltig && $eingabe_check_result->get_feldstatus('strasse') ) echo 'style="border-color:red; border-style: solid"';  ?> />
 		                <label for="hausnr" class="hausnr" >Haus Nr.:</label>
-		                <input type="text" name="hausnr" maxlength="5"  value="<?php if ($eingabe_ungueltig) echo htmlspecialchars($_POST['hausnr'],ENT_QUOTES,'UTF-8'); ?>" class="hausnr" <?php if( $eingabe_ungueltig && $eingabe_check_result->get_feldstatus('hausnr') ) echo 'style="border-color:red; border-style: solid"';  ?> />
+		                <input type="text" name="hausnr" maxlength="5"  value="<?php if ($eingabe_ungueltig) {echo  htmlspecialchars($_POST['hausnr'],ENT_QUOTES,'UTF-8'); }else{ echo htmlspecialchars($profil->get_hausnr_from_kid($kid),ENT_QUOTES,'UTF-8'); } ?>" class="hausnr" <?php if( $eingabe_ungueltig && $eingabe_check_result->get_feldstatus('hausnr') ) echo 'style="border-color:red; border-style: solid"';  ?> />
 		            </p>
 		            
 		             <p class="reg_form_zeile" >
 		                <label for="plz" >PLZ:</label>
-		                <input type="text" name="plz" maxlength="5"  value="<?php if ($eingabe_ungueltig) echo htmlspecialchars($_POST['plz'],ENT_QUOTES,'UTF-8'); ?>" class="plz" <?php if( $eingabe_ungueltig && $eingabe_check_result->get_feldstatus('plz') ) echo 'style="border-color:red; border-style: solid"';  ?> />
+		                <input type="text" name="plz" maxlength="5"  value="<?php if ($eingabe_ungueltig) { echo htmlspecialchars($_POST['plz'],ENT_QUOTES,'UTF-8');}else{ echo htmlspecialchars($profil->get_plz_from_kid($kid),ENT_QUOTES,'UTF-8'); } ?>" class="plz" <?php if( $eingabe_ungueltig && $eingabe_check_result->get_feldstatus('plz') ) echo 'style="border-color:red; border-style: solid"';  ?> />
 		                
 		                <label for="ort" class="ort" >Ort:</label>
-		                <input type="text" name="ort" maxlength="50"  value="<?php if ($eingabe_ungueltig) echo htmlspecialchars($_POST['ort'],ENT_QUOTES,'UTF-8'); ?>" class="std_reg" <?php if( $eingabe_ungueltig && $eingabe_check_result->get_feldstatus('ort') ) echo 'style="border-color:red; border-style: solid"';  ?> />
+		                <input type="text" name="ort" maxlength="50"  value="<?php if ($eingabe_ungueltig) { echo htmlspecialchars($_POST['ort'],ENT_QUOTES,'UTF-8'); }else{ echo htmlspecialchars($profil->get_ort_from_kid($kid),ENT_QUOTES,'UTF-8'); } ?>" class="std_reg" <?php if( $eingabe_ungueltig && $eingabe_check_result->get_feldstatus('ort') ) echo 'style="border-color:red; border-style: solid"';  ?> />
 		            </p>
 		            		            
 		            <p class="text_fehlermeldung" id="EingabeAdresse_fehlermeldung" >
