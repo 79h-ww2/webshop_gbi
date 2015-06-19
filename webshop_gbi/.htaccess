@@ -1,0 +1,5 @@
+Options  -Indexes
+<FilesMatch "\.(php.inc|htaccess)$">
+  order allow,deny
+  deny from all
+  </FilesMatch>
