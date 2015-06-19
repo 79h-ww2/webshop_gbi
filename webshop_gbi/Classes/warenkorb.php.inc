@@ -9,11 +9,13 @@ class warenkorb{
  		$_SESSION["Warenkorb"] = array();
 	 } 
   	}
+  	
  	public function artikel_in_den_warenkorb_legen ($artikelnummer, $menge){
  		$index=count($_SESSION["Warenkorb"]);
  		$eintrag = new warenkorbeintrag($menge, $artikelnummer);
  		$_SESSION["Warenkorb"][$index] = $eintrag;
  	}
+ 	
  	public function menge_im_warenkorb(){
  		
  		$menge = 0;
@@ -23,7 +25,8 @@ class warenkorb{
  			$menge += $y->get_menge();
  		}
  		return $menge;		
- 	 	}
+ 	 }
+ 	 
  	 public function artikel_im_warenkorb_anzeigen(){
  	 	$w = $_SESSION["Warenkorb"];
  	 	return $w;

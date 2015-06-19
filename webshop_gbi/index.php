@@ -17,26 +17,24 @@
 		ini_set('display_errors', 1);
 		
 		include_once 'Classes/warenkorb.php.inc';
-		session_start();
-		//$warenkorb1 = new warenkorb();
-		//echo($warenkorb1->menge_im_warenkorb());
-		//	die($warenkorb1->menge_im_warenkorb());
+		
 		//Startet eine neue Sitzung
+		session_start();
 		
 		
-		//lÃ¤dt die Klasse fÃ¼r die Meldungsbox
+		//lädt die Klasse fÃ¼r die Meldungsbox
 		include_once './Classes/meldungsfenster.php.inc';
 		
 		//bildet ein Objekt das MSG-Box
 		$msgbox = new Meldungsfenster(); 
 		
-		//lÃ¤dt die Klasse fÃ¼r den Datenbankzugriff
+		//lädt die Klasse fÃ¼r den Datenbankzugriff
 		include_once './Classes/datenbank.php.inc';
 	
-		//lÃ¤dt die Webseiten-Kontrolldatei
+		//lädt die Webseiten-Kontrolldatei
 		include_once './Funktions/PHP/set_control.php.inc';
 		
-		//Klassen fÃ¼r die Navigation
+		//Klassen für die Navigation
 		include_once 'Classes/artikel.php.inc';
 		include_once 'Classes/navigation.php.inc';
 	?>
@@ -54,15 +52,16 @@
             </div>
             
             <div class="warenkorbCell">
-    
-            	<?php
-            	
-$warenkorb1 = new warenkorb();
+            <?php
+				$warenkorb1 = new warenkorb();
+				echo($warenkorb1->menge_im_warenkorb());
+				include_once 'Pages/popupWarenkorb.php.inc';
+			?>
 
-echo($warenkorb1->menge_im_warenkorb());
-include_once 'Pages/popupWarenkorb.php.inc';
+<div id="Warenkorb_Beschriftung" >Warenkorb
+</div>
 
-?> <!-- Anzahl Artikel im Warenkorb -->
+ <!-- Anzahl Artikel im Warenkorb -->
             </div>
             
             <div class="accountCell" onclick="if(document.getElementById('popupRegistrierung').style.visibility == 'visible') document.getElementById('popupRegistrierung').style.visibility = '';">

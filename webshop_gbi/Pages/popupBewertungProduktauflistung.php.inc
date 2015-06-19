@@ -1,6 +1,5 @@
 <?php
 	$durchschnittsterne = 0;
-
 	if (($arr_sterne[0]+ $arr_sterne[1] + $arr_sterne[2] + $arr_sterne[3] + $arr_sterne[4]) > 0) $durchschnittsterne = round(($arr_sterne[0]*1 + $arr_sterne[1]*2 + $arr_sterne[2]*3 + $arr_sterne[3]*4 + $arr_sterne[4]*5) /($arr_sterne[0]+ $arr_sterne[1] + $arr_sterne[2] + $arr_sterne[3] + $arr_sterne[4]) ,1);
 ?>
 <div class="popupBewertungProduktauflistung" >

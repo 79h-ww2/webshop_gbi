@@ -7,16 +7,17 @@
 		
 		/**
 		 * Überprüft, ob die Profiländerung gültig ist
-		 * @param unknown $vorname
-		 * @param unknown $name
-		 * @param unknown $strasse
-		 * @param unknown $plz
-		 * @param unknown $hausnr
-		 * @param unknown $ort
+		 * @param string $vorname
+		 * @param string $name
+		 * @param string $strasse
+		 * @param string $plz
+		 * @param string $hausnr
+		 * @param string $ort
 		 * @return Ambigous <string, Ueberpruefresult>
 		 */
 		public function ueberpruefeEingabeAdresseAendern($vorname, $name, $strasse, $plz, $hausnr, $ort){
 			$felder = array($vorname, $name, $strasse, $hausnr, $plz, $ort);
+			
 			$feldnamen = array('vorname', 'name', 'strasse', 'hausnr', 'plz', 'ort');
 			
 			//Array mit Meldungswörtern, die in der Fehlermeldung angezeigt werden sollen
@@ -45,6 +46,62 @@
 			$return->set_fehlermeldung($fehlermeldung);
 			
 			return $return;
+		}
+		
+		
+		/**
+		 * Ändern der Kundenadresse
+		 * @param int $kid Kundennummer
+		 * @param string $vorname_neu neuer Vorname
+		 * @param string $name_neu neuer Name
+		 * @param string $strasse_neu neue Straße
+		 * @param string $plz_neu neue Postleitzahl
+		 * @param string $hausnr_neu neue Hausnummer
+		 * @param string $ort_neu neuer Ort
+		 * @param string $geschlecht_neu neues Geschlecht
+		 * @return boolean war Änderung erfolgreich?
+		 */
+		public function adresseAendern($kid, $vorname_neu, $name_neu, $strasse_neu, $plz_neu, $hausnr_neu, $ort_neu, $geschlecht_neu){
+			
+			//Verbindung zur Datenbank aufbauen
+			$db = datenbank_verbindung_aufbauen();
+			if ( !($db->db_connect()) ) die ("Es konnte keine Verbindung zur Datenbank aufgebaut werden");
+			
+			//Mechanismus zum Schutz gegen Sql Injection
+			$kid = $db->db_real_escape_string($kid);
+			$vorname_neu = $db->db_real_escape_string($vorname_neu);
+			$name_neu = $db->db_real_escape_string($name_neu);
+			$strasse_neu = $db->db_real_escape_string($strasse_neu);
+			$plz_neu = $db->db_real_escape_string($plz_neu);
+			$hausnr_neu = $db->db_real_escape_string($hausnr_neu);
+			$ort_neu = $db->db_real_escape_string($ort_neu);
+			$geschlecht_neu = $db->db_real_escape_string($geschlecht_neu);
+			
+			$query = "
+					update
+						kunde
+					set
+						Vorname = '$vorname_neu',
+						Name = '$name_neu',
+						Strasse = '$strasse_neu',
+						PLZ = '$plz_neu',
+						Hausnummer = '$hausnr_neu',
+						Ort = '$ort_neu',
+						Geschlecht = '$geschlecht_neu',
+						status = 'a',
+						Stand = now()						
+					where
+						KId = '$kid';
+			";
+			
+			//Die Datenbankanweisung ausführen
+			$result = $db->db_query($query);
+			
+			//Verbindung zur Datenbank schließen
+			$db->db_close();
+			
+			return (!$result) ? false : true;
+			
 		}
 		
 		
