@@ -12,7 +12,7 @@
 			
 			//wenn kein Produkt gefunden wurde, wird eine Meldung ausgegeben
 			if ( count($array_query_result_db) == 0) {
-				echo 'Zu Ihren Suchbegriff wurde nichts gefunden.';
+				echo '<br/>Kein Ergebnis gefunden.';
 			}
 			//wenn Produkte gefunden wurden
 			else{

@@ -16,22 +16,27 @@
 		error_reporting(E_ALL);
 		ini_set('display_errors', 1);
 		
-		//Startet eine neue Sitzung
+		include_once 'Classes/warenkorb.php.inc';
 		session_start();
+		//$warenkorb1 = new warenkorb();
+		//echo($warenkorb1->menge_im_warenkorb());
+		//	die($warenkorb1->menge_im_warenkorb());
+		//Startet eine neue Sitzung
 		
-		//lädt die Klasse für die Meldungsbox
+		
+		//lÃ¤dt die Klasse fÃ¼r die Meldungsbox
 		include_once './Classes/meldungsfenster.php.inc';
 		
 		//bildet ein Objekt das MSG-Box
 		$msgbox = new Meldungsfenster(); 
 		
-		//lädt die Klasse für den Datenbankzugriff
+		//lÃ¤dt die Klasse fÃ¼r den Datenbankzugriff
 		include_once './Classes/datenbank.php.inc';
 	
-		//lädt die Webseiten-Kontrolldatei
+		//lÃ¤dt die Webseiten-Kontrolldatei
 		include_once './Funktions/PHP/set_control.php.inc';
 		
-		//Klassen für die Navigation
+		//Klassen fÃ¼r die Navigation
 		include_once 'Classes/artikel.php.inc';
 		include_once 'Classes/navigation.php.inc';
 	?>
@@ -49,7 +54,13 @@
             </div>
             
             <div class="warenkorbCell">
-            	100 <!-- Anzahl Artikel im Warenkorb -->
+            	<?php
+$warenkorb1 = new warenkorb();
+
+echo($warenkorb1->menge_im_warenkorb());
+
+
+?> <!-- Anzahl Artikel im Warenkorb -->
             </div>
             
             <div class="accountCell" onclick="if(document.getElementById('popupRegistrierung').style.visibility == 'visible') document.getElementById('popupRegistrierung').style.visibility = '';">
@@ -161,7 +172,7 @@
         </div>
     </div>
     
-    <!-- aktivieren, zwalls Sidebar gewünscht sind 
+    <!-- aktivieren, zwalls Sidebar gewÃ¼nscht sind 
     
     <aside class="top-sidebar">
         <article>

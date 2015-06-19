@@ -365,6 +365,215 @@
 		}
 		
 		/**
+		 * bestimmt die KId des Kunden
+		 * @param String $email Email-Adresse des Kunden
+		 * @return String KId
+		 */
+		public function get_kid_from_email($email){
+			//Verbindung zur Datenbank aufbauen
+			$db = datenbank_verbindung_aufbauen();
+			if ( !($db->db_connect()) ) die ("Es konnte keine Verbindung zur Datenbank aufgebaut werden");
+				
+			$email = $db->db_real_escape_string($email);
+				
+			$query = "select KId from kunde where Email ='$email'";
+			$result = $db->db_query($query);
+				
+			$w = "";
+			while ( $wert = $db->db_fetch_array($result)){
+				$w = $wert[0];
+			}
+				
+			//Datenbankverbindung schließen
+			$db->db_close();
+				
+			return $w;
+		}
+		
+		/**
+		 * bestimmt den Vornamen
+		 * @param String $kid Kundennr
+		 * @return String Vorname
+		 */
+		public function get_vorname_from_kid($kid){
+			//Verbindung zur Datenbank aufbauen
+			$db = datenbank_verbindung_aufbauen();
+			if ( !($db->db_connect()) ) die ("Es konnte keine Verbindung zur Datenbank aufgebaut werden");
+				
+			$kid = $db->db_real_escape_string($kid);
+				
+			$query = "select Vorname from kunde where KId ='$kid'";
+			$result = $db->db_query($query);
+				
+			$w = "";
+			while ( $wert = $db->db_fetch_array($result)){
+				$w = $wert[0];
+			}
+				
+			//Datenbankverbindung schließen
+			$db->db_close();
+				
+			return $w;
+		}
+		
+		/**
+		* bestimmt den Namen
+		* @param String $kid Kundennr
+		* @return String Name
+		*/
+		public function get_name_from_kid($kid){
+			//Verbindung zur Datenbank aufbauen
+			$db = datenbank_verbindung_aufbauen();
+			if ( !($db->db_connect()) ) die ("Es konnte keine Verbindung zur Datenbank aufgebaut werden");
+		
+			$kid = $db->db_real_escape_string($kid);
+		
+			$query = "select Name from kunde where KId ='$kid'";
+			$result = $db->db_query($query);
+		
+			$w = "";
+			while ( $wert = $db->db_fetch_array($result)){
+				$w = $wert[0];
+			}
+		
+			//Datenbankverbindung schließen
+			$db->db_close();
+		
+			return $w;
+		}
+		
+		/**
+		 * bestimmt das Geschlecht
+		 * @param String $kid Kundennr
+		 * @return String Geschlecht
+		 */
+		public function get_geschlecht_from_kid($kid){
+			//Verbindung zur Datenbank aufbauen
+			$db = datenbank_verbindung_aufbauen();
+			if ( !($db->db_connect()) ) die ("Es konnte keine Verbindung zur Datenbank aufgebaut werden");
+		
+			$kid = $db->db_real_escape_string($kid);
+		
+			$query = "select Geschlecht from kunde where KId ='$kid'";
+			$result = $db->db_query($query);
+		
+			$w = "";
+			while ( $wert = $db->db_fetch_array($result)){
+				$w = $wert[0];
+			}
+		
+			//Datenbankverbindung schließen
+			$db->db_close();
+		
+			return $w;
+		}
+		
+		/**
+		 * bestimmt die Straße
+		 * @param String $kid Kundennr
+		 * @return String Straße
+		 */
+		public function get_strasse_from_kid($kid){
+			//Verbindung zur Datenbank aufbauen
+			$db = datenbank_verbindung_aufbauen();
+			if ( !($db->db_connect()) ) die ("Es konnte keine Verbindung zur Datenbank aufgebaut werden");
+		
+			$kid = $db->db_real_escape_string($kid);
+		
+			$query = "select Strasse from kunde where KId ='$kid'";
+			$result = $db->db_query($query);
+		
+			$w = "";
+			while ( $wert = $db->db_fetch_array($result)){
+				$w = $wert[0];
+			}
+		
+			//Datenbankverbindung schließen
+			$db->db_close();
+		
+			return $w;
+		}
+		
+		/**
+		 * bestimmt die Hausnummer
+		 * @param String $kid Kundennr
+		 * @return String Hausnummer
+		 */
+		public function get_hausnr_from_kid($kid){
+			//Verbindung zur Datenbank aufbauen
+			$db = datenbank_verbindung_aufbauen();
+			if ( !($db->db_connect()) ) die ("Es konnte keine Verbindung zur Datenbank aufgebaut werden");
+		
+			$kid = $db->db_real_escape_string($kid);
+		
+			$query = "select Hausnummer from kunde where KId ='$kid'";
+			$result = $db->db_query($query);
+		
+			$w = "";
+			while ( $wert = $db->db_fetch_array($result)){
+				$w = $wert[0];
+			}
+		
+			//Datenbankverbindung schließen
+			$db->db_close();
+		
+			return $w;
+		}
+		
+		/**
+		 * bestimmt die PLZ
+		 * @param String $kid Kundennr
+		 * @return String PLZ
+		 */
+		public function get_plz_from_kid($kid){
+			//Verbindung zur Datenbank aufbauen
+			$db = datenbank_verbindung_aufbauen();
+			if ( !($db->db_connect()) ) die ("Es konnte keine Verbindung zur Datenbank aufgebaut werden");
+		
+			$kid = $db->db_real_escape_string($kid);
+		
+			$query = "select PLZ from kunde where KId ='$kid'";
+			$result = $db->db_query($query);
+		
+			$w = "";
+			while ( $wert = $db->db_fetch_array($result)){
+				$w = $wert[0];
+			}
+		
+			//Datenbankverbindung schließen
+			$db->db_close();
+		
+			return $w;
+		}
+		
+		/**
+		 * bestimmt den Ort
+		 * @param String $kid Kundennr
+		 * @return String Ort
+		 */
+		public function get_ort_from_kid($kid){
+			//Verbindung zur Datenbank aufbauen
+			$db = datenbank_verbindung_aufbauen();
+			if ( !($db->db_connect()) ) die ("Es konnte keine Verbindung zur Datenbank aufgebaut werden");
+		
+			$kid = $db->db_real_escape_string($kid);
+		
+			$query = "select Ort from kunde where KId ='$kid'";
+			$result = $db->db_query($query);
+		
+			$w = "";
+			while ( $wert = $db->db_fetch_array($result)){
+				$w = $wert[0];
+			}
+		
+			//Datenbankverbindung schließen
+			$db->db_close();
+		
+			return $w;
+		}
+		
+		
+		/**
 		 * Überprüft die eingegebenen Daten, die in das Anmeldeformular eingegeben wurden
 		 * @param unknown $email Eingabe: Email-Adresse
 		 * @param unknown $passwort Eingabe: Passwort

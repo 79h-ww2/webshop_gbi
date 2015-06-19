@@ -1,6 +1,8 @@
     <?php 
  		$eingabe_ungueltig = isset($eingabe_ungueltig) ? $eingabe_ungueltig : false;
  	?>
+ 	<script type="text/javascript" src="./Funktions/JS/vorcheck_std_funktionen.js" >
+    </script>
     <script type="text/javascript" src="./Funktions/JS/registrierung.js" >
     </script>
     <form method="post" action="./?page=reg" onsubmit="return vorcheckEingabe();" id="registrierung" name="form_registrierung" >
@@ -25,11 +27,18 @@
 		            </p>
 		            
 		             <p class="reg_form_zeile" >
+		             <?php
+			             $gechlecht = "männlich";
+			             //wenn das Formular schon submitet wurde und ein Feld als ausgefüllt war
+			             if ( $eingabe_ungueltig){
+			             	$gechlecht = $_POST['geschlecht'];
+			             }
+		             ?>
 		              	<span>Geschlecht:</span>
-		              	<input type="radio" name="geschlecht" id="maennlich" value="männlich" checked="checked" />
+		              	<input type="radio" name="geschlecht" id="maennlich" value="männlich" <?php if($gechlecht == 'männlich') echo 'checked="checked"'; ?> />
 		            	<label for="maennlich">m&auml;nnlich</label>
 		            	
-		            	<input type="radio" name="geschlecht" id="weiblich" value="weiblich"  />
+		            	<input type="radio" name="geschlecht" id="weiblich" value="weiblich" <?php if($gechlecht != 'männlich') echo 'checked="checked"'; ?>  />
 		            	<label for="weiblich">weiblich</label>
 		            </p>
 		            
