@@ -21,9 +21,11 @@ class warenkorb{
  		return $index;		
  	 	}
  	 public function artikel_im_warenkorb_anzeigen(){
- 	 	
- 	 } 
- }
+ 	 	$w = $_SESSION["Warenkorb"];
+ 	 	return $w;
+ 	 	  	 		
+ 	  }
+}
 ?>
 
 

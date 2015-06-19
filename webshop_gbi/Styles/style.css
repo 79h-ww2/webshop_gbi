@@ -402,6 +402,8 @@ label.ort{
     width: 620px;
 }
 
+
+
 .reg_box_iconbereich, .suche_box_iconbereich, .adresse_aendern_box_iconbereich, .email_aendern_box_iconbereich{
 	display: table-cell;
 	width: 80px;
@@ -443,7 +445,7 @@ label.ort{
     -webkit-border-radius: 10px 10px 10px 10px;
 }
 
-.popupRegistrierung{
+.popupRegistrierung, .popupWarenkorb{
 	position: absolute;
 	width: 480px;
 	height: 120px;
@@ -451,9 +453,10 @@ label.ort{
 	margin-left:-370px;
 	visibility: hidden;
 	text-align: left;
+
 }
 
-.popupBewertungProduktauflistung{
+.popupBewertungProduktauflistung, .popupWarenkorb{
 	position: absolute;
 	width: 180px;
 	margin-left: -30px;
@@ -484,7 +487,7 @@ label.ort{
 	list-style: none;
 }
 
-.popupProfil .haken_sprechblase{
+.popupProfil .haken_sprechblase, .popupWarenkorb .haken_sprechblase{
 	border-left: 15px solid transparent;
 	border-right: 15px solid transparent;
 	border-bottom: 30px solid #545454;
@@ -493,7 +496,7 @@ label.ort{
 	height: 0px;
 }
 
-.popupRegistrierung .haken_sprechblase{
+.popupRegistrierung .haken_sprechblase	{
 	border-left: 15px solid transparent;
 	border-right: 15px solid transparent;
 	border-bottom: 30px solid #545454;
@@ -501,6 +504,16 @@ label.ort{
 	width: 0px;
 	height: 0px;
 }
+
+.popupWarenkorb .haken_sprechblase	{
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-bottom: 30px solid #545454;
+	margin-left: 20px;
+	width: 0px;
+	height: 25px;
+}
+
 
 .popupBewertungProduktauflistungSterneGesamt{
 	text-align: center;
@@ -539,6 +552,7 @@ label.ort{
 	margin-left: 30px;
 }
 
+
 input[type="text"], input[type="email"], input[type="password"], select, input[type="number"]{
 	border-style: solid;
 	border-width: 2px;
@@ -550,7 +564,9 @@ input[type="text"], input[type="email"], input[type="password"], select, input[t
 .accountCell:HOVER > .popupRegistrierung, .popupRegistrierung:hover{
 	visibility: visible;
 }
-
+.warenkorbCell:HOVER > .popupWarenkorb, .popupWarenkorb:hover{
+	visibility: visible;
+}
 .accountCell:HOVER > .popupProfil{
 	visibility: visible;
 }

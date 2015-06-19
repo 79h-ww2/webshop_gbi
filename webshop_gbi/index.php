@@ -54,11 +54,13 @@
             </div>
             
             <div class="warenkorbCell">
+    
             	<?php
+            	
 $warenkorb1 = new warenkorb();
 
 echo($warenkorb1->menge_im_warenkorb());
-
+include_once 'Pages/popupWarenkorb.php.inc';
 
 ?> <!-- Anzahl Artikel im Warenkorb -->
             </div>

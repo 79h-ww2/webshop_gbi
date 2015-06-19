@@ -9,6 +9,6 @@
 
 <?php
 $warenkorb1 = new warenkorb();
-echo($warenkorb1->menge_im_warenkorb());
+$warenkorb1->artikel_im_warenkorb_anzeigen();
 
 ?>
