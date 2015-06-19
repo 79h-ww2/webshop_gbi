@@ -6,6 +6,49 @@
 	class Kunden extends EingabeCheckGrundlegend{
 		
 		/**
+		 * Überprüft, ob die Profiländerung gültig ist
+		 * @param unknown $vorname
+		 * @param unknown $name
+		 * @param unknown $strasse
+		 * @param unknown $plz
+		 * @param unknown $hausnr
+		 * @param unknown $ort
+		 * @return Ambigous <string, Ueberpruefresult>
+		 */
+		public function ueberpruefeEingabeAdresseAendern($vorname, $name, $strasse, $plz, $hausnr, $ort){
+			$felder = array($vorname, $name, $strasse, $hausnr, $plz, $ort);
+			$feldnamen = array('vorname', 'name', 'strasse', 'hausnr', 'plz', 'ort');
+			
+			//Array mit Meldungswörtern, die in der Fehlermeldung angezeigt werden sollen
+			$meldungswort = array('ihren Vornamen', 'ihren Namen', 'ihre Straße', 'ihre Hausnummer', 'ihr Postleitzahl', 'ihr Ort');
+			
+			//Variable, wo die Fehlermeldung zwischengespeichert wird
+			$fehlermeldung = "";
+
+
+			//überprüft, ob alle Inputfelder ausgefüllt sind und erstellt wenn nicht eine Fehlermeldung
+			$return = $this->erstelle_meldung_nicht_alle_felder_ausgefuellt($feldnamen, $meldungswort, $felder);
+			$fehlermeldung = $return->get_fehlermeldung();
+			
+			
+			if ($fehlermeldung == "") {
+				//überprüft, ob die PLZ gültig ist
+				if ( strlen($plz) != 5 ||  is_numeric($plz) == false ){
+					$fehlermeldung .= ($fehlermeldung == '') ? '' : ' ';
+					$fehlermeldung .= "Die Postleitzahl ist ungültig. Bitte geben Sie eine gültige Postleitzahl ein.";
+					$return->set_feldstatus('plz', true);
+				}
+			}
+			
+
+			//Übergibt an das Rückgabeobjekt die Fehlermeldung
+			$return->set_fehlermeldung($fehlermeldung);
+			
+			return $return;
+		}
+		
+		
+		/**
 		 * überprüft, die Benutzereingabe des Registrierungsfensters 
 		 * @param string $vorname Vorname
 		 * @param string $name Name

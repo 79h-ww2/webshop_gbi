@@ -4,7 +4,9 @@
     	//Kundennr bestimmen
     	$kid = $profil->get_kid_from_email($_SESSION['angemeldet']);
     	
- 		$eingabe_ungueltig = isset($eingabe_ungueltig) ? $eingabe_ungueltig : false;
+    	$eingabe_ungueltig = isset($eingabe_ungueltig) ? $eingabe_ungueltig : false;
+    	
+ 		$eingabe_ungueltig_adresse = isset($eingabe_ungueltig_adresse) ? $eingabe_ungueltig_adresse : false;
  	?>
  	<script type="text/javascript" src="./Funktions/JS/vorcheck_std_funktionen.js" >
     </script>
@@ -23,12 +25,12 @@
 		        
 		            <p class="reg_form_zeile" >
 		                <label for="vorname">Vorname:</label>
-		                <input type="text" name="vorname" maxlength="50" value="<?php if ($eingabe_ungueltig) {echo htmlspecialchars($_POST['vorname'],ENT_QUOTES,'UTF-8');}else{ echo htmlspecialchars($profil->get_vorname_from_kid($kid),ENT_QUOTES,'UTF-8'); } ?>" class="lang_reg" <?php if( $eingabe_ungueltig && $eingabe_check_result->get_feldstatus('vorname') ) echo 'style="border-color:red; border-style: solid"';  ?> />
+		                <input type="text" name="vorname" maxlength="50" value="<?php if ($eingabe_ungueltig_adresse) {echo htmlspecialchars($_POST['vorname'],ENT_QUOTES,'UTF-8');}else{ echo htmlspecialchars($profil->get_vorname_from_kid($kid),ENT_QUOTES,'UTF-8'); } ?>" class="lang_reg" <?php if( $eingabe_ungueltig && $eingabe_check_result->get_feldstatus('vorname') ) echo 'style="border-color:red; border-style: solid"';  ?> />
 		            </p>
 		            
 		            <p class="reg_form_zeile" >
 		                <label for="name">Name:</label>
-		                <input type="text" name="name" maxlength="50"  value="<?php if ($eingabe_ungueltig) { echo htmlspecialchars($_POST['name'],ENT_QUOTES,'UTF-8');}else{ echo htmlspecialchars($profil->get_name_from_kid($kid),ENT_QUOTES,'UTF-8'); } ?>" class="lang_reg" <?php if($eingabe_ungueltig && $eingabe_check_result->get_feldstatus('name') ) echo 'style="border-color:red; border-style: solid"';  ?> />
+		                <input type="text" name="name" maxlength="50"  value="<?php if ($eingabe_ungueltig_adresse) { echo htmlspecialchars($_POST['name'],ENT_QUOTES,'UTF-8');}else{ echo htmlspecialchars($profil->get_name_from_kid($kid),ENT_QUOTES,'UTF-8'); } ?>" class="lang_reg" <?php if($eingabe_ungueltig && $eingabe_check_result->get_feldstatus('name') ) echo 'style="border-color:red; border-style: solid"';  ?> />
 		            </p>
 		            
 		             <p class="reg_form_zeile" >
@@ -85,7 +87,7 @@
     </form>
     
     
-    <form method="post" action="&type=email_passwort_bearbeiten" onsubmit="return vorcheckEingabeEmailPasswort();" id="form_email_passwort_aendern" name="form_email_passwort_aendern" >
+    <form method="post" action="./?type=email_passwort_bearbeiten" onsubmit="return vorcheckEingabeEmailPasswort();" id="form_email_passwort_aendern" name="form_email_passwort_aendern" >
         <h2>
 		     Email-Adresse und Passwort ändern
 		</h2>

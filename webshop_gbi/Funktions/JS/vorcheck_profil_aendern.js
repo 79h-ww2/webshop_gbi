@@ -11,10 +11,10 @@ function vorcheckEingabeEmailPasswort(){
 	 */
 	
 	//Array mit allen Feldern, die ausgefüllt sein müssen
-	var felder = ['email', 'passwort', 'wpasswort']; 
+	var felder = ['email', 'passwort', 'wpasswort', 'passwort_alt']; 
 	
 	//Array mit Meldungswörtern, die in der Fehlermeldung angezeigt werden sollen
-	var meldungswort = ['ihre Email-Adresse', 'ein Passwort', 'die Passwort-Wiederholung'];
+	var meldungswort = ['ihre Email-Adresse', 'ein Passwort', 'die Passwort-Wiederholung', 'ihr altes Passwort'];
 	
 
 	//überprüft, ob alle Felder ausgefüllt sind
