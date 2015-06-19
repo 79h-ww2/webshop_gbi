@@ -23,6 +23,9 @@
             case 'uebersicht':
             	include './Pages/uebersicht.php.inc';
             	break;
+            case 'produkt':
+            	include_once 'Pages/beispiel_seite_warenkorb.php.inc';
+            break;
             	
             case 'profilbearbeiten':
             	//profil kann nur bearbeitet werden, wenn der Kunde angemelet ist 

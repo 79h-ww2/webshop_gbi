@@ -10,7 +10,7 @@
     </script>
     <script type="text/javascript" src="./Funktions/JS/vorcheck_profil_aendern.js" >
     </script>
-    <form method="post" action="#" onsubmit="return vorcheckEingabeAdresse();" id="form_adresse_aendern" name="form_adresse_aendern" >
+    <form method="post" action="./?page=profilbearbeiten&type=adressebearbeiten" onsubmit="return vorcheckEingabeAdresse();" id="form_adresse_aendern" name="form_adresse_aendern" >
         <h2>
 		     Adresse ändern
 		</h2>
@@ -85,7 +85,7 @@
     </form>
     
     
-    <form method="post" action="#" onsubmit="return vorcheckEingabeEmailPasswort();" id="form_email_passwort_aendern" name="form_email_passwort_aendern" >
+    <form method="post" action="&type=email_passwort_bearbeiten" onsubmit="return vorcheckEingabeEmailPasswort();" id="form_email_passwort_aendern" name="form_email_passwort_aendern" >
         <h2>
 		     Email-Adresse und Passwort ändern
 		</h2>
@@ -95,11 +95,16 @@
 	        	</div> 
 	        
 		        <div class="form_content" >		            
-		            <input type="hidden" name="type" value="email_passwort_aendern" />	            
+		            <input type="hidden" name="type" value="email_passwort_aendern" />
+		            
+		            <p class="reg_form_zeile" >
+		                <label for="passwort_alt">altes Passwort:</label>
+		                <input type="password" name="passwort_alt" maxlength="50"  class="lang_reg" <?php if( $eingabe_ungueltig && $eingabe_check_result->get_feldstatus('passwort') ) echo 'style="border-color:red; border-style: solid"';  ?> />
+		            </p>            
 		            
 		             <p class="reg_form_zeile" >
 		                <label for="email">Email:</label>
-		                <input type="text" name="email" maxlength="50"  value="<?php if ($eingabe_ungueltig) echo htmlspecialchars($_POST['email'],ENT_QUOTES,'UTF-8'); ?>" class="lang_reg" <?php if( $eingabe_ungueltig && $eingabe_check_result->get_feldstatus('email') ) echo 'style="border-color:red; border-style: solid"';  ?> />
+		                <input type="text" name="email" maxlength="50"  value="<?php if ($eingabe_ungueltig){ echo htmlspecialchars($_POST['email'],ENT_QUOTES,'UTF-8');} else{ echo htmlspecialchars($profil->get_email_from_kid($kid),ENT_QUOTES,'UTF-8'); } ?>" class="lang_reg" <?php if( $eingabe_ungueltig && $eingabe_check_result->get_feldstatus('email') ) echo 'style="border-color:red; border-style: solid"';  ?> />
 		            </p>
 		            
 		            <p class="reg_form_zeile" >

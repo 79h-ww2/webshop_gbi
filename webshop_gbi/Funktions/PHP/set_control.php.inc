@@ -8,6 +8,11 @@
 				include_once './Funktions/PHP/registrierung_durchfuehren.php.inc';
 			break;
 			
+			case 'adresse_aendern':
+			case 'email_passwort_aendern':
+				include_once './Funktions/PHP/kunde_aendern.php.inc';
+			break;
+						
 			//Skript zur Durchführung der Anmeldung ausführen
 			case 'anmeldung':
 				include_once './Funktions/PHP/anmeldung_durchfuehren.php.inc';
