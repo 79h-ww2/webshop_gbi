@@ -35,14 +35,31 @@
 
 			if ( $sichtbar_style ) echo '<script type="text/javascript" >anzahlFensterOffen++; zeigeAbdeckung ( true );</script>';
 
+			
+			
+			//ließt alle Get-Parameter aus der Adressenleiste aus (nötig, wenn kein Java-Script aktiviert ist)
+			//Erstellt eine Adresse für einen Link, der bei deaktivierten JavaScript genutzt werden kann
+			$adresse_no_script = ( count($_GET) > 0 ) ?  "./?" : ".";
+			
+			$get_feldnamen = array_keys($_GET);
+			for ( $i = 0; $i < count($_GET); $i++)
+			{
+				$wert = htmlspecialchars ($_GET[$get_feldnamen[$i]],ENT_QUOTES,'ISO8859-1');
+				$feldname = htmlspecialchars ($get_feldnamen[$i],ENT_QUOTES,'ISO8859-1');
+			
+				if ( $i > 0) $adresse_no_script .= "&";
+				
+				$adresse_no_script .= $feldname."=".$wert;
+			}
+			
 			echo
 			"
+				<noscript>
+					<div id=\"no_javaScript_fensterabdeckung\" ></div>
+				</noscript>
 				<div id=\"infoBox_".htmlspecialchars($idInfobox,ENT_QUOTES,'UTF-8')."\"  class=\"meldungsfenster_frame_groesse_1\"  ".$sichtbar_style." >
 					<div class=\"meldungsbox_titelleiste\" >
 						<div class=\"meldungsbox_titelleiste_content\" >
-							<a class=\"schliessen_button_meldungsfenster\" href=\"#\" title=\"Schlie&szlig;en\" onclick=\"schliesseInfoBox('".htmlspecialchars($idInfobox,ENT_QUOTES,'UTF-8')."'); $onButtonClick\" >
-								X
-							</a>
 							<span id=\"infoBox_titel_".htmlspecialchars($idInfobox,ENT_QUOTES,'UTF-8')."\" >
 								".$titel."
 							</span>
@@ -60,7 +77,12 @@
 						<div class=\"clear_left\" >
 						</div>
 						<div class=\"gruppe_button_meldungsbox\" >
-							<input type=\"button\" class=\"button_meldungsbox\" onclick=\"schliesseInfoBox('".htmlspecialchars($idInfobox,ENT_QUOTES,'UTF-8')."'); $onButtonClick\" value=\"OK\"  >
+							<noscript>
+								<a  class=\"link_button_msgbox .link_button_msgbox\" href=\"$adresse_no_script\" >Ok</a>
+							</noscript>
+							<script type=\"text/javascript\">
+								document.write('<input type=\"button\" class=\"button_meldungsbox\" onclick=\"schliesseInfoBox(\'".htmlspecialchars($idInfobox,ENT_QUOTES,'UTF-8')."\'); $onButtonClick\" value=\"OK\"  >');
+							</script>
 						</div>
 						<div class=\"clear_right\" >
 						</div>

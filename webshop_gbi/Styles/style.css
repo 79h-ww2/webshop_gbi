@@ -336,7 +336,7 @@ img.BildMustermodell{
 }
 
 /* Buttonformatierung */
-input[type=submit], input[type=button], .link_button{
+input[type=submit], input[type=button], .link_button, .link_button_msgbox{
 	border-radius: 6px 6px 6px 6px;
 	-moz-border-radius: 6px 6px 6px 6px;
 	-webkit-border-radius: 6px 6px 6px 6px;
@@ -349,6 +349,12 @@ input[type=submit], input[type=button], .link_button{
 	font-size: 16px;
 	border-style: outset;
 	background: linear-gradient(to  bottom, black  , gray);
+}
+
+.link_button_msgbox{
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
 }
 
 input[type=submit]:hover , input[type=button]:hover, .contentPopupRegistrierung input[name="anmeldung_submit"]:hover, .link_button:hover{

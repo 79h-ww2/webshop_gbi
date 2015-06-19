@@ -4,7 +4,7 @@
     	//Kundennr bestimmen
     	$kid = $profil->get_kid_from_email($_SESSION['angemeldet']);
     	
-    	$eingabe_ungueltig = isset($eingabe_ungueltig) ? $eingabe_ungueltig : false;
+    	$eingabe_ungueltig_email_passwort = isset($eingabe_ungueltig_email_passwort) ? $eingabe_ungueltig_email_passwort : false;
     	
  		$eingabe_ungueltig_adresse = isset($eingabe_ungueltig_adresse) ? $eingabe_ungueltig_adresse : false;
  		
@@ -88,7 +88,7 @@
     </form>
     
     
-    <form method="post" action="./?type=email_passwort_bearbeiten" onsubmit="return vorcheckEingabeEmailPasswort();" id="form_email_passwort_aendern" name="form_email_passwort_aendern" >
+    <form method="post" action="./?type=email_passwort_bearbeiten&page=profilbearbeiten" onsubmit="return vorcheckEingabeEmailPasswort();" id="form_email_passwort_aendern" name="form_email_passwort_aendern" >
         <h2>
 		     Email-Adresse und Passwort ändern
 		</h2>
@@ -99,31 +99,31 @@
 	        
 		        <div class="form_content" >		            
 		            <input type="hidden" name="type" value="email_passwort_aendern" />
+		            		            
+		            <p class="reg_form_zeile" >
+		                <label for="email">Email:</label>
+		                <input type="text" name="email" maxlength="50"  value="<?php if ($eingabe_ungueltig_email_passwort){ echo htmlspecialchars($_POST['email'],ENT_QUOTES,'UTF-8');} else{ echo htmlspecialchars($profil->get_email_from_kid($kid),ENT_QUOTES,'UTF-8'); } ?>" class="lang_reg" <?php if( $eingabe_ungueltig_email_passwort && $eingabe_check_result_email_passwort->get_feldstatus('email') ) echo 'style="border-color:red; border-style: solid"';  ?> />
+		            </p>
 		            
 		            <p class="reg_form_zeile" >
 		                <label for="passwort_alt">altes Passwort:</label>
-		                <input type="password" name="passwort_alt" maxlength="50"  class="lang_reg" <?php if( $eingabe_ungueltig && $eingabe_check_result->get_feldstatus('passwort') ) echo 'style="border-color:red; border-style: solid"';  ?> />
+		                <input type="password" name="passwort_alt" maxlength="50"  class="lang_reg" <?php if( $eingabe_ungueltig_email_passwort && $eingabe_check_result_email_passwort->get_feldstatus('passwort_alt') ) echo 'style="border-color:red; border-style: solid"';  ?> />
 		            </p>            
-		            
-		             <p class="reg_form_zeile" >
-		                <label for="email">Email:</label>
-		                <input type="text" name="email" maxlength="50"  value="<?php if ($eingabe_ungueltig){ echo htmlspecialchars($_POST['email'],ENT_QUOTES,'UTF-8');} else{ echo htmlspecialchars($profil->get_email_from_kid($kid),ENT_QUOTES,'UTF-8'); } ?>" class="lang_reg" <?php if( $eingabe_ungueltig && $eingabe_check_result->get_feldstatus('email') ) echo 'style="border-color:red; border-style: solid"';  ?> />
-		            </p>
 		            
 		            <p class="reg_form_zeile" >
 		                <label for="passwort">Passwort:</label>
-		                <input type="password" name="passwort" maxlength="50"  class="lang_reg" <?php if( $eingabe_ungueltig && $eingabe_check_result->get_feldstatus('passwort') ) echo 'style="border-color:red; border-style: solid"';  ?> />
+		                <input type="password" name="passwort" maxlength="50"  class="lang_reg" <?php if( $eingabe_ungueltig_email_passwort && $eingabe_check_result_email_passwort->get_feldstatus('passwort') ) echo 'style="border-color:red; border-style: solid"';  ?> />
 		            </p>
 		            <p class="reg_form_zeile" >
 		                <label for="wpasswort">Passwort-Wiederholung:</label>
-		                <input type="password" name="wpasswort" maxlength="50" class="lang_reg"  <?php if( $eingabe_ungueltig && $eingabe_check_result->get_feldstatus('wpasswort') ) echo 'style="border-color:red; border-style: solid"';  ?>  />
+		                <input type="password" name="wpasswort" maxlength="50" class="lang_reg"  <?php if( $eingabe_ungueltig_email_passwort && $eingabe_check_result_email_passwort->get_feldstatus('wpasswort') ) echo 'style="border-color:red; border-style: solid"';  ?>  />
 		            </p>
 		            
 		            <p class="text_fehlermeldung" id="email_passwort_fehlermeldung" >
 		            	<?php
 		            		//zeigt die Fehlermeldung an, wenn nicht alle Felder richtig ausgefüllt wurden
-		            		if ($eingabe_ungueltig){
-		            			echo htmlspecialchars($eingabe_check_result->get_fehlermeldung(),ENT_QUOTES,'UTF-8');
+		            		if ($eingabe_ungueltig_email_passwort){
+		            			echo htmlspecialchars($eingabe_check_result_email_passwort->get_fehlermeldung(),ENT_QUOTES,'UTF-8');
 		            		} 
 		            	?>
 		            </p>            
