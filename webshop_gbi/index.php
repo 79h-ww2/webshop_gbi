@@ -61,8 +61,12 @@ $warenkorb1 = new warenkorb();
 
 echo($warenkorb1->menge_im_warenkorb());
 include_once 'Pages/popupWarenkorb.php.inc';
+?>
 
-?> <!-- Anzahl Artikel im Warenkorb -->
+<div id="Warenkorb_Beschriftung" >Warenkorb
+</div>
+
+ <!-- Anzahl Artikel im Warenkorb -->
             </div>
             
             <div class="accountCell" onclick="if(document.getElementById('popupRegistrierung').style.visibility == 'visible') document.getElementById('popupRegistrierung').style.visibility = '';">
