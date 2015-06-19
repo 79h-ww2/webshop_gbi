@@ -240,6 +240,46 @@
 			return '<a href="'.$adresse.'&seite='.htmlspecialchars ($seitennr ,ENT_QUOTES,'ISO8859-1').'" title="Seite '.htmlspecialchars ($seitennr ,ENT_QUOTES,'ISO8859-1').'" >'.htmlspecialchars ($seitennr ,ENT_QUOTES,'ISO8859-1').'</a>';
 		}
 		
+		
+		/**
+		 * gibt die Anfangszeilen für den SQL-Query zurück, der die Felder für die Auflistung definiert
+		 * @return string ersten Zeilen des Query's
+		 */
+		protected function anfangszeilenSQLQuery(){
+			
+			//ließt die für die Auflistung benötigten Felder aus und bestimmt wie oft das Produkt welche Sterne bekommen hat durch zählen, wie oft welche Bewertungsziffer für das Produkt angegeben wurde
+			$query = "
+						select
+							distinct p.Bezeichnung bezeichnung,
+							b.Bezeichnung kategorie,
+							`Verfuegbare Menge` exemplare,
+							Preis preis,
+							preis_alt,
+							sterne1,
+							sterne2,
+							sterne3,
+							sterne4,
+							sterne5,
+							p.PId,
+							pb.Pfad bild
+						from
+							produkte p
+								left join bauart b on (b.BId = p.bauart)
+								left join produktkategorie pk on (pk.PTId = p.produktkategorie)
+								left join ( select count(*) sterne1, PId from kommentare where bewertung = '1' and geloescht = 'nein' group by PId ) s1 using (PId)
+								left join ( select count(*) sterne2, PId from kommentare where bewertung = '2' and geloescht = 'nein' group by PId ) s2 using (PId)
+								left join ( select count(*) sterne3, PId from kommentare where bewertung = '3' and geloescht = 'nein' group by PId ) s3 using (PId)
+								left join ( select count(*) sterne4, PId from kommentare where bewertung = '4' and geloescht = 'nein' group by PId ) s4 using (PId)
+								left join ( select count(*) sterne5, PId from kommentare where bewertung = '5' and geloescht = 'nein' group by PId ) s5 using (PId)
+								left join produktbilder pb using (PId)
+						where
+							(pb.Art = 'Liste' or pb.Art is null)
+				
+				";
+			
+			return $query;
+		}
+		
 	}
 
 ?>

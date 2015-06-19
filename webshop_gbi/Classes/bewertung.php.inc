@@ -23,8 +23,10 @@
 				$sterne_isgesammt += $this->arr_sterne[$i];
 				$durschnittt_sterne += $this->arr_sterne[$i] *($i + 1);
 			};
-				
-			$durschnittt_sterne = $durschnittt_sterne/ $sterne_isgesammt;
+			if ($sterne_isgesammt > 0){
+				$durschnittt_sterne = $durschnittt_sterne/ $sterne_isgesammt;
+			}
+			
 			$durschnittt_sterne_abs = round($durschnittt_sterne,0);
 				
 			//gelbe Sterne anzeigen

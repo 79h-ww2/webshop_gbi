@@ -1,38 +1,27 @@
 <article class="detailContent">
-    <header>
         <h2>Serious Rockaway 26</h2>
-    </header>
-    
-    <footer>
-        
-    </footer>
-    
+
     <content>
     
-    <div class="detail-sidebar"> 
+    <div class="detailLeft"> 
     	Detailansichten:
     		<div class="detailCell">
 	    		<img src="Images/Produktbilder/Mustermodell.png" alt="Mustermodell" class="BildMustermodellMinatur" />
-    		</div>
     		
-    		<div class="detailCell">
 	    		<img src="Images/Produktbilder/Mustermodell.png" alt="Mustermodell" class="BildMustermodellMinatur" />
-    		</div>
     		
-    		<div class="detailCell">
 	    		<img src="Images/Produktbilder/Mustermodell.png" alt="Mustermodell" class="BildMustermodellMinatur" />
-    		</div>
     		
-    		<div class="detailCell">
 	    		<img src="Images/Produktbilder/Mustermodell.png" alt="Mustermodell" class="BildMustermodellMinatur" />
-    		</div>
     		
-    		<div class="detailCell">
 	    		<img src="Images/Produktbilder/Mustermodell.png" alt="Mustermodell" class="BildMustermodellMinatur" />
     		</div>
     </div>
     
-    	<img src="Images/Produktbilder/Mustermodell.png" alt="Mountainbike" class="BildMustermodell" />
+    	<div class="detailMiddle">
+    		<img src="Images/Produktbilder/Mustermodell.png" alt="Mountainbike" class="BildMustermodell" />
+    	</div>
+    	
     	
     	<div class="detailContentText">
     		<h3><a href="#" title="Mountainbikes">Mountainbike</a></h3>

@@ -7,7 +7,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     
     <link rel="stylesheet" href="Styles/style.css" type="text/css"/>
-    <meta name accesskey="viewport" content="width=device-widht, initila-scale=1.0"/>
 </head>
 
 
@@ -31,6 +30,10 @@
 	
 		//lädt die Webseiten-Kontrolldatei
 		include_once './Funktions/PHP/set_control.php.inc';
+		
+		//Klassen für die Navigation
+		include_once 'Classes/artikel.php.inc';
+		include_once 'Classes/navigation.php.inc';
 	?>
 
     <header class="mainHeader">
@@ -73,7 +76,38 @@
     <!-- NAVIGATION -->
     <nav class="nav">
         <ul class="navigation">
-            <li><a href="#">Fahrr&auml;der</a> <!-- HIER HINTER DARF KEIN </li> stehn SONST GEHTS NICHT!!! -->
+        	<?php 
+        		$navi = new Navigation();
+        		$arr_kategorie = $navi->erstelle_array_kategorien();
+        		
+        		for ($i = 0; $i < count($arr_kategorie); $i++){
+        			$kategorie = $arr_kategorie[$i];
+        			if ( $i != 0){
+        				echo '<li><a href="./?page=uebersicht&PTId='.htmlspecialchars($kategorie->PTId,ENT_QUOTES,'UTF-8').'">'.htmlspecialchars($kategorie->Bezeichnung,ENT_QUOTES,'UTF-8').'</a></li>';
+        			}
+        			else{
+        				echo '<li><a href="#">'.htmlspecialchars($kategorie->Bezeichnung,ENT_QUOTES,'UTF-8').'</a>';
+        				echo '<ul>';
+        				
+        				$bauart = $navi->erstelle_array_bauart();
+        				$z = 0;
+        				foreach ($bauart as $b){
+        					if ( $z == 0) echo '<div class="Spalte">';
+        					echo '<li><a class="Untermenu" href="./?page=uebersicht&PTId='.htmlspecialchars($kategorie->PTId,ENT_QUOTES,'UTF-8').'&bauart='.htmlspecialchars($b->BId,ENT_QUOTES,'UTF-8').'">'.htmlspecialchars($b->Bezeichnung,ENT_QUOTES,'UTF-8').'</a></li>';
+        					if ( $z == 3){
+        						echo '</div>';
+        						$z=-1;
+        					}
+        					$z++;
+        				}
+        				if ( $z < 3) echo '</div>';
+        				
+        				echo '</ul>';
+        			}
+        		}
+        	?>
+        
+            <?php /*<li><a href="#">Fahrr&auml;der</a>
     			<ul> 
         			<div class="Spalte">
                         <li><a class="Untermenu" href="#">E-Bikes</a></li>
@@ -82,7 +116,26 @@
                         <li><a class="Untermenu" href="#">Modell 4</a></li>
                      </div>
                
-     
+     				<div class="Spalte">
+                        <li><a class="Untermenu" href="#">Modell 5</a></li>
+                        <li><a class="Untermenu" href="#">Modell 6</a></li>
+                        <li><a class="Untermenu" href="#">Modell 7</a></li>
+                        <li><a class="Untermenu" href="#">Modell 8</a></li>
+                     </div>
+                     
+                     <div class="Spalte">
+                        <li><a class="Untermenu" href="#">Modell 1</a></li>
+                        <li><a class="Untermenu" href="#">Modell 2</a></li>
+                        <li><a class="Untermenu" href="#">Modell 3</a></li>
+                        <li><a class="Untermenu" href="#">Modell 4</a></li>
+                     </div>
+
+        			<div class="Spalte">
+                        <li><a class="Untermenu" href="#">Modell 5</a></li>
+                        <li><a class="Untermenu" href="#">Modell 6</a></li>
+                        <li><a class="Untermenu" href="#">Modell 7</a></li>
+                        <li><a class="Untermenu" href="#">Modell 8</a></li>
+                     </div>
                 </ul>
                 
                 
@@ -91,40 +144,10 @@
             <li><a href="#">Fahrradteile</a></li>
             <li><a href="#">Fahrradbekleidung</a></li>
             <li><a href="#">Marken</a></li>
-    		<li><a href="https://www.youtube.com/watch?v=eOG90Q8EfRo">HowTo</a></li>
+    		<li><a href="https://www.youtube.com/watch?v=eOG90Q8EfRo">HowTo</a></li>-->*/?>
         </ul>
     </nav>
-    
-    
-<!--     <nav class="nav"> -->
-    <?php
-//     include_once 'Classes/navigation.php.inc';
-//     ?>
-<!--         <ul class="navigation"> -->
-<!--            <li><a href="#"> <?php ?>echo $kategorien[0]</a> <!-- HIER HINTER DARF KEIN </li> stehn SONST GEHTS NICHT!!! -->
-<!--     			<ul>  -->
-<!--         			<div class="Spalte"> -->
-<!--                         <li><a class="Untermenu" href="#">Modell 1</a></li> -->
-<!--                         <li><a class="Untermenu" href="#">Modell 2</a></li> -->
-<!--                         <li><a class="Untermenu" href="#">Modell 3</a></li> -->
-<!--                         <li><a class="Untermenu" href="#">Modell 4</a></li> -->
-<!--                      </div> -->
-               
-     
-<!--                 </ul> -->
-                
-                
-                
-<!--             <li><a href="Pages/zubehoer.php">Zubeh&ouml;r</a></li> -->
-<!--             <li><a href="#">Fahrradteile</a></li> -->
-<!--             <li><a href="#">Fahrradbekleidung</a></li> -->
-<!--             <li><a href="#">Marken</a></li> -->
-<!--     		<li><a href="https://www.youtube.com/watch?v=eOG90Q8EfRo">HowTo</a></li> -->
-<!--         </ul> -->
-
-       
-<!--     </nav> -->
-    
+    <div style="clear:left" ></div>
     <?php if (isset($_SESSION['angemeldet'])) include_once 'Pages/status_leiste.php.inc'; ?>
     </header>
     

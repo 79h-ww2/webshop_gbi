@@ -23,6 +23,9 @@
             case 'seriousRockaway26':
             	include './Pages/seriousRockaway26.php.inc';
             	break;
+            case 'uebersicht':
+            	include './Pages/uebersicht.php.inc';
+            	break;
             default:
             	echo "<h2>Gewünschte Seite wurde nicht gefunden.</h2>";
         }

@@ -12,6 +12,12 @@
 			case 'anmeldung':
 				include_once './Funktions/PHP/anmeldung_durchfuehren.php.inc';
 			break;
+			
+			//führt den Vorcheck der erweiterten Suche durch
+			case 'erweiterte_suche':
+				include_once './Classes/Ueberpruefresult.php.inc';
+				include_once './Funktions/PHP/vorcheck_erweiterte_suche.php.inc';
+			break;
 		}
 	}
 	
@@ -20,7 +26,6 @@
 		include_once './Funktions/PHP/kunde_aktivieren.php.inc';
 	}
 	
-	//den Kunden abmelden
 	if (isset($_GET['aktion'])){
 		switch ($_GET['aktion']){
 			
