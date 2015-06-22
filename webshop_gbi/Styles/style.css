@@ -226,9 +226,30 @@ img.account {
     margin: 50px 100px;
 }
 
+.warenkorbFeld{
+	display: table;
+}
+
+.textfeld{
+	width: 50px;
+	height: 20px;
+	display: table-cell;
+	vertical-align: middle;
+	margin: 0 15px;
+	
+}
+
+.buttonInWarenkorb {
+	width: 150px;
+	height: 30px;
+	display: table-cell;
+	vertical-align: middle;
+}
+
 .middleContent {
 	clear: both;
     width: 800px;
+    margin: 0 100px;
 }
 
 .topContent {

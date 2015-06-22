@@ -20,14 +20,11 @@
             case 'datenschutz':
             	include './Pages/datenschutz.php.inc';
             break;
-            case 'seriousRockaway26':
-            	include './Pages/seriousRockaway26.php.inc';
-            	break;
             case 'uebersicht':
             	include './Pages/uebersicht.php.inc';
             	break;
             case 'produkt':
-            	include_once 'Pages/beispiel_seite_warenkorb.php.inc';
+            	include_once 'Pages/ArtikelDetailansicht.php.inc';
             break;
             	
             case 'profilbearbeiten':

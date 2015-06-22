@@ -1,3 +1,5 @@
+<?php include_once 'Classes/ArtikelDetails.php.inc';?>
+
 <article class="detailContent">
         <h2>Serious Rockaway 26</h2>
 
@@ -30,9 +32,15 @@
     			2 Exemplare verfügbar
     		</div>
     		
-    		<div class="warenkorbCell">
-    		<br>
-    		<br>
+    		<div class="warenkorbFeld">
+	    		<form action="./?page=produkt&pid=<?php echo htmlspecialchars($_GET['pid'],ENT_QUOTES,'UTF-8');?>" method="post" >
+				<label for="menge">Menge:</label>
+				<input class ="textfeld" type="text" name="menge" />
+				<input class ="buttonInWarenkorb"type="submit" value="In den Warenkorb" />
+				<input type="hidden" name="pid" value="<?php echo htmlspecialchars($_GET['pid'],ENT_QUOTES,'UTF-8');  ?>" />
+				<input type="hidden" value="neuerArtikelimWarenkorb" name="type"/>
+		
+				</form>
     		</div>
     		
     		<p><strong>Eigenschaften</strong></p>
@@ -62,7 +70,7 @@
     
     <content>
     	
-    	<p class="middleContentText">
+    	<!-- <p class="middleContentText">
     	Das smarte Rockaway ist ein Freizeitbike, das überall zu Hause ist - von Alltagsstrecken in der Stadt bis auf
     	Ausflugstouren übers Land. Ob auf Feld- und Waldwegen, auf Schotterstraßen oder asphaltierten Radwegen, das Rockaway
     	bringt seinen Fahrer zuverlässig und flott ans Ziel. Auf kleinen Anstiegen findet sich mit der zuverlässigen Shimano
@@ -76,7 +84,18 @@
 		entspannt vom Rad. Stabile Laufräder mit Hohlkammerfelgen, ein wartungsfreies Patronen Innenlager und gut greifende
 		V-Brakes runden das Bild ab. Mit dem Rockaway steht für einen wirklich günstigen Preis nicht nur ein guter Rahmen mit
 		einer ausgewogenen Ausstattung zur Verfügung, sondern der Fahrspaß ist bereits schon all inklusive.
-		</p>
+		</p> -->
+		
+		<?php 
+		
+		$artikelDetails = new ArtikelDetails();
+		
+		$beschreibung = $artikelDetails->beschreibungAnzeigen($_GET['pid']);
+		
+		
+		echo '<p class="middleContentText">'.htmlspecialchars($beschreibung,ENT_QUOTES,'UTF-8').'</p>';
+		
+		?>
 		        
     </content>
 </article>
