@@ -22,7 +22,7 @@
             break;
             case 'uebersicht':
             	include './Pages/uebersicht.php.inc';
-            	break;
+            break;
             case 'produkt':
             	include_once 'Pages/ArtikelDetailansicht.php.inc';
             break;

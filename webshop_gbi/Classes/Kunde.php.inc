@@ -5,6 +5,207 @@
 
 	class Kunden extends EingabeCheckGrundlegend{
 		
+		
+		public function ueberpruefeEingabeEmailUndPasswortAendern ($email, $passwort, $wpasswort, $passwort_alt, $email_alt){
+				
+			//Objekt, über das der Funktionsrückgabewert übergeben werden soll
+			//$return = new Ueberpruefresult();
+		
+			//Array mit allen Feldern, die ausgefüllt sein müssen
+			$felder = array($email, $passwort, $wpasswort, $passwort_alt);
+			$feldnamen = array('email', 'passwort', 'wpasswort', 'passwort_alt');
+				
+			//Array mit Meldungswörtern, die in der Fehlermeldung angezeigt werden sollen
+			$meldungswort = array('ihre Email-Adresse', 'ein Passwort', 'die Passwort-Wiederholung', 'ihr altes Passwort');
+				
+			//Variable, wo die Fehlermeldung zwischengespeichert wird
+			$fehlermeldung = "";
+				
+			//überprüft, ob alle Inputfelder ausgefüllt sind und erstellt wenn nicht eine Fehlermeldung
+			$return = $this->erstelle_meldung_nicht_alle_felder_ausgefuellt($feldnamen, $meldungswort, $felder);
+			$fehlermeldung = $return->get_fehlermeldung();
+				
+			//wenn alle Felder ausgefüllt sind, wird überprüft, ob die Eingaben gültig sind
+			if ($fehlermeldung == "") {
+		
+				//überprüft, ob das alte Passwort richtig ist	
+				if ($this->ueberpruefeEingabeAnmeldung($email_alt, $passwort_alt)->get_fehlermeldung() != ''){
+					$fehlermeldung .= ($fehlermeldung == '') ? '' : ' ';
+					$fehlermeldung .= "Das alte Passwort ist falsch.";
+					$return->set_feldstatus('passwort_alt', true);
+				}
+				
+				//überprüft, ob die Passwörter übereinstimmen
+				if ( $passwort != $wpasswort ){
+					$fehlermeldung .= ($fehlermeldung == '') ? '' : ' ';
+					$fehlermeldung .= "Die Passwörter stimmen nicht überein.";
+					$return->set_feldstatus('wpasswort', true);
+					$return->set_feldstatus('passwort', true);
+				}
+		
+				//überprüft, die Email-Adresse
+				if (filter_var($email, FILTER_VALIDATE_EMAIL) == false){
+					$fehlermeldung .= ($fehlermeldung == '') ? '' : ' ';
+					$fehlermeldung .= "Die Email-Adresse ist ungültig.";
+					$return->set_feldstatus('email', true);
+				}
+				//überprüft, ob die Email-Adresse nicht schon im System gespeichert ist (wenn esw nicht die alte Email-Adresse ist)
+				elseif ($email_alt != $email &&  $this->email_in_db_vorhanden($email)){
+					$fehlermeldung .= ($fehlermeldung == '') ? '' : ' ';
+					$fehlermeldung .= "Die Email-Adresse wird schon von einer anderen Person verwendet.";
+					$return->set_feldstatus('email', true);
+				}
+			}
+				
+			//Übergibt an das Rückgabeobjekt die Fehlermeldung
+			$return->set_fehlermeldung($fehlermeldung);
+
+			return $return;
+		}
+		
+		
+		
+		
+		/**
+		 * Überprüft, ob die Profiländerung gültig ist
+		 * @param string $vorname
+		 * @param string $name
+		 * @param string $strasse
+		 * @param string $plz
+		 * @param string $hausnr
+		 * @param string $ort
+		 * @return Ambigous <string, Ueberpruefresult>
+		 */
+		public function ueberpruefeEingabeAdresseAendern($vorname, $name, $strasse, $plz, $hausnr, $ort){
+			$felder = array($vorname, $name, $strasse, $hausnr, $plz, $ort);
+			
+			$feldnamen = array('vorname', 'name', 'strasse', 'hausnr', 'plz', 'ort');
+			
+			//Array mit Meldungswörtern, die in der Fehlermeldung angezeigt werden sollen
+			$meldungswort = array('ihren Vornamen', 'ihren Namen', 'ihre Straße', 'ihre Hausnummer', 'ihr Postleitzahl', 'ihr Ort');
+			
+			//Variable, wo die Fehlermeldung zwischengespeichert wird
+			$fehlermeldung = "";
+
+
+			//überprüft, ob alle Inputfelder ausgefüllt sind und erstellt wenn nicht eine Fehlermeldung
+			$return = $this->erstelle_meldung_nicht_alle_felder_ausgefuellt($feldnamen, $meldungswort, $felder);
+			$fehlermeldung = $return->get_fehlermeldung();
+			
+			
+			if ($fehlermeldung == "") {
+				//überprüft, ob die PLZ gültig ist
+				if ( strlen($plz) != 5 ||  is_numeric($plz) == false ){
+					$fehlermeldung .= ($fehlermeldung == '') ? '' : ' ';
+					$fehlermeldung .= "Die Postleitzahl ist ungültig. Bitte geben Sie eine gültige Postleitzahl ein.";
+					$return->set_feldstatus('plz', true);
+				}
+			}
+			
+
+			//Übergibt an das Rückgabeobjekt die Fehlermeldung
+			$return->set_fehlermeldung($fehlermeldung);
+			
+			return $return;
+		}
+		
+		
+		/**
+		 * Ändern der Kundenadresse
+		 * @param int $kid Kundennummer
+		 * @param string $vorname_neu neuer Vorname
+		 * @param string $name_neu neuer Name
+		 * @param string $strasse_neu neue Straße
+		 * @param string $plz_neu neue Postleitzahl
+		 * @param string $hausnr_neu neue Hausnummer
+		 * @param string $ort_neu neuer Ort
+		 * @param string $geschlecht_neu neues Geschlecht
+		 * @return boolean war Änderung erfolgreich?
+		 */
+		public function adresseAendern($kid, $vorname_neu, $name_neu, $strasse_neu, $plz_neu, $hausnr_neu, $ort_neu, $geschlecht_neu){
+			
+			//Verbindung zur Datenbank aufbauen
+			$db = datenbank_verbindung_aufbauen();
+			if ( !($db->db_connect()) ) die ("Es konnte keine Verbindung zur Datenbank aufgebaut werden");
+			
+			//Mechanismus zum Schutz gegen Sql Injection
+			$kid = $db->db_real_escape_string($kid);
+			$vorname_neu = $db->db_real_escape_string($vorname_neu);
+			$name_neu = $db->db_real_escape_string($name_neu);
+			$strasse_neu = $db->db_real_escape_string($strasse_neu);
+			$plz_neu = $db->db_real_escape_string($plz_neu);
+			$hausnr_neu = $db->db_real_escape_string($hausnr_neu);
+			$ort_neu = $db->db_real_escape_string($ort_neu);
+			$geschlecht_neu = $db->db_real_escape_string($geschlecht_neu);
+			
+			$query = "
+					update
+						kunde
+					set
+						Vorname = '$vorname_neu',
+						Name = '$name_neu',
+						Strasse = '$strasse_neu',
+						PLZ = '$plz_neu',
+						Hausnummer = '$hausnr_neu',
+						Ort = '$ort_neu',
+						Geschlecht = '$geschlecht_neu',
+						status = 'a',
+						Stand = now()						
+					where
+						KId = '$kid';
+			";
+			
+			//Die Datenbankanweisung ausführen
+			$result = $db->db_query($query);
+			
+			//Verbindung zur Datenbank schließen
+			$db->db_close();
+			
+			return (!$result) ? false : true;
+			
+		}
+		
+		/**
+		 * Ändern der Email-Adresse und des Passworts
+		 * @param int $kid
+		 * @param string $email
+		 * @param string $passwort
+		 * @return boolean war Änderung erfolgreich?
+		 */
+		public function EmailUndPasswortAendern($kid, $email, $passwort){
+				
+			//Verbindung zur Datenbank aufbauen
+			$db = datenbank_verbindung_aufbauen();
+			if ( !($db->db_connect()) ) die ("Es konnte keine Verbindung zur Datenbank aufgebaut werden");
+				
+			//Mechanismus zum Schutz gegen Sql Injection
+			$kid = $db->db_real_escape_string($kid);
+			$email = $db->db_real_escape_string($email);
+			$passwort = md5($passwort);
+			
+				
+			$query = "
+				update
+					kunde
+				set
+					Email = '$email',
+					Passwort = '$passwort',
+					status = 'a',
+					Stand = now()
+				where
+					KId = '$kid';
+			";
+				
+			//Die Datenbankanweisung ausführen
+			$result = $db->db_query($query);
+				
+			//Verbindung zur Datenbank schließen
+			$db->db_close();
+				
+			return (!$result) ? false : true;	
+		}
+		
+		
 		/**
 		 * überprüft, die Benutzereingabe des Registrierungsfensters 
 		 * @param string $vorname Vorname
@@ -49,7 +250,7 @@
 				//überprüft, ob die Passwörter übereinstimmen
 				if ( $passwort != $wpasswort ){
 					$fehlermeldung .= ($fehlermeldung == '') ? '' : ' ';
-					$fehlermeldung += "Die Passwörter stimmen nicht überein.";
+					$fehlermeldung .= "Die Passwörter stimmen nicht überein.";
 					$return->set_feldstatus('wpasswort', true);
 					$return->set_feldstatus('passwort', true);
 				}

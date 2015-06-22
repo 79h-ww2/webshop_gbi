@@ -67,8 +67,9 @@ body {
    background-position: 15px 35px;
    padding-left: 21px;
    padding-top:45px;
-   font-size:12px;
-   color:yellow;
+   font-size:13px;
+   color:white;
+   
 }
 
 .accountCell{
@@ -408,7 +409,7 @@ img.BildMustermodell{
 }
 
 /* Buttonformatierung */
-input[type=submit], input[type=button], .link_button{
+input[type=submit], input[type=button], .link_button, .link_button_msgbox{
 	border-radius: 6px 6px 6px 6px;
 	-moz-border-radius: 6px 6px 6px 6px;
 	-webkit-border-radius: 6px 6px 6px 6px;
@@ -421,6 +422,12 @@ input[type=submit], input[type=button], .link_button{
 	font-size: 16px;
 	border-style: outset;
 	background: linear-gradient(to  bottom, black  , gray);
+}
+
+.link_button_msgbox{
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
 }
 
 input[type=submit]:hover , input[type=button]:hover, .contentPopupRegistrierung input[name="anmeldung_submit"]:hover, .link_button:hover{
@@ -475,6 +482,8 @@ label.ort{
     width: 620px;
 }
 
+
+
 .reg_box_iconbereich, .suche_box_iconbereich, .adresse_aendern_box_iconbereich, .email_aendern_box_iconbereich{
 	display: table-cell;
 	width: 80px;
@@ -516,7 +525,7 @@ label.ort{
     -webkit-border-radius: 10px 10px 10px 10px;
 }
 
-.popupRegistrierung{
+.popupRegistrierung, .popupWarenkorb{
 	position: absolute;
 	width: 480px;
 	height: 120px;
@@ -524,9 +533,10 @@ label.ort{
 	margin-left:-370px;
 	visibility: hidden;
 	text-align: left;
+
 }
 
-.popupBewertungProduktauflistung{
+.popupBewertungProduktauflistung, .popupWarenkorb{
 	position: absolute;
 	width: 180px;
 	margin-left: -30px;
@@ -557,7 +567,7 @@ label.ort{
 	list-style: none;
 }
 
-.popupProfil .haken_sprechblase{
+.popupProfil .haken_sprechblase, .popupWarenkorb .haken_sprechblase{
 	border-left: 15px solid transparent;
 	border-right: 15px solid transparent;
 	border-bottom: 30px solid #545454;
@@ -566,7 +576,7 @@ label.ort{
 	height: 0px;
 }
 
-.popupRegistrierung .haken_sprechblase{
+.popupRegistrierung .haken_sprechblase	{
 	border-left: 15px solid transparent;
 	border-right: 15px solid transparent;
 	border-bottom: 30px solid #545454;
@@ -574,6 +584,16 @@ label.ort{
 	width: 0px;
 	height: 0px;
 }
+
+.popupWarenkorb .haken_sprechblase	{
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-bottom: 30px solid #545454;
+	margin-left: 20px;
+	width: 0px;
+	height: 25px;
+}
+
 
 .popupBewertungProduktauflistungSterneGesamt{
 	text-align: center;
@@ -590,6 +610,12 @@ label.ort{
 }
 
 .contentPopupRegistrierung{
+	/*background: transparent linear-gradient(to bottom, #fff 1%, #585858) repeat scroll 0% 0%;*/
+	background-color: #545454;
+	padding: 15px;
+	color: white;
+}
+.contentPopupWarenkorb{
 	/*background: transparent linear-gradient(to bottom, #fff 1%, #585858) repeat scroll 0% 0%;*/
 	background-color: #545454;
 	padding: 15px;
@@ -612,6 +638,7 @@ label.ort{
 	margin-left: 30px;
 }
 
+
 input[type="text"], input[type="email"], input[type="password"], select, input[type="number"]{
 	border-style: solid;
 	border-width: 2px;
@@ -623,7 +650,9 @@ input[type="text"], input[type="email"], input[type="password"], select, input[t
 .accountCell:HOVER > .popupRegistrierung, .popupRegistrierung:hover{
 	visibility: visible;
 }
-
+.warenkorbCell:HOVER > .popupWarenkorb, .popupWarenkorb:hover{
+	visibility: visible;
+}
 .accountCell:HOVER > .popupProfil{
 	visibility: visible;
 }
