@@ -38,6 +38,9 @@
             case 'artBewerten':
             	include_once 'Pages/ArtikelBewerten.php.inc';
             	break;
+            	case 'login':
+            		include_once 'Login.php.inc';
+            		break;
             default:
             	echo "<br/><h2>Gewünschte Seite wurde nicht gefunden.</h2>";
         }

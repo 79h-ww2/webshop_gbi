@@ -6,7 +6,7 @@
     <title>Startseite</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     
-    <link rel="stylesheet" href="Styles/style.css" type="text/css"/>
+    <link rel="stylesheet" href="Styles/mobile.css" type="text/css"/>
 </head>
 
 
@@ -211,6 +211,7 @@
     </footer>
        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
      <script src="Funktions/JS/show-nav.js"></script>
+       <script src="Funktions/JS/clickLogin.js"></script>
 </body>
 
 </html>
