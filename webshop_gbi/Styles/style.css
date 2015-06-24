@@ -403,7 +403,7 @@ img.BildMustermodell{
 	padding: 10px;
 }
 
-#registrierung input[type=submit], #suche_erweitert input[type=submit], #form_adresse_aendern input[type=submit], #form_email_passwort_aendern input[type=submit] #login input[type=submit]{
+#registrierung input[type=submit], #suche_erweitert input[type=submit], #form_adresse_aendern input[type=submit], #form_email_passwort_aendern input[type=submit], #login input[type=submit]{
     float: right;
     margin-right: 20px;
 }
