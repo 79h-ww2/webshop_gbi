@@ -38,7 +38,10 @@
 		include_once 'Classes/artikel.php.inc';
 		include_once 'Classes/navigation.php.inc';
 	?>
-
+<div class="show-nav"></div>
+	 <div class="HeaderContentMobile">
+		<div class="show-search" ></div>
+ </div>
     <header class="mainHeader">
     
     <div class="HeaderContent">
@@ -206,6 +209,8 @@
         	<li><a href="./?page=datenschutz">Datenschutz</a></li>
         </ul>
     </footer>
+       <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+     <script src="Funktions/JS/show-nav.js"></script>
 </body>
 
 </html>
