@@ -99,3 +99,4 @@
 		        
     </content>
 </article>
+<a href="./?page=artBewerten" title="ArtikelBewerten">Artikel bewerten</a>

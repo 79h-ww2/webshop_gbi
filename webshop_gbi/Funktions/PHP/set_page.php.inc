@@ -35,7 +35,9 @@
             		echo "Sie müssen angemeldet sein, um Ihr Profil ändern zu können.";
             	}
             break;
-            	
+            case 'artBewerten':
+            	include_once 'Pages/ArtikelBewerten.php.inc';
+            	break;
             default:
             	echo "<br/><h2>Gewünschte Seite wurde nicht gefunden.</h2>";
         }
