@@ -143,7 +143,7 @@ else {
 										if ($i != 0) {
 											echo '<li><a href="./?page=uebersicht&PTId=' . htmlspecialchars ( $kategorie->PTId, ENT_QUOTES, 'UTF-8' ) . '">' . htmlspecialchars ( $kategorie->Bezeichnung, ENT_QUOTES, 'UTF-8' ) . '</a></li>';
 										} else {
-											echo '<li><a href="./?page=drdoMobile">' . htmlspecialchars ( $kategorie->Bezeichnung, ENT_QUOTES, 'UTF-8' ) . '</a>';
+											echo '<li><a href="./?page=#">' . htmlspecialchars ( $kategorie->Bezeichnung, ENT_QUOTES, 'UTF-8' ) . '</a>';
 											echo '<ul>';
 											
 											$bauart = $navi->erstelle_array_bauart ();
