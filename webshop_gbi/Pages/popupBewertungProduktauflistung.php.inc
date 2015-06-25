@@ -90,7 +90,7 @@ $text = '';
 			if ($anzahlBewertungen == 1) {
 				$text = 'Eine Bewertung anzeigen';
 			} elseif ($anzahlBewertungen > 1) {
-				$text = 'Alle ' + $anzahlBewertungen + ' Bewertung anzeigen';
+				$text = 'Alle ' . $anzahlBewertungen . ' Bewertung anzeigen';
 			}
 			?>
 			<a href="#"><?php echo $text; ?></a>
