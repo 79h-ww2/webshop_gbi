@@ -1142,7 +1142,22 @@ label.label_preisspanne{
 h1{
 	color: #D56509;
 }
+.topContentUebersicht{
+	display: block;
+	padding: 0px;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;	
+}
 /* ################ Artikelbewertung ################ */
+.topContentArtBewerten {
+	
+	display: block;
+	padding: 0px;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;	
+}
 .artBewerten{
 	display: table;
 }
