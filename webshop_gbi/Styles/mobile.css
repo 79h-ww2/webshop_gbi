@@ -27,22 +27,36 @@ body {
     clear: both;
 }
 
-.mainHeader{
+/*.mainHeader{
 	background: #788A5F;
-	background:linear-gradient(to bottom right ,#6c7b35 , 	#82a143 , #788A5F );
 	 position: absolute;
 	width: 100%;
 	 height: 1padding-right: .25em;
+	padding-top: 0em;
    box-sizing: border-box;
 	left: -2px;
 	padding-right: .25em;
 	padding-top: 0em;
-	top: 0px;
+	top: 30px;
 	transition: all .3s;
 	z-index: 20;
-	
+	background:linear-gradient(to bottom right ,#6c7b35 , 	#82a143 , #788A5F );
+}*/
+.mainHeader{
+	background: #788A5F;
+	 position: absolute;
+	width: 100%;
+	 height: 1padding-right: .25em;
+	padding-top: 0em;
+   box-sizing: border-box;
+	left: -200px;
+	padding-right: .25em;
+	padding-top: 0em;
+	top: 340px;
+	transition: all .3s;
+	z-index: 20;
+	background:linear-gradient(to bottom right ,#6c7b35 , 	#82a143 , #788A5F );
 }
-
 .HeaderContent{
     display: table;
     width: 100%;
