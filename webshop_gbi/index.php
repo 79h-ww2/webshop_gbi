@@ -7,6 +7,32 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     
     <link rel="stylesheet" href="Styles/mobile.css" type="text/css"/>
+    <?php
+
+function check_mobile() {
+  $agents = array(
+    'Windows CE', 'Pocket', 'Mobile',
+    'Portable', 'Smartphone', 'SDA',
+    'PDA', 'Handheld', 'Symbian',
+    'WAP', 'Palm', 'Avantgo',
+    'cHTML', 'BlackBerry', 'Opera Mini',
+    'Nokia'
+  );
+
+  // Prüfen der Browserkennung
+  for ($i=0; $i<count($agents); $i++) {
+    if(isset($_SERVER["HTTP_USER_AGENT"]) && strpos($_SERVER["HTTP_USER_AGENT"], $agents[$i]) !== false)
+      return true;
+  }
+
+  return false;
+}
+if (check_mobile()) {
+	?>
+	<link rel="stylesheet" href="Styles/mobile.css" type="text/css"/>
+	<?php	
+}
+?>
 </head>
 
 
@@ -38,8 +64,10 @@
 		include_once 'Classes/artikel.php.inc';
 		include_once 'Classes/navigation.php.inc';
 	?>
-<div class="show-nav"></div>
+
 	 <div class="HeaderContentMobile">
+	 <div class="show-nav"></div>
+	 <div class="aktPageName"></div>
 		<div class="show-search" ></div>
  </div>
     <header class="mainHeader">
@@ -64,7 +92,12 @@
 <div id="Warenkorb_Beschriftung" >Warenkorb
 </div>
 
+
  <!-- Anzahl Artikel im Warenkorb -->
+            </div>
+             <div class="mobilewarenkorbCell">
+                <a href="./?page=warenkorb" class=mobilewarenkorbCell_WarenkorbLink>
+                </a>
             </div>
             
             <div class="accountCell" onclick="if(document.getElementById('popupRegistrierung').style.visibility == 'visible') document.getElementById('popupRegistrierung').style.visibility = '';">
@@ -80,6 +113,10 @@
                 		include_once 'Pages/popupProfilVerwalten.php.inc';
                 	}
                 ?>
+            </div>
+            <div class="mobileaccountCell">
+                <a href="./?page=login" class=mobileaccountCell_LoginLink>
+                </a>
             </div>
             
         </div>
@@ -211,7 +248,6 @@
     </footer>
        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
      <script src="Funktions/JS/show-nav.js"></script>
-       <script src="Funktions/JS/clickLogin.js"></script>
 </body>
 
 </html>

@@ -26,53 +26,59 @@ body {
     width: 100%;
     clear: both;
 }
-.show-nav{
-	 background-image: url('../Images/Design/menu-icon.png');
-	 cursor: pointer;
-	 left: 1em;
-	height: 30px;
-	position: absolute;
-	top: 1em;
-	width: 30px;
-	z-index: 30;
-}
+
 .mainHeader{
 	background: #788A5F;
+	background:linear-gradient(to bottom right ,#6c7b35 , 	#82a143 , #788A5F );
 	 position: absolute;
-	width: 200px;
+	width: 100%;
 	 height: 1padding-right: .25em;
-	padding-top: 0em;
    box-sizing: border-box;
-	left: -200px;
+	left: -2px;
 	padding-right: .25em;
 	padding-top: 0em;
-	position: absolute;
-	top: 60px;
+	top: 0px;
 	transition: all .3s;
 	z-index: 20;
-	background:linear-gradient(to bottom right ,#6c7b35 , 	#82a143 , #788A5F );
+	
 }
-header.show {
-	left:0;
-}
+
 .HeaderContent{
     display: table;
     width: 100%;
 }
 .HeaderContentMobile{
+	display:table;
 	 background:linear-gradient(to bottom right ,#6c7b35 , 	#82a143 , #788A5F );
-	 height:60px;
+	 width:100%;
+	 height:30px;
 }
+.show-nav{
+	display:table-cell;
+	 background-image: url('../Images/Design/menu-icon.png');
+	  background-repeat: no-repeat;
+	   background-position: 5px 5px;
+	   width: 30px;
+	height: 30px;
+	float:left;
+	z-index: 30;
+}
+header.show {
+	left:0;
+}
+.aktPageName{
+	display:table-cell;
+	width:100%;
+}
+
 .show-search{
+	display:table-cell;
 	background-image: url('../Images/Design/search-icon.png');
 	 background-repeat: no-repeat;
-		   background-position: 15px 15px;
-		    cursor: pointer;
-	width: 60px;
-	height: 60px; 
-		 margin-left:auto; 
-		 margin-right:0;
-		 transition: all .3s;
+		   background-position: 5px 5px;
+	width: 30px;
+	height: 30px; 
+	float: right;
 		 z-index: 30;
 }
 .TableRow {
@@ -96,7 +102,7 @@ header.show {
 	top: -200px;
 }
 
-.warenkorbCell{
+/*.warenkorbCell{
   display:inline;
 	float: left;
 	width: 30px;
@@ -110,9 +116,24 @@ header.show {
    font-size:13px;
    color:white;
    
+}*/
+.warenkorbCell{
+	display:none;
 }
-
-.accountCell{
+.mobilewarenkorbCell{
+	display:table-cell;
+	  background-image: url('../Images/Design/warenkorb.png');
+	background-repeat: no-repeat;
+   background-position: 15px 35px;
+	 width: 120px;
+}
+.mobilewarenkorbCell_WarenkorbLink{
+	display:block;
+	margin:15px;
+	padding:30px;
+	height:100%;
+}
+/*.accountCell{
   display: inline;
 	float: right;
 	width: 30px;
@@ -125,13 +146,27 @@ header.show {
    color: black;
    font-size: 14px;
    text-align: center;
+}*/
+.accountCell{
+	display:none;	
 }
-
-.accountCell:hover{
+/*.accountCell:hover{
 	background-image: url('../Images/Design/account_hover.png');
 	color: #FFBF00;
+}*/
+.mobileaccountCell{
+	display:table-cell;
+	background-image: url('../Images/Design/account.png');
+	background-repeat: no-repeat;
+   background-position: center 35px;
+	 width: 120px;
 }
-
+.mobileaccountCell_LoginLink{
+	display:block;
+	margin:15px;
+	padding:30px;
+	height:100%;
+}
 img.logo {
     height: 90px;
     margin-top: 10px;
@@ -307,7 +342,7 @@ img.account {
     background:linear-gradient(to bottom, white , 	#D9F0B7 , white );
     background: white;
 	margin: 0px 0px;
-	height: 400px;
+	height: auto;
 	padding: 5px 0;
 	background:linear-gradient(to bottom, white , 	#EDFDD5 , white );
 }
@@ -325,25 +360,28 @@ img.account {
 
 .bottomContent {
 	clear: both;
+	width: 100%;
+	
     background-color: #fff;
-    margin-top: 200px;
     text-align: center;
 }
 
 .bottomContent h2 {
-	text-align: left;
+	text-align: center;
 	 font-size: 0.94em;
-	 text-align: center;
+}
+.BottomContentContainer{
+	clear:both;
 }
 .BottomContentTableRow {
-    display: inline;
-    width: 100%;
+	display:table;
+	 vertical-align: middle;
+    margin: 0 auto;
 }
 
-.articleCell{
-   display: inline; 
-   vertical-align: middle;
-   width: 100%;
+.articleCell{ 
+	display:table-cell;
+	float:left;
 }
 
 
@@ -355,8 +393,12 @@ img.account {
 }
 
 img.BildMustermodell{
+	display:block;
 	width: 100%;
+	max-width:400px;
 	height:auto;
+	margin-left: auto;
+    margin-right: auto;
 }
 .post-info {
     font-style: italic;
@@ -457,7 +499,6 @@ footer.show {
 #registrierung h2, #suche_erweitert h2, #form_adresse_aendern h2, #form_email_passwort_aendern h2 {
     text-align: center;
    display:inline;
-     font-size: 18px;
 }
 
 #registrierung .form_content, #suche_erweitert .form_content, #form_adresse_aendern .form_content, #form_email_passwort_aendern .form_content{

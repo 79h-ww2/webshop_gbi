@@ -35,6 +35,7 @@
     </footer>
     
     <content>
+    <div class="BottomContentContainer">
     	<div class="BottomContentTableRow">
     		<div class="articleCell">
 	    		<img src="Images/Produktbilder/Mustermodell.png" alt="Mustermodell" class="BildMustermodellKlein" />
@@ -57,6 +58,6 @@
     		</div>
 	    	
     	</div>
-        
+        </div>
     </content>
 </article>

@@ -7,7 +7,6 @@ body {
     text-align: left;
     
 }
-
 .mainContent a, .nav a {
     text-decoration: none;
 }
@@ -71,7 +70,9 @@ body {
    color:white;
    
 }
-
+.mobilewarenkorbCell{
+	display:none;
+}
 .accountCell{
    display: table-cell;
    vertical-align: middle;
@@ -90,7 +91,9 @@ body {
 	background-image: url('../Images/Design/account_hover.png');
 	color: #FFBF00;
 }
-
+.mobileaccountCell{
+	display:none;
+}
 img.logo {
     height: 90px;
     margin-top: 10px;
