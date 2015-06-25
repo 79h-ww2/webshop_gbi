@@ -602,14 +602,23 @@ label.ort{
 	text-align: center;
 	border-bottom: solid 1px;
 }
-
+.contentPopupBewertungProduktauflistung .popupBewertungTable  {
+	border-bottom: solid 1px;
+}
 .contentPopupBewertungProduktauflistung .ZeileSterne{
-	margin-top: 5px;
 }
 
 .contentPopupBewertungProduktauflistung .ZeileSterne .beschriftung{
 	display: inline-block;
 	width: 65px;
+}
+.contentPopupBewertungProduktauflistung .ZeileSterne .anzahlBewertung{
+	display:inline;
+	width:100px;
+	text-align: center;
+}
+.contentPopupBewertungProduktauflistung .ZeileSterne a{
+	text-align: center;
 }
 
 .contentPopupRegistrierung{

@@ -6,7 +6,7 @@
     <title>Startseite</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     
-    <link rel="stylesheet" href="Styles/mobile.css" type="text/css"/>
+    <link rel="stylesheet" href="Styles/style.css" type="text/css"/>
     <?php
 
 function check_mobile() {
