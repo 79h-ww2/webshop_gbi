@@ -44,6 +44,9 @@ if (isset ( $_GET ['page'] ) && $_GET ['page'] != "") {
 		case 'warenkorb' :
 			include_once './Pages/beispiel_seite_warenkorb.php.inc';
 			break;
+			case 'drdoMobile' :
+				include_once './Pages/dropdownMobile.php.inc';
+				break;
 		default :
 			echo "<br/><h2>Gewünschte Seite wurde nicht gefunden.</h2>";
 	}

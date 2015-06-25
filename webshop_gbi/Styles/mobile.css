@@ -306,7 +306,7 @@ img.account {
     padding: 0px;
 }
 
-.detailContent {
+/*}.detailContent {
     background-color: #EDFDD5;
     width:100%;
     background:linear-gradient(to bottom, white , 	#D9F0B7 , white );
@@ -315,13 +315,21 @@ img.account {
 	padding: 5px 0;
 	background:linear-gradient(to bottom, white , 	#EDFDD5 , white );
 	display: table;
+}*/
+.detailContent {
+   display: block;
+	padding: 0px;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 
 .detailLeft{
 	width: 100%;
-	display: inline;
+	display: table;
 	vertical-align: middle;
+	padding-right: 0px;
 }
 
 .detailCell {
@@ -369,21 +377,30 @@ img.account {
 }
 
 .middleContent {
-	clear: both;
-    width: 100%;
-    margin: 0 0px;
-    font-size: 12px;
+		display: block;
+	padding: 0px;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;	
+	font-size: 12px;
 }
 
 /*Startseite*/
-.topContent {
+.startseite{
 	margin: 0px 0px;
 	height: auto;
 	padding: 5px 0;
 	 background-color: #EDFDD5;
 	background:linear-gradient(to bottom, white , 	#EDFDD5 , white );
 }
-
+.topContent {
+	
+	display: block;
+	padding: 0px;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;	
+}
 
 .topContent h2 {
     text-align: center; 
@@ -522,11 +539,15 @@ footer.show {
 }
 #registrierung h2, #login h2, #suche_erweitert h2, #form_adresse_aendern h2, #form_email_passwort_aendern h2 {
     text-align: center;
+    height: auto;
 }
 
 #registrierung .form_content, #login .form_content, #suche_erweitert .form_content, #form_adresse_aendern .form_content, #form_email_passwort_aendern .form_content{
-	display: inline;
-	padding: 10px;
+	display: block;
+	padding: 0px;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #registrierung input[type=submit], #login input[type=submit], #suche_erweitert input[type=submit], #form_adresse_aendern input[type=submit], #form_email_passwort_aendern input[type=submit]{

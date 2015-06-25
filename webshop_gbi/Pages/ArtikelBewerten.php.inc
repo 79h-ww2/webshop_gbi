@@ -1,11 +1,14 @@
 <!-- Vorher schauen ob angemeldet: wenn nicht zum zum Loginfenster, wenn angemeldet schauen ob bereits Bewertung abgegeben wurde -->
 <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
  <script type="text/javascript" src="Funktions/JS/bewertung.js"></script>
+ <div class="startseite">
  <?php
                 	//wenn der Kunde noch nicht angemeldet ist, wird auf die Login-Seite weitergeleitet
                 	if (!(isset($_SESSION['angemeldet']))){
                ?>
-               <h3>Bevor Sie eine Bewertung abgeben können, müssen Sie sich anmelden!</h3>
+               <div class="topContent">
+               <h4>Bevor Sie eine Bewertung abgeben können, müssen Sie sich anmelden!</h4>
+               </div>
                 <?php
                 		include 'Pages/Login.php.inc';
                 	}
@@ -57,3 +60,4 @@
                 			<?php
                 	}
                 ?>
+                </div>

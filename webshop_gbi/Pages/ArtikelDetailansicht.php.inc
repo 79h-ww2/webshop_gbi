@@ -1,5 +1,5 @@
 <?php include_once 'Classes/ArtikelDetails.php.inc';?>
-
+<div class = "startseite">
 <article class="detailContent">
         <h2>Serious Rockaway 26</h2>
 
@@ -98,5 +98,6 @@
 		?>
 		        
     </content>
+    <a href="./?page=artBewerten" title="ArtikelBewerten">Artikel bewerten</a>
 </article>
-<a href="./?page=artBewerten" title="ArtikelBewerten">Artikel bewerten</a>
+</div>

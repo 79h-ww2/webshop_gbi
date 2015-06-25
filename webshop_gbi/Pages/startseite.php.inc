@@ -1,3 +1,4 @@
+<div class = "startseite">
 <article class="topContent">
     <header>
         <h2>Fahrrad des Tages</h2>
@@ -61,3 +62,4 @@
         </div>
     </content>
 </article>
+</div>
