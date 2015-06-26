@@ -11,21 +11,21 @@ class ArtikelDetails extends  Artikelauflistung{
 	
 		//Anfrage ergänzen
 		$query = "select 
-					Beschreibung
+					Bezeichnung, Beschreibung, `Verfuegbare Menge` as Menge
 				from
 					produkte
 				where pid = '$pid' ";
 		$result = $db->db_query($query);
 		
-		$beschreibung = "";
+		$werte = "";
 		
 		while ($db_werte = $db->db_fetch_object($result)){
-			$beschreibung = $db_werte->Beschreibung;
+			$werte = $db_werte;
 		}
 		
 		$db ->db_close();
 		
-		return $beschreibung;
+		return $werte;
 		
 	}
 		

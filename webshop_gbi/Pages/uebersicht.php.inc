@@ -7,5 +7,10 @@ if (isset($_GET["PTId"])) {
 		$navi  = new Navigation();
 		$navi->FahrradbauartAuflisten($_GET ["bauart"], $seite);
 	}
+	else {
+			$seite = isset($_GET['seite']) ? $_GET['seite'] : 1;
+			$navi  = new Navigation();
+			$navi->WeitereProdukteAuflisten($_GET ["PTId"], $seite);
+	}
 }
 ?>

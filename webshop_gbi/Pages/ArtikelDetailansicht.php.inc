@@ -1,7 +1,17 @@
 <?php include_once 'Classes/ArtikelDetails.php.inc';?>
 
 <article class="detailContent">
-        <h2>Serious Rockaway 26</h2>
+        
+        <?php 
+		
+		$artikelDetails = new ArtikelDetails();
+		
+		$artikel = $artikelDetails->beschreibungAnzeigen($_GET['pid']);
+		
+		
+		echo '<h2>'.htmlspecialchars($artikel->Bezeichnung,ENT_QUOTES,'UTF-8').'</h2>';
+		
+		?>
 
     <content>
     
@@ -29,7 +39,16 @@
     		<h3><a href="#" title="Mountainbikes">Mountainbike</a></h3>
     		
     		<div class="menge_exemplare_gruen">
-    			2 Exemplare verfügbar
+    			<?php 
+		
+					$artikelDetails = new ArtikelDetails();
+					
+					$artikel = $artikelDetails->beschreibungAnzeigen($_GET['pid']);
+					
+					
+					echo '<span id="exemplare" >'.htmlspecialchars($artikel->Menge,ENT_QUOTES,'UTF-8').'</span> Exemplare verfügbar';
+					
+					?>
     		</div>
     		
     		<div class="warenkorbFeld">
@@ -90,10 +109,10 @@
 		
 		$artikelDetails = new ArtikelDetails();
 		
-		$beschreibung = $artikelDetails->beschreibungAnzeigen($_GET['pid']);
+		$artikel = $artikelDetails->beschreibungAnzeigen($_GET['pid']);
 		
 		
-		echo '<p class="middleContentText">'.htmlspecialchars($beschreibung,ENT_QUOTES,'UTF-8').'</p>';
+		echo '<p class="middleContentText">'.htmlspecialchars($artikel->Beschreibung,ENT_QUOTES,'UTF-8').'</p>';
 		
 		?>
 		        
