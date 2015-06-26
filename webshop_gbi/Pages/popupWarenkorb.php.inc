@@ -6,6 +6,13 @@
 		<div class="popupWarenkorbgesamt" >
 			
 		</div>
-
+		<div class="WarenkorbButtonPopup">
+<a href="#" title="Warenkorb anzeigen" class="link_button" id="link_button_reg_popup" >
+					Warenkorb anzeigen	
+				</a>
+				<a href="#" title="zur Kasse" class="link_button" id="link_button_reg_popup" >
+					zur Kasse	
+				</a>
+				</div>
 	</div>
 </div>

@@ -112,14 +112,15 @@
                 <?php
 																// wenn der Kunde noch nicht angemeldet ist, wird hier das Anmelde-Popup angezeigt
 																if (! (isset ( $_SESSION ['angemeldet'] ))) {
-																	echo "Anmelden";
+																	echo "<div id=\"Text_Anmeldung\">Anmelden</div>";
 																	include 'Pages/popupRegistrierung.php.inc';
 																}  // wenn er angemeldet ist bekommt der Kunde ein Popup zur Verwaltung seines Profils angezeigt
 else {
-																	echo "Mein Konto";
+																	echo "<div id=\"Text_Anmeldung\">Mein Konto</div>";
 																	include_once 'Pages/popupProfilVerwalten.php.inc';
 																}
 																?>
+																
             </div>
 				<div class="mobileaccountCell">
 					<a href="./?page=login" class=mobileaccountCell_LoginLink> </a>

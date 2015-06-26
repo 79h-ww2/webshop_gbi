@@ -63,12 +63,26 @@ body {
    width: 80px;
    background-image: url('../Images/Design/warenkorb.png');
    background-repeat: no-repeat;
-   background-position: 15px 35px;
+   background-position: 15px 30px;
    padding-left: 21px;
-   padding-top:45px;
+   padding-top:40px;
    font-size:13px;
    color:white;
    
+}
+.warenkorbCell:hover{
+	background-image: url('../Images/Design/warenkorb_hover.png');
+	/*'color: #FFBF00;*/
+}
+#Warenkorb_Beschriftung{
+	margin-top: 21px;
+	margin-left: -15px;
+	color: black;
+	font-size: 14px;
+}
+
+#Text_Anmeldung{
+	margin-top: 15px;
 }
 .mobilewarenkorbCell{
 	display:none;
@@ -89,7 +103,7 @@ body {
 
 .accountCell:hover{
 	background-image: url('../Images/Design/account_hover.png');
-	color: #FFBF00;
+	/*color: #FFBF00;*/
 }
 .mobileaccountCell{
 	display:none;
@@ -546,6 +560,18 @@ label.ort{
 	visibility: hidden;
 	cursor: default;
 }
+.popupWarenkorb{
+	width: 500px;
+	margin-left: -430px;
+	margin-top: 20px;
+}
+.WarenkorbButtonPopup{
+	border-top: 2px solid;
+	padding-top: 20px;
+	color: white;
+	margin: 0px auto;
+	width: 400px;
+}
 
 .popupBewertungProduktauflistung .haken_sprechblase{
 	border-left: 5px solid transparent;
@@ -592,7 +618,7 @@ label.ort{
 	border-left: 15px solid transparent;
 	border-right: 15px solid transparent;
 	border-bottom: 30px solid #545454;
-	margin-left: 20px;
+	margin-left: 425px;
 	width: 0px;
 	height: 25px;
 }
