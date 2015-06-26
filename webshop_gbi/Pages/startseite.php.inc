@@ -1,3 +1,4 @@
+<div class = "startseite">
 <article class="topContent">
     <header>
         <h2>Fahrrad des Tages</h2>
@@ -35,6 +36,7 @@
     </footer>
     
     <content>
+    <div class="BottomContentContainer">
     	<div class="BottomContentTableRow">
     		<div class="articleCell">
 	    		<img src="Images/Produktbilder/Mustermodell.png" alt="Mustermodell" class="BildMustermodellKlein" />
@@ -57,6 +59,7 @@
     		</div>
 	    	
     	</div>
-        
+        </div>
     </content>
 </article>
+</div>

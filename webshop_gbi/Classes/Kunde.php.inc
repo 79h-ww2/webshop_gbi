@@ -484,7 +484,7 @@
 				$nachricht .= "Ihr Webshop Team der Global Bike Inc.\r\n";
 				
 				//die Email versenden
-				$erfolgreich =  $mail->senden($kunde->Email, "Bestätigungsemail: Abmeldung am Webshop der Global Bike Inc.", $nachricht);
+				$erfolgreich =  $mail->senden($kunde->Email, "Bestätigungsemail: Anmeldung am Webshop der Global Bike Inc.", $nachricht);
 			}
 						
 			//Datenbankverbindung schließen

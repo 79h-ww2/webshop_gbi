@@ -5,6 +5,8 @@
     </script>
     <script type="text/javascript" src="./Funktions/JS/registrierung.js" >
     </script>
+    
+    
     <form method="post" action="./?page=reg" onsubmit="return vorcheckEingabe();" id="registrierung" name="form_registrierung" >
         <h2>
 		     Registierung
