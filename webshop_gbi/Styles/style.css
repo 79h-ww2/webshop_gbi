@@ -622,6 +622,19 @@ label.ort{
 	width: 0px;
 	height: 25px;
 }
+.popupArtikelWarenkorb{
+	display: table;
+	width: 400px;
+	margin: 0px auto;
+	
+}
+.aktuelleArtikelimWarenkorb{
+	display: table-row;
+}
+.ArtikelbildWarenkorb, .ArtikelnameWarenkorb, .ArtikelmengeWarenkorb{
+	display: table-cell;
+	border: solid 1px;
+}
 
 
 .popupBewertungProduktauflistungSterneGesamt{
