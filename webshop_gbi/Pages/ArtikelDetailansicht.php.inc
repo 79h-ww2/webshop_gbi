@@ -1,5 +1,5 @@
 <?php include_once 'Classes/ArtikelDetails.php.inc';?>
-
+<div class = "startseite">
 <article class="detailContent">
         
         <?php 
@@ -52,13 +52,17 @@
     		</div>
     		
     		<div class="warenkorbFeld">
-	    		<form action="./?page=produkt&pid=<?php echo htmlspecialchars($_GET['pid'],ENT_QUOTES,'UTF-8');?>" method="post" >
+    			<script type="text/javascript" src="./Funktions/JS/vorcheck_std_funktionen.js" >
+    			</script>
+    			<script type="text/javascript" src="Funktions/JS/vorcheck_warenkorb.js">
+    			</script>
+	    		<form name="from_warenkorb"  action="./?page=produkt&pid=<?php echo htmlspecialchars($_GET['pid'],ENT_QUOTES,'UTF-8');?>" method="post" onsubmit="return eintrag_in_warenkorb_vorcheck();"  >
 				<label for="menge">Menge:</label>
 				<input class ="textfeld" type="text" name="menge" />
 				<input class ="buttonInWarenkorb"type="submit" value="In den Warenkorb" />
 				<input type="hidden" name="pid" value="<?php echo htmlspecialchars($_GET['pid'],ENT_QUOTES,'UTF-8');  ?>" />
 				<input type="hidden" value="neuerArtikelimWarenkorb" name="type"/>
-		
+				<div id="fehlermeldung_warenkorb"></div>
 				</form>
     		</div>
     		
@@ -117,4 +121,6 @@
 		?>
 		        
     </content>
+    <a href="./?page=artBewerten" title="ArtikelBewerten">Artikel bewerten</a>
 </article>
+</div>

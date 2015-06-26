@@ -1,7 +1,8 @@
 <?php 
 	$eingabe_ungueltig_anmeldung = isset($eingabe_ungueltig_anmeldung) ? $eingabe_ungueltig_anmeldung : false;
 ?>
-<div class="popupRegistrierung" id="popupRegistrierung" <?php if($eingabe_ungueltig_anmeldung) echo 'style="visibility: visible;"' ?> >
+<div class="popupRegistrierung" id="popupRegistrierung" 
+<?php if($eingabe_ungueltig_anmeldung  && !isset($_POST['type1'] ))	echo 'style="visibility: visible;"' ?> >
 	<script type="text/javascript" src="./Funktions/JS/anmeldung.js" >
 	</script>
 	<div class="haken_sprechblase" >
@@ -20,7 +21,7 @@
 					<label for="anmedlung_email" >Email:</label>
 					<input autocomplete="off" type="text" name="anmedlung_email" value="<?php if ($eingabe_ungueltig_anmeldung) echo htmlspecialchars($_POST['anmedlung_email'],ENT_QUOTES,'UTF-8'); ?>" <?php if( $eingabe_ungueltig_anmeldung && $eingabe_check_result_anmeldung->get_feldstatus('anmedlung_email') ) echo 'style="border-color:red; border-style: solid"';  ?> /> 
 					<label for="anmedlung_passwort">Passwort:</label>
-					<input  type="password" name="anmedlung_passwort" value="<?php if ($eingabe_ungueltig_anmeldung) echo htmlspecialchars($_POST['anmedlung_passwort'],ENT_QUOTES,'UTF-8'); ?>" <?php if( $eingabe_ungueltig_anmeldung && $eingabe_check_result_anmeldung->get_feldstatus('anmedlung_passwort') ) echo 'style="border-color:red; border-style: solid"';  ?> />
+					<input  type="password" name="anmedlung_passwort"  <?php if( $eingabe_ungueltig_anmeldung && $eingabe_check_result_anmeldung->get_feldstatus('anmedlung_passwort') ) echo 'style="border-color:red; border-style: solid"';  ?> />
 					
 					<input type="hidden" name="type" value="anmeldung" />
 					

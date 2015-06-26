@@ -38,6 +38,27 @@ class warenkorbeintrag{
 		
 			return  $bezeichnung;
 		}
+		public function get_artikelbild(){
+			//Verbindung zur Datenbank aufbauen
+			$db = datenbank_verbindung_aufbauen();
+			if ( !($db->db_connect()) ) die ("Es konnte keine Verbindung zur Datenbank aufgebaut werden");
+			$PId = $db->db_real_escape_string($this->artikelnummer);
+			//Die Datenbankabfrage
+			$query = "select Pfad from produktbilder where PID ='$PId' and Art ='Liste'";
+		
+			//Ausführen der Abfrage
+			$result = $db->db_query($query);
+		
+			$pfad ="";
+			while($werte = $db->db_fetch_object($result)){
+				$pfad = $werte->Pfad;
+			}
+		
+			//schließt die Datenbankverbindung
+			$db->db_close();
+		
+			return  $pfad;
+		}
 }
 
 ?>

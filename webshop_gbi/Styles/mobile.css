@@ -7,6 +7,7 @@ body {
     text-align: left;
     
 }
+
 .mainContent a, .nav a {
     text-decoration: none;
 }
@@ -22,25 +23,104 @@ body {
 
 .body {
     margin: 0 auto;
-    width: 1024px;
+    width: 100%;
     clear: both;
 }
-
-.mainHeader {
-	background: #788A5F;
-    position: absolute;
-    width: 1024px;
-    top: 0px;
-    background:linear-gradient(to bottom right ,#6c7b35 , 	#82a143 , #788A5F );
+/*############# Header ################*/
+#HeaderLeisteMobile{
+	display:table;
+	 background:linear-gradient(to bottom right ,#6c7b35 , 	#82a143 , #788A5F );
+	 width:100%;
+	 height:30px;
+}
+.show-nav{
+	display:table-cell;
+	 background-image: url('../Images/Design/menu-icon.png');
+	  background-repeat: no-repeat;
+	   background-position: 5px 5px;
+	   width: 30px;
+	height: 30px;
+	float:left;
+	z-index: 30;
+}
+.aktPageName{
+	display:table-cell;
+	width:100%;
 }
 
+.show-search{
+	display:table-cell;
+	background-image: url('../Images/Design/search-icon.png');
+	 background-repeat: no-repeat;
+		   background-position: 5px 5px;
+	width: 30px;
+	height: 30px; 
+	float: right;
+		 z-index: 30;
+}
+header.einblenden {
+	left:0;
+}
+
+/*Suchleite*/
+#SearchLeisteMobile{
+	 position: absolute;
+	 background:linear-gradient(to bottom right ,#6c7b35 , 	#82a143 , #788A5F );
+	 width:100%;
+	 top:0px;
+	 height:30px;
+	 z-index: 40;
+	display: none;
+}
+
+.search-zurueck{
+	display:table-cell;
+	 background-image: url('../Images/Design/search-zurueck-icon.png');
+	  background-repeat: no-repeat;
+	   background-position: 5px 5px;
+	   width: 30px;
+	height: 30px;
+	float:left;
+	z-index: 30;
+}
+.search-textfeld{
+	dispaly:table-cell;
+}
+.search-go{
+	display:table-cell;
+	background-image: url('../Images/Design/search-go-icon.png');
+	 background-repeat: no-repeat;
+		   background-position: 5px 5px;
+	width: 30px;
+	height: 30px; 
+	float: right;
+		 z-index: 30;
+}
+
+/* MainHeader*/
+.mainHeader{
+	background: #788A5F;
+	
+	background:linear-gradient(to bottom right ,#6c7b35 , 	#82a143 , #788A5F );
+	
+	width: 100%;
+	 height: 100%;
+   box-sizing: border-box;
+	left: -100%;
+	padding-right: .25em;
+	padding-top: 0em;
+	position: absolute;
+	top: 30px;
+	transition: all .3s;
+	z-index: 20;
+}
 .HeaderContent{
     display: table;
     width: 100%;
 }
 
 .TableRow {
-    display: table-row;
+    display: inline;
     width: 100%;
 }
 
@@ -55,42 +135,48 @@ body {
     vertical-align: top;
     width: 600px; 
     text-align: left;
+    position:absolute;
+	margin-left: 100px;
+	top: -200px;
 }
 
-.warenkorbCell{
-   display: table-cell;
+/*.warenkorbCell{
+  display:inline;
+	float: left;
+	width: 30px;
+	height: 30px;
    vertical-align: top;
-   width: 80px;
    background-image: url('../Images/Design/warenkorb.png');
    background-repeat: no-repeat;
-   background-position: 15px 30px;
+   background-position: 15px 35px;
    padding-left: 21px;
-   padding-top:40px;
+   padding-top:45px;
    font-size:13px;
    color:white;
    
-}
-.warenkorbCell:hover{
-	background-image: url('../Images/Design/warenkorb_hover.png');
-	/*'color: #FFBF00;*/
-}
-#Warenkorb_Beschriftung{
-	margin-top: 21px;
-	margin-left: -15px;
-	color: black;
-	font-size: 14px;
-}
-
-#Text_Anmeldung{
-	margin-top: 15px;
-}
-.mobilewarenkorbCell{
+}*/
+.warenkorbCell{
 	display:none;
 }
-.accountCell{
-   display: table-cell;
+.mobilewarenkorbCell{
+	display:table-cell;
+	  background-image: url('../Images/Design/warenkorb.png');
+	background-repeat: no-repeat;
+   background-position: 15px 35px;
+	 width: 120px;
+}
+.mobilewarenkorbCell_WarenkorbLink{
+	display:block;
+	margin:15px;
+	padding:30px;
+	height:100%;
+}
+/*.accountCell{
+  display: inline;
+	float: right;
+	width: 30px;
+	height: 30px;
    vertical-align: middle;
-   width: 100px;
    padding-top: 60px;
    background-image: url('../Images/Design/account.png');
    background-repeat: no-repeat;
@@ -98,15 +184,26 @@ body {
    color: black;
    font-size: 14px;
    text-align: center;
-   width: 120px;
+}*/
+.accountCell{
+	display:none;	
 }
-
-.accountCell:hover{
+/*.accountCell:hover{
 	background-image: url('../Images/Design/account_hover.png');
-	/*color: #FFBF00;*/
-}
+	color: #FFBF00;
+}*/
 .mobileaccountCell{
-	display:none;
+	display:table-cell;
+	background-image: url('../Images/Design/account.png');
+	background-repeat: no-repeat;
+   background-position: center 35px;
+	 width: 120px;
+}
+.mobileaccountCell_LoginLink{
+	display:block;
+	margin:15px;
+	padding:30px;
+	height:100%;
 }
 img.logo {
     height: 90px;
@@ -122,19 +219,23 @@ img.account {
 
 
 /* Hauptmenü und Überschrift Registrierung*/
-.nav,  #registrierung h2, #suche_erweitert h2, #form_adresse_aendern h2, #form_email_passwort_aendern h2, #login h2{
-   height: 40px;
-   background: linear-gradient(to  bottom, black  , gray); 
+.nav,  #registrierung h2, #suche_erweitert h2, #form_adresse_aendern h2, #form_email_passwort_aendern h2{
+   height: 240px;
+   background: none; 
 }
-
+.nav ul{
+	padding-left: 0
+}
 .navigation{
     list-style: circle;
     margin: 0 auto;
+    margin-top: 5px;
 }
 
 .navigation li {
     float: left;
     display: inline;
+    width: 100%;
 }
 
 .nav a:link, .nav a:visited{
@@ -150,6 +251,7 @@ img.account {
     text-shadow: none;  
     color: black;
     background: linear-gradient(to  bottom, #d56509  , orange 15%, #d56509);
+    width: 75%;
     
 }
 
@@ -165,6 +267,7 @@ img.account {
 
 
 .navigation ul, .navigation ul li ul {
+	 display: none;
     visibility: hidden;
     list-style: none;;
     border-top : 2px solid red;
@@ -192,38 +295,46 @@ img.account {
    
     
 }
-
+/*############### Content ##################*/
 .content {
     /* 70& wenn Sidebars erw�nscht sind
     /*aktivieren, zwalls Sidebars erw�nscht sind
     float: left;
     */
-    margin-top: 125px;
+    margin-top: 0px;
     background-color: #fff;
-    padding: 15px;
+    padding: 0px;
 }
 
-.detailContent {
+/*}.detailContent {
     background-color: #EDFDD5;
+    width:100%;
     background:linear-gradient(to bottom, white , 	#D9F0B7 , white );
     background: white;
-	margin: 50px 100px;
+	margin: 0px 0px;
 	padding: 5px 0;
 	background:linear-gradient(to bottom, white , 	#EDFDD5 , white );
 	display: table;
+}*/
+.detailContent {
+   display: block;
+	padding: 0px;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 
 .detailLeft{
-	width: 70px;
-	display: table-cell;
+	width: 100%;
+	display: table;
 	vertical-align: middle;
-	
+	padding-right: 0px;
 }
 
 .detailCell {
+	width:100%;
 	display: block;
-	display: table-cell;
 }
 
 .detailCell img {
@@ -232,16 +343,17 @@ img.account {
 }
 
 .detailMiddle{
-	width: 300px;
-	display: table-cell;
+	width: 100%;
+	display: table;
 	vertical-align: middle;
-	padding-right: 50px;
+	padding-right: 0px;
 }
 
 .detailContentText {
     width: 350px;
     display: table-cell;
     margin: 50px 100px;
+    font-size:12px;
 }
 
 .warenkorbFeld{
@@ -265,50 +377,64 @@ img.account {
 }
 
 .middleContent {
-	clear: both;
-    width: 800px;
-    margin: 0 100px;
+		display: block;
+	padding: 0px;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;	
+	font-size: 12px;
 }
 
-.topContent {
-    background-color: #EDFDD5;
-    background:linear-gradient(to bottom, white , 	#D9F0B7 , white );
-    background: white;
-	margin: 50px 100px;
-	height: 330px;
+/*Startseite*/
+.startseite{
+	margin: 0px 0px;
+	height: auto;
 	padding: 5px 0;
+	 background-color: #EDFDD5;
 	background:linear-gradient(to bottom, white , 	#EDFDD5 , white );
 }
-
-
-.topContent h2 {
-    text-align: center;
+.topContent {
+	
+	display: block;
+	padding: 0px;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;	
 }
 
+.topContent h2 {
+    text-align: center; 
+}
 .topContentText {
-    float: right;
     clear: both;
-    width: 350px;
+    padding:10px;
+     font-size: 0.94em;
 }
 
 .bottomContent {
+	clear: both;
+	width: 100%;
+	
     background-color: #fff;
-    margin-top: 2px;
     text-align: center;
 }
 
 .bottomContent h2 {
-	text-align: left;
+	text-align: center;
+	 font-size: 0.94em;
+}
+.BottomContentContainer{
+	clear:both;
 }
 .BottomContentTableRow {
-    display: table-row;
-    width: 900px;
+	display:table;
+	 vertical-align: middle;
+    margin: 0 auto;
 }
 
-.articleCell{
-   display: table-cell; 
-   vertical-align: middle;
-   width: 200px;
+.articleCell{ 
+	display:table-cell;
+	float:left;
 }
 
 
@@ -320,7 +446,12 @@ img.account {
 }
 
 img.BildMustermodell{
-	width: 300px;
+	display:block;
+	width: 100%;
+	max-width:400px;
+	height:auto;
+	margin-left: auto;
+    margin-right: auto;
 }
 .post-info {
     font-style: italic;
@@ -355,18 +486,28 @@ img.BildMustermodell{
     padding: 2% 3%;
 }
 */
-
+/*#################### Footer ######################*/
 .mainFooter {
-    width: 1024px;
-    height: 40px;
+	background: #788A5F;
+	position: absolute;
+    width: 200px;
+    height: 80px;
+    box-sizing: border-box;
+	left: -200px;
+	padding-right: .25em;
+	padding-top: 0em;
     /*float: left;*/ 
-    background: #788A5F;
-    text-align: center;
-    display: table-cell;
+    
+    text-align: left;
     vertical-align: middle;
+    transition: all .3s;
+	z-index: 20;
     background:linear-gradient(to top right ,#6c7b35 , 	#82a143 , #788A5F );
+    
 }
-
+footer.show {
+	left:0;
+}
 .mainFooter li, .mainFooter ul{
 	list-style: none;
 	display: inline;
@@ -387,40 +528,29 @@ img.BildMustermodell{
 /* ############################################## Registierung ############################################## */
 
 
-#registrierung, #suche_erweitert, #form_adresse_aendern, #form_email_passwort_aendern, #login{
+#registrierung, #login, #suche_erweitert, #form_adresse_aendern, #form_email_passwort_aendern{
     display:block;
-    margin: 0px auto;
-    width: 640px;
-    padding: 0px;
-    margin-top:20px;
+    margin: 0px 0px;
+    width: 100%;
+    padding: 5px 0;
+    margin-top:0px;
+	 background-color: #EDFDD5;
+	background:linear-gradient(to bottom, white , 	#EDFDD5 , white );
+}
+#registrierung h2, #login h2, #suche_erweitert h2, #form_adresse_aendern h2, #form_email_passwort_aendern h2 {
+    text-align: center;
+    height: auto;
 }
 
-#registrierung h2, #suche_erweitert h2, #form_adresse_aendern h2, #form_email_passwort_aendern h2, #login h2 {
-    padding-left: 15px;
-    display: table-cell;
-    vertical-align: middle;
-     border-radius: 10px 10px 0px 0px;
-    -moz-border-radius: 10px 10px 0px 0px;
-    -webkit-border-radius: 10px 10px 0px 0px;
-    margin: 0px;
-    vertical-align: middle;
-    color: #fff;
-    display: table-cell;
-     width: 640px;
-     font-size: 18px;  
+#registrierung .form_content, #login .form_content, #suche_erweitert .form_content, #form_adresse_aendern .form_content, #form_email_passwort_aendern .form_content{
+	display: block;
+	padding: 0px;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-.reg_form_zeile{
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-#registrierung .form_content, #suche_erweitert .form_content, #form_adresse_aendern .form_content, #form_email_passwort_aendern .form_content, #login .form_content{
-	display: table-cell;
-	padding: 10px;
-}
-
-#registrierung input[type=submit], #suche_erweitert input[type=submit], #form_adresse_aendern input[type=submit], #form_email_passwort_aendern input[type=submit], #login input[type=submit]{
+#registrierung input[type=submit], #login input[type=submit], #suche_erweitert input[type=submit], #form_adresse_aendern input[type=submit], #form_email_passwort_aendern input[type=submit]{
     float: right;
     margin-right: 20px;
 }
@@ -456,7 +586,7 @@ input[type=submit]:hover , input[type=button]:hover, .contentPopupRegistrierung 
 }
 
 .reg_form_zeile label, .reg_form_zeile span{
-    width: 120px;
+    width: 100%;
     display:inline-block;
 }
 
@@ -464,22 +594,14 @@ input[type=submit]:hover , input[type=button]:hover, .contentPopupRegistrierung 
 	width: 160px;
 }
 
-#registrierung .lang_reg, #suche_erweitert .lang_reg, #form_adresse_aendern .lang_reg, #form_email_passwort_aendern .lang_reg, #login .lang_reg{
+#registrierung .lang_reg, #login .lang_reg, #suche_erweitert .lang_reg, #form_adresse_aendern .lang_reg, #form_email_passwort_aendern .lang_reg{
 	width: 260px;
 }
-
+input.vorname, input.name, input.email, input.passwort, input.wpasswort{
+	width: 100px;
+}
 input.hausnr, input.plz, input.bereich_preis{
 	width: 72px;
-}
-
-label.hausnr{
-	margin-left: 10px;
-	width: 75px;
-}
-
-label.ort{
-	margin-left: 45px;
-	width:40px;
 }
 
 .clear_right{
@@ -489,20 +611,21 @@ label.ort{
 .reg_box_aufteilung{
 	display: table;
 	/*background:linear-gradient(to bottom right ,#6c7b35 ,#82a143 , #788A5F );*/
-	background-color: #82a143;
-    color: #fff;
+    color: black;
+    background-color: #EDFDD5;
+    background:linear-gradient(to bottom, white , 	#D9F0B7 , white );
     border-radius: 0px 0px 10px 10px;
     -moz-border-radius: 0px 0px 10px 10px;
     -webkit-border-radius: 0px 0px 10px 10px;
     margin-top:0px;
     padding: 10px;
-    width: 620px;
+    width: 100%;
 }
 
 
 
 .reg_box_iconbereich, .suche_box_iconbereich, .adresse_aendern_box_iconbereich, .email_aendern_box_iconbereich{
-	display: table-cell;
+	display: none;
 	width: 80px;
 	padding-top: 20px;
 	background-image: url('../Images/Design/kunde_plus.png');
@@ -541,8 +664,9 @@ label.ort{
     -moz-border-radius: 10px 10px 10px 10px;
     -webkit-border-radius: 10px 10px 10px 10px;
 }
-/* ##################### Popup Registrierung ##################### */
+
 .popupRegistrierung, .popupWarenkorb{
+	display:none;
 	position: absolute;
 	width: 480px;
 	height: 120px;
@@ -559,18 +683,6 @@ label.ort{
 	margin-left: -30px;
 	visibility: hidden;
 	cursor: default;
-}
-.popupWarenkorb{
-	width: 500px;
-	margin-left: -430px;
-	margin-top: 20px;
-}
-.WarenkorbButtonPopup{
-	border-top: 2px solid;
-	padding-top: 20px;
-	color: white;
-	margin: 0px auto;
-	width: 400px;
 }
 
 .popupBewertungProduktauflistung .haken_sprechblase{
@@ -618,52 +730,9 @@ label.ort{
 	border-left: 15px solid transparent;
 	border-right: 15px solid transparent;
 	border-bottom: 30px solid #545454;
-	margin-left: 425px;
+	margin-left: 20px;
 	width: 0px;
 	height: 25px;
-}
-.popupArtikelWarenkorb{
-	display: table;
-	width: 400px;
-	margin: 0px auto;
-	
-}
-.aktuelleArtikelimWarenkorb{
-	display: table-row;
-}
-.ArtikelbildWarenkorb, .ArtikelnameWarenkorb, .ArtikelmengeWarenkorb{
-	display: table-cell;
-	text-align: center;
-	padding-left: 10px;
-	padding-top: 10px;
-	vertical-align: middle;
-	border-bottom: solid 1px;
-}
-.ArtikelnameWarenkorb{
-	width: 250px;
-	
-}
-.ArtikelnameWarenkorbhyper{
-	color: white;
-	text-decoration: none;
-}
-.ArtikelnameWarenkorbhyper:hover{
-	color: #FFBF00;
-}
-
-.ArtikelbildWarenkorb{
-	width: 100px;
-}
-.UeberschriftWarenkorb{
-	font-weight: bold;
-	
-}
-#keineArtikelimWarenkorb{
-text-align: center;
-font-size: 14px;	
-}
-.Artikelbild{
-	width: 100px;
 }
 
 
@@ -671,23 +740,14 @@ font-size: 14px;
 	text-align: center;
 	border-bottom: solid 1px;
 }
-.contentPopupBewertungProduktauflistung .popupBewertungTable  {
-	border-bottom: solid 1px;
-}
+
 .contentPopupBewertungProduktauflistung .ZeileSterne{
+	margin-top: 5px;
 }
 
 .contentPopupBewertungProduktauflistung .ZeileSterne .beschriftung{
 	display: inline-block;
 	width: 65px;
-}
-.contentPopupBewertungProduktauflistung .ZeileSterne .anzahlBewertung{
-	display:inline;
-	width:100px;
-	text-align: center;
-}
-.contentPopupBewertungProduktauflistung .ZeileSterne a{
-	text-align: center;
 }
 
 .contentPopupRegistrierung{
@@ -814,10 +874,7 @@ input[type="text"], input[type="email"], input[type="password"], select, input[t
     text-shadow: none;
     background: linear-gradient(to  bottom, #d56509  , orange 15%, #d56509); 
 }
-/* ##################################### Login ################################## */
-#reg_link{
-	padding-top: 10px;
-}
+
 /* ##################################### Statusleiste ################################## */
 #status_leiste{
 	background-color: #585858;
@@ -911,30 +968,29 @@ input[type="text"], input[type="email"], input[type="password"], select, input[t
 /* ################ Produkteauflistung ################ */
 
 .auflistung_produkte{
-	margin-left: 15px;
-	width: 944px;
-	padding: 10px;
+	margin-left: 0px;
+	width: 100%;
+	padding: 0px;
 }
 
 .listeneintrag_auflistung_produkte{
-	padding: 5px;
+	padding: 0px;
 	border-bottom-style: solid;
 	border-bottom-color: #848484;
 	border-bottom-width: 1px;
-	margin-top: 15px;
+	margin-top: 0px;
 }
 
 .listeneintrag_auflistung_produkte_content{
 	display: table;
-	width: 944px;
+	width: 100%;
 }
 
 .listeneintrag_auflistung_produkte_content:hover{
-	background-color: #E6E6E6;
 }
 
 .listeneintrag_auflistung_produkte_bild{
-	display: table-cell;
+	display: table;
 	width: 160px;
 	border-style: solid;
 	border-width: 1px;
@@ -943,7 +999,7 @@ input[type="text"], input[type="email"], input[type="password"], select, input[t
 }
 
 .listeneintrag_auflistung_produkte_beschriftung{
-	display: table-cell;
+	display: table;
 	padding-left: 20px;
 	vertical-align: top;
 }
@@ -984,10 +1040,11 @@ input[type="text"], input[type="email"], input[type="password"], select, input[t
 }
 
 .listeneintrag_bewertung{
-	float: right;
+	display:inline;
+	float: left;
 	font-size: 15px;
 	color: #6E6E6E;
-	width: 265px;
+	width: 100%;
 	cursor: pointer;
 }
 
@@ -996,8 +1053,9 @@ input[type="text"], input[type="email"], input[type="password"], select, input[t
 }
 
 .box_seitennavigation_ergebnis_seiten{
-	width: 400px;
+	width: 100%;
 	margin: 0px auto;
+	padding-top:5px;
 	display: table;
 }
 
@@ -1006,7 +1064,7 @@ input[type="text"], input[type="email"], input[type="password"], select, input[t
 	padding: 0px;
 	padding-top: 30px;
 	background-repeat: no-repeat;
-	font-size: 12px;
+	font-size: 10px;
 	text-align: center;
 	display: table-cell;
 	background-position: center 0px;
@@ -1084,13 +1142,28 @@ label.label_preisspanne{
 h1{
 	color: #D56509;
 }
+.topContentUebersicht{
+	display: block;
+	padding: 0px;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;	
+}
 /* ################ Artikelbewertung ################ */
+.topContentArtBewerten {
+	
+	display: block;
+	padding: 0px;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;	
+}
 .artBewerten{
 	display: table;
 }
 .produktimg img{
 	display:table-cell;
-	width: 200px;
+	width: 100%;
 	height:auto;
 }
 .bewertung{
@@ -1106,6 +1179,7 @@ h1{
 }
 .sternliste{
 	display: inline;
+	width:100%;
 	list-style-type: none;
 }
 .sternliste li{
@@ -1132,13 +1206,13 @@ height:46px;
 	display: block;
 }
 .uberschrift{
-	width:800px;
+	width:100%;
 	 display: block;
     margin-left: auto;
     margin-right: auto;
 }
 .rezension{
-	width:800px;
+	width:100%;
 	height: 200px;
 	 display: block;
     margin-left: auto;
@@ -1163,8 +1237,3 @@ stern2.gelb{
 	background-image: url("../Images/Design/gelb.png");
 }
 /* ################ Ende Artikelbewertung ################ */
-
-
-#fehlermeldung_warenkorb{
-	color: red;
-}
