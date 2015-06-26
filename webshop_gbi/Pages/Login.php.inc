@@ -35,16 +35,16 @@ if (isset ( $_GET ['page'] )) {
 				<p class="reg_form_zeile">
 					<label for="anmedlung_passwort">Passwort:</label> <input
 						type="password" name="anmedlung_passwort" maxlength="50"  class="lang_reg"
-						value="<?php if ($eingabe_ungueltig_login) echo htmlspecialchars($_POST['anmedlung_passwort'],ENT_QUOTES,'UTF-8'); ?>"
-						<?php if( $eingabe_ungueltig_login && $eingabe_check_result_login->get_feldstatus('anmedlung_passwort') ) echo 'style="border-color:red; border-style: solid"';  ?> />
+						<?php if( $eingabe_ungueltig_anmeldung && $eingabe_check_result_anmeldung->get_feldstatus('anmedlung_passwort') ) echo 'style="border-color:red; border-style: solid"';  ?> />
 				</p>
-				<input type="hidden" name="type" value="login" />
+				<input type="hidden" name="type" value="anmeldung" />
+				<input type="hidden" name="type1" value="bewertung" />
 
 				<p class="text_fehlermeldung" id="fehlermeldung_login">
 						<?php
 						// zeigt die Fehlermeldung an, wenn nicht alle Felder richtig ausgefüllt wurden
-						if ($eingabe_ungueltig_login) {
-							echo htmlspecialchars ( $eingabe_check_result_login->get_fehlermeldung (), ENT_QUOTES, 'UTF-8' );
+						if ($eingabe_ungueltig_anmeldung) {
+							echo htmlspecialchars($eingabe_check_result_anmeldung->get_fehlermeldung(),ENT_QUOTES,'UTF-8');
 						}
 						?>
 					</p>

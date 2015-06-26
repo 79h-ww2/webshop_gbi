@@ -33,7 +33,11 @@
     		</div>
     		
     		<div class="warenkorbFeld">
-	    		<form action="./?page=produkt&pid=<?php echo htmlspecialchars($_GET['pid'],ENT_QUOTES,'UTF-8');?>" method="post" >
+    			<script type="text/javascript" src="./Funktions/JS/vorcheck_std_funktionen.js" >
+    			</script>
+    			<script type="text/javascript" src="Funktions/JS/vorcheck_warenkorb.js">
+    			</script>
+	    		<form name="from_warenkorb"  action="./?page=produkt&pid=<?php echo htmlspecialchars($_GET['pid'],ENT_QUOTES,'UTF-8');?>" method="post" onsubmit=""  >
 				<label for="menge">Menge:</label>
 				<input class ="textfeld" type="text" name="menge" />
 				<input class ="buttonInWarenkorb"type="submit" value="In den Warenkorb" />
