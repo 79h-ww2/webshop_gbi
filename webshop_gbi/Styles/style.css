@@ -1153,3 +1153,8 @@ stern2.gelb{
 	background-image: url("../Images/Design/gelb.png");
 }
 /* ################ Ende Artikelbewertung ################ */
+
+
+#fehlermeldung_warenkorb{
+	color: red;
+}

@@ -37,13 +37,13 @@
     			</script>
     			<script type="text/javascript" src="Funktions/JS/vorcheck_warenkorb.js">
     			</script>
-	    		<form name="from_warenkorb"  action="./?page=produkt&pid=<?php echo htmlspecialchars($_GET['pid'],ENT_QUOTES,'UTF-8');?>" method="post" onsubmit=""  >
+	    		<form name="from_warenkorb"  action="./?page=produkt&pid=<?php echo htmlspecialchars($_GET['pid'],ENT_QUOTES,'UTF-8');?>" method="post" onsubmit="return eintrag_in_warenkorb_vorcheck();"  >
 				<label for="menge">Menge:</label>
 				<input class ="textfeld" type="text" name="menge" />
 				<input class ="buttonInWarenkorb"type="submit" value="In den Warenkorb" />
 				<input type="hidden" name="pid" value="<?php echo htmlspecialchars($_GET['pid'],ENT_QUOTES,'UTF-8');  ?>" />
 				<input type="hidden" value="neuerArtikelimWarenkorb" name="type"/>
-		
+				<div id="fehlermeldung_warenkorb"></div>
 				</form>
     		</div>
     		
