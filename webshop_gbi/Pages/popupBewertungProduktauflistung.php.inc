@@ -12,9 +12,7 @@ if ($anzahlBewertungen > 0)
 		</div>
 		<div class="popupBewertungTable">
 			<div class="ZeileSterne">
-				<tr>
-					<td><span class="beschriftung"> 1 Stern:</span></td>
-					<td>
+					<span class="beschriftung"> 1 Stern:</span>
 					<?php
 					$anzahl = $arr_sterne [0];
 					if ($anzahl == '') {
@@ -22,65 +20,47 @@ if ($anzahlBewertungen > 0)
 					}
 					?>
 					<span class="anzahlBewertung"> <?php echo $anzahl;?></span>
-					</td>
-
-				</tr>
 			</div>
 			<div class="ZeileSterne">
-				<tr>
-					<td><span class="beschriftung"> 2 Sterne:</span></td>
-					<td>
+					<span class="beschriftung"> 2 Sterne:</span></td>
 					<?php
 					$anzahl = $arr_sterne [1];
 					if ($anzahl == '') {
 						$anzahl = '-';
 					}
 					?>
-						<span class="anzahlBewertung"> <?php echo $anzahl;?></span>
-					</td>
-				</tr>
+					<span class="anzahlBewertung"> <?php echo $anzahl;?></span>
 			</div>
 			<div class="ZeileSterne">
-				<tr>
-					<td><span class="beschriftung"> 3 Sterne:</span></td>
-					<td>
+					<span class="beschriftung"> 3 Sterne:</span></td>
 					<?php
 					$anzahl = $arr_sterne [2];
 					if ($anzahl == '') {
 						$anzahl = '-';
 					}
 					?>
-						<a><?php echo $anzahl;?></a>
-					</td>
-				</tr>
+					<span class="anzahlBewertung"><?php echo $anzahl;?></span>
 			</div>
 			<div class="ZeileSterne">
-				<tr>
-					<td><span class="beschriftung"> 4 Sterne:</span></td>
-					<td>
+					<span class="beschriftung"> 4 Sterne:</span></td>
 					<?php
 					$anzahl = $arr_sterne [3];
 					if ($anzahl == '') {
 						$anzahl = '-';
 					}
 					?>
-						<a><?php echo $anzahl;?></a>
-					</td>
-				</tr>
+					<span class="anzahlBewertung"><?php echo $anzahl;?></span>
+
 			</div>
 			<div class="ZeileSterne">
-				<tr>
-					<td><span class="beschriftung"> 5 Sterne:</span></td>
-					<td>
+					<span class="beschriftung"> 5 Sterne:</span></td>
 					<?php
 					$anzahl = $arr_sterne [4];
 					if ($anzahl == '') {
 						$anzahl = '-';
 					}
 					?>
-						<a><?php echo $anzahl;?></a>
-					</td>
-				</tr>
+					<span class="anzahlBewertung"><?php echo $anzahl;?></span>
 			</div>
 		</div>
 		<div class="popupBewertungLinkAlleBewertungen">
