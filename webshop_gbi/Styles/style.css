@@ -637,10 +637,20 @@ label.ort{
 	padding-left: 10px;
 	padding-top: 10px;
 	vertical-align: middle;
+	border-bottom: solid 1px;
 }
 .ArtikelnameWarenkorb{
 	width: 250px;
+	
 }
+.ArtikelnameWarenkorbhyper{
+	color: white;
+	text-decoration: none;
+}
+.ArtikelnameWarenkorbhyper:hover{
+	color: #FFBF00;
+}
+
 .ArtikelbildWarenkorb{
 	width: 100px;
 }
