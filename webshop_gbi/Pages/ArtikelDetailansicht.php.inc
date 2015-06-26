@@ -3,13 +3,16 @@
 <article class="detailContent">
         
         <?php 
+        
+        //zeigt die Artikelseite nur an, wenn eine PID übergeben wurde
+        if(isset($_GET['pid'])){
 		
-		$artikelDetails = new ArtikelDetails();
-		
-		$artikel = $artikelDetails->beschreibungAnzeigen($_GET['pid']);
-		
-		
-		echo '<h2>'.htmlspecialchars($artikel->Bezeichnung,ENT_QUOTES,'UTF-8').'</h2>';
+			$artikelDetails = new ArtikelDetails();
+			
+			$artikel = $artikelDetails->beschreibungAnzeigen($_GET['pid']);
+			
+			
+			echo '<h2>'.htmlspecialchars($artikel->Bezeichnung,ENT_QUOTES,'UTF-8').'</h2>';
 		
 		?>
 
@@ -139,5 +142,7 @@
 		        
     </content>
     <a href="./?page=artBewerten" title="ArtikelBewerten">Artikel bewerten</a>
+    
+    <?php }else{echo "Keine Artikelnummer übergeben !!!";} ?>
 </article>
 </div>

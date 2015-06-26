@@ -39,7 +39,7 @@
 			
 			//ließt alle Get-Parameter aus der Adressenleiste aus (nötig, wenn kein Java-Script aktiviert ist)
 			//Erstellt eine Adresse für einen Link, der bei deaktivierten JavaScript genutzt werden kann
-			$adresse_no_script = ( count($_GET) > 0 ) ?  "./?" : ".";
+			$adresse_no_script = ( count($_GET) > 0 ) ?  "./?" : "./";
 			
 			$get_feldnamen = array_keys($_GET);
 			for ( $i = 0; $i < count($_GET); $i++)
@@ -47,9 +47,10 @@
 				$wert = htmlspecialchars ($_GET[$get_feldnamen[$i]],ENT_QUOTES,'ISO8859-1');
 				$feldname = htmlspecialchars ($get_feldnamen[$i],ENT_QUOTES,'ISO8859-1');
 			
-				if ( $i > 0) $adresse_no_script .= "&";
-				
-				$adresse_no_script .= $feldname."=".$wert;
+				if ($feldname != "account-activate"){ //Übernimmt nicht den Aktivierungs-Code zur Adresse, damit der Benutzer nicht mehrfach aktiviert wird
+					if ( $i > 0) $adresse_no_script .= "&";
+					$adresse_no_script .= $feldname."=".$wert;
+				}
 			}
 			
 			echo
