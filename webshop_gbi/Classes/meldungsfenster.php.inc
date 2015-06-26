@@ -179,8 +179,26 @@
 
 			if ( $sichtbar_style ) echo '<script type="text/javascript" >anzahlFensterOffen++; zeigeAbdeckung ( true );</script>';
 
+			//ließt alle Get-Parameter aus der Adressenleiste aus (nötig, wenn kein Java-Script aktiviert ist)
+			//Erstellt eine Adresse für einen Link, der bei deaktivierten JavaScript genutzt werden kann
+			$adresse_no_script = ( count($_GET) > 0 ) ?  "./?" : ".";
+				
+			$get_feldnamen = array_keys($_GET);
+			for ( $i = 0; $i < count($_GET); $i++)
+			{
+			$wert = htmlspecialchars ($_GET[$get_feldnamen[$i]],ENT_QUOTES,'ISO8859-1');
+					$feldname = htmlspecialchars ($get_feldnamen[$i],ENT_QUOTES,'ISO8859-1');
+		
+							if ( $i > 0) $adresse_no_script .= "&";
+			
+							$adresse_no_script .= $feldname."=".$wert;
+			}
+			
 			echo
 			"
+				<noscript>
+					<div id=\"no_javaScript_fensterabdeckung\" ></div>
+				</noscript>
 				<div id=\"infoBox_".htmlspecialchars($idBox,ENT_QUOTES,'UTF-8')."\"  class=\"meldungsfenster_frame_groesse_1\"  ".$sichtbar_style." >
 					<div class=\"meldungsbox_titelleiste\" >
 						<div class=\"meldungsbox_titelleiste_content\" >

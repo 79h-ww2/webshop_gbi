@@ -74,7 +74,7 @@
 	<div id="SearchLeisteMobile">
 		<div class="search-zurueck"
 			onclick="einblenden('SearchLeisteMobile'); return false;"></div>
-		<input type="text" class="search-textfeld"></input>
+		<input type="text" class="search-textfeld" />
 		<div class="search-go"></div>
 	</div>
 	<header class="mainHeader">
@@ -212,7 +212,7 @@ else {
         </ul>
 		</nav>
 		<div style="clear: left"></div>
-    <?php if (isset($_SESSION['angemeldet'])) include_once 'Pages/status_leiste.php.inc'; ?>
+    <?php if (isset($_SESSION['angemeldet'])) {include_once 'Pages/status_leiste.php.inc';} ?>
     </header>
 
 	<div class="mainContent">

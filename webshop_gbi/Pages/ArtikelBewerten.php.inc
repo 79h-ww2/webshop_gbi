@@ -6,7 +6,7 @@
                 	//wenn der Kunde noch nicht angemeldet ist, wird auf die Login-Seite weitergeleitet
                 	if (!(isset($_SESSION['angemeldet']))){
                ?>
-               <div class="topContent">
+               <div class="topContentArtBewerten">
                <h4>Bevor Sie eine Bewertung abgeben können, müssen Sie sich anmelden!</h4>
                </div>
                 <?php
@@ -26,7 +26,7 @@
                 				<div class="produktimg">
                 					<img src="Images/Produktbilder/Mustermodell.png" alt="Produktimg" />
                 				</div>
-                				<h3 class="produktname">Produktname</h3>
+                				<h3 class="produktname">Mountainbike</h3>
                 				<form method="post" action="<?php echo $url; ?>" onsubmit="return vorcheckEingabe_bewertung();" id="rezension" name="form_bewertung" >
                 					<div class="sterne">
                 						<input class="sternbewertung" type="text" name="sternbewertung">
@@ -41,9 +41,9 @@
                 					</div>
                 					<div class="textfelder">
                 		
-                						<input class="uberschrift" type="text" name="uberschrift_feld">
+                						<input class="uberschrift" type="text" name="uberschrift_feld" placeholder="Überschrift oder Zusammenfassung ihrer Rezension (erforderlich)">
                 		
-                						<textarea class="rezension" name="rezension_area"></textarea>
+                						<textarea class="rezension" name="rezension_area" placeholder="Schreiben Sie hier ihre Rezension (erforderlich)"></textarea>
                 		
                 					</div>
                 					<input class="sendebutton" type="submit" name="action" value="Senden"></input>

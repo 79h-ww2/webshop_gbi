@@ -1,5 +1,5 @@
 <div class = "startseite">
-	<div class = "topContent">
+	<div class = "topContentUebersicht">
 <?php 
 include_once './Classes/artikel.php.inc';
 include_once 'Classes/navigation.php.inc';
