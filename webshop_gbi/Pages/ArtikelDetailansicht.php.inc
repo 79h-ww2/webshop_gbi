@@ -48,7 +48,7 @@
 					
 					echo '<span id="exemplare_auf_lager" >'.htmlspecialchars($artikel->Menge,ENT_QUOTES,'UTF-8').'</span> Exemplare verfügbar';
 					
-					?>
+				?>
     		</div>
     		
     		<div class="warenkorbFeld">
@@ -56,13 +56,30 @@
     			</script>
     			<script type="text/javascript" src="Funktions/JS/vorcheck_warenkorb.js">
     			</script>
+    			<?php
+    				//Variable, die anzeigt, ob die vor einen Submit angegeben Menge gültig war (Serverseitig nach den Submit überprüft)
+    				$mengen_fehler = (isset($mengen_fehler)) ? $mengen_fehler : false;
+    			?>
 	    		<form name="from_warenkorb"  action="./?page=produkt&pid=<?php echo htmlspecialchars($_GET['pid'],ENT_QUOTES,'UTF-8');?>" method="post" onsubmit="return eintrag_in_warenkorb_vorcheck();"  >
 				<label for="menge">Menge:</label>
-				<input class ="textfeld" type="text" name="menge" />
+				<input class ="textfeld" type="text" name="menge" 
+				<?php 
+					//Mariert das Fenster rot, wenn der Mengenwert falsch war
+					if($mengen_fehler && isset($_POST['menge'])){
+						echo 'style="border-style: solid; border-color:red;" value="'.htmlspecialchars($_POST['menge'],ENT_QUOTES,'UTF-8').'" ';
+					}
+				?> />
 				<input class ="buttonInWarenkorb"type="submit" value="In den Warenkorb" />
 				<input type="hidden" name="pid" value="<?php echo htmlspecialchars($_GET['pid'],ENT_QUOTES,'UTF-8');  ?>" />
 				<input type="hidden" value="neuerArtikelimWarenkorb" name="type"/>
-				<div id="fehlermeldung_warenkorb"></div>
+				<div id="fehlermeldung_warenkorb">
+					<?php
+						//Wenn die Mengenangabe falsch war, wird eine Fehlermeldung angezeigt
+						if ($mengen_fehler && isset($result_ueberpruefung)){
+							echo htmlspecialchars($result_ueberpruefung->get_fehlermeldung(),ENT_QUOTES,'UTF-8');
+						}
+					?>
+				</div>
 				</form>
     		</div>
     		

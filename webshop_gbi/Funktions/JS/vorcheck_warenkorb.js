@@ -1,5 +1,6 @@
 /**
  * Überprüft die eingegebene Menge der Ware, bevor der Artikel in den Warenkorb gepackt wird
+ * Übernommen von Benedikt, um den Zeitplan einhalten zu können
  * @returns {Boolean} gibt zurück, ob ein Fehler beim Überprüfen gefunden wurde
  */
 function eintrag_in_warenkorb_vorcheck(){
@@ -20,7 +21,7 @@ function eintrag_in_warenkorb_vorcheck(){
 		
 	if (fehlermeldung == ''){
 		
-		//überprüft, ob der Wert im Warenkorb eine gültige Zahl ist
+		//überprüft, ob der Wert im Mengen-Inputfeld eine gültige Zahl ist
 		if (isNumeric(document.forms['from_warenkorb']['menge'].value) == false){
 			
 			//wenn sie keine gültige Zahl ist -> Fehlermelung 
@@ -34,7 +35,7 @@ function eintrag_in_warenkorb_vorcheck(){
 		//Fehlermedung, wenn die Zahl nicht positive ist
 		else if (parseInt(document.forms['from_warenkorb']['menge'].value) < 1){
 			fehlermeldung += fehlermeldung == '' ? '' : ' ';
-			fehlermeldung += 'Die Menge muss eine positive Zahl sein.';
+			fehlermeldung += 'Die Menge muss eine positive Zahl sein, die größer als 0 ist.';
 			
 			//Textbox rot umranden
 			document.forms['from_warenkorb']['menge'].style.borderColor = 'red';
@@ -43,7 +44,7 @@ function eintrag_in_warenkorb_vorcheck(){
 		//Fehlermeldung, wenn mehr Exemplare gewählt wurden als vorhanden sind
 		else if ( parseInt(document.getElementById('exemplare_auf_lager').innerHTML) < parseInt(document.forms['from_warenkorb']['menge'].value) ){
 			fehlermeldung += fehlermeldung == '' ? '' : ' ';
-			fehlermeldung += 'Es können nicht mehr Examplare bestellt werden, als auf Lager sind.';
+			fehlermeldung += 'Es können nicht mehr Exemplare bestellt werden, als auf Lager sind.';
 			
 			//Textbox rot umranden
 			document.forms['from_warenkorb']['menge'].style.borderColor = 'red';
