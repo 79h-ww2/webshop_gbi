@@ -46,7 +46,7 @@
 					$artikel = $artikelDetails->beschreibungAnzeigen($_GET['pid']);
 					
 					
-					echo '<span id="exemplare" >'.htmlspecialchars($artikel->Menge,ENT_QUOTES,'UTF-8').'</span> Exemplare verfügbar';
+					echo '<span id="exemplare_auf_lager" >'.htmlspecialchars($artikel->Menge,ENT_QUOTES,'UTF-8').'</span> Exemplare verfügbar';
 					
 					?>
     		</div>
