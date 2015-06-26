@@ -633,7 +633,27 @@ label.ort{
 }
 .ArtikelbildWarenkorb, .ArtikelnameWarenkorb, .ArtikelmengeWarenkorb{
 	display: table-cell;
-	border: solid 1px;
+	text-align: center;
+	padding-left: 10px;
+	padding-top: 10px;
+	vertical-align: middle;
+}
+.ArtikelnameWarenkorb{
+	width: 250px;
+}
+.ArtikelbildWarenkorb{
+	width: 100px;
+}
+.UeberschriftWarenkorb{
+	font-weight: bold;
+	
+}
+#keineArtikelimWarenkorb{
+text-align: center;
+font-size: 14px;	
+}
+.Artikelbild{
+	width: 100px;
 }
 
 
