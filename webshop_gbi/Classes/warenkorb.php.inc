@@ -18,18 +18,12 @@ class warenkorb extends EingabeCheckGrundlegend{
   	 * mit der gewünschte Menge angezeigt
   	 */
  	public function artikel_in_den_warenkorb_legen ($artikelnummer, $menge){
-		$artikelschonvorhanden = -1;
-		for( $i = 0; $i < count($_SESSION["Warenkorb"]); $i++){
- 			$w = $_SESSION["Warenkorb"];
- 			$y = $w[$i];
- 			if ($y->get_artikelnummer() == $artikelnummer) $artikelschonvorhanden = $i;
-		}
-		if ($artikelschonvorhanden!= -1){
+		if ( $this->objekt_schon_im_warenkorb($artikelnummer) != -1){
 			$w = $_SESSION["Warenkorb"];
-			$y = $w[$artikelschonvorhanden];
+			$y = $w[$this->objekt_schon_im_warenkorb($artikelnummer)];
 			$x = $y->get_menge();
 			$x+= $menge;
-			$_SESSION["Warenkorb"][$artikelschonvorhanden]->set_menge($x);
+			$_SESSION["Warenkorb"][$this->objekt_schon_im_warenkorb($artikelnummer)]->set_menge($x);
 		}
 			else {
  		$index=count($_SESSION["Warenkorb"]);
@@ -93,6 +87,7 @@ class warenkorb extends EingabeCheckGrundlegend{
  				$fehlermeldung .= ($fehlermeldung == '') ? '' : ' ';
  				$fehlermeldung .= "Die Menge muss eine positive Zahl sein, die größer als 0 ist.";
  			}
+ 			//Erlaubt nur ganze Zahlen
  			elseif (ceil($menge) != $menge ){
  				$fehlermeldung .= ($fehlermeldung == '') ? '' : ' ';
  				$fehlermeldung .= "Es muss eine ganze Zahl eingegeben werden.";
@@ -103,9 +98,18 @@ class warenkorb extends EingabeCheckGrundlegend{
  				$artikel_info = $aktuellerArtikel->beschreibungAnzeigen($pid);
  				$vorhandene_menge = $artikel_info->Menge;
  				
- 				if ($vorhandene_menge < $menge){
+ 				$menge_schon_in_korb = 0;
+ 				if ( $this->objekt_schon_im_warenkorb($pid) != -1 ) {
+ 					$warenkorb = $_SESSION["Warenkorb"][$this->objekt_schon_im_warenkorb($pid)];
+ 					$menge_schon_in_korb = $warenkorb->get_menge();
+ 				}
+ 				
+ 				
+ 				if ($vorhandene_menge < $menge || $vorhandene_menge < ($menge + $menge_schon_in_korb) ){
  					$fehlermeldung .= ($fehlermeldung == '') ? '' : ' ';
  					$fehlermeldung .= "Es können nicht mehr Exemplare bestellt werden, als auf Lager sind.";
+ 					
+ 					if ($menge_schon_in_korb > 0) $fehlermeldung .= " Es sind schon $menge_schon_in_korb Objekte im Warenkorb.";
  				}
  				//wenn kein Fehler aufgetreten ist
  				else{
@@ -118,6 +122,17 @@ class warenkorb extends EingabeCheckGrundlegend{
  		$return->set_fehlermeldung($fehlermeldung);
  			
  		return $return;
+ 	}
+ 	
+ 	public function objekt_schon_im_warenkorb($artikelnummer){
+ 		$artikelschonvorhanden = -1;
+ 		for( $i = 0; $i < count($_SESSION["Warenkorb"]); $i++){
+ 			$w = $_SESSION["Warenkorb"];
+ 			$y = $w[$i];
+ 			if ($y->get_artikelnummer() == $artikelnummer) $artikelschonvorhanden = $i;
+ 		}
+ 		
+ 		return $artikelschonvorhanden;
  	}
 
 }
