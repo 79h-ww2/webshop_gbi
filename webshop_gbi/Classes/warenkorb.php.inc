@@ -124,6 +124,12 @@ class warenkorb extends EingabeCheckGrundlegend{
  		return $return;
  	}
  	
+ 	/**
+ 	 * überprüft, ob das Objekt schon existiert
+ 	 * wenn das Objekt schon existiert wird der Index im Warenkorb angegeben
+ 	 * @param unknown $artikelnummer Artikelnummer
+ 	 * @return number
+ 	 */
  	public function objekt_schon_im_warenkorb($artikelnummer){
  		$artikelschonvorhanden = -1;
  		for( $i = 0; $i < count($_SESSION["Warenkorb"]); $i++){
