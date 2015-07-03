@@ -93,6 +93,10 @@ class warenkorb extends EingabeCheckGrundlegend{
  				$fehlermeldung .= ($fehlermeldung == '') ? '' : ' ';
  				$fehlermeldung .= "Die Menge muss eine positive Zahl sein, die größer als 0 ist.";
  			}
+ 			elseif (ceil($menge) != $menge ){
+ 				$fehlermeldung .= ($fehlermeldung == '') ? '' : ' ';
+ 				$fehlermeldung .= "Es muss eine ganze Zahl eingegeben werden.";
+ 			}
  			//Fehlermdelung, wenn versucht wird mehr Artikel, als vorhanden in den Warenkorb zu packen
  			else{
  				$aktuellerArtikel = new ArtikelDetails();
