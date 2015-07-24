@@ -1,4 +1,4 @@
-* Profilbearbeitungsfunktion implementieren
+* Profilbearbeitungsfunktion implementieren (fertig)
 * Mobile CSS nochmal ansehen und und funktionierend in die Webseite einbauen
 * Artikelübersichtsseite für Zubehör, Fahrradteil, usw. erstellen
 * Warenkorb fertigstellen/ einbinden
