@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.6.24, for debian-linux-gnu (x86_64)
+-- MySQL dump 10.13  Distrib 5.6.25, for debian-linux-gnu (x86_64)
 --
 -- Host: localhost    Database: webshop
 -- ------------------------------------------------------
--- Server version	5.6.24-0ubuntu2
+-- Server version	5.6.25-0ubuntu0.15.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -40,6 +40,33 @@ INSERT INTO `bauart` VALUES (1,'Trekkingrad'),(2,'Elektro Rad'),(3,'Cityrad'),(4
 UNLOCK TABLES;
 
 --
+-- Table structure for table `bestellprodukte`
+--
+
+DROP TABLE IF EXISTS `bestellprodukte`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `bestellprodukte` (
+  `BestId` int(11) NOT NULL,
+  `PId` int(11) NOT NULL,
+  `Menge` int(11) NOT NULL,
+  PRIMARY KEY (`BestId`,`PId`),
+  KEY `PId` (`PId`),
+  CONSTRAINT `bestellprodukte_ibfk_1` FOREIGN KEY (`BestId`) REFERENCES `bestellung` (`BestId`),
+  CONSTRAINT `bestellprodukte_ibfk_2` FOREIGN KEY (`PId`) REFERENCES `produkte` (`PId`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `bestellprodukte`
+--
+
+LOCK TABLES `bestellprodukte` WRITE;
+/*!40000 ALTER TABLE `bestellprodukte` DISABLE KEYS */;
+/*!40000 ALTER TABLE `bestellprodukte` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `bestellung`
 --
 
@@ -48,8 +75,6 @@ DROP TABLE IF EXISTS `bestellung`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `bestellung` (
   `KId` int(11) NOT NULL DEFAULT '0',
-  `PId` int(11) NOT NULL DEFAULT '0',
-  `Menge` int(11) DEFAULT NULL,
   `Status` varchar(25) DEFAULT NULL,
   `Datum` date DEFAULT NULL,
   `Zahlungsart` varchar(25) DEFAULT NULL,
@@ -59,9 +84,7 @@ CREATE TABLE `bestellung` (
   `BestId` int(11) NOT NULL AUTO_INCREMENT,
   `SAP_BestId` int(11) DEFAULT NULL,
   PRIMARY KEY (`BestId`),
-  KEY `bestellung_ibfk_1` (`PId`),
   KEY `bestellung_ibfk_2` (`KId`),
-  CONSTRAINT `bestellung_ibfk_1` FOREIGN KEY (`PId`) REFERENCES `produkte` (`PId`),
   CONSTRAINT `bestellung_ibfk_2` FOREIGN KEY (`KId`) REFERENCES `kunde` (`KId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -140,7 +163,7 @@ CREATE TABLE `kunde` (
 
 LOCK TABLES `kunde` WRITE;
 /*!40000 ALTER TABLE `kunde` DISABLE KEYS */;
-INSERT INTO `kunde` VALUES (2,'Benedikt','32839','Steinheim','benedikt@webshop-testmail.de',NULL,'Papiermühlenweg','Brüntrup','2015-06-04 12:05:00','','161ebd7d45089b3446ee4e0d86dbcf92',NULL,'nein','ja',NULL,NULL,NULL),(3,'Benedikt','32839','Steinheim','root@kunde.de',NULL,'Papiermühlenweg','Brüntrup','2015-06-10 12:29:02','','161ebd7d45089b3446ee4e0d86dbcf92',NULL,'nein','ja',NULL,NULL,'2'),(4,'Paul','32839','Osthausen','benedikt@kunde.de',NULL,'Teststraße','Tester','2015-06-21 18:40:46','männlich','161ebd7d45089b3446ee4e0d86dbcf92',NULL,'nein','ja',NULL,'a','3');
+INSERT INTO `kunde` VALUES (2,'Benedikt','32839','Steinheim','benedikt@webshop-testmail.de',NULL,'Papiermühlenweg','Brüntrup','2015-06-04 12:05:00','','161ebd7d45089b3446ee4e0d86dbcf92',NULL,'nein','ja',NULL,NULL,NULL),(3,'Benedikt','32839','Steinheim','root@kunde.de',NULL,'Papiermühlenweg','Brüntrup','2015-06-10 12:29:02','','161ebd7d45089b3446ee4e0d86dbcf92',NULL,'nein','ja',NULL,NULL,'2'),(4,'Otto','32839','Osthausen','benedikt@kunde.de',NULL,'Teststraße','Teste','2015-07-22 22:52:59','männlich','161ebd7d45089b3446ee4e0d86dbcf92',NULL,'nein','ja',NULL,'a','5'),(5,'Root','22222','Baum','root@webshop-testmail.de',NULL,'Wurzel','Root','2015-06-26 22:41:41','männlich','161ebd7d45089b3446ee4e0d86dbcf92',NULL,'nein','ja',NULL,NULL,'1');
 /*!40000 ALTER TABLE `kunde` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -248,4 +271,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-06-21 18:41:31
+-- Dump completed on 2015-07-26 14:17:01
