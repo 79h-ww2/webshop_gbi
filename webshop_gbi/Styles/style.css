@@ -271,6 +271,19 @@ img.account {
 	margin-left: 7px;
 }
 
+.auflistung_warenkorb{
+	display: table;
+	margin: 0px auto;
+}
+
+.auflistung_warenkorb .aktuelleArtikelimWarenkorb .ArtikelnameWarenkorb{
+	width:450px;
+}
+
+.auflistung_warenkorb .aktuelleArtikelimWarenkorb .ArtikelmengeWarenkorb{
+	width:90px;
+}
+
 .middleContent {
 	clear: both;
     width: 800px;
@@ -643,7 +656,7 @@ label.ort{
 .aktuelleArtikelimWarenkorb{
 	display: table-row;
 }
-.ArtikelbildWarenkorb, .ArtikelnameWarenkorb, .ArtikelmengeWarenkorb{
+.ArtikelbildWarenkorb, .ArtikelnameWarenkorb, .ArtikelmengeWarenkorb, .ArtikelmarkiercheckboxWarenkorb, .ArtikelLoeschenWarenkorb{
 	display: table-cell;
 	text-align: center;
 	padding-left: 10px;
@@ -651,6 +664,7 @@ label.ort{
 	vertical-align: middle;
 	border-bottom: solid 1px;
 }
+
 .ArtikelnameWarenkorb{
 	width: 250px;
 	
@@ -661,6 +675,34 @@ label.ort{
 }
 .ArtikelnameWarenkorbhyper:hover{
 	color: #FFBF00;
+}
+
+.loeschen_link{
+	display: inline-block;
+	width: 20px;
+	height: 19px;
+	background-image: url("../Images/Design/loeschen.png");
+	background-repeat: no-repeat;
+	background-position: 0px auto;
+	margin-top: 8px;
+}
+
+.link_menge_aendern{
+	display: inline-block;
+	width: 20px;
+	height: 21px;
+	background-image: url("../Images/Design/stift.png");
+	background-repeat: no-repeat;
+	background-position: 0px auto;
+	margin-left: 5px;
+}
+
+.link_menge_aendern:hover{
+	background-image: url("../Images/Design/stift_hover.png");
+}
+
+.loeschen_link:hover{
+	background-image: url("../Images/Design/loeschen_hover.png");
 }
 
 .ArtikelbildWarenkorb{

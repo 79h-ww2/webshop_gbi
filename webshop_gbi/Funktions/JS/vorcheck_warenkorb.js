@@ -59,3 +59,12 @@ function eintrag_in_warenkorb_vorcheck(){
 	
 	return fehlermeldung == ''; 
 }
+
+/**
+ * Markiert oder demarkiert alle Artikel im Warenkorb
+ */
+function WarenkorbAlleArtikelMarkieren() {
+	for (var i= 0; i < document.forms["form_warenkorb_auflistung"].check_warenkorb_artikel.length; i++ ){
+		document.forms["form_warenkorb_auflistung"].check_warenkorb_artikel[i].checked = document.forms["form_warenkorb_auflistung"]["check_all_warenkorb"].checked;
+	}
+}

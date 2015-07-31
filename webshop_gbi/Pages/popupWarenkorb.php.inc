@@ -36,7 +36,7 @@ for ($i = 0; $i < count($Artikel) && $i<4; $i++){
 		}
 		?>
 		<div class="WarenkorbButtonPopup">
-<a href=".?page=datenschutz" title="Warenkorb anzeigen" class="link_button" id="" >
+<a href=".?page=warenkorb" title="Warenkorb anzeigen" class="link_button" id="" >
 					Gesamter Warenkorb (<?php echo $warenkorb1->menge_im_warenkorb();
 				?>)
 				</a>
