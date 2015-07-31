@@ -72,7 +72,7 @@
 						echo 'style="border-style: solid; border-color:red;" value="'.htmlspecialchars($_POST['menge'],ENT_QUOTES,'UTF-8').'" ';
 					}
 				?> />
-				<input class ="buttonInWarenkorb"type="submit" value="In den Warenkorb" />
+				<input class ="buttonInWarenkorb" type="submit" value="In den Warenkorb" />
 				<input type="hidden" name="pid" value="<?php echo htmlspecialchars($_GET['pid'],ENT_QUOTES,'UTF-8');  ?>" />
 				<input type="hidden" value="neuerArtikelimWarenkorb" name="type"/>
 				<div id="fehlermeldung_warenkorb">

@@ -93,7 +93,7 @@
 				<div class="warenkorbCell">
             <?php
 												$warenkorb1 = new warenkorb ();
-												echo ($warenkorb1->menge_im_warenkorb ());
+												echo '<span class="warenkorbCellMengeHeader" >'.$warenkorb1->menge_im_warenkorb ().'</span>';
 												include_once 'Pages/popupWarenkorb.php.inc';
 												?>
 

@@ -63,7 +63,7 @@ body {
    width: 80px;
    background-image: url('../Images/Design/warenkorb.png');
    background-repeat: no-repeat;
-   background-position: 15px 30px;
+   background-position: 22px 31px;
    padding-left: 21px;
    padding-top:40px;
    font-size:13px;
@@ -264,6 +264,13 @@ img.account {
 	vertical-align: middle;
 }
 
+.warenkorbCellMengeHeader{
+	width: 22px;
+	text-align: center;
+	display: inline-block;
+	margin-left: 7px;
+}
+
 .middleContent {
 	clear: both;
     width: 800px;
@@ -441,6 +448,10 @@ input[type=submit], input[type=button], .link_button, .link_button_msgbox{
 	background: linear-gradient(to  bottom, black  , gray);
 }
 
+#btn_zur_kasse{
+	margin-left:5px;
+}
+
 .link_button_msgbox{
 	text-decoration: none;
 	color: white;
@@ -571,6 +582,7 @@ label.ort{
 	color: white;
 	margin: 0px auto;
 	width: 400px;
+	text-align: center;
 }
 
 .popupBewertungProduktauflistung .haken_sprechblase{
@@ -618,7 +630,7 @@ label.ort{
 	border-left: 15px solid transparent;
 	border-right: 15px solid transparent;
 	border-bottom: 30px solid #545454;
-	margin-left: 425px;
+	margin-left: 435px;
 	width: 0px;
 	height: 25px;
 }
@@ -746,6 +758,8 @@ input[type="text"], input[type="email"], input[type="password"], select, input[t
 	margin-left: 0px;
 	background: linear-gradient(to right bottom, #6C7B35, #82A143, #788A5F) repeat scroll 0% 0% transparent;
 }
+
+
 
 #passwort_link{
 	color: white;
