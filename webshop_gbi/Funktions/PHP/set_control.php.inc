@@ -1,9 +1,9 @@
 <?php
-	//lÃ¤dt die von der Seite benÃ¶tigten Funktionen
+	//lädt die von der Seite benötigten Funktionen
 	if (isset($_POST['type'])){
 		switch ($_POST['type']){
 			
-			//Skript zur DurchfÃ¼hrung der Registrierung ausfÃ¼hren
+			//Skript zur DurchfÃ¼hrung der Registrierung ausführen
 			case 'reg':
 				include_once './Funktions/PHP/registrierung_durchfuehren.php.inc';
 			break;
@@ -17,7 +17,7 @@
 				include_once './Funktions/PHP/warenkorb.php.inc';
 			break;
 				
-			//Skript zur DurchfÃ¼hrung der Anmeldung ausfÃ¼hren
+			//Skript zur DurchfÃ¼hrung der Anmeldung ausführen
 			case 'anmeldung':
 				include_once './Funktions/PHP/anmeldung_durchfuehren.php.inc';
 			break;
@@ -42,6 +42,11 @@
 			case 'abmelden':
 				session_destroy();
 				session_start();
+			break;
+			
+			//Artikel aus dem Warenkorb entfernen
+			case 'artikel-warenkorb-entfernen':
+				include_once './Funktions/PHP/warenkorb.php.inc';
 			break;
 		}
 	}

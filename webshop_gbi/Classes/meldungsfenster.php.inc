@@ -39,17 +39,19 @@
 			
 			//ließt alle Get-Parameter aus der Adressenleiste aus (nötig, wenn kein Java-Script aktiviert ist)
 			//Erstellt eine Adresse für einen Link, der bei deaktivierten JavaScript genutzt werden kann
-			$adresse_no_script = ( count($_GET) > 0 ) ?  "./?" : "./";
+			$adresse_no_script = "./";
 			
 			$get_feldnamen = array_keys($_GET);
+			$z = 0;
 			for ( $i = 0; $i < count($_GET); $i++)
 			{
 				$wert = htmlspecialchars ($_GET[$get_feldnamen[$i]],ENT_QUOTES,'ISO8859-1');
 				$feldname = htmlspecialchars ($get_feldnamen[$i],ENT_QUOTES,'ISO8859-1');
 			
 				if ($feldname != "account-activate"){ //Übernimmt nicht den Aktivierungs-Code zur Adresse, damit der Benutzer nicht mehrfach aktiviert wird
-					if ( $i > 0) $adresse_no_script .= "&";
+					$adresse_no_script .= ( $z > 0) ? "&" : "?";
 					$adresse_no_script .= $feldname."=".$wert;
+					$z++;
 				}
 			}
 			
@@ -167,13 +169,7 @@
 			return $URL;
 		}
 
-		//erstellt den Quelltext einer Confirmbox ( ohne Meldungstext )
-		public function erstelleHTMLQuelltextConfirmBox ( $idBox, $onButton1_Click, $onButton2_Click, $aufschriftButton1, $aufschriftButton2 )
-		{
-			$this->erstelleHTMLQuelltextConfirmBox_mit_Meldung ( $idBox, "", "", "question" ,$onButton1_Click, $onButton2_Click,$aufschriftButton1, $aufschriftButton2,  false );
-		}
-
-		public function erstelleHTMLQuelltextConfirmBox_mit_Meldung ( $idBox, $titel, $meldungstext, $icon ,$onButton1_Click, $onButton2_Click, $aufschriftButton1, $aufschriftButton2,  $sichtbar )
+		public function erstelleHTMLQuelltextConfirmBox_mit_Meldung ( $idBox, $titel, $meldungstext, $icon ,$aktionsnameButton1, $aktionsparamButton1, $aktionsnameButton2 ,$aktionsparamButton2, $aufschriftButton1, $aufschriftButton2,  $sichtbar )
 		{
 			$icon_url = $this->getURLIcon ( $icon );
 			$sichtbar_style = ( $sichtbar ) ? "style=\"display:block\"" : "";
@@ -182,17 +178,21 @@
 
 			//ließt alle Get-Parameter aus der Adressenleiste aus (nötig, wenn kein Java-Script aktiviert ist)
 			//Erstellt eine Adresse für einen Link, der bei deaktivierten JavaScript genutzt werden kann
-			$adresse_no_script = ( count($_GET) > 0 ) ?  "./?" : ".";
+			$adresse_no_script = "./?";
 				
 			$get_feldnamen = array_keys($_GET);
+			$z = 0;
 			for ( $i = 0; $i < count($_GET); $i++)
 			{
-			$wert = htmlspecialchars ($_GET[$get_feldnamen[$i]],ENT_QUOTES,'ISO8859-1');
-					$feldname = htmlspecialchars ($get_feldnamen[$i],ENT_QUOTES,'ISO8859-1');
+				$wert = htmlspecialchars ($_GET[$get_feldnamen[$i]],ENT_QUOTES,'ISO8859-1');
+				$feldname = htmlspecialchars ($get_feldnamen[$i],ENT_QUOTES,'ISO8859-1');
 		
-							if ( $i > 0) $adresse_no_script .= "&";
-			
-							$adresse_no_script .= $feldname."=".$wert;
+				//übernimmt die Parameter von die 
+				if ( $feldname != "aktion" && $feldname != "aktionparam"){
+					if ( $z > 0) $adresse_no_script .=  "&";
+					$adresse_no_script .= $feldname."=".$wert;
+					$z++;
+				}
 			}
 			
 			echo
@@ -203,9 +203,6 @@
 				<div id=\"infoBox_".htmlspecialchars($idBox,ENT_QUOTES,'UTF-8')."\"  class=\"meldungsfenster_frame_groesse_1\"  ".$sichtbar_style." >
 					<div class=\"meldungsbox_titelleiste\" >
 						<div class=\"meldungsbox_titelleiste_content\" >
-							<a class=\"schliessen_button_meldungsfenster\" href=\"#\" title=\"Schlie&szlig;en\" onclick=\"schliesseInfoBox('".htmlspecialchars($idBox,ENT_QUOTES,'UTF-8')."');\" >
-								X
-							</a>
 							<span id=\"infoBox_titel_".htmlspecialchars($idBox,ENT_QUOTES,'UTF-8')."\" >
 								".htmlspecialchars($titel,ENT_QUOTES,'UTF-8')."
 							</span>
@@ -221,8 +218,17 @@
 						<div class=\"clear_left\" >
 						</div>
 						<div class=\"gruppe_button_meldungsbox\" >
-							<input type=\"button\"  id=\"meldungsbox_button1_".htmlspecialchars($idBox,ENT_QUOTES,'UTF-8')."\"    class=\"button_meldungsbox\" onclick=\"schliesseInfoBox('".htmlspecialchars($idBox,ENT_QUOTES,'UTF-8')."'); $onButton1_Click\" value=\"".htmlspecialchars($aufschriftButton1,ENT_QUOTES,'UTF-8')."\"  > 
-							<input type=\"button\"   id=\"meldungsbox_button2".htmlspecialchars($idBox,ENT_QUOTES,'UTF-8')."\"  class=\"button_meldungsbox\" onclick=\"schliesseInfoBox('".htmlspecialchars($idBox,ENT_QUOTES,'UTF-8')."'); $onButton2_Click\" value=\"".htmlspecialchars($aufschriftButton2,ENT_QUOTES,'UTF-8')."\"  >
+			";
+			
+			$trennzeichen = ($z > 0) ? "&" : "";
+			
+			
+			echo
+			"
+							<a  class=\"link_button_msgbox .link_button_msgbox\" href=\"".$adresse_no_script.$trennzeichen."aktion=".htmlspecialchars ($aktionsnameButton1,ENT_QUOTES,'UTF-8')."&aktionparam=".htmlspecialchars($aktionsparamButton1,ENT_QUOTES,'UTF-8')."\" >".htmlspecialchars($aufschriftButton1,ENT_QUOTES,'UTF-8')."</a>
+							<a  class=\"link_button_msgbox .link_button_msgbox\" href=\"".$adresse_no_script.$trennzeichen."aktion=".htmlspecialchars ($aktionsnameButton2,ENT_QUOTES,'UTF-8')."&aktionparam=".htmlspecialchars($aktionsparamButton2,ENT_QUOTES,'UTF-8')."\" >".htmlspecialchars($aufschriftButton2,ENT_QUOTES,'UTF-8')."</a>
+							<!--<input type=\"button\"  id=\"meldungsbox_button1_".htmlspecialchars($idBox,ENT_QUOTES,'UTF-8')."\"    class=\"button_meldungsbox\" onclick=\"schliesseInfoBox('".htmlspecialchars($idBox,ENT_QUOTES,'UTF-8')."');\" value=\"".htmlspecialchars($aufschriftButton1,ENT_QUOTES,'UTF-8')."\"  > 
+							<input type=\"button\"   id=\"meldungsbox_button2".htmlspecialchars($idBox,ENT_QUOTES,'UTF-8')."\"  class=\"button_meldungsbox\" onclick=\"schliesseInfoBox('".htmlspecialchars($idBox,ENT_QUOTES,'UTF-8')."');\" value=\"".htmlspecialchars($aufschriftButton2,ENT_QUOTES,'UTF-8')."\"  >-->
 						</div>
 						<div class=\"clear_right\" >
 						</div>

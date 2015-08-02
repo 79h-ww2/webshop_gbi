@@ -4,6 +4,7 @@ include_once "Classes/warenkorbeintrag.php.inc";
 include_once "Classes/EingabeCheckGrundlegend.php.inc";
 include_once 'Classes/artikel.php.inc';
 include_once 'Classes/ArtikelDetails.php.inc';
+include_once 'Classes/meldungsfenster.php.inc';
 		
 class warenkorb extends EingabeCheckGrundlegend{ 
      
@@ -128,7 +129,7 @@ class warenkorb extends EingabeCheckGrundlegend{
  	 * überprüft, ob das Objekt schon existiert
  	 * wenn das Objekt schon existiert wird der Index im Warenkorb angegeben
  	 * @param unknown $artikelnummer Artikelnummer
- 	 * @return number
+ 	 * @return number Index im Warenkorb
  	 */
  	public function objekt_schon_im_warenkorb($artikelnummer){
  		$artikelschonvorhanden = -1;
@@ -139,6 +140,21 @@ class warenkorb extends EingabeCheckGrundlegend{
  		}
  		
  		return $artikelschonvorhanden;
+ 	}
+ 	
+ 	public function sicherheitsnachfrage_ein_artikel_auswarenkorb_entfernen($pid){
+ 		
+ 		//bestimmt, welchen Index der Artikel im Warenkorb hat
+ 		$warenkorbIndex = $this->objekt_schon_im_warenkorb($pid);
+ 		
+ 		//bestimmt, den Artikelnamen
+ 		$w = $_SESSION["Warenkorb"];
+ 		$y = $w[$warenkorbIndex];
+ 		$artikelname = $y->get_artikelnamen();
+ 		
+ 		//zeigt die Sicherheitsfrage an
+ 		$msg = new Meldungsfenster();
+ 		$msg->erstelleHTMLQuelltextConfirmBox_mit_Meldung("artikel_loeschen", "Gewählten Artikel löschen", "Wollen Sie den Artikel \"$artikelname\" wirklich aus dem Warenkorb entfernen?" , "question", "artikel-warenkorb-entfernen","bestaetigt.".$pid,  "artikel-warenkorb-entfernen", "verneint", "ja", "nein", true);
  	}
 
 }

@@ -17,5 +17,20 @@ if (isset($_POST['menge']) && isset($_POST['pid'])){
 		//den Artikel zum Warenkorb hinzufügen
 		$warenkorb1->artikel_in_den_warenkorb_legen($_POST['pid'],$_POST['menge']);
 	}
-} 		
+}
+//Entfernt einen Artikel aus dem Warenkorb
+elseif (isset($_GET["aktion"]) && isset($_GET["aktionparam"]) && $_GET["aktion"]== "artikel-warenkorb-entfernen"){
+	
+	//Extrahiert die übermittelten Parameter für die Löschfunktion
+	$parameter = explode(".", $_GET["aktionparam"]);
+	
+	
+	//Instanz des Warenkorbs bilden
+	$warenkorb1 = new warenkorb();
+	
+	//Zeigt die Sicherheitsfrage an
+	if (count($parameter) == 2 && $parameter[0] == "sicherheitsfrage"){
+		$warenkorb1->sicherheitsnachfrage_ein_artikel_auswarenkorb_entfernen($parameter[1]);
+	}
+}	
 ?>

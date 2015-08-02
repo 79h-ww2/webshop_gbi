@@ -25,6 +25,26 @@ $warenkorb1 = new warenkorb();
 			</div>
 			<script type="text/javascript" src="Funktions/JS/vorcheck_warenkorb.js" ></script>
 			<?php
+			
+			//erstellt den Adressenanfang für den Löschen und Berarbeitungslink
+			$adresse_links = "./?";
+			$get_feldnamen = array_keys($_GET);
+			$z = 0;
+			for ( $i = 0; $i < count($_GET); $i++)
+			{
+				$wert = htmlspecialchars ($_GET[$get_feldnamen[$i]],ENT_QUOTES,'ISO8859-1');
+				$feldname = htmlspecialchars ($get_feldnamen[$i],ENT_QUOTES,'ISO8859-1');
+			
+				//übernimmt die Parameter von der Adressenleiste, die nicht als Feldname "aktion" und "aktionparam" heißen
+				if ( $feldname != "aktion" && $feldname != "aktionparam" ){
+					if ( $z > 0) $adresse_no_script .=  "&";
+					$adresse_links .= $feldname."=".$wert;
+					$z++;
+				}
+			}
+			if ($z > 0) $adresse_links.= "&";	
+			
+			//Listet die Produkte des Warenkorbs auf
 			$Artikel = $warenkorb1->artikel_im_warenkorb_anzeigen();
 			for ($i = 0; $i < count($Artikel) && $i<4; $i++){
 				$AktuellerArtikel = $Artikel[$i];
@@ -42,7 +62,7 @@ $warenkorb1 = new warenkorb();
 						<a href="#" title="Menge &auml;ndern" class="link_menge_aendern" ></a>
 					</div>
 					<div class="ArtikelLoeschenWarenkorb">
-						<a href="#" title="Artikel aus dem Warenkorb entfernen" class="loeschen_link" >
+						<a href="<?php echo $adresse_links."aktion=artikel-warenkorb-entfernen&aktionparam=sicherheitsfrage.".htmlspecialchars ( $AktuellerArtikel->get_artikelnummer(), ENT_QUOTES, 'UTF-8');?>" title="Artikel aus dem Warenkorb entfernen" class="loeschen_link" >
 						</a>
 					</div>
 				</div>

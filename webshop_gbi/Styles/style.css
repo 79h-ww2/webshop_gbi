@@ -680,11 +680,11 @@ label.ort{
 .loeschen_link{
 	display: inline-block;
 	width: 20px;
-	height: 19px;
+	height: 21px;
 	background-image: url("../Images/Design/loeschen.png");
 	background-repeat: no-repeat;
 	background-position: 0px auto;
-	margin-top: 8px;
+	margin-top: 5px;
 }
 
 .link_menge_aendern{
