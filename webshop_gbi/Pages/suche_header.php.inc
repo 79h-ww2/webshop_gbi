@@ -12,6 +12,6 @@
 		</div>
 	</div>
 </div>
-<a id="link_zur_erweiterten_suche" href="./?page=suche_erweitert" >
-	erweiterte Suche
+<a id="link_zur_erweiterten_suche" href="./?page=suche_erweitert" title="Erweiterte Suche" >
+	Erweiterte Suche
 </a>

@@ -446,7 +446,7 @@ img.BildMustermodell{
 }
 
 /* Buttonformatierung */
-input[type=submit], input[type=button], .link_button, .link_button_msgbox{
+input[type=submit], input[type=button], .link_button, .link_button_msgbox,.grauer_link_button{
 	border-radius: 6px 6px 6px 6px;
 	-moz-border-radius: 6px 6px 6px 6px;
 	-webkit-border-radius: 6px 6px 6px 6px;
@@ -461,6 +461,7 @@ input[type=submit], input[type=button], .link_button, .link_button_msgbox{
 	background: linear-gradient(to  bottom, black  , gray);
 }
 
+
 #btn_zur_kasse{
 	margin-left:5px;
 }
@@ -471,7 +472,7 @@ input[type=submit], input[type=button], .link_button, .link_button_msgbox{
 	font-weight: bold;
 }
 
-input[type=submit]:hover , input[type=button]:hover, .contentPopupRegistrierung input[name="anmeldung_submit"]:hover, .link_button:hover{
+input[type=submit]:hover , input[type=button]:hover, .contentPopupRegistrierung input[name="anmeldung_submit"]:hover, .link_button:hover, .grauer_link_button:hover, .link_button_msgbox:hover{
 	background: #d56509; 
 	text-shadow: none;  
 	color: black;
@@ -677,6 +678,11 @@ label.ort{
 	color: #FFBF00;
 }
 
+.bereich_button_warenkorb_volle_uebersicht{
+	margin: 5px auto;
+	width: 731px;
+}
+
 .loeschen_link{
 	display: inline-block;
 	width: 20px;
@@ -695,6 +701,10 @@ label.ort{
 	background-repeat: no-repeat;
 	background-position: 0px auto;
 	margin-left: 5px;
+}
+
+.button_warenkorb_volle_uebersicht_rechts_ausrichten{
+	float: right;
 }
 
 .link_menge_aendern:hover{
@@ -1223,4 +1233,12 @@ stern2.gelb{
 
 #fehlermeldung_warenkorb{
 	color: red;
+}
+
+a.grauer_link_button:link, a.grauer_link_button:VISITED{
+	color: white;
+}
+
+a.grauer_link_button:hover{
+	color: black;
 }

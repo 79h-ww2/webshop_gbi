@@ -14,6 +14,7 @@
 			break;
 						
 			case 'neuerArtikelimWarenkorb':
+			case 'markierung_loeschen_warenkorb':
 				include_once './Funktions/PHP/warenkorb.php.inc';
 			break;
 				

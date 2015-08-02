@@ -1,6 +1,6 @@
 <?php
 $result_ueberpruefung = "";
-if (isset($_POST['menge']) && isset($_POST['pid'])){
+if (isset($_POST['type']) && isset($_POST['menge']) && isset($_POST['pid']) && $_POST['type'] == 'neuerArtikelimWarenkorb'){
 	
 	$warenkorb1 = new warenkorb();
 	
@@ -18,6 +18,19 @@ if (isset($_POST['menge']) && isset($_POST['pid'])){
 		$warenkorb1->artikel_in_den_warenkorb_legen($_POST['pid'],$_POST['menge']);
 	}
 }
+
+//Sicherheitsfrage, wenn mehrere Artikel aus dem Warenkorb gelöscht werden sollen
+elseif (isset($_POST['type']) && $_POST['type'] == 'markierung_loeschen_warenkorb'){
+	//entfernt aus dem über Post übermittelten Werten alle Werte, die keine Artikelnummer sind
+	$werte = $_POST;
+	if (isset($werte['type'])) unset($werte['type']);
+	if (isset($werte['submit'])) unset($werte['submit']);
+	
+	$warenkorb1 = new warenkorb();
+	//Zeigte eine Sicherheitsfrage an, ob die markierten Produkte wirklich aus dem Warenkorb entfernt werden sollen
+	$warenkorb1->sicherheitsnachfrage_mehrere_artikel_aus_warenkorb_entfernen($werte);
+}
+
 //Entfernt einen Artikel aus dem Warenkorb
 elseif (isset($_GET["aktion"]) && isset($_GET["aktionparam"]) && $_GET["aktion"]== "artikel-warenkorb-entfernen"){
 	
@@ -34,6 +47,12 @@ elseif (isset($_GET["aktion"]) && isset($_GET["aktionparam"]) && $_GET["aktion"]
 	//Löscht den Artikel aus dem Warenkorb, wenn der Löschvorgang bestätigt wurde
 	elseif (count($parameter) == 2 && $parameter[0] == "bestaetigt"){
 		$warenkorb1->entferne_artikel_aus_warenkorb($parameter[1]);
+	}
+	//Löscht mehrere markierte Artikel aus dem Warenkorb
+	elseif (count($parameter) > 1 && $parameter[0] == "bestaetigt_mehrere_pids"){
+		$arr_pids = $parameter;
+		unset($arr_pids[0]);
+		$warenkorb1->mehrere_artikel_aus_warenkorb_entfernen($arr_pids);
 	}
 }	
 ?>

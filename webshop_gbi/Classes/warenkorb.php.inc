@@ -160,6 +160,34 @@ class warenkorb extends EingabeCheckGrundlegend{
  		$msg = new Meldungsfenster();
  		$msg->erstelleHTMLQuelltextConfirmBox_mit_Meldung("artikel_loeschen", "Gewählten Artikel löschen", "Wollen Sie den Artikel \"$artikelname\" wirklich aus dem Warenkorb entfernen?" , "question", "artikel-warenkorb-entfernen","bestaetigt.".$pid,  "artikel-warenkorb-entfernen", "verneint", "ja", "nein", true);
  	}
+ 	
+ 	
+ 	/**
+ 	 * Zeigt eine Sicherheitsnachfrage an, wo der Benutzer bestätigen muss, dass wirklich die markierten Artikel gelöscht werden sollen
+ 	 * @param number $arr_pids Array mit den Atrikelnummern, die aus dem Warenkorb entfernt werden sollen
+ 	 */
+ 	public function sicherheitsnachfrage_mehrere_artikel_aus_warenkorb_entfernen($arr_pids){
+ 		
+ 		//erstellt eine Array mit den Indexen, wo sich der Artikel im Warenkorb befindet
+ 		$warenkorbIndexe = array();
+ 		
+ 		$summe_produkte = count($arr_pids);
+ 			 			
+ 		//zeigt die Sicherheitsfrage an
+ 		$msg = new Meldungsfenster();
+ 		if ($summe_produkte > 0){
+ 			//erstellt einen Zeichenkette, wo die zum Entfernen markierten Artikel mit Punkt getrennt hintereinander geschrieben werden
+ 			$pids_str_loeschen = implode(".", $arr_pids);
+	 		
+	 		$loeschmeldung = ($summe_produkte == 1) ? "Wollen Sie wirklich das gewählte Produkt aus dem Warenkorb entfernen?" : "Wollen Sie wirklich die $summe_produkte markierten Produkte aus dem Warenkorb entfernen.";
+	 		$msg->erstelleHTMLQuelltextConfirmBox_mit_Meldung("artikel_loeschen", "Gewählte Artikel löschen", $loeschmeldung , "question", "artikel-warenkorb-entfernen","bestaetigt_mehrere_pids.".$pids_str_loeschen,  "artikel-warenkorb-entfernen", "verneint", "ja", "nein", true);
+ 		}
+ 		//Infomirt den Benutzer, dass kein Produkt markiert wurde
+ 		else{
+ 			$msg->erstelleHTMLQuelltextInfoBox_mit_Meldung("warenkorb_nichts_markiert", "Kein Artikel markiert", "Bitte markieren Sie einen Artikel, der gelöscht werden soll.", 'info', '', true);
+ 		}
+ 	}
+ 	
 
  	/**
  	 * Entfernt den Artikel mit der übergebenen Artikelnummer aus dem Projekt
@@ -188,6 +216,16 @@ class warenkorb extends EingabeCheckGrundlegend{
  		
  		//speichert den neuen Warenkorb in der SESSION-Variable
  		$_SESSION["Warenkorb"] = $warenkorb_neu;
+ 	}
+ 	
+ 	/**
+ 	 * Entfernt mehrere Artikel aus dem Warenkorb
+ 	 * @param number $arr_pids Array mit den Artikelnumern, die aus dem Warenkorb entfernt werden sollen
+ 	 */
+ 	public function mehrere_artikel_aus_warenkorb_entfernen($arr_pids){
+ 		foreach ($arr_pids as $pid){
+ 			$this->entferne_artikel_aus_warenkorb($pid);
+ 		}
  	}
 }
 ?>
