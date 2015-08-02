@@ -142,6 +142,10 @@ class warenkorb extends EingabeCheckGrundlegend{
  		return $artikelschonvorhanden;
  	}
  	
+ 	/**
+ 	 * Zeigt eine Sicherheitsnachfrage an, wo der Benutzer bestätigen muss, wenn wirklich der Artikel aus dem Warenkorb gelöscht werden soll
+ 	 * @param number $pid Artikelnummer des Artikels
+ 	 */
  	public function sicherheitsnachfrage_ein_artikel_auswarenkorb_entfernen($pid){
  		
  		//bestimmt, welchen Index der Artikel im Warenkorb hat
@@ -157,5 +161,33 @@ class warenkorb extends EingabeCheckGrundlegend{
  		$msg->erstelleHTMLQuelltextConfirmBox_mit_Meldung("artikel_loeschen", "Gewählten Artikel löschen", "Wollen Sie den Artikel \"$artikelname\" wirklich aus dem Warenkorb entfernen?" , "question", "artikel-warenkorb-entfernen","bestaetigt.".$pid,  "artikel-warenkorb-entfernen", "verneint", "ja", "nein", true);
  	}
 
+ 	/**
+ 	 * Entfernt den Artikel mit der übergebenen Artikelnummer aus dem Projekt
+ 	 * @param nummer $pid Die übergebene Artikelnummer
+ 	 */
+ 	public function entferne_artikel_aus_warenkorb($pid){
+ 		//bestimmt, welchen Index der Artikel im Warenkorb hat
+ 		$warenkorbIndex = $this->objekt_schon_im_warenkorb($pid);
+ 		
+ 		//eine Zählvariable für ein neues Array, wo der Artikel nicht mehr enthalten ist
+ 		$z = 0;
+ 		
+ 		//das neue Array wird erstellt
+ 		$warenkorb_neu = array();
+ 		
+ 		//der alte Warenkorb
+ 		$warenkorb_alt = $_SESSION["Warenkorb"];
+ 		
+ 		//füllt den neuen Warenkorb mit den Produkten des alten und lässt das entfernte Produkt weg
+ 		for ( $i = 0; $i < count($warenkorb_alt); $i++){
+ 			if ($i != $warenkorbIndex){
+ 				$warenkorb_neu[$z] = $warenkorb_alt[$i];
+ 				$z++;
+ 			}
+ 		}
+ 		
+ 		//speichert den neuen Warenkorb in der SESSION-Variable
+ 		$_SESSION["Warenkorb"] = $warenkorb_neu;
+ 	}
 }
 ?>

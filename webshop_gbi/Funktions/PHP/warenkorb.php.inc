@@ -24,13 +24,16 @@ elseif (isset($_GET["aktion"]) && isset($_GET["aktionparam"]) && $_GET["aktion"]
 	//Extrahiert die übermittelten Parameter für die Löschfunktion
 	$parameter = explode(".", $_GET["aktionparam"]);
 	
-	
 	//Instanz des Warenkorbs bilden
 	$warenkorb1 = new warenkorb();
 	
 	//Zeigt die Sicherheitsfrage an
 	if (count($parameter) == 2 && $parameter[0] == "sicherheitsfrage"){
 		$warenkorb1->sicherheitsnachfrage_ein_artikel_auswarenkorb_entfernen($parameter[1]);
+	}
+	//Löscht den Artikel aus dem Warenkorb, wenn der Löschvorgang bestätigt wurde
+	elseif (count($parameter) == 2 && $parameter[0] == "bestaetigt"){
+		$warenkorb1->entferne_artikel_aus_warenkorb($parameter[1]);
 	}
 }	
 ?>
