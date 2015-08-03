@@ -304,13 +304,14 @@
 		 * @param unknown $uebertragungsmethode Übertragungsmethode des Fensterformulars
 		 * @param unknown $sichtbar Sichtbarkeit des Fensters
 		 * @param unknown $js_eingabe_vorcheck JavaScript-Methode, die vor den Absenden die Eingabe des Formulars prüft
-		 * @param unknown $js_id_fehlermeldung JavaScript-ID für die Fehlermeldung, wenn die Eingabe nicht gültig war
+		 * @param unknown $js_id_fehlermeldung JavaScript-ID des Divs, wo die Fehlermeldung angezeigt werden soll, wenn die Eingabe nicht gültig war
 		 * @param unknown $fehlermeldung Fehlermeldung (serverseitig programmiert)
 		 * @param unknown $wertTextfeld Wert, der im Textfeld stehen soll
 		 * @param unknown $form_name Name des Übertragungsformulars
 		 * @param unknown $textfeld_breite gibt die Breite des Textfeldes an
+		 * @param unknown $popupAufgabe Legt die Aufgabe fest, wofür das Popup verwendet wird
 		 */
-		public function erstelleHTMLQuelltextTextinputbox ($idBox, $titel, $meldungstext, $textfeldBeschriftung, $textfeldname ,$aufschriftButton1, $aufschriftButtonAbbrechen, $formActionLink, $uebertragungsmethode ,  $sichtbar, $js_eingabe_vorcheck, $js_id_fehlermeldung, $fehlermeldung, $wertTextfeld, $form_name, $textfeld_breite)
+		public function erstelleHTMLQuelltextTextinputbox ($idBox, $titel, $meldungstext, $textfeldBeschriftung, $textfeldname ,$aufschriftButton1, $aufschriftButtonAbbrechen, $formActionLink, $uebertragungsmethode ,  $sichtbar, $js_eingabe_vorcheck, $js_id_fehlermeldung, $fehlermeldung, $wertTextfeld, $form_name, $textfeld_breite, $popupAufgabe)
 		{
 			$sichtbar_style = ( $sichtbar ) ? "style=\"display:block\"" : "";
 		
@@ -353,6 +354,7 @@
 					<div class=\"meldungsbox_content\" >
 						<form action=\"$formActionLink\" name=\"".htmlspecialchars($form_name,ENT_QUOTES,'UTF-8')."\" method=\"".htmlspecialchars($uebertragungsmethode,ENT_QUOTES,'UTF-8')."\" onsubmit=\"return $js_eingabe_vorcheck\" >
 							<input type=\"hidden\" name=\"idBox\" value=\"$idBox\" />
+							<input type=\"hidden\" name=\"type\" value=\"".htmlspecialchars($popupAufgabe,ENT_QUOTES,'UTF-8')."\" />
 							<div class=\"meldungsbox_content_meassage\" id=\"infoBox_meassage_".htmlspecialchars($idBox,ENT_QUOTES,'UTF-8')."\" >
 								<b>".htmlspecialchars($meldungstext,ENT_QUOTES,'UTF-8')."</b>
 							</div>

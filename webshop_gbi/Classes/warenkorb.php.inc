@@ -55,9 +55,10 @@ class warenkorb extends EingabeCheckGrundlegend{
  	 * Übernommen von Benedikt, um den Zeitplan einhalten zu können
  	 * @param unknown $menge Menge, die in den Warenkorb gepackt werden soll
  	 * @param unknown $pid Artikel- bzw. Produkt-ID
+ 	 * @param boolean $update Gibt an, ob es sich um eine Änderung der Menge handelt, wenn der Artikel schon im Warenkorb ist
  	 * @return Ambigous <string, Ueberpruefresult> Rückgabewert der Überprüfung, mit Fehlermeldung und Array der falschen Felder
  	 */ 
- 	public function ueberpruefe_eingegebene_menge_warenkorb($menge, $pid){
+ 	public function ueberpruefe_eingegebene_menge_warenkorb($menge, $pid, $update){
  		
  		//Array mit allen Feldern, die ausgefüllt sein müssen
  		$felder = array($menge);
@@ -93,7 +94,7 @@ class warenkorb extends EingabeCheckGrundlegend{
  				$fehlermeldung .= ($fehlermeldung == '') ? '' : ' ';
  				$fehlermeldung .= "Es muss eine ganze Zahl eingegeben werden.";
  			}
- 			//Fehlermdelung, wenn versucht wird mehr Artikel, als vorhanden in den Warenkorb zu packen
+ 			//Fehlermeldung, wenn versucht wird mehr Artikel, als vorhanden in den Warenkorb zu packen
  			else{
  				$aktuellerArtikel = new ArtikelDetails();
  				$artikel_info = $aktuellerArtikel->beschreibungAnzeigen($pid);
@@ -106,11 +107,11 @@ class warenkorb extends EingabeCheckGrundlegend{
  				}
  				
  				
- 				if ($vorhandene_menge < $menge || $vorhandene_menge < ($menge + $menge_schon_in_korb) ){
+ 				if ($vorhandene_menge < $menge || $vorhandene_menge < ($menge + $menge_schon_in_korb) && !$update){
  					$fehlermeldung .= ($fehlermeldung == '') ? '' : ' ';
  					$fehlermeldung .= "Es können nicht mehr Exemplare bestellt werden, als auf Lager sind.";
  					
- 					if ($menge_schon_in_korb > 0) $fehlermeldung .= " Es sind schon $menge_schon_in_korb Objekte im Warenkorb.";
+ 					if ($menge_schon_in_korb > 0 && !$update) $fehlermeldung .= " Es sind schon $menge_schon_in_korb Objekte im Warenkorb.";
  				}
  				//wenn kein Fehler aufgetreten ist
  				else{
@@ -263,7 +264,7 @@ class warenkorb extends EingabeCheckGrundlegend{
  		$msg = new Meldungsfenster();
  		$wort_exemplar = ($vorhandene_menge != 1) ? "Exemplare" : "Exemplar";
  		
- 		$msg->erstelleHTMLQuelltextTextinputbox($pid, "Bestellmenge ändern", "Tippen Sie in dieses Fenster die neue Bestellmenge ein. $vorhandene_menge $wort_exemplar des Artikels sind auf Lager vorhanden.", "Menge", "menge", "OK", "Abbrechen", $action_link, "post", true, "eintrag_in_warenkorb_vorcheck();", "fehlermeldung_warenkorb", $fehler, $menge_aktuell, "from_warenkorb", "60px" );
+ 		$msg->erstelleHTMLQuelltextTextinputbox($pid, "Bestellmenge ändern", "Tippen Sie in dieses Fenster die neue Bestellmenge ein. $vorhandene_menge $wort_exemplar des Artikels sind auf Lager vorhanden.", "Menge", "menge", "OK", "Abbrechen", $action_link, "post", true, "eintrag_in_warenkorb_vorcheck();", "fehlermeldung_warenkorb", $fehler, $menge_aktuell, "from_warenkorb", "60px", "warenkorb-artikel-mengenaewnderung" );
  	}
  	
  	/**
@@ -279,6 +280,25 @@ class warenkorb extends EingabeCheckGrundlegend{
  		}
  		
  		return $preis_summe;
+ 	}
+ 	
+ 	/**
+ 	 * Ändert die Bestellmenge eines Artikels im Warenkorb
+ 	 * @param unknown $pid Artikelnummer
+ 	 * @param unknown $menge Bestellmenge
+ 	 */
+ 	public function aendere_bestellmenge_artikel_im_warenkorb($pid, $menge){
+ 		//bestimmt den Index des Artikels im Warenkorb
+ 		$warenkorbIndex = $this->objekt_schon_im_warenkorb($pid);
+ 		
+ 		//ändert die Menge im Warenkorb
+ 		$w = $_SESSION["Warenkorb"];
+ 		$y = $w[$warenkorbIndex];
+ 		$y->set_menge($menge);
+ 		
+ 		//speichert die geänderte Menge in der SESSION-Variable
+ 		$w[$warenkorbIndex] = $y;
+ 		$_SESSION["Warenkorb"] = $w;
  	}
 }
 ?>

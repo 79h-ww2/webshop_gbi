@@ -5,7 +5,7 @@ if (isset($_POST['type']) && isset($_POST['menge']) && isset($_POST['pid']) && $
 	$warenkorb1 = new warenkorb();
 	
 	//überprüft, ob die angegebene Menge, die in den Warenkorb gepackt werden soll gültig ist
-	$result_ueberpruefung = $warenkorb1->ueberpruefe_eingegebene_menge_warenkorb($_POST['menge'], $_POST['pid']);
+	$result_ueberpruefung = $warenkorb1->ueberpruefe_eingegebene_menge_warenkorb($_POST['menge'], $_POST['pid'], false);
 
 	$mengen_fehler = true; //Variable, die festhält, ob die Mengenangabe gültig war
 	
@@ -29,6 +29,29 @@ elseif (isset($_POST['type']) && $_POST['type'] == 'markierung_loeschen_warenkor
 	$warenkorb1 = new warenkorb();
 	//Zeigte eine Sicherheitsfrage an, ob die markierten Produkte wirklich aus dem Warenkorb entfernt werden sollen
 	$warenkorb1->sicherheitsnachfrage_mehrere_artikel_aus_warenkorb_entfernen($werte);
+}
+
+//Bestellmenge eines Artikels ändern
+elseif (isset($_POST['type']) && $_POST['type'] == 'warenkorb-artikel-mengenaewnderung' && isset($_POST['idBox']) && isset($_POST['menge'])){
+	$pid = $_POST['idBox'];
+	$menge = $_POST['menge'];
+	
+	$warenkorb1 = new warenkorb();
+	
+	//überprüft, ob die angegebene Menge, die in den Warenkorb gepackt werden soll gültig ist
+	$result_ueberpruefung = $warenkorb1->ueberpruefe_eingegebene_menge_warenkorb($menge, $pid, true);
+	
+
+	//wenn die Eingabe gültig ist
+	if ( $result_ueberpruefung->get_fehlermeldung() == ""){
+		//Bestellmenge im Warenkorb ändern
+		$warenkorb1->aendere_bestellmenge_artikel_im_warenkorb($pid, $menge);
+	}
+	//wenn die Eingabe ungültig ist
+	else{
+		//es wird das Popup erneut geöffnet und die Fehlermeldung angezeigt
+		$warenkorb1->zeige_fenster_bestellmenge_aendern_atrikel($pid, $result_ueberpruefung->get_fehlermeldung());
+	}
 }
 
 //Entfernt einen Artikel aus dem Warenkorb
