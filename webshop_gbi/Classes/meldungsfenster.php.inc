@@ -336,6 +336,8 @@
 									}
 			}
 				
+			$textfeldumrandung = ($fehlermeldung != "") ? "border-color:red;" : "";
+			
 			echo
 			"
 				<noscript>
@@ -362,7 +364,7 @@
 							</div>
 							<div class=\"input_box_textfeldbereich\" >
 								<label for=\"".htmlspecialchars($textfeldname,ENT_QUOTES,'UTF-8')."\">".htmlspecialchars($textfeldBeschriftung,ENT_QUOTES,'UTF-8').":</label>
-								<input style=\"width:$textfeld_breite\" name=\"".htmlspecialchars($textfeldname,ENT_QUOTES,'UTF-8')."\" type=\"text\"  value=\"".htmlspecialchars($wertTextfeld,ENT_QUOTES,'UTF-8')."\" />
+								<input style=\"width:$textfeld_breite;$textfeldumrandung\" name=\"".htmlspecialchars($textfeldname,ENT_QUOTES,'UTF-8')."\" type=\"text\"  value=\"".htmlspecialchars($wertTextfeld,ENT_QUOTES,'UTF-8')."\" />
 							</div>
 							<div class=\"clear_right\" >
 								<div class=\"fehlermeldung_input_popup\" id=\"".htmlspecialchars($js_id_fehlermeldung,ENT_QUOTES,'UTF-8')."\" >".htmlspecialchars($fehlermeldung,ENT_QUOTES,'UTF-8')."</div>

@@ -152,14 +152,16 @@ class warenkorb extends EingabeCheckGrundlegend{
  		//bestimmt, welchen Index der Artikel im Warenkorb hat
  		$warenkorbIndex = $this->objekt_schon_im_warenkorb($pid);
  		
- 		//bestimmt, den Artikelnamen
- 		$w = $_SESSION["Warenkorb"];
- 		$y = $w[$warenkorbIndex];
- 		$artikelname = $y->get_artikelnamen();
- 		
- 		//zeigt die Sicherheitsfrage an
- 		$msg = new Meldungsfenster();
- 		$msg->erstelleHTMLQuelltextConfirmBox_mit_Meldung("artikel_loeschen", "Gewählten Artikel löschen", "Wollen Sie den Artikel \"$artikelname\" wirklich aus dem Warenkorb entfernen?" , "question", "artikel-warenkorb-entfernen","bestaetigt.".$pid,  "artikel-warenkorb-entfernen", "verneint", "ja", "nein", true);
+ 		if ($warenkorbIndex != -1){
+	 		//bestimmt, den Artikelnamen
+	 		$w = $_SESSION["Warenkorb"];
+	 		$y = $w[$warenkorbIndex];
+	 		$artikelname = $y->get_artikelnamen();
+	 		
+	 		//zeigt die Sicherheitsfrage an
+	 		$msg = new Meldungsfenster();
+	 		$msg->erstelleHTMLQuelltextConfirmBox_mit_Meldung("artikel_loeschen", "Gewählten Artikel löschen", "Wollen Sie den Artikel \"$artikelname\" wirklich aus dem Warenkorb entfernen?" , "question", "artikel-warenkorb-entfernen","bestaetigt.".$pid,  "artikel-warenkorb-entfernen", "verneint", "ja", "nein", true);
+ 		}
  	}
  	
  	
@@ -254,17 +256,27 @@ class warenkorb extends EingabeCheckGrundlegend{
  		
  		//Bestimmt die Bestellmenge, die in Moment im Warenkorb vorzufinden ist
  		$warenkorbIndex = $this->objekt_schon_im_warenkorb($pid);
- 		$w = $_SESSION["Warenkorb"];
- 		$y = $w[$warenkorbIndex];
- 		$menge_aktuell = $y->get_menge();
- 		
- 		
- 		//Zeigt das Popup-Fenster an, wo der Benutzer die neue Bestellmenge eingeben kann
- 		$action_link = "./?page=warenkorb";
- 		$msg = new Meldungsfenster();
- 		$wort_exemplar = ($vorhandene_menge != 1) ? "Exemplare" : "Exemplar";
- 		
- 		$msg->erstelleHTMLQuelltextTextinputbox($pid, "Bestellmenge ändern", "Tippen Sie in dieses Fenster die neue Bestellmenge ein. $vorhandene_menge $wort_exemplar des Artikels sind auf Lager vorhanden.", "Menge", "menge", "OK", "Abbrechen", $action_link, "post", true, "eintrag_in_warenkorb_vorcheck();", "fehlermeldung_warenkorb", $fehler, $menge_aktuell, "from_warenkorb", "60px", "warenkorb-artikel-mengenaewnderung" );
+ 		if ($warenkorbIndex != -1){
+ 			
+ 			//Wenn kein Fehler bei der letzten Eingabe aufgetreten ist, wird die aktuelle Bestellmenge des Warenkorbs geladen
+ 			if ($fehler == ""){
+	 			$w = $_SESSION["Warenkorb"];
+	 			$y = $w[$warenkorbIndex];
+	 			$menge_aktuell = $y->get_menge();
+ 			}
+ 			//wenn ein Fehler aufgetreten ist, wird die letzte Eingabe angezeigt
+ 			else{
+ 				$menge_aktuell = $_POST['menge'];
+ 			}
+	 		
+	 		
+	 		//Zeigt das Popup-Fenster an, wo der Benutzer die neue Bestellmenge eingeben kann
+	 		$action_link = "./?page=warenkorb";
+	 		$msg = new Meldungsfenster();
+	 		$wort_exemplar = ($vorhandene_menge != 1) ? "Exemplare" : "Exemplar";
+	 		
+	 		$msg->erstelleHTMLQuelltextTextinputbox($pid, "Bestellmenge ändern", "Tippen Sie in dieses Fenster die neue Bestellmenge ein. $vorhandene_menge $wort_exemplar des Artikels sind auf Lager vorhanden.", "Menge", "menge", "OK", "Abbrechen", $action_link, "post", true, "eintrag_in_warenkorb_vorcheck();", "fehlermeldung_warenkorb", $fehler, $menge_aktuell, "from_warenkorb", "60px", "warenkorb-artikel-mengenaewnderung" );
+ 		};
  	}
  	
  	/**
@@ -291,14 +303,16 @@ class warenkorb extends EingabeCheckGrundlegend{
  		//bestimmt den Index des Artikels im Warenkorb
  		$warenkorbIndex = $this->objekt_schon_im_warenkorb($pid);
  		
- 		//ändert die Menge im Warenkorb
- 		$w = $_SESSION["Warenkorb"];
- 		$y = $w[$warenkorbIndex];
- 		$y->set_menge($menge);
- 		
- 		//speichert die geänderte Menge in der SESSION-Variable
- 		$w[$warenkorbIndex] = $y;
- 		$_SESSION["Warenkorb"] = $w;
+ 		if ($warenkorbIndex != -1){
+	 		//ändert die Menge im Warenkorb
+	 		$w = $_SESSION["Warenkorb"];
+	 		$y = $w[$warenkorbIndex];
+	 		$y->set_menge($menge);
+	 		
+	 		//speichert die geänderte Menge in der SESSION-Variable
+	 		$w[$warenkorbIndex] = $y;
+	 		$_SESSION["Warenkorb"] = $w;
+ 		};
  	}
 }
 ?>
