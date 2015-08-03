@@ -1242,3 +1242,7 @@ a.grauer_link_button:link, a.grauer_link_button:VISITED{
 a.grauer_link_button:hover{
 	color: black;
 }
+
+.clear_right #fehlermeldung_warenkorb{
+	color: black;
+}

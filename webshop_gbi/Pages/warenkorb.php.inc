@@ -58,7 +58,7 @@ $warenkorb1 = new warenkorb();
 						<div class="ArtikelnameWarenkorb "> <a class="ArtikelnameWarenkorbhyper" href="./?page=produkt&pid=<?php echo htmlspecialchars ( $AktuellerArtikel->get_artikelnummer(), ENT_QUOTES, 'UTF-8');?>"><?php echo htmlspecialchars ( $AktuellerArtikel->get_artikelnamen(), ENT_QUOTES, 'UTF-8');?> </a> </div> 
 						<div class="ArtikelmengeWarenkorb ">
 							<?php echo htmlspecialchars ( $AktuellerArtikel->get_menge(), ENT_QUOTES, 'UTF-8' );?>
-							<a href="#" title="Menge &auml;ndern" class="link_menge_aendern" ></a>
+							<a href="<?php echo $adresse_links."aktion=bestellmenge_warenkorbartikel_aendern&aktionparam=".htmlspecialchars ( $AktuellerArtikel->get_artikelnummer(), ENT_QUOTES, 'UTF-8');?>" title="Menge &auml;ndern" class="link_menge_aendern" ></a>
 						</div>
 						<div class="ArtikelLoeschenWarenkorb">
 							<a href="<?php echo $adresse_links."aktion=artikel-warenkorb-entfernen&aktionparam=sicherheitsfrage.".htmlspecialchars ( $AktuellerArtikel->get_artikelnummer(), ENT_QUOTES, 'UTF-8');?>" title="Artikel aus dem Warenkorb entfernen" class="loeschen_link" >
@@ -90,5 +90,7 @@ $warenkorb1 = new warenkorb();
 		</form>
 	<?php
 		}
+		$msg = new Meldungsfenster();
+		//$msg->erstelleHTMLQuelltextTextinputbox("Test", "Test123","Dieses ist ein Test", "Hallo", "hallo", "Ok", "Abbrechen", "#", "Post", true, "");
 	?>
 </article>

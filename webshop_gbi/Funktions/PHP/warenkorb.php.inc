@@ -54,5 +54,20 @@ elseif (isset($_GET["aktion"]) && isset($_GET["aktionparam"]) && $_GET["aktion"]
 		unset($arr_pids[0]);
 		$warenkorb1->mehrere_artikel_aus_warenkorb_entfernen($arr_pids);
 	}
-}	
+}
+
+//Zeigt eine Popup-Fenster an, wo der Benutzer die Bestellmenge ändern kann
+elseif (isset($_GET["aktion"]) && isset($_GET["aktionparam"]) && $_GET["aktion"]== "bestellmenge_warenkorbartikel_aendern"){
+	//Instanz des Warenkorbs bilden
+	$warenkorb1 = new warenkorb();
+	
+	//Extrahiert die übermittelten Parameter für die Löschfunktion
+	$parameter = explode(".", $_GET["aktionparam"]);
+	
+	//wenn die gültige Menge an Parametern übertragen wurde
+	if (count($parameter) == 1){
+		//Popup öffnen, wo der Benutzer die neue Menge eingeben kann
+		$warenkorb1->zeige_fenster_bestellmenge_aendern_atrikel($parameter[0], "");
+	}
+}
 ?>

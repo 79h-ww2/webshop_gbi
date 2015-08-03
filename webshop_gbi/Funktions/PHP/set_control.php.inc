@@ -45,8 +45,9 @@
 				session_start();
 			break;
 			
-			//Artikel aus dem Warenkorb entfernen
-			case 'artikel-warenkorb-entfernen':
+			//Artikel aus dem Warenkorb entfernen ODER ändern der Bestellmenge eines Artikels im Warenkorb
+			case 'artikel-warenkorb-entfernen':	
+			case 'bestellmenge_warenkorbartikel_aendern':
 				include_once './Funktions/PHP/warenkorb.php.inc';
 			break;
 		}

@@ -23,7 +23,7 @@
 .meldungsfenster_frame_groesse_1, .meldungsfenster_frame_no_javaScript
 {
 	display: none;
-	position: fixed;
+	position: absolute;
 	width: 400px;
 	/*height: 230px;*/
 	left: 50%;
@@ -70,7 +70,7 @@
 .meldungsfenster_frame_groesse_1_platzhalter
 {
 	display: none;
-	position: fixed;
+	position: absolute;
 	width: 400px;
 	/*height: 230px;*/
 	left: 50%;
@@ -233,4 +233,15 @@ a.schliessen_button_meldungsfenster:hover
 	text-align: center;
 	width: 306px;
 	font-size: 20px;
+}
+
+.input_box_textfeldbereich{
+	margin-top: 10px;
+	float: right;
+	padding-bottom: 10px;
+}
+
+.fehlermeldung_input_popup{
+	color: black;
+	font-weight: bold;
 }

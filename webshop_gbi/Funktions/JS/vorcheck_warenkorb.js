@@ -59,20 +59,3 @@ function eintrag_in_warenkorb_vorcheck(){
 	
 	return fehlermeldung == ''; 
 }
-
-/**
- * Markiert oder demarkiert alle Artikel im Warenkorb
- */
-function WarenkorbAlleArtikelMarkieren() {
-	
-	//wenn mehrere Artikel im Warenkorb sind
-	if (document.forms["form_warenkorb_auflistung"].check_warenkorb_artikel.length){
-		for (var i= 0; i < document.forms["form_warenkorb_auflistung"].check_warenkorb_artikel.length; i++ ){
-			document.forms["form_warenkorb_auflistung"].check_warenkorb_artikel[i].checked = document.forms["form_warenkorb_auflistung"]["check_all_warenkorb"].checked;
-		}
-	}
-	else{
-		//Wenn nur ein Artkiel im Warenkorb ist
-		document.forms["form_warenkorb_auflistung"]["check_warenkorb_artikel"].checked = document.forms["form_warenkorb_auflistung"]["check_all_warenkorb"].checked;
-	}
-}

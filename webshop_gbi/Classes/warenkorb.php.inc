@@ -227,5 +227,41 @@ class warenkorb extends EingabeCheckGrundlegend{
  			$this->entferne_artikel_aus_warenkorb($pid);
  		}
  	}
+ 	
+ 	/**
+ 	 * Zeigt ein Popup-Fenster an, wo der Benutzer die Bestellmenge ändern kann
+ 	 * @param unknown $pid
+ 	 */
+ 	public function zeige_fenster_bestellmenge_aendern_atrikel($pid, $fehler){
+ 		
+ 		//JavaScripts für den Vorcheck werden hinzugefügt
+ 		echo
+ 		'
+ 			<script type="text/javascript" src="./Funktions/JS/vorcheck_std_funktionen.js" >
+    		</script>
+    		<script type="text/javascript" src="Funktions/JS/vorcheck_warenkorb.js">
+    		</script>
+ 		';
+ 		
+ 		//bestimmt die Menge, wie viele Objekte des Artikels sich auf Lager befindet
+ 		$aktuellerArtikel = new ArtikelDetails();
+ 		$artikel_info = $aktuellerArtikel->beschreibungAnzeigen($pid);
+ 		$vorhandene_menge = $artikel_info->Menge;
+ 		
+ 		//Unsichtbares Div, welches die auf Lager vorhandene Menge enthält (um schon bestehende JS-Script-Vorcheckmethode nutzen zu können)
+ 		echo '<span style="display:none" id="exemplare_auf_lager" >'.htmlspecialchars($vorhandene_menge,ENT_QUOTES,'UTF-8').'</span>';
+ 		
+ 		//Bestimmt die Bestellmenge, die in Moment im Warenkorb vorzufinden ist
+ 		$warenkorbIndex = $this->objekt_schon_im_warenkorb($pid);
+ 		$w = $_SESSION["Warenkorb"];
+ 		$y = $w[$warenkorbIndex];
+ 		$menge_aktuell = $y->get_menge();
+ 		
+ 		
+ 		//Zeigt das Popup-Fenster an, wo der Benutzer die neue Bestellmenge eingeben kann
+ 		$action_link = "./?page=warenkorb";
+ 		$msg = new Meldungsfenster();
+ 		$msg->erstelleHTMLQuelltextTextinputbox($pid, "Bestellmenge ändern", "Tippen Sie in dieses Fenster die neue Bestellmenge ein.", "Menge", "menge", "OK", "Abbrechen", $action_link, "post", true, "eintrag_in_warenkorb_vorcheck();", "fehlermeldung_warenkorb", $fehler, $menge_aktuell, "from_warenkorb", "60px" );
+ 	}
 }
 ?>
