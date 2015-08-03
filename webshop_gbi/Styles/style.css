@@ -284,6 +284,11 @@ img.account {
 	width:90px;
 }
 
+.warenkorb_alle_markieren_link{
+	position: absolute;
+	margin-top: -43px;
+}
+
 .middleContent {
 	clear: both;
     width: 800px;
@@ -657,7 +662,7 @@ label.ort{
 .aktuelleArtikelimWarenkorb{
 	display: table-row;
 }
-.ArtikelbildWarenkorb, .ArtikelnameWarenkorb, .ArtikelmengeWarenkorb, .ArtikelmarkiercheckboxWarenkorb, .ArtikelLoeschenWarenkorb{
+.ArtikelbildWarenkorb, .ArtikelnameWarenkorb, .ArtikelmengeWarenkorb, .ArtikelmarkiercheckboxWarenkorb, .ArtikelLoeschenWarenkorb, .ArtikelPreisWarenkorb{
 	display: table-cell;
 	text-align: center;
 	padding-left: 10px;
@@ -679,8 +684,8 @@ label.ort{
 }
 
 .bereich_button_warenkorb_volle_uebersicht{
-	margin: 5px auto;
-	width: 731px;
+	margin: 20px auto;
+	width: 800px;
 }
 
 .loeschen_link{
@@ -1245,4 +1250,8 @@ a.grauer_link_button:hover{
 
 .clear_right #fehlermeldung_warenkorb{
 	color: black;
+}
+
+.ArtikelwarenkorbSummenZeile{
+	border-bottom: none;
 }

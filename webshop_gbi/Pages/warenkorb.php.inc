@@ -20,6 +20,8 @@ $warenkorb1 = new warenkorb();
 					<div class="ArtikelbildWarenkorb UeberschriftWarenkorb">Bild</div>
 					<div class="ArtikelnameWarenkorb UeberschriftWarenkorb">Name</div>
 					<div class="ArtikelmengeWarenkorb UeberschriftWarenkorb">Menge</div>
+					<div class="ArtikelPreisWarenkorb UeberschriftWarenkorb">Einzelpreis</div>
+					<div class="ArtikelPreisWarenkorb UeberschriftWarenkorb">Gesamtpreis</div>
 					<div class="ArtikelLoeschenWarenkorb UeberschriftWarenkorb"></div>
 				</div>
 				<script type="text/javascript" src="Funktions/JS/vorcheck_warenkorb.js" ></script>
@@ -60,6 +62,8 @@ $warenkorb1 = new warenkorb();
 							<?php echo htmlspecialchars ( $AktuellerArtikel->get_menge(), ENT_QUOTES, 'UTF-8' );?>
 							<a href="<?php echo $adresse_links."aktion=bestellmenge_warenkorbartikel_aendern&aktionparam=".htmlspecialchars ( $AktuellerArtikel->get_artikelnummer(), ENT_QUOTES, 'UTF-8');?>" title="Menge &auml;ndern" class="link_menge_aendern" ></a>
 						</div>
+						<div class="ArtikelPreisWarenkorb"><?php echo number_format($AktuellerArtikel->get_einzelpreis_artikel(),2, ",", ""); ?> &euro;</div>
+						<div class="ArtikelPreisWarenkorb"><?php echo number_format($AktuellerArtikel->get_gesamtpreis_artikel(),2, ",", ""); ?> &euro;</div>
 						<div class="ArtikelLoeschenWarenkorb">
 							<a href="<?php echo $adresse_links."aktion=artikel-warenkorb-entfernen&aktionparam=sicherheitsfrage.".htmlspecialchars ( $AktuellerArtikel->get_artikelnummer(), ENT_QUOTES, 'UTF-8');?>" title="Artikel aus dem Warenkorb entfernen" class="loeschen_link" >
 							</a>
@@ -68,9 +72,18 @@ $warenkorb1 = new warenkorb();
 			<?php
 				}
 			?>
+				<div class="aktuelleArtikelimWarenkorb" >
+					<div class="ArtikelmarkiercheckboxWarenkorb ArtikelwarenkorbSummenZeile" ></div>
+					<div class="ArtikelbildWarenkorb ArtikelwarenkorbSummenZeile"></div>
+					<div class="ArtikelnameWarenkorb ArtikelwarenkorbSummenZeile"></div> 
+					<div class="ArtikelmengeWarenkorb ArtikelwarenkorbSummenZeile"></div>
+					<div class="ArtikelPreisWarenkorb UeberschriftWarenkorb ArtikelwarenkorbSummenZeile">Summe:</div>
+					<div class="ArtikelPreisWarenkorb ArtikelwarenkorbSummenZeile"><?php echo number_format($warenkorb1->get_gesamtpreis_artikel_im_warenkorb(),2, ",", ""); ?> &euro;</div>
+					<div class="ArtikelLoeschenWarenkorb ArtikelwarenkorbSummenZeile"></div>
+				</div>
 			</div>
 			<div class="bereich_button_warenkorb_volle_uebersicht" >
-				<a href="<?php 
+				<a class="warenkorb_alle_markieren_link" href="<?php 
 					//Link, um alle Artikel zu markieren bzw. demarkieren
 					$aufschrift = "Alle Artikel markieren"; 
 					if (isset($_GET['aktion']) && $_GET['aktion'] == 'alle_markieren' ) {

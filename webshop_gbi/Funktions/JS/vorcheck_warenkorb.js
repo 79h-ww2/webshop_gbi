@@ -26,7 +26,7 @@ function eintrag_in_warenkorb_vorcheck(){
 			
 			//wenn sie keine gültige Zahl ist -> Fehlermelung 
 			fehlermeldung += fehlermeldung == '' ? '' : ' ';
-			fehlermeldung += 'Die Mege muss ein Zahlwert sein.';
+			fehlermeldung += 'Die Menge muss ein Zahlwert sein.';
 			
 			//Textbox rot umranden
 			document.forms['from_warenkorb']['menge'].style.borderColor = 'red';

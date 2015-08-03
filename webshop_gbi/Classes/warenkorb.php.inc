@@ -261,7 +261,24 @@ class warenkorb extends EingabeCheckGrundlegend{
  		//Zeigt das Popup-Fenster an, wo der Benutzer die neue Bestellmenge eingeben kann
  		$action_link = "./?page=warenkorb";
  		$msg = new Meldungsfenster();
- 		$msg->erstelleHTMLQuelltextTextinputbox($pid, "Bestellmenge ändern", "Tippen Sie in dieses Fenster die neue Bestellmenge ein.", "Menge", "menge", "OK", "Abbrechen", $action_link, "post", true, "eintrag_in_warenkorb_vorcheck();", "fehlermeldung_warenkorb", $fehler, $menge_aktuell, "from_warenkorb", "60px" );
+ 		$wort_exemplar = ($vorhandene_menge != 1) ? "Exemplare" : "Exemplar";
+ 		
+ 		$msg->erstelleHTMLQuelltextTextinputbox($pid, "Bestellmenge ändern", "Tippen Sie in dieses Fenster die neue Bestellmenge ein. $vorhandene_menge $wort_exemplar des Artikels sind auf Lager vorhanden.", "Menge", "menge", "OK", "Abbrechen", $action_link, "post", true, "eintrag_in_warenkorb_vorcheck();", "fehlermeldung_warenkorb", $fehler, $menge_aktuell, "from_warenkorb", "60px" );
+ 	}
+ 	
+ 	/**
+ 	 * Gibt den Gesamtpreis der Artikel im Warenkorb aus
+ 	 * @return float Der Gesamtpreis
+ 	 */
+ 	public function get_gesamtpreis_artikel_im_warenkorb(){
+ 		
+ 		$preis_summe = 0;
+ 		//addiert die Gesamtpreise der Artikel
+ 		foreach ($_SESSION["Warenkorb"] as $artikel){
+ 			$preis_summe += $artikel->get_gesamtpreis_artikel();
+ 		}
+ 		
+ 		return $preis_summe;
  	}
 }
 ?>
