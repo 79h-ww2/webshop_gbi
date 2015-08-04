@@ -6,7 +6,7 @@
 	$aktuelle_bestellung = $bestellungen->get_zwischengespeicherte_bestellungseinstellungen();
 
 	//Die Versandart wird zwischengespeichert
-	if ($_POST['type'] == 'bestellvorgang_versandart' && isset($_POST['versandart']) && $_POST['versandart'] != ""){
+	if ($_POST['type'] == 'bestellvorgang_versandart' && isset($_POST['versandart']) && $_POST['versandart'] != ""){		
 		$aktuelle_bestellung->set_versandart($_POST['versandart']);
 		$bestellungen->set_zwischengespeicherte_bestellungseinstellungen($aktuelle_bestellung);
 	}

@@ -531,13 +531,17 @@ label.ort{
 
 
 
-.reg_box_iconbereich, .suche_box_iconbereich, .adresse_aendern_box_iconbereich, .email_aendern_box_iconbereich, .versandadresse_iconbereich{
+.reg_box_iconbereich, .suche_box_iconbereich, .adresse_aendern_box_iconbereich, .email_aendern_box_iconbereich, .versandadresse_iconbereich, .warenkorb_iconbereich{
 	display: table-cell;
 	width: 80px;
 	padding-top: 20px;
 	background-image: url('../Images/Design/kunde_plus.png');
 	background-repeat: no-repeat;
 	background-position: 10px 20px;
+}
+
+.warenkorb_iconbereich{
+	background-image: url('../Images/Design/warenkorb.png');
 }
 
 .adresse_aendern_box_iconbereich{
@@ -1285,5 +1289,17 @@ h2.ueberschrift_bestellvorgang{
 }
 
 .versandadresse_iconbereich{
-	background-image: url('../Images/Design/versand.png')
+	background-image: url('../Images/Design/versand.png');
+}
+
+.form_content .auflistung_warenkorb{
+	font-size: 13.8px;
+}
+
+.form_content .auflistung_warenkorb .aktuelleArtikelimWarenkorb .ArtikelbildWarenkorb .Artikelbild {
+	width: 80px;
+}
+
+.ArtikelPreisWarenkorb{
+	text-align: right;
 }

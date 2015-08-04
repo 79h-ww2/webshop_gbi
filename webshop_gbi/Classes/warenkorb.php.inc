@@ -235,7 +235,7 @@ class warenkorb extends EingabeCheckGrundlegend{
  	 * Zeigt ein Popup-Fenster an, wo der Benutzer die Bestellmenge ändern kann
  	 * @param unknown $pid
  	 */
- 	public function zeige_fenster_bestellmenge_aendern_atrikel($pid, $fehler){
+ 	public function zeige_fenster_bestellmenge_aendern_atrikel($pid, $fehler, $action_link ){
  		
  		//JavaScripts für den Vorcheck werden hinzugefügt
  		echo
@@ -271,7 +271,7 @@ class warenkorb extends EingabeCheckGrundlegend{
 	 		
 	 		
 	 		//Zeigt das Popup-Fenster an, wo der Benutzer die neue Bestellmenge eingeben kann
-	 		$action_link = "./?page=warenkorb";
+	 		//$action_link = "./?page=warenkorb";
 	 		$msg = new Meldungsfenster();
 	 		$wort_exemplar = ($vorhandene_menge != 1) ? "Exemplare" : "Exemplar";
 	 		
