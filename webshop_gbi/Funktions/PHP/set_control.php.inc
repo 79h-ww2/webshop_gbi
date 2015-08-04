@@ -3,7 +3,7 @@
 	if (isset($_POST['type'])){
 		switch ($_POST['type']){
 			
-			//Skript zur DurchfÃ¼hrung der Registrierung ausführen
+			//Skript zur Durchführung der Registrierung ausführen
 			case 'reg':
 				include_once './Funktions/PHP/registrierung_durchfuehren.php.inc';
 			break;
@@ -19,15 +19,20 @@
 				include_once './Funktions/PHP/warenkorb.php.inc';
 			break;
 				
-			//Skript zur DurchfÃ¼hrung der Anmeldung ausführen
+			//Skript zur Durchführung der Anmeldung ausführen
 			case 'anmeldung':
 				include_once './Funktions/PHP/anmeldung_durchfuehren.php.inc';
 			break;
 			
-			//fÃ¼hrt den Vorcheck der erweiterten Suche durch
+			//fährt den Vorcheck der erweiterten Suche durch
 			case 'erweiterte_suche':
 				include_once './Classes/Ueberpruefresult.php.inc';
 				include_once './Funktions/PHP/vorcheck_erweiterte_suche.php.inc';
+			break;
+			
+			//Bearbeitet die Aufgaben ab, die mit dem Bestellvorgang zu tun haben
+			case 'bestellvorgang_versandart':
+				include_once 'Funktions/PHP/bestellvorgang.php.inc';
 			break;
 		}
 	}

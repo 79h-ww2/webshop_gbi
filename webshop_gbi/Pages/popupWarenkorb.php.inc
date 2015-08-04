@@ -40,7 +40,7 @@ for ($i = 0; $i < count($Artikel) && $i<4; $i++){
 					Gesamter Warenkorb (<?php echo $warenkorb1->menge_im_warenkorb();
 				?>)
 				</a>
-				<a href=".?page=datenschutz" title="Zur Kasse" class="link_button" id="btn_zur_kasse" >
+				<a href="./?page=bestellung" title="Zur Kasse" class="link_button" id="btn_zur_kasse" >
 					Zur Kasse	
 				</a>
 				</div>

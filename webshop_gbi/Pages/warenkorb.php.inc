@@ -1,7 +1,7 @@
 <?php
 $warenkorb1 = new warenkorb();
 ?>
-<article class="middleContent" >
+<article class="middleContent content_einruecken" >
 	<h1>Warenkorb</h1>
 	<?php
 		//Meldung, die angibt, wie viele Artikel sich im Warenkorb befinden.
@@ -12,7 +12,7 @@ $warenkorb1 = new warenkorb();
 		if ($warenkorb1->menge_im_warenkorb() > 0){
 			$Artikel = $warenkorb1->artikel_im_warenkorb_anzeigen();
 	?>
-		<form  method="post" action="" name="form_warenkorb_auflistung" id="form_warenkorb_auflistung" >
+		<form  method="post" action="./?page=warenkorb" name="form_warenkorb_auflistung" id="form_warenkorb_auflistung" >
 			<div class="auflistung_warenkorb" >
 				<div class="aktuelleArtikelimWarenkorb" >
 					<div class="ArtikelmarkiercheckboxWarenkorb UeberschriftWarenkorb">
@@ -96,7 +96,7 @@ $warenkorb1 = new warenkorb();
 					<input type="hidden" value="markierung_loeschen_warenkorb" name="type" /> 
 				
 					<input type="submit" name="submit" value="Markierte Artikel l&ouml;schen" title="Markierte Artikel l&ouml;schen" />
-					<a href="#" title="Zur Kasse" class="grauer_link_button" >Zur Kasse</a>
+					<a href="./?page=bestellung" title="Zur Kasse" class="grauer_link_button" >Zur Kasse</a>
 				</div>
 				<div class="clear_right" ></div>
 			</div>
