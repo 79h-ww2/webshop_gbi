@@ -31,20 +31,11 @@ if (!(isset($_SESSION['angemeldet']))){
 		//zeigt die erste Seite des Bestellvorgangs an
 		if (!isset($_GET['schritt'])){
 			include_once 'Pages/bestellvorgang_schritt1.php.inc';
-		}else{
-			//zeigt die nächsten Seiten des Bestellvorgangs an
-			switch ($_GET['schritt']){
-				
-				//erste Seite
-				case '1':
-					include_once 'Pages/bestellvorgang_schritt1.php.inc';
-				break;
-				
-				//zweite Seite
-				case '2':
-					include_once 'Pages/bestellvorgang_schritt2.php.inc';
-				break;
-			}
+		}else if (is_numeric($_GET['schritt']) && ceil($_GET['schritt']) == $_GET['schritt'] && $_GET['schritt'] > 0 && $_GET['schritt'] < 7) {
+			
+			//zeigt die nächsten Seiten des Bestellvorgangs an	
+			$adresse = 'Pages/bestellvorgang_schritt'.$_GET['schritt'].'.php.inc';
+			include_once $adresse;				
 		}
 	}
 ?>

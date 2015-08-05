@@ -490,11 +490,11 @@ input[type=submit]:hover , input[type=button]:hover, .contentPopupRegistrierung 
     display:inline-block;
 }
 
-#registrierung .std_reg,  #suche_erweitert .std_reg, #form_adresse_aendern .std_reg, #form_email_passwort_aendern .std_reg{
+#registrierung .std_reg,  #suche_erweitert .std_reg, #form_adresse_aendern .std_reg, #form_email_passwort_aendern .std_reg, #form_bestellung .std_reg{
 	width: 160px;
 }
 
-#registrierung .lang_reg, #suche_erweitert .lang_reg, #form_adresse_aendern .lang_reg, #form_email_passwort_aendern .lang_reg, #login .lang_reg{
+#registrierung .lang_reg, #suche_erweitert .lang_reg, #form_adresse_aendern .lang_reg, #form_email_passwort_aendern .lang_reg, #login .lang_reg, #form_bestellung .lang_reg{
 	width: 260px;
 }
 
@@ -737,6 +737,11 @@ font-size: 14px;
 }
 .Artikelbild{
 	width: 100px;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    background-color: white;
+    padding: 4px;
 }
 
 
@@ -1302,4 +1307,45 @@ h2.ueberschrift_bestellvorgang{
 
 .ArtikelPreisWarenkorb{
 	text-align: right;
+}
+
+#bankeinzug{
+	margin-top: 30px;
+}
+
+.bankeinzug_form{
+	position: absolute;
+	/*border: solid;*/
+	height: 140px;
+	width: 520px;
+}
+
+.platzhalter_formular_bankeinzug{
+	/*border: solid;*/
+	height: 140px;
+	/*color: red;*/
+}
+
+input:disabled {
+	background-color: #D8D8D8;
+	content: 'hallo';
+	color: rgb(80,80,80);
+	border-color: #848484;
+}
+
+#bankeinzug_form_disabled{
+	z-index: 1;
+}
+
+#bankeinzug_form_disabled p label{
+	color: #BDBDBD;
+}
+
+#bankeinzug_form_enabled{
+	display: none;
+	z-index: 2;
+}
+
+#bankeinzug:checked + #bankeinzug_form_enabled{
+	display: block;
 }

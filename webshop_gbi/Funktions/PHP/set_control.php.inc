@@ -32,6 +32,7 @@
 			
 			//Bearbeitet die Aufgaben ab, die mit dem Bestellvorgang zu tun haben
 			case 'bestellvorgang_versandart':
+			case 'bestellvorgang_zahlungsart':
 				include_once 'Funktions/PHP/bestellvorgang.php.inc';
 			break;
 		}
