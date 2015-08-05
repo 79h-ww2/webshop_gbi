@@ -25,7 +25,7 @@
 						</ul>
 					</label>
 				</div>
-				<p class="text_fehlermeldung" ></p>
+				<p class="text_fehlermeldung"></p>
 				<div class="button_warenkorb_volle_uebersicht_rechts_ausrichten" >	
 					<a href="./" title="Abbrechen" class="grauer_link_button" >Abbrechen</a>
 					<input type="hidden" name="type" value="bestellvorgang_versandart" />			

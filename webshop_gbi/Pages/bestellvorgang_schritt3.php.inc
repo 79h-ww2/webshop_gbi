@@ -6,9 +6,13 @@
 	$inhaber = (isset($_POST['inhaber'])) ? $_POST['inhaber'] : $aktuelle_bestellung->get_bankeinzug_daten()->get_kontoinhaber();
 	
 ?>
+ <script type="text/javascript" src="./Funktions/JS/vorcheck_std_funktionen.js" >
+ </script>
+ <script type="text/javascript" src="./Funktions/JS/vorcheck_bestellung.js" >
+</script>
 <article class="middleContent content_einruecken" >
 	<h2>Bestellvorgang: Schritt 3 von 6</h2>
-	<form action="./?page=bestellung&schritt=3" name="form_zahlungsart" method="post" id="form_bestellung" >
+	<form action="./?page=bestellung&schritt=3" name="form_zahlungsart" method="post" id="form_bestellung" onsubmit="return vorcheckZahlungsart();" >
 		<h2>Zahlungsart</h2>
 		<div class="reg_box_aufteilung" >
 			<div class="warenkorb_iconbereich" ></div>
@@ -60,7 +64,7 @@
 				<label for="bankeinzug" >Bankeinzug</label>
 				<div class="platzhalter_formular_bankeinzug" ></div>
 				
-				<p class="text_fehlermeldung" >
+				<p class="text_fehlermeldung" id="zahlungsart_fehlermeldung" >
 					<?php if (isset($bankeinzug_eingabe_unguelig) && $bankeinzug_eingabe_unguelig) echo htmlspecialchars($eingabe_check->get_fehlermeldung(),ENT_QUOTES,'UTF-8'); ?>
 				</p>
 				<div class="button_warenkorb_volle_uebersicht_rechts_ausrichten" >	
