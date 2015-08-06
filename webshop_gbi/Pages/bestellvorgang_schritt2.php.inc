@@ -1,3 +1,11 @@
+<?php
+	//Überprüft, ob der vorherige Schritt auch ausgeführt wurde
+	if ($aktuelle_bestellung->get_durchgefuehrte_schritte() < 1){
+		//wenn nicht wird zu den Schritt weitergeleitet, wo der Benutzer eigentlich wäre
+		die("<h3>Bitte führen Sie die vorherigen Schritte des Bestellvorgangs durch</h3>");
+	}else{
+		$aktuelle_bestellung->set_durchgefuehrte_schritte(2);
+?>
 <article class="middleContent content_einruecken" >
 	<h2>Bestellvorgang: Schritt 2 von 5</h2>
 	<form action="./?page=bestellung&schritt=2" name="form_warenkorb" method="post" id="form_bestellung" >
@@ -113,3 +121,4 @@
 		</div>
 	</form>
 </article>
+<?php }?>

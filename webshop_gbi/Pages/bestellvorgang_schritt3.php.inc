@@ -1,9 +1,16 @@
-<?php 
+<?php
+
 	$zahlungsart1 = $aktuelle_bestellung->get_zahlungsart();
 
 	$bic = (isset($_POST['bic'])) ? $_POST['bic'] : $aktuelle_bestellung->get_bankeinzug_daten()->get_bic();
 	$iban = (isset($_POST['iban'])) ? $_POST['iban'] : $aktuelle_bestellung->get_bankeinzug_daten()->get_iban();
 	$inhaber = (isset($_POST['inhaber'])) ? $_POST['inhaber'] : $aktuelle_bestellung->get_bankeinzug_daten()->get_kontoinhaber();
+	
+	//Überprüft, ob der vorherige Schritt auch ausgeführt wurde
+	if ($aktuelle_bestellung->get_durchgefuehrte_schritte() < 2){
+		//wenn nicht wird zu den Schritt weitergeleitet, wo der Benutzer eigentlich wäre
+		die("<h3>Bitte führen Sie die vorherigen Schritte des Bestellvorgangs durch</h3>");
+	}else{
 	
 ?>
  <script type="text/javascript" src="./Funktions/JS/vorcheck_std_funktionen.js" >
@@ -79,3 +86,4 @@
 		</div>
 	</form>
 </article>
+<?php } ?>

@@ -1,4 +1,9 @@
 <?php
+	//Überprüft, ob der vorherige Schritt auch ausgeführt wurde
+	if ($aktuelle_bestellung->get_durchgefuehrte_schritte() < 4){
+		//wenn nicht wird zu den Schritt weitergeleitet, wo der Benutzer eigentlich wäre
+		die("<h3>Bitte führen Sie die vorherigen Schritte des Bestellvorgangs durch</h3>");
+	}else{
 ?>
 <article class="middleContent content_einruecken" >
 	<h2>Bestellvorgang: Schritt 5 von 5</h2>
@@ -13,3 +18,4 @@
 		</div>
 	</form>
 </article>
+<?php }?>

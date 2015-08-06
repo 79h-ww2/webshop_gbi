@@ -23,6 +23,11 @@
 			$aktuelle_bestellung->get_liefer_vorname() != $profil->get_vorname_from_kid($kid)
 	) $andreAdresse = true;
 	
+	//Überprüft, ob der vorherige Schritt auch ausgeführt wurde
+	if ($aktuelle_bestellung->get_durchgefuehrte_schritte() < 3){
+		//wenn nicht wird zu den Schritt weitergeleitet, wo der Benutzer eigentlich wäre
+		die("<h3>Bitte führen Sie die vorherigen Schritte des Bestellvorgangs durch</h3>");
+	}else{
 ?>
 <script type="text/javascript" src="./Funktions/JS/vorcheck_std_funktionen.js" >
 </script>
@@ -194,3 +199,4 @@
 		</div>
 	</form>
 </article>
+<?php }?>

@@ -14,6 +14,7 @@
 	//Die Versandart wird zwischengespeichert
 	if ($_POST['type'] == 'bestellvorgang_versandart' && isset($_POST['versandart']) && $_POST['versandart'] != ""){		
 		$aktuelle_bestellung->set_versandart($_POST['versandart']);
+		$aktuelle_bestellung->set_durchgefuehrte_schritte(1);
 		$bestellungen->set_zwischengespeicherte_bestellungseinstellungen($aktuelle_bestellung);
 	}
 	
@@ -48,7 +49,10 @@
 		$bestellungen->set_zwischengespeicherte_bestellungseinstellungen($aktuelle_bestellung);
 		
 		//wenn alle Eingaben gültig waren wird zur nächsten Seite weitergeleitet
-		if (!$bankeinzug_fehler) header("location: ./?page=bestellung&schritt=4");
+		if (!$bankeinzug_fehler) {
+			$aktuelle_bestellung->set_durchgefuehrte_schritte(3);
+			header("location:./?page=bestellung&schritt=4");
+		}
 	}
 	
 	//####################################################################
@@ -89,7 +93,7 @@
 		//speichert die Kundenadresse als Lieferadresse
 		else{
 			//Kundennr bestimmen
-			$kid = $profil->get_kid_from_email($_SESSION['angemeldet']);
+			$kid = $kunde1->get_kid_from_email($_SESSION['angemeldet']);
 			
 			$aktuelle_bestellung->set_liefer_geschlecht($kunde1->get_geschlecht_from_kid($kid));
 			$aktuelle_bestellung->set_liefer_hausnr($kunde1->get_hausnr_from_kid($kid));
@@ -104,6 +108,9 @@
 		$bestellungen->set_zwischengespeicherte_bestellungseinstellungen($aktuelle_bestellung);
 		
 		//wenn alle Eingaben gültig waren wird zur nächsten Seite weitergeleitet
-		if (!$adresse_fehler) header("location: ./?page=bestellung&schritt=5");
+		if (!$adresse_fehler) {
+			$aktuelle_bestellung->set_durchgefuehrte_schritte(4);
+			header("location:./?page=bestellung&schritt=5");
+		}
 	}
 ?>
