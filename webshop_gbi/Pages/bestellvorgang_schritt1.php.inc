@@ -1,6 +1,6 @@
 <?php $versandart = $aktuelle_bestellung->get_versandart(); ?>
 <article class="middleContent content_einruecken" >
-	<h2>Bestellvorgang: Schritt 1 von 6</h2>
+	<h2>Bestellvorgang: Schritt 1 von 5</h2>
 	<form action="./?page=bestellung&schritt=2" name="form_versandart" method="post" id="form_bestellung" >
 		<h2>Versandart</h2>
 		<div class="reg_box_aufteilung" >

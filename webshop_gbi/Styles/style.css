@@ -1309,11 +1309,11 @@ h2.ueberschrift_bestellvorgang{
 	text-align: right;
 }
 
-#bankeinzug{
+#bankeinzug, #adresse_andere{
 	margin-top: 30px;
 }
 
-.bankeinzug_form{
+.bankeinzug_form, .lieferadresse_form{
 	position: absolute;
 	/*border: solid;*/
 	height: 140px;
@@ -1326,6 +1326,10 @@ h2.ueberschrift_bestellvorgang{
 	/*color: red;*/
 }
 
+.platzhalter_formular_lieferadresse{
+    height: 210px;
+}
+
 input:disabled {
 	background-color: #D8D8D8;
 	content: 'hallo';
@@ -1333,19 +1337,27 @@ input:disabled {
 	border-color: #848484;
 }
 
-#bankeinzug_form_disabled{
+#bankeinzug_form_disabled, #lieferadresse_form_disabled{
 	z-index: 1;
 }
 
-#bankeinzug_form_disabled p label{
+#bankeinzug_form_disabled p label,  #lieferadresse_form_disabled p label,  #lieferadresse_form_disabled p span, .gespeicherte_adresse{
 	color: #BDBDBD;
 }
 
-#bankeinzug_form_enabled{
+#bankeinzug_form_enabled, #lieferadresse_form_enabled{
 	display: none;
 	z-index: 2;
 }
 
-#bankeinzug:checked + #bankeinzug_form_enabled{
+#bankeinzug:checked + #bankeinzug_form_enabled, #adresse_andere:checked + #lieferadresse_form_enabled{
 	display: block;
+}
+
+#adresse_reg:checked + label .gespeicherte_adresse{
+	color: black;
+}
+
+.gespeicherte_adresse{
+    padding-left: 25px;
 }

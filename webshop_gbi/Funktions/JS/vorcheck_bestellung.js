@@ -53,3 +53,18 @@ function vorcheckZahlungsart(){
 	//übergibt den Rückgabewert "true", wenn kein Fehler aufgetreten ist. Ist Fehler aufgetreten wird ein "false" ausgegeben
 	return fehlermeldung == ''; 
 }
+
+/**
+ * Vorcheck der eingegebenen Lieferadresse
+ */
+function vorcheckLieferadresse(){
+	
+	var rueckgabe = true;
+	
+	//wenn das Formular zur Eingabe einer anderen Adresse aktiviert ist
+	if (document.getElementById('adresse_andere').checked == true){
+		rueckgabe = vorcheckEingabeAdresse();
+	}
+	
+	return rueckgabe;
+}

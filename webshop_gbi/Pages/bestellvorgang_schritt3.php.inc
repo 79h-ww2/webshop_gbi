@@ -11,7 +11,7 @@
  <script type="text/javascript" src="./Funktions/JS/vorcheck_bestellung.js" >
 </script>
 <article class="middleContent content_einruecken" >
-	<h2>Bestellvorgang: Schritt 3 von 6</h2>
+	<h2>Bestellvorgang: Schritt 3 von 5</h2>
 	<form action="./?page=bestellung&schritt=3" name="form_zahlungsart" method="post" id="form_bestellung" onsubmit="return vorcheckZahlungsart();" >
 		<h2>Zahlungsart</h2>
 		<div class="reg_box_aufteilung" >
