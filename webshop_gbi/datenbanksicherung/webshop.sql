@@ -63,6 +63,7 @@ CREATE TABLE `bestellprodukte` (
 
 LOCK TABLES `bestellprodukte` WRITE;
 /*!40000 ALTER TABLE `bestellprodukte` DISABLE KEYS */;
+INSERT INTO `bestellprodukte` VALUES (2,2,4);
 /*!40000 ALTER TABLE `bestellprodukte` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -96,7 +97,7 @@ CREATE TABLE `bestellung` (
   PRIMARY KEY (`BestId`),
   KEY `bestellung_ibfk_2` (`KId`),
   CONSTRAINT `bestellung_ibfk_2` FOREIGN KEY (`KId`) REFERENCES `kunde` (`KId`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -105,6 +106,7 @@ CREATE TABLE `bestellung` (
 
 LOCK TABLES `bestellung` WRITE;
 /*!40000 ALTER TABLE `bestellung` DISABLE KEYS */;
+INSERT INTO `bestellung` VALUES (6,'Auftrag erhalten','2015-08-07','bankeinzug','2015-08-07 01:32:37','expressversand','nein',2,NULL,'DE08700901001234567890','1234567890a','Helena von Throja','weiblich','Helena','von Throja','Burgstraße','2','12345','Throja');
 /*!40000 ALTER TABLE `bestellung` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -281,4 +283,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-08-07  0:28:22
+-- Dump completed on 2015-08-07  1:34:34
