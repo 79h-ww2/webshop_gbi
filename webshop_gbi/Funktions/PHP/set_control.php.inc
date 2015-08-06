@@ -34,6 +34,7 @@
 			case 'bestellvorgang_versandart':
 			case 'bestellvorgang_zahlungsart':
 			case 'bestellvorgang_lieferart':
+			case 'bestellvorgang_agb':
 				include_once 'Funktions/PHP/bestellvorgang.php.inc';
 			break;
 		}

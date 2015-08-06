@@ -4,6 +4,7 @@
 	
 	$bankeinzug_eingabe_unguelig = false;
 	$eingabe_ungueltig_adresse = false;
+	$agb_fehler = false;
 	$eingabe_check = "";
 	
 	//lädt die aktuell zwischengespeicherte Bestellung
@@ -111,6 +112,21 @@
 		if (!$adresse_fehler) {
 			if ($aktuelle_bestellung->get_durchgefuehrte_schritte() < 4) $aktuelle_bestellung->set_durchgefuehrte_schritte(4);
 			if (!(isset($_GET['aendern']))) {header("location:./?page=bestellung&schritt=5");} else{header("location:./?page=bestellung&schritt=5");};
+		}
+	}
+	//####################################################################
+	//Den Bestellvorgang abschließen
+	elseif ($_POST['type'] == 'bestellvorgang_agb' ){
+		
+		//Wenn die AGB-zugestimmt wurde
+		if (isset( $_POST['ack_agb']) && $_POST['ack_agb'] == 'ja' ){
+			
+			//Bestellung wird abgesendet
+			$bestellungen->zwischengespeicherter_bestellungslisteneintrag_bestellen();
+		}
+		//Wenn die AGB nicht zugestimmt wurde
+		else{
+			$agb_fehler = true;
 		}
 	}
 ?>

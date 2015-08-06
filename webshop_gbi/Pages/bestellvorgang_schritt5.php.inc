@@ -9,7 +9,7 @@
 </script>
 <article class="middleContent content_einruecken" >
 	<h2>Bestellvorgang: Schritt 5 von 5</h2>
-	<form action="./?page=bestellung&schritt=5" name="form_ueberschicht" method="post" id="form_bestellung" onsubmit="return vorcheckAGBZugestimmt();"  >
+	<form action="./?page=bestellung&schritt=5#ack_agb" name="form_ueberschicht" method="post" id="form_bestellung" onsubmit="return vorcheckAGBZugestimmt();"  >
 		<h2>Bestell&uuml;bersicht</h2>
 		<div class="reg_box_aufteilung" >
 			<div class="warenkorb_iconbereich" ></div>
@@ -67,6 +67,7 @@
 					<label for="ack_agb" >Ich akzeptiere die AGB.</label>
 				</div>
 				<p class="text_fehlermeldung" id="fehler_check_agb" >
+					<?php if (isset($agb_fehler) && $agb_fehler == true) echo 'Sie müssen der AGB zustimmen, um den Bestellvorgang absenden zu können.';?>
 				</p>
 				<div class="button_warenkorb_volle_uebersicht_rechts_ausrichten" >	
 					<a href="./" title="Abbrechen" class="grauer_link_button" >Abbrechen</a>

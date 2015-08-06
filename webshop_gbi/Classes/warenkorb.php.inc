@@ -44,6 +44,10 @@ class warenkorb extends EingabeCheckGrundlegend{
  		return $menge;		
  	 }
  	 
+ 	 /**
+ 	  * Zeigt die Artikel im Warenkorb an
+ 	  * @return warenkorbeintrag[]
+ 	  */
  	 public function artikel_im_warenkorb_anzeigen(){
  	 	$w = $_SESSION["Warenkorb"];
  	 	return $w;
