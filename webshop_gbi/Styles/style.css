@@ -1361,3 +1361,68 @@ input:disabled {
 .gespeicherte_adresse{
     padding-left: 25px;
 }
+
+.werte_bestellvorgang_uebersicht_ueberschrift{
+	font-size: 20px;
+	font-weight: bold;
+	color: #fff;
+	margin-top: 10px;
+}
+
+ul.werte_bestellvorgang_uebersicht{
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+.werte_bestellvorgang_uebersicht_zahlungsart{
+	display: table;
+}
+
+.werte_bestellvorgang_uebersicht_zahlungsart_bereich{
+	display: table-cell;
+}
+
+.werte_bestellvorgang_uebersicht_zahlungsart_platzierung_aendern_stift{
+	vertical-align: middle;
+	padding-left: 15px;
+}
+
+.werte_bestellvorgang_uebersicht_zahlungsart_platzierung_aendern_stift_oben{
+    padding-left: 5px;
+    vertical-align: top;
+}
+
+.agbtext_bestellvorgang{
+	margin-top:5px;
+	border: solid 2px;
+	border-color: black;
+	height: 200px;
+	background-color: white;
+	overflow-y: scroll;
+	overflow-x: hidden; 
+	border-radius: 10px;
+	color:black;
+}
+
+.agb_ueberschrift{
+	color: #D56509;
+        font-size:24px;
+}
+
+.agbtext_bestellvorgang .AGB{
+	padding: 15px;
+	padding-top: 0px;
+	font-size: 13px;
+}
+
+.agbtext_bestellvorgang .AGB .agb_ueberschrift{
+	font-size: 16px;
+}
+
+#checkbox_agb{
+	margin-top: 5px;
+}
+
+#bestellenButton{
+	background: #D56509;
+}

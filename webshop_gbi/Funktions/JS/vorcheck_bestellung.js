@@ -68,3 +68,16 @@ function vorcheckLieferadresse(){
 	
 	return rueckgabe;
 }
+
+/**
+ * Überprüft, ob die AGB zugestimmt wurde
+ */
+function vorcheckAGBZugestimmt(){
+	if ( document.getElementById('ack_agb').checked == false){
+		document.getElementById('fehler_check_agb').innerHTML = 'Sie müssen der AGB zustimmen, um den Bestellvorgang absenden zu können.';
+	}else{
+		document.getElementById('fehler_check_agb').innerHTML = '';
+	}
+	
+	return document.getElementById('ack_agb').checked;
+}

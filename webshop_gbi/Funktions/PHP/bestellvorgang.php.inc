@@ -14,7 +14,7 @@
 	//Die Versandart wird zwischengespeichert
 	if ($_POST['type'] == 'bestellvorgang_versandart' && isset($_POST['versandart']) && $_POST['versandart'] != ""){		
 		$aktuelle_bestellung->set_versandart($_POST['versandart']);
-		$aktuelle_bestellung->set_durchgefuehrte_schritte(1);
+		if ($aktuelle_bestellung->get_durchgefuehrte_schritte() < 1) $aktuelle_bestellung->set_durchgefuehrte_schritte(1);
 		$bestellungen->set_zwischengespeicherte_bestellungseinstellungen($aktuelle_bestellung);
 	}
 	
@@ -50,8 +50,8 @@
 		
 		//wenn alle Eingaben gültig waren wird zur nächsten Seite weitergeleitet
 		if (!$bankeinzug_fehler) {
-			$aktuelle_bestellung->set_durchgefuehrte_schritte(3);
-			header("location:./?page=bestellung&schritt=4");
+			if ($aktuelle_bestellung->get_durchgefuehrte_schritte() < 3) $aktuelle_bestellung->set_durchgefuehrte_schritte(3);
+			if (!(isset($_GET['aendern']))) {header("location:./?page=bestellung&schritt=4");} else{header("location:./?page=bestellung&schritt=5");}
 		}
 	}
 	
@@ -109,8 +109,8 @@
 		
 		//wenn alle Eingaben gültig waren wird zur nächsten Seite weitergeleitet
 		if (!$adresse_fehler) {
-			$aktuelle_bestellung->set_durchgefuehrte_schritte(4);
-			header("location:./?page=bestellung&schritt=5");
+			if ($aktuelle_bestellung->get_durchgefuehrte_schritte() < 4) $aktuelle_bestellung->set_durchgefuehrte_schritte(4);
+			if (!(isset($_GET['aendern']))) {header("location:./?page=bestellung&schritt=5");} else{header("location:./?page=bestellung&schritt=5");};
 		}
 	}
 ?>

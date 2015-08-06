@@ -1,7 +1,7 @@
 <?php $versandart = $aktuelle_bestellung->get_versandart(); ?>
 <article class="middleContent content_einruecken" >
-	<h2>Bestellvorgang: Schritt 1 von 5</h2>
-	<form action="./?page=bestellung&schritt=2" name="form_versandart" method="post" id="form_bestellung" >
+	<?php if (!(isset($_GET['aendern']))) { echo '<h2>Bestellvorgang: Schritt 1 von 5</h2>'; } else {echo '<h2>Bestellvorgang: Versandart &auml;ndern</h2>'; } ?>
+	<form action="./?page=bestellung&schritt=<?php if (!(isset($_GET['aendern']))) {echo '2';} else {echo '5';} ?>" name="form_versandart" method="post" id="form_bestellung" >
 		<h2>Versandart</h2>
 		<div class="reg_box_aufteilung" >
 			<div class="versandadresse_iconbereich" ></div>
@@ -27,9 +27,10 @@
 				</div>
 				<p class="text_fehlermeldung"></p>
 				<div class="button_warenkorb_volle_uebersicht_rechts_ausrichten" >	
-					<a href="./" title="Abbrechen" class="grauer_link_button" >Abbrechen</a>
-					<input type="hidden" name="type" value="bestellvorgang_versandart" />			
-					<input type="submit" name="submit" value="Weiter" title="Weiter" />
+					<a href="<?php if (!(isset($_GET['aendern']))) { echo './'; } else {echo './?page=bestellung&schritt=5'; } ?>" title="Abbrechen" class="grauer_link_button" >Abbrechen</a>
+					<input type="hidden" name="type" value="bestellvorgang_versandart" />
+					<?php $aufschrift = (!(isset($_GET['aendern']))) ? "Weiter" : "&Auml;ndern"; ?>			
+					<input type="submit" name="submit" value="<?php echo $aufschrift; ?>" title="<?php echo $aufschrift; ?>" />
 				</div>
 				<div class="clear_right" ></div>
 			</div>

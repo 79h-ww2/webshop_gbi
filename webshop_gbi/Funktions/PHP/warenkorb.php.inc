@@ -91,7 +91,8 @@ elseif (isset($_GET["aktion"]) && isset($_GET["aktionparam"]) && $_GET["aktion"]
 	
 	//wenn die gültige Menge an Parametern übertragen wurde
 	if (count($parameter) == 1){
-		$link = (isset($_GET['page']) && $_GET['page'] == "warenkorb") ? "./?page=warenkorb" : "./?page=bestellung&schritt=2";
+		$schritt = (isset($_GET['schritt']) && $_GET['schritt'] == "2") ? $_GET['schritt'] : "5";
+		$link = (isset($_GET['page']) && $_GET['page'] == "warenkorb") ? "./?page=warenkorb" : "./?page=bestellung&schritt=".$schritt;
 		
 		//Popup öffnen, wo der Benutzer die neue Menge eingeben kann
 		$warenkorb1->zeige_fenster_bestellmenge_aendern_atrikel($parameter[0], "", $link);

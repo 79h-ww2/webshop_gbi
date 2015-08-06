@@ -18,8 +18,8 @@
  <script type="text/javascript" src="./Funktions/JS/vorcheck_bestellung.js" >
 </script>
 <article class="middleContent content_einruecken" >
-	<h2>Bestellvorgang: Schritt 3 von 5</h2>
-	<form action="./?page=bestellung&schritt=3" name="form_zahlungsart" method="post" id="form_bestellung" onsubmit="return vorcheckZahlungsart();" >
+	<?php if (!(isset($_GET['aendern']))) { echo '<h2>Bestellvorgang: Schritt 3 von 5</h2>'; } else {echo '<h2>Bestellvorgang: Zahlungsart &auml;ndern</h2>'; } ?>
+	<form action="./?page=bestellung&schritt=3<?php if (isset($_GET['aendern'])) { echo '&aendern=1'; }?>" name="form_zahlungsart" method="post" id="form_bestellung" onsubmit="return vorcheckZahlungsart();" >
 		<h2>Zahlungsart</h2>
 		<div class="reg_box_aufteilung" >
 			<div class="warenkorb_iconbereich" ></div>
@@ -75,10 +75,11 @@
 					<?php if (isset($bankeinzug_eingabe_unguelig) && $bankeinzug_eingabe_unguelig) echo htmlspecialchars($eingabe_check->get_fehlermeldung(),ENT_QUOTES,'UTF-8'); ?>
 				</p>
 				<div class="button_warenkorb_volle_uebersicht_rechts_ausrichten" >	
-					<a href="./" title="Abbrechen" class="grauer_link_button" >Abbrechen</a>
+					<a href="<?php if (!(isset($_GET['aendern']))) { echo './'; } else {echo './?page=bestellung&schritt=5'; } ?>" title="Abbrechen" class="grauer_link_button" >Abbrechen</a>
 					<input type="hidden" name="type" value="bestellvorgang_zahlungsart" />	
-					<a href="./?page=bestellung&schritt=2" title="Zurück" class="grauer_link_button" >Zurück</a>		
-					<input type="submit" name="submit" value="Weiter" title="Weiter" />
+					<?php if (!(isset($_GET['aendern']))) echo'<a href="./?page=bestellung&schritt=2" title="Zurück" class="grauer_link_button" >Zurück</a>'; ?>	
+					<?php $aufschrift = (!(isset($_GET['aendern']))) ? "Weiter" : "&Auml;ndern"; ?>			
+					<input type="submit" name="submit" value="<?php echo $aufschrift; ?>" title="<?php echo $aufschrift; ?>" />
 				</div>
 				<div class="clear_right" ></div>
 								

@@ -36,8 +36,8 @@
 <script type="text/javascript" src="./Funktions/JS/vorcheck_bestellung.js" >
 </script>
 <article class="middleContent content_einruecken" >
-	<h2>Bestellvorgang: Schritt 4 von 5</h2>
-	<form action="./?page=bestellung&schritt=4" name="form_adresse_aendern" method="post" id="form_bestellung" onsubmit="return vorcheckLieferadresse()" >
+	<?php if (!(isset($_GET['aendern']))) { echo '<h2>Bestellvorgang: Schritt 4 von 5</h2>'; } else {echo '<h2>Bestellvorgang: Lieferadresse &auml;ndern</h2>'; } ?>
+	<form action="./?page=bestellung&schritt=4<?php if (isset($_GET['aendern'])) { echo '&aendern=1'; }?>" name="form_adresse_aendern" method="post" id="form_bestellung" onsubmit="return vorcheckLieferadresse()" >
 		<h2>Lieferadresse</h2>
 		<div class="reg_box_aufteilung" >
 			<div class="warenkorb_iconbereich" ></div>
@@ -188,10 +188,11 @@
 		            ?>
 				</p>
 				<div class="button_warenkorb_volle_uebersicht_rechts_ausrichten" >	
-					<a href="./" title="Abbrechen" class="grauer_link_button" >Abbrechen</a>
+					<a href="<?php if (!(isset($_GET['aendern']))) { echo './'; } else {echo './?page=bestellung&schritt=5'; } ?>" title="Abbrechen" class="grauer_link_button" >Abbrechen</a>
 					<input type="hidden" name="type" value="bestellvorgang_lieferart" />	
-					<a href="./?page=bestellung&schritt=3" title="Zurück" class="grauer_link_button" >Zurück</a>		
-					<input type="submit" name="submit" value="Weiter" title="Weiter" />
+					<?php if (!(isset($_GET['aendern']))) echo'<a href="./?page=bestellung&schritt=3" title="Zurück" class="grauer_link_button" >Zurück</a>'; ?>	
+					<?php $aufschrift = (!(isset($_GET['aendern']))) ? "Weiter" : "&Auml;ndern"; ?>			
+					<input type="submit" name="submit" value="<?php echo $aufschrift; ?>" title="<?php echo $aufschrift; ?>" />
 				</div>
 				<div class="clear_right" ></div>
 								
