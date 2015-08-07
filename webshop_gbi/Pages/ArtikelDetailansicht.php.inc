@@ -1,6 +1,8 @@
 <?php include_once 'Classes/ArtikelDetails.php.inc';?>
 <div class = "startseite">
 <article class="detailContent">
+
+
         
         <?php 
         
@@ -24,20 +26,52 @@
     <div class="detailLeft"> 
     	Detailansichten:
     		<div class="detailCell">
-	    		<img src="Images/Produktbilder/Mustermodell.png" alt="Mustermodell" class="BildMustermodellMinatur" />
     		
-	    		<img src="Images/Produktbilder/Mustermodell.png" alt="Mustermodell" class="BildMustermodellMinatur" />
+    		<?php 
     		
-	    		<img src="Images/Produktbilder/Mustermodell.png" alt="Mustermodell" class="BildMustermodellMinatur" />
+    		foreach ($artikelDetails->DetailbilderAnzeigen($_GET['pid']) AS $PfadDetailbild) {
+    			echo '<a href= "'.$PfadDetailbild.'"  data-lightbox="Produktbilder"> <img src="'.$PfadDetailbild.'" alt="Detail" class="BildMustermodellMinatur" /> </a>';
+    		}
+    		?>
     		
-	    		<img src="Images/Produktbilder/Mustermodell.png" alt="Mustermodell" class="BildMustermodellMinatur" />
-    		
-	    		<img src="Images/Produktbilder/Mustermodell.png" alt="Mustermodell" class="BildMustermodellMinatur" />
     		</div>
     </div>
     
     	<div class="detailMiddle">
-    		<img src="Images/Produktbilder/Mustermodell.png" alt="Mountainbike" class="BildMustermodell" />
+    	<?php 
+    	
+    	if ($artikelDetails->produktbildAnzeigen($_GET['pid'])!=""){
+    	
+    	
+    	?>
+    		<a href= "
+    		<?php 
+    		
+    		echo $artikelDetails->produktbildAnzeigen($_GET['pid']);
+    		
+    		?>
+    		" data-lightbox="Produktbilder">
+    		<?php 
+    	}
+    		?>
+    		<img src="
+    		<?php 
+    		
+    		echo $artikelDetails->produktbildAnzeigen($_GET['pid']);
+    		
+    		?>" alt="
+    		<?php 
+    		
+    		echo htmlspecialchars($artikel->Bezeichnung,ENT_QUOTES,'UTF-8');
+    		
+    		?>
+    		" class="BildMustermodell" />
+    		<?php 
+    		if ($artikelDetails->produktbildAnzeigen($_GET['pid'])!="")
+    			echo "</a>";
+    		?>
+    		
+    		
     	</div>
     	
     	

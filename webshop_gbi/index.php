@@ -6,6 +6,9 @@
 <title>Startseite</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="Styles/style.css" type="text/css" />
+<link rel="stylesheet" href="Styles/lightbox.css">
+
+
  
     <?php
 				/*
@@ -263,6 +266,7 @@ else {
 	</footer>
 	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 	<script src="Funktions/JS/show-nav.js"></script>
+	<script src="Funktions/JS/lightbox-plus-jquery.min.js"></script>
 </body>
 
 </html>
