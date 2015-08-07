@@ -11,6 +11,9 @@
 			
 			$artikel = $artikelDetails->beschreibungAnzeigen($_GET['pid']);
 			
+			//wenn der Artikel exisitert
+			if ( $artikel != ""){
+			
 			
 			echo '<h2>'.htmlspecialchars($artikel->Bezeichnung,ENT_QUOTES,'UTF-8').'</h2>';
 		
@@ -168,6 +171,6 @@
     </content>
     <a href="./?page=artBewerten" title="ArtikelBewerten">Artikel bewerten</a>
     
-    <?php }else{echo "Keine Artikelnummer übergeben !!!";} ?>
+    <?php }else{echo "<h2>Artikel nicht gefunden !!!</h2>";} }else{echo "Keine Artikelnummer übergeben !!!";} ?>
 </article>
 </div>
