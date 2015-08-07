@@ -7,13 +7,14 @@ class ArtikelDetails extends  Artikelauflistung{
 		$db = datenbank_verbindung_aufbauen();
 		if ( !($db->db_connect()) ) die ("Es konnte keine Verbindung zur Datenbank aufgebaut werden");
 	
-		$pid=$db->db_real_escape_string($pid); //Sonderzeichen aus $bauart entfernen
+		$pid=$db->db_real_escape_string($pid); //Sonderzeichen aus $pid entfernen
 	
 		//Anfrage ergänzen
 		$query = "select 
-					Bezeichnung, Beschreibung, `Verfuegbare Menge` as Menge
+					 Beschreibung, `Verfuegbare Menge` as Menge, Preis, bauart.Bezeichnung as bauart, produkte.Bezeichnung as Bezeichnung
 				from
 					produkte
+					left join bauart ON (produkte.bauart = bauart.BId)
 				where pid = '$pid' ";
 		$result = $db->db_query($query);
 		

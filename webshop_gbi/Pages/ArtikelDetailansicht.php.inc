@@ -36,7 +36,18 @@
     	
     	
     	<div class="detailContentText">
-    		<h3><a href="#" title="Mountainbikes">Mountainbike</a></h3>
+    		<?php 
+		
+					$artikelDetails = new ArtikelDetails();
+					
+					$artikel = $artikelDetails->beschreibungAnzeigen($_GET['pid']);
+					
+									
+					echo  '<span id="bauart" > <h3><a href="#" title="Mountainbikes">'.htmlspecialchars($artikel->bauart,ENT_QUOTES,'UTF-8').'</a> </h3> </span>'
+					
+					?>
+    		
+    		
     		
     		<div class="menge_exemplare_gruen">
     			<?php 
@@ -47,6 +58,20 @@
 					
 					
 					echo '<span id="exemplare" >'.htmlspecialchars($artikel->Menge,ENT_QUOTES,'UTF-8').'</span> Exemplare verfügbar';
+					
+					?>
+    		</div>
+    		
+    		
+    		<div class="listeneintrag_auflistung_preis" >
+    			<?php 
+		
+					$artikelDetails = new ArtikelDetails();
+					
+					$artikel = $artikelDetails->beschreibungAnzeigen($_GET['pid']);
+					
+					
+					echo '<span id="preis" >'.htmlspecialchars($artikel->Preis,ENT_QUOTES,'UTF-8').'</span> €';
 					
 					?>
     		</div>
