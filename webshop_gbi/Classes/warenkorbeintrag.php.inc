@@ -59,6 +59,41 @@ class warenkorbeintrag{
 		
 			return  $pfad;
 		}
+		
+		/**
+		 * Gibt den Einzelpreis des Artikels aus
+		 * @return float Der Einzelpreis
+		 */
+		public function get_einzelpreis_artikel(){
+			
+			//Verbindung zur Datenbank aufbauen
+			$db = datenbank_verbindung_aufbauen();
+			if ( !($db->db_connect()) ) die ("Es konnte keine Verbindung zur Datenbank aufgebaut werden");
+			$PId = $db->db_real_escape_string($this->artikelnummer);
+			//Die Datenbankabfrage
+			$query = "select Preis from produkte where PId ='$PId' ";
+			
+			//Ausführen der Abfrage
+			$result = $db->db_query($query);
+			
+			$preis =0;
+			while($werte = $db->db_fetch_object($result)){
+				$preis = $werte->Preis;
+			}
+			
+			//schließt die Datenbankverbindung
+			$db->db_close();
+			
+			return $preis;
+		}
+		
+		/**
+		 * Gibt den Gesamtpreis aus, der sich nach der Angabe der Menge ergibt 
+		 * @return float der Gesamtpreis
+		 */
+		public function get_gesamtpreis_artikel(){
+			return $this->menge * $this->get_einzelpreis_artikel();
+		}
 }
 
 ?>

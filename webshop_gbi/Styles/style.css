@@ -63,7 +63,7 @@ body {
    width: 80px;
    background-image: url('../Images/Design/warenkorb.png');
    background-repeat: no-repeat;
-   background-position: 15px 30px;
+   background-position: 22px 31px;
    padding-left: 21px;
    padding-top:40px;
    font-size:13px;
@@ -122,7 +122,7 @@ img.account {
 
 
 /* Hauptmenü und Überschrift Registrierung*/
-.nav,  #registrierung h2, #suche_erweitert h2, #form_adresse_aendern h2, #form_email_passwort_aendern h2, #login h2{
+.nav,  #registrierung h2, #suche_erweitert h2, #form_adresse_aendern h2, #form_email_passwort_aendern h2, #login h2, #form_bestellung h2{
    height: 40px;
    background: linear-gradient(to  bottom, black  , gray); 
 }
@@ -264,6 +264,31 @@ img.account {
 	vertical-align: middle;
 }
 
+.warenkorbCellMengeHeader{
+	width: 22px;
+	text-align: center;
+	display: inline-block;
+	margin-left: 7px;
+}
+
+.auflistung_warenkorb{
+	display: table;
+	margin: 0px auto;
+}
+
+.auflistung_warenkorb .aktuelleArtikelimWarenkorb .ArtikelnameWarenkorb{
+	width:450px;
+}
+
+.auflistung_warenkorb .aktuelleArtikelimWarenkorb .ArtikelmengeWarenkorb{
+	width:90px;
+}
+
+.warenkorb_alle_markieren_link{
+	position: absolute;
+	margin-top: -43px;
+}
+
 .middleContent {
 	clear: both;
     width: 800px;
@@ -387,7 +412,7 @@ img.BildMustermodell{
 /* ############################################## Registierung ############################################## */
 
 
-#registrierung, #suche_erweitert, #form_adresse_aendern, #form_email_passwort_aendern, #login{
+#registrierung, #suche_erweitert, #form_adresse_aendern, #form_email_passwort_aendern, #login, #form_bestellung{
     display:block;
     margin: 0px auto;
     width: 640px;
@@ -395,7 +420,7 @@ img.BildMustermodell{
     margin-top:20px;
 }
 
-#registrierung h2, #suche_erweitert h2, #form_adresse_aendern h2, #form_email_passwort_aendern h2, #login h2 {
+#registrierung h2, #suche_erweitert h2, #form_adresse_aendern h2, #form_email_passwort_aendern h2, #login h2, #form_bestellung h2 {
     padding-left: 15px;
     display: table-cell;
     vertical-align: middle;
@@ -415,7 +440,7 @@ img.BildMustermodell{
     padding-right: 20px;
 }
 
-#registrierung .form_content, #suche_erweitert .form_content, #form_adresse_aendern .form_content, #form_email_passwort_aendern .form_content, #login .form_content{
+#registrierung .form_content, #suche_erweitert .form_content, #form_adresse_aendern .form_content, #form_email_passwort_aendern .form_content, #login .form_content, #form_bestellung .form_content{
 	display: table-cell;
 	padding: 10px;
 }
@@ -426,7 +451,7 @@ img.BildMustermodell{
 }
 
 /* Buttonformatierung */
-input[type=submit], input[type=button], .link_button, .link_button_msgbox{
+input[type=submit], input[type=button], .link_button, .link_button_msgbox,.grauer_link_button{
 	border-radius: 6px 6px 6px 6px;
 	-moz-border-radius: 6px 6px 6px 6px;
 	-webkit-border-radius: 6px 6px 6px 6px;
@@ -441,13 +466,18 @@ input[type=submit], input[type=button], .link_button, .link_button_msgbox{
 	background: linear-gradient(to  bottom, black  , gray);
 }
 
+
+#btn_zur_kasse{
+	margin-left:5px;
+}
+
 .link_button_msgbox{
 	text-decoration: none;
 	color: white;
 	font-weight: bold;
 }
 
-input[type=submit]:hover , input[type=button]:hover, .contentPopupRegistrierung input[name="anmeldung_submit"]:hover, .link_button:hover{
+input[type=submit]:hover , input[type=button]:hover, .contentPopupRegistrierung input[name="anmeldung_submit"]:hover, .link_button:hover, .grauer_link_button:hover, .link_button_msgbox:hover{
 	background: #d56509; 
 	text-shadow: none;  
 	color: black;
@@ -460,11 +490,11 @@ input[type=submit]:hover , input[type=button]:hover, .contentPopupRegistrierung 
     display:inline-block;
 }
 
-#registrierung .std_reg,  #suche_erweitert .std_reg, #form_adresse_aendern .std_reg, #form_email_passwort_aendern .std_reg{
+#registrierung .std_reg,  #suche_erweitert .std_reg, #form_adresse_aendern .std_reg, #form_email_passwort_aendern .std_reg, #form_bestellung .std_reg{
 	width: 160px;
 }
 
-#registrierung .lang_reg, #suche_erweitert .lang_reg, #form_adresse_aendern .lang_reg, #form_email_passwort_aendern .lang_reg, #login .lang_reg{
+#registrierung .lang_reg, #suche_erweitert .lang_reg, #form_adresse_aendern .lang_reg, #form_email_passwort_aendern .lang_reg, #login .lang_reg, #form_bestellung .lang_reg{
 	width: 260px;
 }
 
@@ -501,13 +531,17 @@ label.ort{
 
 
 
-.reg_box_iconbereich, .suche_box_iconbereich, .adresse_aendern_box_iconbereich, .email_aendern_box_iconbereich{
+.reg_box_iconbereich, .suche_box_iconbereich, .adresse_aendern_box_iconbereich, .email_aendern_box_iconbereich, .versandadresse_iconbereich, .warenkorb_iconbereich{
 	display: table-cell;
 	width: 80px;
 	padding-top: 20px;
 	background-image: url('../Images/Design/kunde_plus.png');
 	background-repeat: no-repeat;
 	background-position: 10px 20px;
+}
+
+.warenkorb_iconbereich{
+	background-image: url('../Images/Design/warenkorb.png');
 }
 
 .adresse_aendern_box_iconbereich{
@@ -571,6 +605,7 @@ label.ort{
 	color: white;
 	margin: 0px auto;
 	width: 400px;
+	text-align: center;
 }
 
 .popupBewertungProduktauflistung .haken_sprechblase{
@@ -618,7 +653,7 @@ label.ort{
 	border-left: 15px solid transparent;
 	border-right: 15px solid transparent;
 	border-bottom: 30px solid #545454;
-	margin-left: 425px;
+	margin-left: 435px;
 	width: 0px;
 	height: 25px;
 }
@@ -631,7 +666,7 @@ label.ort{
 .aktuelleArtikelimWarenkorb{
 	display: table-row;
 }
-.ArtikelbildWarenkorb, .ArtikelnameWarenkorb, .ArtikelmengeWarenkorb{
+.ArtikelbildWarenkorb, .ArtikelnameWarenkorb, .ArtikelmengeWarenkorb, .ArtikelmarkiercheckboxWarenkorb, .ArtikelLoeschenWarenkorb, .ArtikelPreisWarenkorb{
 	display: table-cell;
 	text-align: center;
 	padding-left: 10px;
@@ -639,6 +674,7 @@ label.ort{
 	vertical-align: middle;
 	border-bottom: solid 1px;
 }
+
 .ArtikelnameWarenkorb{
 	width: 250px;
 	
@@ -649,6 +685,43 @@ label.ort{
 }
 .ArtikelnameWarenkorbhyper:hover{
 	color: #FFBF00;
+}
+
+.bereich_button_warenkorb_volle_uebersicht{
+	margin: 20px auto;
+	width: 800px;
+}
+
+.loeschen_link{
+	display: inline-block;
+	width: 20px;
+	height: 21px;
+	background-image: url("../Images/Design/loeschen.png");
+	background-repeat: no-repeat;
+	background-position: 0px auto;
+	margin-top: 5px;
+}
+
+.link_menge_aendern{
+	display: inline-block;
+	width: 20px;
+	height: 21px;
+	background-image: url("../Images/Design/stift.png");
+	background-repeat: no-repeat;
+	background-position: 0px auto;
+	margin-left: 5px;
+}
+
+.button_warenkorb_volle_uebersicht_rechts_ausrichten{
+	float: right;
+}
+
+.link_menge_aendern:hover{
+	background-image: url("../Images/Design/stift_hover.png");
+}
+
+.loeschen_link:hover{
+	background-image: url("../Images/Design/loeschen_hover.png");
 }
 
 .ArtikelbildWarenkorb{
@@ -664,6 +737,11 @@ font-size: 14px;
 }
 .Artikelbild{
 	width: 100px;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    background-color: white;
+    padding: 4px;
 }
 
 
@@ -746,6 +824,8 @@ input[type="text"], input[type="email"], input[type="password"], select, input[t
 	margin-left: 0px;
 	background: linear-gradient(to right bottom, #6C7B35, #82A143, #788A5F) repeat scroll 0% 0% transparent;
 }
+
+
 
 #passwort_link{
 	color: white;
@@ -930,7 +1010,7 @@ input[type="text"], input[type="email"], input[type="password"], select, input[t
 }
 
 .listeneintrag_auflistung_produkte_content:hover{
-	background-color: #E6E6E6;
+	/*background-color: #E6E6E6;*/
 }
 
 .listeneintrag_auflistung_produkte_bild{
@@ -1167,4 +1247,182 @@ stern2.gelb{
 
 #fehlermeldung_warenkorb{
 	color: red;
+}
+
+a.grauer_link_button:link, a.grauer_link_button:VISITED{
+	color: white;
+}
+
+a.grauer_link_button:hover{
+	color: black;
+}
+
+.clear_right #fehlermeldung_warenkorb{
+	color: black;
+}
+
+.ArtikelwarenkorbSummenZeile{
+	border-bottom: none;
+}
+
+.content_einruecken{
+	margin-top:30px;
+}
+
+
+.radio-buttonbereich-versandart{
+	display: table;
+}
+
+.radio-buttonbereich-versandart-bereich{
+	display: table-cell;
+}
+
+.radio-buttonbereich-versandart-bereich-standardversand{
+	width: 50%;
+}
+
+.radio-buttonbereich-versandart-bereich label ul{
+	margin-top: 0px;
+	padding-top: 0px;
+	font-size: 13px;
+	color:#000;
+}
+
+h2.ueberschrift_bestellvorgang{
+	color: #000;
+}
+
+.versandadresse_iconbereich{
+	background-image: url('../Images/Design/versand.png');
+}
+
+.form_content .auflistung_warenkorb{
+	font-size: 13.8px;
+}
+
+.form_content .auflistung_warenkorb .aktuelleArtikelimWarenkorb .ArtikelbildWarenkorb .Artikelbild {
+	width: 80px;
+}
+
+.ArtikelPreisWarenkorb{
+	text-align: right;
+}
+
+#bankeinzug, #adresse_andere{
+	margin-top: 30px;
+}
+
+.bankeinzug_form, .lieferadresse_form{
+	position: absolute;
+	/*border: solid;*/
+	height: 140px;
+	width: 520px;
+}
+
+.platzhalter_formular_bankeinzug{
+	/*border: solid;*/
+	height: 140px;
+	/*color: red;*/
+}
+
+.platzhalter_formular_lieferadresse{
+    height: 210px;
+}
+
+input:disabled {
+	background-color: #D8D8D8;
+	content: 'hallo';
+	color: rgb(80,80,80);
+	border-color: #848484;
+}
+
+#bankeinzug_form_disabled, #lieferadresse_form_disabled{
+	z-index: 1;
+}
+
+#bankeinzug_form_disabled p label,  #lieferadresse_form_disabled p label,  #lieferadresse_form_disabled p span, .gespeicherte_adresse{
+	color: #BDBDBD;
+}
+
+#bankeinzug_form_enabled, #lieferadresse_form_enabled{
+	display: none;
+	z-index: 2;
+}
+
+#bankeinzug:checked + #bankeinzug_form_enabled, #adresse_andere:checked + #lieferadresse_form_enabled{
+	display: block;
+}
+
+#adresse_reg:checked + label .gespeicherte_adresse{
+	color: black;
+}
+
+.gespeicherte_adresse{
+    padding-left: 25px;
+}
+
+.werte_bestellvorgang_uebersicht_ueberschrift{
+	font-size: 20px;
+	font-weight: bold;
+	color: #fff;
+	margin-top: 10px;
+}
+
+ul.werte_bestellvorgang_uebersicht{
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+.werte_bestellvorgang_uebersicht_zahlungsart{
+	display: table;
+}
+
+.werte_bestellvorgang_uebersicht_zahlungsart_bereich{
+	display: table-cell;
+}
+
+.werte_bestellvorgang_uebersicht_zahlungsart_platzierung_aendern_stift{
+	vertical-align: middle;
+	padding-left: 15px;
+}
+
+.werte_bestellvorgang_uebersicht_zahlungsart_platzierung_aendern_stift_oben{
+    padding-left: 5px;
+    vertical-align: top;
+}
+
+.agbtext_bestellvorgang{
+	margin-top:5px;
+	border: solid 2px;
+	border-color: black;
+	height: 200px;
+	background-color: white;
+	overflow-y: scroll;
+	overflow-x: hidden; 
+	border-radius: 10px;
+	color:black;
+}
+
+.agb_ueberschrift{
+	color: #D56509;
+        font-size:24px;
+}
+
+.agbtext_bestellvorgang .AGB{
+	padding: 15px;
+	padding-top: 0px;
+	font-size: 13px;
+}
+
+.agbtext_bestellvorgang .AGB .agb_ueberschrift{
+	font-size: 16px;
+}
+
+#checkbox_agb{
+	margin-top: 5px;
+}
+
+#bestellenButton{
+	background: #D56509;
 }

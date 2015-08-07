@@ -43,7 +43,9 @@
 	error_reporting ( E_ALL );
 	ini_set ( 'display_errors', 1 );
 	
+	//Klassen, die vor den erstellen einer Session-Variable geladen werden müssen, damit sie in der Session gespeichert werden können
 	include_once 'Classes/warenkorb.php.inc';
+	include_once 'Classes/bestellungenslisteneintrag.php.inc';
 	
 	// Startet eine neue Sitzung
 	session_start ();
@@ -93,7 +95,7 @@
 				<div class="warenkorbCell">
             <?php
 												$warenkorb1 = new warenkorb ();
-												echo ($warenkorb1->menge_im_warenkorb ());
+												echo '<span class="warenkorbCellMengeHeader" >'.$warenkorb1->menge_im_warenkorb ().'</span>';
 												include_once 'Pages/popupWarenkorb.php.inc';
 												?>
 

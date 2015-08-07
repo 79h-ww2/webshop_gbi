@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.6.24, for debian-linux-gnu (x86_64)
+-- MySQL dump 10.13  Distrib 5.6.25, for debian-linux-gnu (x86_64)
 --
 -- Host: localhost    Database: webshop
 -- ------------------------------------------------------
--- Server version	5.6.24-0ubuntu2
+-- Server version	5.6.25-0ubuntu0.15.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -40,6 +40,34 @@ INSERT INTO `bauart` VALUES (1,'Trekkingrad'),(2,'Elektro Rad'),(3,'Cityrad'),(4
 UNLOCK TABLES;
 
 --
+-- Table structure for table `bestellprodukte`
+--
+
+DROP TABLE IF EXISTS `bestellprodukte`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `bestellprodukte` (
+  `BestId` int(11) NOT NULL,
+  `PId` int(11) NOT NULL,
+  `Menge` int(11) NOT NULL,
+  PRIMARY KEY (`BestId`,`PId`),
+  KEY `PId` (`PId`),
+  CONSTRAINT `bestellprodukte_ibfk_1` FOREIGN KEY (`BestId`) REFERENCES `bestellung` (`BestId`),
+  CONSTRAINT `bestellprodukte_ibfk_2` FOREIGN KEY (`PId`) REFERENCES `produkte` (`PId`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `bestellprodukte`
+--
+
+LOCK TABLES `bestellprodukte` WRITE;
+/*!40000 ALTER TABLE `bestellprodukte` DISABLE KEYS */;
+INSERT INTO `bestellprodukte` VALUES (2,2,4);
+/*!40000 ALTER TABLE `bestellprodukte` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `bestellung`
 --
 
@@ -48,8 +76,6 @@ DROP TABLE IF EXISTS `bestellung`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `bestellung` (
   `KId` int(11) NOT NULL DEFAULT '0',
-  `PId` int(11) NOT NULL DEFAULT '0',
-  `Menge` int(11) DEFAULT NULL,
   `Status` varchar(25) DEFAULT NULL,
   `Datum` date DEFAULT NULL,
   `Zahlungsart` varchar(25) DEFAULT NULL,
@@ -58,12 +84,20 @@ CREATE TABLE `bestellung` (
   `geloescht` enum('ja','nein') DEFAULT NULL,
   `BestId` int(11) NOT NULL AUTO_INCREMENT,
   `SAP_BestId` int(11) DEFAULT NULL,
+  `bankeinzug_iban` varchar(38) DEFAULT NULL,
+  `bankeinzug_bic` varchar(11) DEFAULT NULL,
+  `bankeinzug_kontoinhaber` varchar(50) DEFAULT NULL,
+  `lieferadresse_geschlecht` enum('männlich','weiblich') DEFAULT NULL,
+  `lieferadresse_vorname` varchar(50) DEFAULT NULL,
+  `lieferadresse_name` varchar(50) DEFAULT NULL,
+  `lieferadresse_strasse` varchar(50) DEFAULT NULL,
+  `lieferadresse_hausnummer` varchar(10) DEFAULT NULL,
+  `lieferadresse_plz` varchar(5) DEFAULT NULL,
+  `lieferadresse_ort` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`BestId`),
-  KEY `bestellung_ibfk_1` (`PId`),
   KEY `bestellung_ibfk_2` (`KId`),
-  CONSTRAINT `bestellung_ibfk_1` FOREIGN KEY (`PId`) REFERENCES `produkte` (`PId`),
   CONSTRAINT `bestellung_ibfk_2` FOREIGN KEY (`KId`) REFERENCES `kunde` (`KId`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -72,6 +106,7 @@ CREATE TABLE `bestellung` (
 
 LOCK TABLES `bestellung` WRITE;
 /*!40000 ALTER TABLE `bestellung` DISABLE KEYS */;
+INSERT INTO `bestellung` VALUES (6,'Auftrag erhalten','2015-08-07','bankeinzug','2015-08-07 01:32:37','expressversand','nein',2,NULL,'DE08700901001234567890','1234567890a','Helena von Throja','weiblich','Helena','von Throja','Burgstraße','2','12345','Throja');
 /*!40000 ALTER TABLE `bestellung` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -140,7 +175,7 @@ CREATE TABLE `kunde` (
 
 LOCK TABLES `kunde` WRITE;
 /*!40000 ALTER TABLE `kunde` DISABLE KEYS */;
-INSERT INTO `kunde` VALUES (2,'Benedikt','32839','Steinheim','benedikt@webshop-testmail.de',NULL,'Papiermühlenweg','Brüntrup','2015-06-04 12:05:00','','161ebd7d45089b3446ee4e0d86dbcf92',NULL,'nein','ja',NULL,NULL,NULL),(3,'Benedikt','32839','Steinheim','root@kunde.de',NULL,'Papiermühlenweg','Brüntrup','2015-06-10 12:29:02','','161ebd7d45089b3446ee4e0d86dbcf92',NULL,'nein','ja',NULL,NULL,'2'),(4,'Paul','32839','Osthausen','benedikt@kunde.de',NULL,'Teststraße','Tester','2015-06-21 18:40:46','männlich','161ebd7d45089b3446ee4e0d86dbcf92',NULL,'nein','ja',NULL,'a','3');
+INSERT INTO `kunde` VALUES (2,'Benedikt','32839','Steinheim','benedikt@webshop-testmail.de',NULL,'Papiermühlenweg','Brüntrup','2015-06-04 12:05:00','','161ebd7d45089b3446ee4e0d86dbcf92',NULL,'nein','ja',NULL,NULL,NULL),(3,'Benedikt','32839','Steinheim','root@kunde.de',NULL,'Papiermühlenweg','Brüntrup','2015-06-10 12:29:02','','161ebd7d45089b3446ee4e0d86dbcf92',NULL,'nein','ja',NULL,NULL,'2'),(5,'Root','22222','Baum','root@webshop-testmail.de',NULL,'Wurzel','Root','2015-06-26 22:41:41','männlich','161ebd7d45089b3446ee4e0d86dbcf92',NULL,'nein','ja',NULL,NULL,'1'),(6,'Otto','12345','Testhausen','benedikt@kunde.de',NULL,'Teststraße','Tester','2015-08-02 14:26:59','männlich','161ebd7d45089b3446ee4e0d86dbcf92',NULL,'nein','ja',NULL,NULL,'2');
 /*!40000 ALTER TABLE `kunde` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -211,7 +246,7 @@ CREATE TABLE `produkte` (
 
 LOCK TABLES `produkte` WRITE;
 /*!40000 ALTER TABLE `produkte` DISABLE KEYS */;
-INSERT INTO `produkte` VALUES (1,NULL,'Das smarte Rockaway ist ein Freizeitbike, das überall zu Hause ist - von Alltagsstrecken in der Stadt bis auf Ausflugstouren übers Land. Ob auf Feld- und Waldwegen, auf Schotterstraßen oder asphaltierten Radwegen, das Rockaway bringt seinen Fahrer zuverlässig und flott ans Ziel. Auf kleinen Anstiegen findet sich mit der zuverlässigen Shimano Altus 21 Gang Schaltung schnell die passende Übersetzung. In Kombination mit Shimano Umwerfer und Shimano Zahnkranz sorgt dieser Antrieb für nachhaltigen Fahrspaß.\r\n\r\nDie Shimano Schalt- Bremshebelkombination bietet dabei gerade Einsteigern vor allem Komfort und Sicherheit. Die Federgabel von Suntour schluckt kleine Unebenheiten mühelos weg und macht zusammen mit den griffigen Reifen selbst holprige Pisten zum Vergnügen. Dank des komfortablen Sportsattels und der gemäßigt sportlichen Sitzposition, die Rahmengeometrie, Vorbau und Riserlenker vorgeben steigt der Rockawayfahrer auch nach längeren Ausflügen noch entspannt vom Rad. Stabile Laufräder mit Hohlkammerfelgen, ein wartungsfreies Patronen Innenlager und gut greifende V-Brakes runden das Bild ab. Mit dem Rockaway steht für einen wirklich günstigen Preis nicht nur ein guter Rahmen mit einer ausgewogenen Ausstattung zur Verfügung, sondern der Fahrspaß ist bereits schon all inklusive.',14,279.99,NULL,'blau','Serious Rockaway 26\"',2,NULL,'nein',1,NULL,NULL,NULL,NULL),(2,NULL,'Mit dem De Goya lässt sich auf Ausflugstour bequem durch malerische Landschaften cruisen oder komfortabel kurze Wege in der Stadt bewältigen.\r\n\r\nDie Federgabel dämpft selbst gröbere Unebenheiten locker weg und schont Wirbelsäule sowie Gelenke. Auf dem Touren Komfortsattel sitzt man in moderat aufrechter Sitzposition auch über längere Strecken gut; zumal die Sitzposition über den verstellbaren Vorbau je nach Bedarf angepasst werden kann. 7 Gänge erlauben bequemes Fahren, auch wenn es etwas bergan gehen sollte. Bergab sorgen gut greifende V-Brakes in Kombination mit der beliebten Rücktrittbremse für Sicherheit. Der Fahrspaß und die Sicherheit sind starke Argumente für ein De Goya, nicht zuletzt aber besticht es mit einer sehr ästhetischen Optik der Anbauteile, einem Hauch von Nostalgie durch den Sattel und die Griffe sowie zurückhaltendem Understatement des Rahmens in schlichtem schwarzmatt.\r\n\r\nIm Detail ist das de Goya mit hochwertiger Schwalbe Pannenschutzbereifung, rostfreien Speichen, stabilen Hohlkammerfelgen und wartungsfreiem Innenlager auch da erstklassig ausgestattet, wo man es nicht auf dem ersten Blick sieht, sich aber langfristig besonders auszahlt. ',3,400.00,NULL,'schwarz','Ortler deGoya Damen (2015)',4,NULL,'nein',1,NULL,NULL,'Damenrad','Oertler');
+INSERT INTO `produkte` VALUES (1,NULL,'Das smarte Rockaway ist ein Freizeitbike, das überall zu Hause ist - von Alltagsstrecken in der Stadt bis auf Ausflugstouren übers Land. Ob auf Feld- und Waldwegen, auf Schotterstraßen oder asphaltierten Radwegen, das Rockaway bringt seinen Fahrer zuverlässig und flott ans Ziel. Auf kleinen Anstiegen findet sich mit der zuverlässigen Shimano Altus 21 Gang Schaltung schnell die passende Übersetzung. In Kombination mit Shimano Umwerfer und Shimano Zahnkranz sorgt dieser Antrieb für nachhaltigen Fahrspaß.\r\n\r\nDie Shimano Schalt- Bremshebelkombination bietet dabei gerade Einsteigern vor allem Komfort und Sicherheit. Die Federgabel von Suntour schluckt kleine Unebenheiten mühelos weg und macht zusammen mit den griffigen Reifen selbst holprige Pisten zum Vergnügen. Dank des komfortablen Sportsattels und der gemäßigt sportlichen Sitzposition, die Rahmengeometrie, Vorbau und Riserlenker vorgeben steigt der Rockawayfahrer auch nach längeren Ausflügen noch entspannt vom Rad. Stabile Laufräder mit Hohlkammerfelgen, ein wartungsfreies Patronen Innenlager und gut greifende V-Brakes runden das Bild ab. Mit dem Rockaway steht für einen wirklich günstigen Preis nicht nur ein guter Rahmen mit einer ausgewogenen Ausstattung zur Verfügung, sondern der Fahrspaß ist bereits schon all inklusive.',14,279.99,NULL,'blau','Serious Rockaway 26\"',2,NULL,'nein',1,NULL,NULL,NULL,NULL),(2,NULL,'Mit dem De Goya lässt sich auf Ausflugstour bequem durch malerische Landschaften cruisen oder komfortabel kurze Wege in der Stadt bewältigen.\r\n\r\nDie Federgabel dämpft selbst gröbere Unebenheiten locker weg und schont Wirbelsäule sowie Gelenke. Auf dem Touren Komfortsattel sitzt man in moderat aufrechter Sitzposition auch über längere Strecken gut; zumal die Sitzposition über den verstellbaren Vorbau je nach Bedarf angepasst werden kann. 7 Gänge erlauben bequemes Fahren, auch wenn es etwas bergan gehen sollte. Bergab sorgen gut greifende V-Brakes in Kombination mit der beliebten Rücktrittbremse für Sicherheit. Der Fahrspaß und die Sicherheit sind starke Argumente für ein De Goya, nicht zuletzt aber besticht es mit einer sehr ästhetischen Optik der Anbauteile, einem Hauch von Nostalgie durch den Sattel und die Griffe sowie zurückhaltendem Understatement des Rahmens in schlichtem schwarzmatt.\r\n\r\nIm Detail ist das de Goya mit hochwertiger Schwalbe Pannenschutzbereifung, rostfreien Speichen, stabilen Hohlkammerfelgen und wartungsfreiem Innenlager auch da erstklassig ausgestattet, wo man es nicht auf dem ersten Blick sieht, sich aber langfristig besonders auszahlt. ',3,400.00,NULL,'schwarz','Ortler deGoya Damen (2015)',4,NULL,'nein',1,NULL,NULL,'Damenrad','Oertler'),(666,'nein','abc',NULL,2.00,'2015-07-28 00:00:00','rot','Beispiel Zubehör',2,20,NULL,2,NULL,NULL,'Herrenrad','Hugo');
 /*!40000 ALTER TABLE `produkte` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -248,4 +283,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-06-21 18:41:31
+-- Dump completed on 2015-08-07  1:34:34

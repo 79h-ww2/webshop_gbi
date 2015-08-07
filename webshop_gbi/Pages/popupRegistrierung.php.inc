@@ -12,9 +12,24 @@
 			<div id="popup_reg_anmeldungsteil" >
 				<?php 
 					//Setzt die Action-Url zusammen
-					$url = $_SERVER['PHP_SELF']; 
+					/*$url = $_SERVER['PHP_SELF']; 
 					if ( isset($_GET['page'])){
 						$url .= "?page=".htmlspecialchars($_GET['page'],ENT_QUOTES,'UTF-8');
+					}*/	
+				
+					//Setzt die Action-Url zusammen
+					$url = ( count($_GET) > 0 ) ?  "./?" : "./";
+						
+					$get_feldnamen = array_keys($_GET);
+					for ( $i = 0; $i < count($_GET); $i++)
+					{
+						$wert = htmlspecialchars ($_GET[$get_feldnamen[$i]],ENT_QUOTES,'ISO8859-1');
+						$feldname = htmlspecialchars ($get_feldnamen[$i],ENT_QUOTES,'ISO8859-1');
+						
+						if ($feldname != "aktion" && $wert != "abmelden"){ //übernimmt nur die Get-Parameter, wenn sie nicht zum gleichzeitigen Abmelden führen
+							if ( $i > 0) $url .= "&";
+							$url .= $feldname."=".$wert;
+						}
 					}
 				?>
 				<form method="post" action="<?php echo $url; ?>" name="anmeldung" onsubmit="return vorcheckEingabe_anmeldung();" >

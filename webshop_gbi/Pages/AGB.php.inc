@@ -1,7 +1,7 @@
 <div class="AGB">
 	<h1>AGB</h1>
 
-	<h2>1. Zustandekommen des Vertrags</h2>
+	<div class="agb_ueberschrift" >1. Zustandekommen des Vertrags</div>
 	
 	<p>
 	Mit Ihrer Bestellung geben Sie ein verbindliches Angebot an uns ab, einen Vertrag mit Ihnen zu schließen. Mit der Zusendung einer <br>
@@ -20,7 +20,7 @@
 	</p>
 	
 		
-	<h2>2. Speicherung des Vertragstextes</h2>
+	<div class="agb_ueberschrift" >2. Speicherung des Vertragstextes</div>
 	
 	<p>
 	Den Vertragstext Ihrer Bestellung speichern wir. Sie können diesen vor der Versendung Ihrer Bestellung an uns ausdrucken, indem Sie <br>
@@ -28,13 +28,13 @@
 	Auftragsbestätigung mit allen Bestelldaten und unseren Allgemeinen Geschäftsbedingungen an die von Ihnen angegebene E-Mail-Adresse. <br>
 	</p>
 	
-	<h2>3. Eigentumsvorbehalt</h2>
+	<div class="agb_ueberschrift" >3. Eigentumsvorbehalt</div>
 	
 	<p>
 	Die gelieferte Ware bleibt bis zur vollständigen Bezahlung aller Forderungen unser Eigentum. <br>
 	</p>
 	
-	<h2>4. Preise, Versandkosten, Rücksendekosten bei Widerruf</h2>
+	<div class="agb_ueberschrift" >4. Preise, Versandkosten, Rücksendekosten bei Widerruf</div>
 	
 	<p>
 	Alle Preise sind Endpreise, sie enthalten die gesetzliche Mehrwertsteuer. Der Mindestbestellwert beträgt [XX] Euro. <br>
@@ -48,7 +48,7 @@
 	Widerrufsrecht Gebrauch machen, übernehmen wir die Kosten der Rücksendung.“] <br>
 	</p>
 	
-	<h2>5. Lieferbedingungen</h2>
+	<div class="agb_ueberschrift" >5. Lieferbedingungen</div>
 	
 	<p>
 	Als Lieferzeiten gelten die beim Angebot angegebenen Lieferzeiten, diese beginnen mit Zahlungseingang. Bei Lieferung auf Rechnung <br>
@@ -56,7 +56,7 @@
 	</p>
 	
 		
-	<h2>6. Zahlungsbedingungen</h2>
+	<div class="agb_ueberschrift" >6. Zahlungsbedingungen</div>
 	
 	<p>
 	Die Zahlung erfolgt wahlweise per Vorkasse durch Vorab-Überweisung, per Rechnung, per Lastschrifteinzug oder per Nachnahme. Wir behalten <br>
@@ -64,7 +64,7 @@
 	Auftragsbestätigung. Der Rechnungsbetrag ist binnen 10 Tagen auf unser Konto zu überweisen. <br>
 	</p>
 	
-	<h2>7. Gewährleistung</h2>
+	<div class="agb_ueberschrift" >7. Gewährleistung</div>
 	
 	<p>
 	Die Gewährleistung richtet sich nach den gesetzlichen Bestimmungen. Soweit gebrauchte Waren Gegenstand des Kaufvertrags sind und der <br>
@@ -72,7 +72,7 @@
 	Kauf gebrauchter Sachen ein Jahr. <br>
 	</p>
 	
-	<h2>8. Datenschutz</h2>
+	<div class="agb_ueberschrift" >8. Datenschutz</div>
 	
 	<p>
 	Bei Anbahnung, Abschluss, Abwicklung und Rückabwicklung eines Kaufvertrages werden von uns Daten im Rahmen der gesetzlichen Bestimmungen <br>
@@ -98,7 +98,7 @@
 	Dienstleistungen Dritter in Anspruch nehmen, werden die Bestimmungen des Bundesdatenschutzgesetzes eingehalten. <br>
 	</p>
 	
-	<h2>Dauer der Speicherung</h2>
+	<div class="agb_ueberschrift" >Dauer der Speicherung</div>
 	
 	<p>
 	Personenbezogene Daten, die uns über unsere Website mitgeteilt worden sind, werden nur so lange gespeichert, bis der Zweck erfüllt ist, <br>
@@ -106,7 +106,7 @@
 	bestimmter Daten bis zu 10 Jahre betragen. <br>
 	</p>
 	
-	<h2>Ihre Rechte</h2>
+	<div class="agb_ueberschrift" >Ihre Rechte</div>
 	
 	<p>
 	Sollten Sie mit der Speicherung Ihrer personenbezogenen Daten nicht mehr einverstanden oder diese unrichtig geworden sein, werden wir auf <br>
@@ -123,7 +123,7 @@
 	E-Mail-Adresse: <br>
 	</p>
 	
-	<h2>Links auf andere Internetseiten</h2>
+	<div class="agb_ueberschrift" >Links auf andere Internetseiten</div>
 	
 	<p>
 	Soweit wir von unserem Internetangebot auf die Webseiten Dritter verweisen oder verlinken, können wir keine Gewähr und Haftung für die <br>
@@ -137,7 +137,7 @@
 	bezeichnet werden. Für diese Erklärung kann z. B. der (ggf. individuell angepasste) Text von Ziffer 8 dieser Muster-AGB verwendet werden. <br>
 	</p>
 	
-	<h2>9. Anwendbares Recht</h2>
+	<div class="agb_ueberschrift" >9. Anwendbares Recht</div>
 	
 	<p>
 	Es gilt ausschließlich deutsches Recht. Gegenüber einem Verbraucher gilt diese Rechtswahl nur insoweit, als dadurch keine zwingenden <br>

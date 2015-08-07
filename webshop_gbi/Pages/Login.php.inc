@@ -6,11 +6,20 @@ $eingabe_ungueltig_login = isset ( $eingabe_ungueltig_login ) ? $eingabe_unguelt
 
 
 <?php
-// Setzt die Action-Url zusammen
-$url = $_SERVER ['PHP_SELF'];
-if (isset ( $_GET ['page'] )) {
-	$url .= "?page=" . htmlspecialchars ( $_GET ['page'], ENT_QUOTES, 'UTF-8' );
-}
+	//Setzt die Action-Url zusammen
+	$url = ( count($_GET) > 0 ) ?  "./?" : "./";
+		
+	$get_feldnamen = array_keys($_GET);
+	for ( $i = 0; $i < count($_GET); $i++)
+	{
+		$wert = htmlspecialchars ($_GET[$get_feldnamen[$i]],ENT_QUOTES,'ISO8859-1');
+		$feldname = htmlspecialchars ($get_feldnamen[$i],ENT_QUOTES,'ISO8859-1');
+		
+		if ($feldname != "aktion" && $wert != "abmelden"){ //übernimmt nur die Get-Parameter, wenn sie nicht zum gleichzeitigen Abmelden führen
+			if ( $i > 0) $url .= "&";
+			$url .= $feldname."=".$wert;
+		}
+	}
 ?>
 
 <form method="post" action="<?php echo $url; ?>" name="form_login"
@@ -48,18 +57,18 @@ if (isset ( $_GET ['page'] )) {
 						}
 						?>
 					</p>
+						
 
 				<input type="submit"  value="Login" title="Login"/>
 
 				<!--<a href="" title="Passwort vergessen" id="passwort_link" >
 						Passwort vergessen
 					</a>-->
+				<div id="reg_link">
+					Sie haben noch kein Konto? Registrieren Sie sich <a	href="./?page=reg" title="Registrierung" style="color:black"> hier </a>
+				</div>
 
 				<div class="clear_right"></div>
-				<div id="reg_link">
-					Sie haben noch kein Konto? Registrieren Sie sich <a
-						href="./?page=reg" title="Registrierung"> hier </a>
-				</div>
 			</div>
 		</div>
 	</div>

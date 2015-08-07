@@ -1,9 +1,9 @@
 <?php
-	//lÃ¤dt die von der Seite benÃ¶tigten Funktionen
+	//lädt die von der Seite benötigten Funktionen
 	if (isset($_POST['type'])){
 		switch ($_POST['type']){
 			
-			//Skript zur DurchfÃ¼hrung der Registrierung ausfÃ¼hren
+			//Skript zur Durchführung der Registrierung ausführen
 			case 'reg':
 				include_once './Funktions/PHP/registrierung_durchfuehren.php.inc';
 			break;
@@ -14,18 +14,28 @@
 			break;
 						
 			case 'neuerArtikelimWarenkorb':
+			case 'markierung_loeschen_warenkorb':
+			case 'warenkorb-artikel-mengenaewnderung':
 				include_once './Funktions/PHP/warenkorb.php.inc';
 			break;
 				
-			//Skript zur DurchfÃ¼hrung der Anmeldung ausfÃ¼hren
+			//Skript zur Durchführung der Anmeldung ausführen
 			case 'anmeldung':
 				include_once './Funktions/PHP/anmeldung_durchfuehren.php.inc';
 			break;
 			
-			//fÃ¼hrt den Vorcheck der erweiterten Suche durch
+			//fährt den Vorcheck der erweiterten Suche durch
 			case 'erweiterte_suche':
 				include_once './Classes/Ueberpruefresult.php.inc';
 				include_once './Funktions/PHP/vorcheck_erweiterte_suche.php.inc';
+			break;
+			
+			//Bearbeitet die Aufgaben ab, die mit dem Bestellvorgang zu tun haben
+			case 'bestellvorgang_versandart':
+			case 'bestellvorgang_zahlungsart':
+			case 'bestellvorgang_lieferart':
+			case 'bestellvorgang_agb':
+				include_once 'Funktions/PHP/bestellvorgang.php.inc';
 			break;
 		}
 	}
@@ -42,6 +52,12 @@
 			case 'abmelden':
 				session_destroy();
 				session_start();
+			break;
+			
+			//Artikel aus dem Warenkorb entfernen ODER ändern der Bestellmenge eines Artikels im Warenkorb
+			case 'artikel-warenkorb-entfernen':	
+			case 'bestellmenge_warenkorbartikel_aendern':
+				include_once './Funktions/PHP/warenkorb.php.inc';
 			break;
 		}
 	}
