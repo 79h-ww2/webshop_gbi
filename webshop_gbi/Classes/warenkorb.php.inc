@@ -318,5 +318,12 @@ class warenkorb extends EingabeCheckGrundlegend{
 	 		$_SESSION["Warenkorb"] = $w;
  		};
  	}
+ 	
+ 	/**
+ 	 * leert den Warenkorb
+ 	 */
+ 	public function leeren(){
+ 		$_SESSION["Warenkorb"] = array();
+ 	}
 }
 ?>

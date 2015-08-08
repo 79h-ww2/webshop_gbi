@@ -1,6 +1,7 @@
 <?php
 	include_once 'Classes/bestellungen.php.inc';
 	include_once 'Classes/bankeinzug.php.inc';
+	include_once 'Classes/Email.php.inc';
 	
 	$bankeinzug_eingabe_unguelig = false;
 	$eingabe_ungueltig_adresse = false;
@@ -122,7 +123,22 @@
 		if (isset( $_POST['ack_agb']) && $_POST['ack_agb'] == 'ja' ){
 			
 			//Bestellung wird abgesendet
-			$bestellungen->zwischengespeicherter_bestellungslisteneintrag_bestellen();
+			$erfolgreich = $bestellungen->zwischengespeicherter_bestellungslisteneintrag_bestellen();
+			
+			//Wenn die Bestellung erfolgreich angelegt wurde, wird eine Bestätigungsemail versendet
+			if ( $erfolgreich){
+				//Bestätigungsemail versenden
+				$erfolgreich =$bestellungen->sende_bestaetigungs_email();
+			}
+			
+			//War das Senden der Email erfolgreich, wird der Warenkorb geleert
+			if ($erfolgreich){
+				$warenkorb1 = new warenkorb();
+				$warenkorb1->leeren();
+				
+				//leitet den Kunden an die Startseite weiter
+				header("location: ./?aktion=bestellung_uebermittelt");
+			}
 		}
 		//Wenn die AGB nicht zugestimmt wurde
 		else{
