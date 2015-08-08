@@ -44,7 +44,7 @@ class ArtikelDetails extends  Artikelauflistung{
 		Pfad
 		from
 		produktbilder
-		where pid = '$pid' AND geloescht = 'nein' ANd Art = 'Gross'  ";
+		where pid = '$pid' AND geloescht = 'nein' ANd Art = 'Produktbild'  ";
 		$result = $db->db_query($query);
 	
 		$wert = "";

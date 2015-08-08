@@ -24,7 +24,9 @@
     <content>
     
     <div class="detailLeft"> 
-    	Detailansichten:
+    	<?php $detailbilder = $artikelDetails->DetailbilderAnzeigen($_GET['pid']); 
+    	if (count($detailbilder) > 0) echo "Detailansichten:";  ?>
+    	
     		<div class="detailCell">
     		
     		<?php 
@@ -59,13 +61,7 @@
     		
     		echo $artikelDetails->produktbildAnzeigen($_GET['pid']);
     		
-    		?>" alt="
-    		<?php 
-    		
-    		echo htmlspecialchars($artikel->Bezeichnung,ENT_QUOTES,'UTF-8');
-    		
-    		?>
-    		" class="BildMustermodell" />
+    		?>" alt="Kein Produktbild vorhanden" class="BildMustermodell" />
     		<?php 
     		if ($artikelDetails->produktbildAnzeigen($_GET['pid'])!="")
     			echo "</a>";

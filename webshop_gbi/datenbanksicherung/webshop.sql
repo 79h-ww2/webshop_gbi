@@ -63,7 +63,7 @@ CREATE TABLE `bestellprodukte` (
 
 LOCK TABLES `bestellprodukte` WRITE;
 /*!40000 ALTER TABLE `bestellprodukte` DISABLE KEYS */;
-INSERT INTO `bestellprodukte` VALUES (2,2,4);
+INSERT INTO `bestellprodukte` VALUES (2,2,4),(3,2,2);
 /*!40000 ALTER TABLE `bestellprodukte` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -97,7 +97,7 @@ CREATE TABLE `bestellung` (
   PRIMARY KEY (`BestId`),
   KEY `bestellung_ibfk_2` (`KId`),
   CONSTRAINT `bestellung_ibfk_2` FOREIGN KEY (`KId`) REFERENCES `kunde` (`KId`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -106,7 +106,7 @@ CREATE TABLE `bestellung` (
 
 LOCK TABLES `bestellung` WRITE;
 /*!40000 ALTER TABLE `bestellung` DISABLE KEYS */;
-INSERT INTO `bestellung` VALUES (6,'Auftrag erhalten','2015-08-07','bankeinzug','2015-08-07 01:32:37','expressversand','nein',2,NULL,'DE08700901001234567890','1234567890a','Helena von Throja','weiblich','Helena','von Throja','Burgstraße','2','12345','Throja');
+INSERT INTO `bestellung` VALUES (6,'Auftrag erhalten','2015-08-07','bankeinzug','2015-08-07 01:32:37','expressversand','nein',2,NULL,'DE08700901001234567890','1234567890a','Helena von Throja','weiblich','Helena','von Throja','Burgstraße','2','12345','Throja'),(6,'Auftrag erhalten','2015-08-07','vorkasse','2015-08-07 09:11:04','standardversand','nein',3,NULL,'','','','männlich','Otto','Tester','Teststraße','2','12345','Testhausen');
 /*!40000 ALTER TABLE `bestellung` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -188,14 +188,14 @@ DROP TABLE IF EXISTS `produktbilder`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `produktbilder` (
   `BId` int(11) NOT NULL AUTO_INCREMENT,
-  `Art` varchar(25) DEFAULT NULL,
+  `Art` enum('Liste','Produktbild','Detail') DEFAULT NULL,
   `Pfad` text,
   `PId` int(11) DEFAULT NULL,
-  `geloescht` enum('ja','nein') DEFAULT NULL,
+  `geloescht` enum('nein','ja') DEFAULT 'nein',
   PRIMARY KEY (`BId`),
   KEY `PId` (`PId`),
   CONSTRAINT `produktbilder_ibfk_1` FOREIGN KEY (`PId`) REFERENCES `produkte` (`PId`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -204,7 +204,7 @@ CREATE TABLE `produktbilder` (
 
 LOCK TABLES `produktbilder` WRITE;
 /*!40000 ALTER TABLE `produktbilder` DISABLE KEYS */;
-INSERT INTO `produktbilder` VALUES (1,'Liste','./Images/Produktbilder/1/liste.jpg',1,'nein'),(2,'Liste','./Images/Produktbilder/2/Liste.jpg',2,'nein');
+INSERT INTO `produktbilder` VALUES (1,'Liste','./Images/Produktbilder/1/Produktbild_Liste.jpg',1,'nein'),(2,'Liste','./Images/Produktbilder/2/Liste.jpg',2,'nein'),(3,'Detail','./Images/Produktbilder/1/Detail_Hinterrad_Gross.jpg',1,'nein'),(4,'Detail','./Images/Produktbilder/1/Detail_Lenker_Gross.jpg',1,'nein'),(5,'Detail','./Images/Produktbilder/1/Detail_Pedale_Gross.jpg',1,'nein'),(6,'Detail','./Images/Produktbilder/1/Detail_Sattel_Gross.jpg',1,'nein'),(7,'Detail','./Images/Produktbilder/1/Detail_Vorderrad_Gross.jpg',1,'nein'),(8,'Produktbild','./Images/Produktbilder/1/Produktbild_Gross.jpg',1,'nein'),(9,'Produktbild','./Images/Produktbilder/2/Gross.jpg',2,'nein'),(10,'Detail','./Images/Produktbilder/2/Hinterrad_Gross.jpg',2,'nein'),(11,'Detail','./Images/Produktbilder/2/Lenker_Gross.jpg',2,'nein'),(12,'Detail','./Images/Produktbilder/2/Pedale_Gross.jpg',2,'nein'),(13,'Detail','./Images/Produktbilder/2/Sattel_Gross.jpg',2,'nein'),(14,'Detail','./Images/Produktbilder/2/Vorderrad_Gross.jpg',2,'nein');
 /*!40000 ALTER TABLE `produktbilder` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -283,4 +283,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-08-07  1:34:34
+-- Dump completed on 2015-08-08 13:08:38
