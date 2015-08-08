@@ -1,6 +1,8 @@
 <?php include_once 'Classes/ArtikelDetails.php.inc';?>
 <div class = "startseite">
 <article class="detailContent">
+
+
         
         <?php 
         
@@ -11,6 +13,9 @@
 			
 			$artikel = $artikelDetails->beschreibungAnzeigen($_GET['pid']);
 			
+			//wenn der Artikel exisitert
+			if ( $artikel != ""){
+			
 			
 			echo '<h2>'.htmlspecialchars($artikel->Bezeichnung,ENT_QUOTES,'UTF-8').'</h2>';
 		
@@ -19,27 +24,66 @@
     <content>
     
     <div class="detailLeft"> 
-    	Detailansichten:
+    	<?php $detailbilder = $artikelDetails->DetailbilderAnzeigen($_GET['pid']); 
+    	if (count($detailbilder) > 0) echo "Detailansichten:";  ?>
+    	
     		<div class="detailCell">
-	    		<img src="Images/Produktbilder/Mustermodell.png" alt="Mustermodell" class="BildMustermodellMinatur" />
     		
-	    		<img src="Images/Produktbilder/Mustermodell.png" alt="Mustermodell" class="BildMustermodellMinatur" />
+    		<?php 
     		
-	    		<img src="Images/Produktbilder/Mustermodell.png" alt="Mustermodell" class="BildMustermodellMinatur" />
+    		foreach ($artikelDetails->DetailbilderAnzeigen($_GET['pid']) AS $PfadDetailbild) {
+    			echo '<a href= "'.$PfadDetailbild.'"  data-lightbox="Produktbilder"> <img src="'.$PfadDetailbild.'" alt="Detail" class="BildMustermodellMinatur" /> </a>';
+    		}
+    		?>
     		
-	    		<img src="Images/Produktbilder/Mustermodell.png" alt="Mustermodell" class="BildMustermodellMinatur" />
-    		
-	    		<img src="Images/Produktbilder/Mustermodell.png" alt="Mustermodell" class="BildMustermodellMinatur" />
     		</div>
     </div>
     
     	<div class="detailMiddle">
-    		<img src="Images/Produktbilder/Mustermodell.png" alt="Mountainbike" class="BildMustermodell" />
+    	<?php 
+    	
+    	if ($artikelDetails->produktbildAnzeigen($_GET['pid'])!=""){
+    	
+    	
+    	?>
+    		<a href= "
+    		<?php 
+    		
+    		echo $artikelDetails->produktbildAnzeigen($_GET['pid']);
+    		
+    		?>
+    		" data-lightbox="Produktbilder">
+    		<?php 
+    	}
+    		?>
+    		<img src="
+    		<?php 
+    		
+    		echo $artikelDetails->produktbildAnzeigen($_GET['pid']);
+    		
+    		?>" alt="Kein Produktbild vorhanden" class="BildMustermodell" />
+    		<?php 
+    		if ($artikelDetails->produktbildAnzeigen($_GET['pid'])!="")
+    			echo "</a>";
+    		?>
+    		
+    		
     	</div>
     	
     	
     	<div class="detailContentText">
-    		<h3><a href="#" title="Mountainbikes">Mountainbike</a></h3>
+    		<?php 
+		
+					$artikelDetails = new ArtikelDetails();
+					
+					$artikel = $artikelDetails->beschreibungAnzeigen($_GET['pid']);
+					
+									
+					echo  '<span id="bauart" > <h3><a href="#" title="Mountainbikes">'.htmlspecialchars($artikel->bauart,ENT_QUOTES,'UTF-8').'</a> </h3> </span>'
+					
+					?>
+    		
+    		
     		
     		<div class="menge_exemplare_gruen">
     			<?php 
@@ -52,6 +96,20 @@
 					echo '<span id="exemplare_auf_lager" >'.htmlspecialchars($artikel->Menge,ENT_QUOTES,'UTF-8').'</span> Exemplare verfügbar';
 					
 				?>
+    		</div>
+    		
+    		
+    		<div class="listeneintrag_auflistung_preis" >
+    			<?php 
+		
+					$artikelDetails = new ArtikelDetails();
+					
+					$artikel = $artikelDetails->beschreibungAnzeigen($_GET['pid']);
+					
+					
+					echo '<span id="preis" >'.htmlspecialchars($artikel->Preis,ENT_QUOTES,'UTF-8').'</span> €';
+					
+					?>
     		</div>
     		
     		<div class="warenkorbFeld">
@@ -143,6 +201,6 @@
     </content>
     <a href="./?page=artBewerten" title="ArtikelBewerten">Artikel bewerten</a>
     
-    <?php }else{echo "Keine Artikelnummer übergeben !!!";} ?>
+    <?php }else{echo "<h2>Artikel nicht gefunden !!!</h2>";} }else{echo "Keine Artikelnummer übergeben !!!";} ?>
 </article>
 </div>
