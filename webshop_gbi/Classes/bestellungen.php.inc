@@ -7,6 +7,15 @@
 	include_once 'Classes/warenkorbeintrag.php.inc';
 	
 	/**
+	 * Ließt die Bankdaten der Firma GBI aus der Config-Datei ein
+	 * @return multitype:string
+	 */
+	function get_konto_daten_gbi(){
+		global $bankdaten_gbi;
+		return  $bankdaten_gbi;
+	}
+	
+	/**
 	 * Diese Klasse dient dazu die Bestellungen zu verwalten
 	 */
 	class Bestellungen extends EingabeCheckGrundlegend{
@@ -334,6 +343,17 @@
 							display: table-cell;
 							width:250px;
 						}
+							
+						.rot{
+							margin-top: 30px;
+							font-weight: bold;
+							color: red;
+							padding-bottom:30px;
+						}
+							
+						.rot ul{
+							margin-top: 15px;
+						}
 					
 					</style>
 				</head>
@@ -428,6 +448,8 @@
 					<li>'.htmlspecialchars(ucwords($this->get_zwischengespeicherte_bestellungseinstellungen()->get_zahlungsart()),ENT_QUOTES,'UTF-8').'</li>
 			</ul>
 		';
+		$weitere_Zahlungshinweise = "";
+		
 		if ( $this->get_zwischengespeicherte_bestellungseinstellungen()->get_zahlungsart() == 'bankeinzug' ){
 			
 			
@@ -439,11 +461,26 @@
 			</ul>	
 			';
 		}
+		else{
+			$daten = get_konto_daten_gbi();
+			
+			$weitere_Zahlungshinweise = '
+					<div class="rot" >
+						Bitte überweisen Sie den oben genannten Betrag an folgendes Konto:
+						<ul>
+							<li>Kontoinhaber: '.htmlspecialchars($daten['inhaber'],ENT_QUOTES,'UTF-8').'</li>
+							<li>IBAN: '.htmlspecialchars($daten['iban'],ENT_QUOTES,'UTF-8').'</li>
+							<li>BIC: '.htmlspecialchars($daten['bic'],ENT_QUOTES,'UTF-8').'</li>
+						</ul>
+					</div>
+			';
+		}
 		
 		$anrede= ( $this->get_zwischengespeicherte_bestellungseinstellungen()->get_liefer_geschlecht() == 'weiblich') ? "Frau" : "Herr";
 		
 		$html_code_email.= '
-		</div>	
+		</div>
+		'.$weitere_Zahlungshinweise.'	
 		<div class="ueberschriften" >Lieferadresse:</div>
 		<ul>
 			<li>'.$anrede.'</li>
