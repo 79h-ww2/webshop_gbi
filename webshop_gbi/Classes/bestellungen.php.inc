@@ -404,7 +404,7 @@
 			<p>vielen Dank für Ihre Bestellung beim Webshop der Firma GBI. Mit dieser Email bestätigen wird den Erhalt Ihrer Bestellung.</p>
 			<p>Sobald Ihre Zahlung bei uns eingegangen ist, wird Ihre Bestellung versendet. Wenn die Ware noch nicht versendet wurde, können Sie selbstverstänlich noch Änderungen an der Bestellung auf der Webseite durchführen.</p>
 		
-			<p>Damit Sie nochmal alle Detail der Bestellung überprüfen können, werden diese nochmal in dieser Email mitgesendet.</p>
+			<p>Damit Sie nochmal alle Details der Bestellung überprüfen können, werden diese nochmal in dieser Email mitgesendet.</p>
 			<div class="ueberschriften" >Versandart:</div>
 			<ul>
 				<li>'.htmlspecialchars(ucwords($this->get_zwischengespeicherte_bestellungseinstellungen()->get_versandart()),ENT_QUOTES,'UTF-8').'</li>
