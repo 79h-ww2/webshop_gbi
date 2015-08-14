@@ -324,7 +324,12 @@ img.account {
 }
 
 .bottomContent h2 {
-	text-align: left;
+	text-align: center;
+}
+
+.BottomContentContainer{
+	display: inline-block;
+	margin: 0px auto;
 }
 .BottomContentTableRow {
     display: table-row;

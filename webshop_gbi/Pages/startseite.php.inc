@@ -2,7 +2,11 @@
 
 include_once 'Classes/ArtikelDesTages.php.inc';
 
+include_once 'Classes/MeistAngeseheneArtikel.php.inc';
+
 $artikelDesTages = new ArtikelDesTages();
+
+$meistAngesheneArtikel = new MeistAngeseheneArtikel();
 
 $ArtikelDesTagesPId= $artikelDesTages->ArtikelDesTagesPIdSuchen();
 
@@ -126,28 +130,24 @@ $ArtikelDesTagesPId= $artikelDesTages->ArtikelDesTagesPIdSuchen();
     
     <content>
     <div class="BottomContentContainer">
-    	<div class="BottomContentTableRow">
-    		<div class="articleCell">
-	    		<img src="Images/Produktbilder/Mustermodell.png" alt="Mustermodell" class="BildMustermodellKlein" />
-	    		<h4><a href="#" title="Mustermodell A">Mustermodell A</a></h4>
-    		</div>
+    	<div class="BottomContentTableRow">   		
     		
-    		<div class="articleCell">
-	    		<img src="Images/Produktbilder/Mustermodell.png" alt="Mustermodell" class="BildMustermodellKlein" />
-	    		<h4><a href="#" title="Mustermodell B">Mustermodell B</a></h4>
-    		</div>
+    		<?php
     		
-    		<div class="articleCell">
-	    		<img src="Images/Produktbilder/Mustermodell.png" alt="Mustermodell" class="BildMustermodellKlein" />
-	    		<h4><a href="#" title="Mustermodell C">Mustermodell C</a></h4>
-    		</div>
+    		foreach ($meistAngesheneArtikel->MeistAngeseheneArtikelAnzeigen() as $angeseheneArtikel){
+    			
+    			$pfad = $angeseheneArtikel->Pfad;
+    			
+    			$bezeichnung = htmlspecialchars($angeseheneArtikel->Bezeichnung,ENT_QUOTES,'UTF-8');
+    			
+    			$pid= $angeseheneArtikel->PId;
+    			
+    			echo '<div class="articleCell"><a href="./?page=produkt&pid='.$pid.'" title="'.$bezeichnung.'"><img src="'.$pfad.'" alt="'.$bezeichnung.'" class="BildMustermodellKlein" </a>
+        		<h4><a href="./?page=produkt&pid='.$pid.'" title="'.$bezeichnung.'">'.$bezeichnung.'</a></h4></div>';
+    
+    		}
     		
-    		<div class="articleCell">
-	    		<img src="Images/Produktbilder/Mustermodell.png" alt="Mustermodell" class="BildMustermodellKlein" />
-	    		<h4><a href="#" title="Mustermodell D">Mustermodell D</a></h4>
-    		</div>
-	    	
-    	</div>
+    		?>	    	
         </div>
     </content>
 </article>

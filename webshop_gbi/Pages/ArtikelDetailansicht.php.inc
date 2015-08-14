@@ -1,7 +1,7 @@
 <?php include_once 'Classes/ArtikelDetails.php.inc';?>
-<?php include_once 'Classes/seitenaufrufe.php.inc';
+<?php include_once 'Classes/MeistAngeseheneArtikel.php.inc';
 
-$seitenaufrufe1 = new seitenaufrufe();
+$seitenaufrufe1 = new MeistAngeseheneArtikel();
 
 
 ?>
