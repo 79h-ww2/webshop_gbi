@@ -34,6 +34,12 @@ $ArtikelDesTagesPId= $artikelDesTages->ArtikelDesTagesPIdSuchen();
     </div>
     
     	<div class= "detailMiddle">
+    	<?php 
+    	$artikel = $artikelDesTages->beschreibungAnzeigen($ArtikelDesTagesPId);
+    	
+    	if ($artikelDesTages->produktbildAnzeigen($ArtikelDesTagesPId)!=""){
+    	echo '<a href="./?page=produkt&pid='.htmlspecialchars($ArtikelDesTagesPId,ENT_QUOTES,'UTF-8').'" title="'.htmlspecialchars($artikel->bauart,ENT_QUOTES,'UTF-8').'">';
+    	?>
     	<img src="
     		<?php 
     		
@@ -41,16 +47,13 @@ $ArtikelDesTagesPId= $artikelDesTages->ArtikelDesTagesPIdSuchen();
     		
     		?>" alt="
     		<?php 
-    		
-    		$artikel = $artikelDesTages->beschreibungAnzeigen($ArtikelDesTagesPId);
-    		
+    		    		
     		echo htmlspecialchars($artikel->Bezeichnung,ENT_QUOTES,'UTF-8');
     		
     		?>
     		" class="BildMustermodell" />
     		<?php 
-    		if ($artikelDesTages->produktbildAnzeigen($ArtikelDesTagesPId)!="")
-    			echo "</a>";
+    			echo "</a>";}
     		?>
     		
     		</div>
@@ -61,7 +64,7 @@ $ArtikelDesTagesPId= $artikelDesTages->ArtikelDesTagesPIdSuchen();
 					$artikel = $artikelDesTages->beschreibungAnzeigen($ArtikelDesTagesPId);
 					
 									
-					echo  '<span id="bauart" > <h3><a href="#" title="'.htmlspecialchars($artikel->bauart,ENT_QUOTES,'UTF-8').'">'.htmlspecialchars($artikel->bauart,ENT_QUOTES,'UTF-8').'</a> </h3> </span>'
+					echo  '<span id="bauart" > <h3><a href="./?page=produkt&pid='.htmlspecialchars($ArtikelDesTagesPId,ENT_QUOTES,'UTF-8').'" title="'.htmlspecialchars($artikel->bauart,ENT_QUOTES,'UTF-8').'">'.htmlspecialchars($artikel->bauart,ENT_QUOTES,'UTF-8').'</a> </h3> </span>'
 					
 					?>
     		
