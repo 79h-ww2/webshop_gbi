@@ -1072,7 +1072,7 @@ input[type="text"], input[type="email"], input[type="password"], select, input[t
 	cursor: pointer;
 }
 
-.listeneintrag_bewertung:hover > .popupBewertungProduktauflistung{
+.listeneintrag_bewertung:hover > .popupBewertungProduktauflistung, .artikeldetails_bewertung:hover > .popupBewertungProduktauflistung {
 	visibility: visible;
 }
 
@@ -1430,5 +1430,4 @@ ul.werte_bestellvorgang_uebersicht{
 
 .artikeldetails_bewertung{
 	margin-top:15px;
-}
 }

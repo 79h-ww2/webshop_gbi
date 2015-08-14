@@ -127,6 +127,9 @@ class ArtikelDetails extends  Artikelauflistung{
 
 		$bewertung1 = new Bewertung($arr_sterne);
 		$bewertung1->zeige_sterne();
+		
+		//Popup mit der detailierten Auswertung der Bewertung wird eingefügt
+		include './Pages/popupBewertungProduktauflistung.php.inc';
 	}
 }
 ?>
