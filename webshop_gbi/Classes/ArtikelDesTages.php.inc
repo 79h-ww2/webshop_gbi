@@ -17,6 +17,7 @@ class ArtikelDesTages extends ArtikelDetails {
 		where `Artikel des Tages` = 'ja' ";
 		$result = $db->db_query($query);
 		
+		
 		$werte = "";
 		
 		while ($db_werte = $db->db_fetch_object($result)){
