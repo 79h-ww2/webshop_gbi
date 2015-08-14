@@ -1427,3 +1427,8 @@ ul.werte_bestellvorgang_uebersicht{
 #bestellenButton{
 	background: #D56509;
 }
+
+.artikeldetails_bewertung{
+	margin-top:15px;
+}
+}

@@ -143,7 +143,9 @@
 				</div>
 				</form>
     		</div>
-    		
+    		<div class="artikeldetails_bewertung" >
+    			<?php $artikelDetails->bewertungZeigen($_GET['pid']); ?>
+    		</div>
     		<p><strong>Eigenschaften</strong></p>
     		
     		
