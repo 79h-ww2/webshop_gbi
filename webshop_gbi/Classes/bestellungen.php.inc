@@ -201,6 +201,41 @@
 			//Datenbankverbindung schließen
 			$db->db_close();
 			
+			//Verringert die Menge der Produkte auf Lager
+			if (!(!$result)){
+				for ($i = 0; $i < count($Artikel); $i++){
+					$eintrag = $Artikel[$i];
+					$menge = $eintrag->get_menge();
+					$artikelnummer = $eintrag->get_artikelnummer();
+					$this->produktmenge_auf_lager_verringern($artikelnummer, $menge);
+				}
+			}
+			
+			return (!$result) ? false : true;
+		}
+		
+		/**
+		 * Verringert den Mengenwert der Produkte auf Lager
+		 * @param int $pid Die Artikelnummer
+		 * @param int $verringerung der Wert der Verringerung
+		 * @return boolean
+		 */
+		public function produktmenge_auf_lager_verringern ($pid, $verringerung){
+			//Verbindung zur Datenbank aufbauen
+			$db = datenbank_verbindung_aufbauen();
+			if ( !($db->db_connect()) ) die ("Es konnte keine Verbindung zur Datenbank aufgebaut werden");
+			
+			$verringerung = $db->db_real_escape_string($verringerung);
+			$pid = $db->db_real_escape_string($pid);
+			
+			$query = "update produkte set `Verfuegbare Menge` = `Verfuegbare Menge` - $verringerung where PId = '$pid';";
+			
+			
+			$result = $db->db_query($query);
+			
+			//Datenbankverbindung schließen
+			$db->db_close();
+			
 			return (!$result) ? false : true;
 		}
 		
@@ -213,8 +248,9 @@
 			$skript_name = 'index.php';
 			$warenkorb1 = new warenkorb();
 			
-			
-			$datum = date("d.m.Y", time());
+			date_default_timezone_set("Europe/Berlin");
+			$timestamp = time();
+			$datum = date("d.m.Y", $timestamp);
 			
 			$kunde1 = new Kunden();
 			
@@ -232,7 +268,8 @@
 					<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 					<title>Best&auml;tigungs-Email des Webshop GBI zur Bestellung vom '.$datum.'</title>
 					<style type="text/css" >
-						header{
+						.header{
+							background: #6C7B35;
 							background: transparent linear-gradient(to right bottom, #6C7B35, #82A143, #788A5F) repeat scroll 0% 0%;
 							display:block;
 							width: 1004px;
@@ -358,16 +395,16 @@
 					</style>
 				</head>
 			<body>
-		<header>
-			<img class="logo" src="http://'.$_SERVER["SERVER_ADDR"].str_replace($skript_name,"",$_SERVER["PHP_SELF"]).'/Images/Design/Logo/fahrrad.png" alt="Firmenlogo" />
-		</header>
+		<div class="header">
+			<img class="logo" src="http://'.$_SERVER["SERVER_NAME"].str_replace($skript_name,"",$_SERVER["PHP_SELF"]).'/Images/Design/Logo/fahrrad.png" alt="Firmenlogo" />
+		</div>
 		<div class="content" >
 			<h2>Best&auml;tigungs-Email des Webshop GBI zur Bestellung vom '.$datum.'</h2>
 			'.$anrede.' '.htmlspecialchars($kunden_namen,ENT_QUOTES,'UTF-8').',
 			<p>vielen Dank für Ihre Bestellung beim Webshop der Firma GBI. Mit dieser Email bestätigen wird den Erhalt Ihrer Bestellung.</p>
 			<p>Sobald Ihre Zahlung bei uns eingegangen ist, wird Ihre Bestellung versendet. Wenn die Ware noch nicht versendet wurde, können Sie selbstverstänlich noch Änderungen an der Bestellung auf der Webseite durchführen.</p>
 		
-			<p>Damit Sie nochmal alle Detail der Bestellung überprüfen können, werden diese nochmal in dieser Email mitgesendet.</p>
+			<p>Damit Sie nochmal alle Details der Bestellung überprüfen können, werden diese nochmal in dieser Email mitgesendet.</p>
 			<div class="ueberschriften" >Versandart:</div>
 			<ul>
 				<li>'.htmlspecialchars(ucwords($this->get_zwischengespeicherte_bestellungseinstellungen()->get_versandart()),ENT_QUOTES,'UTF-8').'</li>
@@ -394,9 +431,9 @@
 			'
 				<div class="aktuelleArtikelimWarenkorb" >
 						<div class="ArtikelbildWarenkorb ">
-							<a class="ArtikelnameWarenkorbhyper" href="http://'.$_SERVER["SERVER_ADDR"].str_replace($skript_name,"",$_SERVER["PHP_SELF"]).'?page=produkt&pid='.htmlspecialchars ( $AktuellerArtikel->get_artikelnummer(), ENT_QUOTES, "UTF-8").'"><img class="Artikelbild" alt="Artikelbild" title="'.htmlspecialchars ( $AktuellerArtikel->get_artikelnamen(), ENT_QUOTES, 'UTF-8' ).'" src="http://'.$_SERVER["SERVER_ADDR"].str_replace($skript_name,"",$_SERVER["PHP_SELF"]).$AktuellerArtikel->get_artikelbild().'" ></a>
+							<a class="ArtikelnameWarenkorbhyper" href="http://'.$_SERVER["SERVER_NAME"].str_replace($skript_name,"",$_SERVER["PHP_SELF"]).'?page=produkt&pid='.htmlspecialchars ( $AktuellerArtikel->get_artikelnummer(), ENT_QUOTES, "UTF-8").'"><img class="Artikelbild" alt="Artikelbild" title="'.htmlspecialchars ( $AktuellerArtikel->get_artikelnamen(), ENT_QUOTES, 'UTF-8' ).'" src="http://'.$_SERVER["SERVER_NAME"].str_replace($skript_name,"",$_SERVER["PHP_SELF"]).$AktuellerArtikel->get_artikelbild().'" ></a>
 						</div>
-						<div class="ArtikelnameWarenkorb "> <a class="ArtikelnameWarenkorbhyper" href="./?page=produkt&pid='.htmlspecialchars ( $AktuellerArtikel->get_artikelnummer(), ENT_QUOTES, 'UTF-8').'">'.htmlspecialchars ( $AktuellerArtikel->get_artikelnamen(), ENT_QUOTES, 'UTF-8').'</a> </div>
+						<div class="ArtikelnameWarenkorb "> <a class="ArtikelnameWarenkorbhyper" href="http://'.$_SERVER["SERVER_NAME"].str_replace($skript_name,"",$_SERVER["PHP_SELF"]).'?page=produkt&pid='.htmlspecialchars ( $AktuellerArtikel->get_artikelnummer(), ENT_QUOTES, "UTF-8").'">'.htmlspecialchars ( $AktuellerArtikel->get_artikelnamen(), ENT_QUOTES, 'UTF-8').'</a> </div>
 						<div class="ArtikelmengeWarenkorb ">
 							'.htmlspecialchars ( $AktuellerArtikel->get_menge(), ENT_QUOTES, 'UTF-8' ).'
 						</div>
@@ -497,7 +534,7 @@
 ';
 		
 		$email = instanziere_email_objekt();
-		return $email->html_email_senden($kunde1->get_email_from_kid($kid), "Bestätigungs-Email des Webshop GBI zur Bestellung vom 08.08.2015", $html_code_email);
+		return $email->html_email_senden($kunde1->get_email_from_kid($kid), "Bestätigungs-Email des Webshop GBI zur Bestellung vom ".$datum, $html_code_email);
 		}
 		
 		
