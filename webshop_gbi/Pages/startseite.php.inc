@@ -38,6 +38,8 @@ $ArtikelDesTagesPId= $artikelDesTages->ArtikelDesTagesPIdSuchen();
     		?>" alt="
     		<?php 
     		
+    		$artikel = $artikelDesTages->beschreibungAnzeigen($ArtikelDesTagesPId);
+    		
     		echo htmlspecialchars($artikel->Bezeichnung,ENT_QUOTES,'UTF-8');
     		
     		?>

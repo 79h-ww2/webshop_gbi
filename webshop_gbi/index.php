@@ -224,8 +224,12 @@ else {
 		<div class="content">
         	
 			<?php
-			if (isset ( $_GET ['aktion'] ) && $_GET ['aktion'] == "abmelden")
+			if (isset ( $_GET ['aktion'] ) && $_GET ['aktion'] == "abmelden"){
 				echo '<h2 class="abmeldungsnachricht" >Sie wurden erfolgreich abgemeldet.</h2>';
+			}
+			elseif (isset ( $_GET ['aktion'] ) && $_GET ['aktion'] == "bestellung_uebermittelt" ){
+				echo '<h2 class="abmeldungsnachricht" >Die Bestellung wurde erfolgreich an GBI übermittelt.</h2>';
+			}
 			include "./Funktions/PHP/set_page.php.inc";
 			?>
         </div>

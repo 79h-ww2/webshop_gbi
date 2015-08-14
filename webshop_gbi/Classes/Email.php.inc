@@ -53,5 +53,24 @@
 			$erfolgreich = mail($empfaenger_adresse,$betreff,$nachricht,$header);
 			return $erfolgreich;
 		}
+		
+		/**
+		 * Versendet eine HTML-Email
+		 * @param unknown $empfaenger_adresse Der Empfänger der Email
+		 * @param unknown $betreff Der Betreff der Email
+		 * @param unknown $html_code DeEmail-Nachricht ürbertragen werden soll
+		 * @return boolean
+		 */
+		public function html_email_senden($empfaenger_adresse, $betreff, $html_code){
+			
+			//Email-Header wird erstellt
+			$header = "From: ".$this->absender_name." <".$this->absender_adresse.">\r\n";
+			$header  .= 'MIME-Version: 1.0' . "\r\n";
+			$header .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+			
+			//versendet die Email
+			$erfolgreich = mail($empfaenger_adresse,$betreff,$html_code,$header);
+			return $erfolgreich;
+		}
 	}
 ?>

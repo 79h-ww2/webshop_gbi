@@ -205,11 +205,11 @@ img.account {
 
 .detailContent {
     background-color: #EDFDD5;
-    background:linear-gradient(to bottom, white , 	#D9F0B7 , white );
+    /*background:linear-gradient(to bottom, white , 	#D9F0B7 , white );*/
     background: white;
 	margin: 50px 100px;
 	padding: 5px 0;
-	background:linear-gradient(to bottom, white , 	#EDFDD5 , white );
+	/*background:linear-gradient(to bottom, white , 	#EDFDD5 , white );*/
 	display: table;
 }
 
@@ -297,12 +297,13 @@ img.account {
 
 .topContent {
     background-color: #EDFDD5;
-    background:linear-gradient(to bottom, white , 	#D9F0B7 , white );
+    /*background:linear-gradient(to bottom, white , 	#D9F0B7 , white );*/
     background: white;
 	margin: 50px 100px;
 	height: 330px;
 	padding: 5px 0;
-	background:linear-gradient(to bottom, white , 	#EDFDD5 , white );
+	
+	/*background:linear-gradient(to bottom, white , 	#EDFDD5 , white );*/
 }
 
 
@@ -1071,7 +1072,7 @@ input[type="text"], input[type="email"], input[type="password"], select, input[t
 	cursor: pointer;
 }
 
-.listeneintrag_bewertung:hover > .popupBewertungProduktauflistung{
+.listeneintrag_bewertung:hover > .popupBewertungProduktauflistung, .artikeldetails_bewertung:hover > .popupBewertungProduktauflistung {
 	visibility: visible;
 }
 
@@ -1425,4 +1426,8 @@ ul.werte_bestellvorgang_uebersicht{
 
 #bestellenButton{
 	background: #D56509;
+}
+
+.artikeldetails_bewertung{
+	margin-top:15px;
 }
