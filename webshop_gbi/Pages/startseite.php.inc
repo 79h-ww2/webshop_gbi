@@ -1,26 +1,119 @@
+<?php 
+
+include_once 'Classes/ArtikelDesTages.php.inc';
+
+include_once 'Classes/MeistAngeseheneArtikel.php.inc';
+
+$artikelDesTages = new ArtikelDesTages();
+
+$meistAngesheneArtikel = new MeistAngeseheneArtikel();
+
+$ArtikelDesTagesPId= $artikelDesTages->ArtikelDesTagesPIdSuchen();
+
+?>
 <div class = "startseite">
-<article class="topContent">
+<article class="detailContent">
     <header>
         <h2>Fahrrad des Tages</h2>
     </header>
         
     <content>
-    	<img src="Images/Produktbilder/Mustermodell.png" alt="Mustermodell" class="BildMustermodell" />
+    
+    <div class="detailLeft"> 
+    	Detailansichten:
+    		<div class="detailCell">
+    		
+    		<?php 
+    		
+    		foreach ($artikelDesTages->DetailbilderAnzeigen($ArtikelDesTagesPId) AS $PfadDetailbild) {
+    			echo '<a href= "'.$PfadDetailbild.'"  data-lightbox="Produktbilder"> <img src="'.$PfadDetailbild.'" alt="Detail" class="BildMustermodellMinatur" /> </a>';
+    		}
+    		?>
+    		
+    		</div>
+    </div>
+    
+    	<div class= "detailMiddle">
+    	<img src="
+    		<?php 
+    		
+    		echo $artikelDesTages->produktbildAnzeigen($ArtikelDesTagesPId);
+    		
+    		?>" alt="
+    		<?php 
+    		
+    		$artikel = $artikelDesTages->beschreibungAnzeigen($ArtikelDesTagesPId);
+    		
+    		echo htmlspecialchars($artikel->Bezeichnung,ENT_QUOTES,'UTF-8');
+    		
+    		?>
+    		" class="BildMustermodell" />
+    		<?php 
+    		if ($artikelDesTages->produktbildAnzeigen($ArtikelDesTagesPId)!="")
+    			echo "</a>";
+    		?>
+    		
+    		</div>
     	
-    	<div class="topContentText">
-    		<h3><a href="#" title="Mustermodell">Mustermodell</a></h3>
+    	<div class="detailContentText">
+    		<?php 
+							
+					$artikel = $artikelDesTages->beschreibungAnzeigen($ArtikelDesTagesPId);
+					
+									
+					echo  '<span id="bauart" > <h3><a href="#" title="'.htmlspecialchars($artikel->bauart,ENT_QUOTES,'UTF-8').'">'.htmlspecialchars($artikel->bauart,ENT_QUOTES,'UTF-8').'</a> </h3> </span>'
+					
+					?>
     		
-    		<p><strong>Eigenschaften</strong></p>
     		
     		
-	        <ul type="disc">
-		        <li>32 Gänge + Rückwärtsgang</li>
-		        <li>Einparkassistent</li>
-		        <li>Allradantrieb</li>
-		        <li>Navigationssystem</li>
-		        <li>Tagfahrlicht</li>
-		        <li>Gratis Wackedackel für jedes Fahrrad :D</li>
-	        </ul>
+    		<div class="menge_exemplare_gruen">
+    			<?php 
+					
+					$artikel = $artikelDesTages->beschreibungAnzeigen($ArtikelDesTagesPId);
+					
+					
+					echo '<span id="exemplare_auf_lager" >'.htmlspecialchars($artikel->Menge,ENT_QUOTES,'UTF-8').'</span> Exemplare verfügbar';
+					
+				?>
+    		</div>
+    		
+    		
+    		<div class="listeneintrag_auflistung_preis" >
+    			<?php 
+							
+					$artikel = $artikelDesTages->beschreibungAnzeigen($ArtikelDesTagesPId);
+					
+					
+					echo '<span id="preis" >'.htmlspecialchars($artikel->Preis,ENT_QUOTES,'UTF-8').'</span> €';
+					
+					?>
+    		</div>		
+    		
+    		
+	        
+	        <?php 
+	        
+	        $eigenschaften = $artikelDesTages ->EigenschaftenAnzeigen($ArtikelDesTagesPId) ;
+	        
+	        if (count($eigenschaften)>0) {
+	        	
+	        	
+	        	if (count($eigenschaften)==1 && $eigenschaften[0]=="") {
+	        	}else {
+	        	
+	        	echo '<p><strong>Eigenschaften</strong></p>
+        				<ul type="disc">';
+	        	
+	        	foreach ($eigenschaften as $eigenschaft){
+	        		echo '<li>'.htmlspecialchars($eigenschaft,ENT_QUOTES,'UTF-8').'</li>';
+	        	}
+	        	echo '</ul>';
+	        	}
+	        }
+	        
+	        ?>
+		        
     	</div>
     	
     </content>
@@ -37,28 +130,24 @@
     
     <content>
     <div class="BottomContentContainer">
-    	<div class="BottomContentTableRow">
-    		<div class="articleCell">
-	    		<img src="Images/Produktbilder/Mustermodell.png" alt="Mustermodell" class="BildMustermodellKlein" />
-	    		<h4><a href="#" title="Mustermodell A">Mustermodell A</a></h4>
-    		</div>
+    	<div class="BottomContentTableRow">   		
     		
-    		<div class="articleCell">
-	    		<img src="Images/Produktbilder/Mustermodell.png" alt="Mustermodell" class="BildMustermodellKlein" />
-	    		<h4><a href="#" title="Mustermodell B">Mustermodell B</a></h4>
-    		</div>
+    		<?php
     		
-    		<div class="articleCell">
-	    		<img src="Images/Produktbilder/Mustermodell.png" alt="Mustermodell" class="BildMustermodellKlein" />
-	    		<h4><a href="#" title="Mustermodell C">Mustermodell C</a></h4>
-    		</div>
+    		foreach ($meistAngesheneArtikel->MeistAngeseheneArtikelAnzeigen() as $angeseheneArtikel){
+    			
+    			$pfad = $angeseheneArtikel->Pfad;
+    			
+    			$bezeichnung = htmlspecialchars($angeseheneArtikel->Bezeichnung,ENT_QUOTES,'UTF-8');
+    			
+    			$pid= $angeseheneArtikel->PId;
+    			
+    			echo '<div class="articleCell"><a href="./?page=produkt&pid='.$pid.'" title="'.$bezeichnung.'"><img src="'.$pfad.'" alt="'.$bezeichnung.'" class="BildMustermodellKlein" </a>
+        		<h4><a href="./?page=produkt&pid='.$pid.'" title="'.$bezeichnung.'">'.$bezeichnung.'</a></h4></div>';
+    
+    		}
     		
-    		<div class="articleCell">
-	    		<img src="Images/Produktbilder/Mustermodell.png" alt="Mustermodell" class="BildMustermodellKlein" />
-	    		<h4><a href="#" title="Mustermodell D">Mustermodell D</a></h4>
-    		</div>
-	    	
-    	</div>
+    		?>	    	
         </div>
     </content>
 </article>

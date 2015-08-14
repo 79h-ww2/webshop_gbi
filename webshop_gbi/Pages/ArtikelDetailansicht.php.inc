@@ -1,4 +1,10 @@
 <?php include_once 'Classes/ArtikelDetails.php.inc';?>
+<?php include_once 'Classes/MeistAngeseheneArtikel.php.inc';
+
+$seitenaufrufe1 = new MeistAngeseheneArtikel();
+
+
+?>
 <div class = "startseite">
 <article class="detailContent">
 
@@ -16,6 +22,10 @@
 			//wenn der Artikel exisitert
 			if ( $artikel != ""){
 			
+				if ($seitenaufrufe1->ArtikelSeiteSchonAufgerufen($_GET['pid']) == false) {
+					$seitenaufrufe1->BesuchezaehlerErhoehen($_GET['pid']);
+				}
+				
 			
 			echo '<h2>'.htmlspecialchars($artikel->Bezeichnung,ENT_QUOTES,'UTF-8').'</h2>';
 		
@@ -79,7 +89,7 @@
 					$artikel = $artikelDetails->beschreibungAnzeigen($_GET['pid']);
 					
 									
-					echo  '<span id="bauart" > <h3><a href="#" title="Mountainbikes">'.htmlspecialchars($artikel->bauart,ENT_QUOTES,'UTF-8').'</a> </h3> </span>'
+					echo  '<span id="bauart" > <h3><a href="#" title="'.htmlspecialchars($artikel->bauart,ENT_QUOTES,'UTF-8').'">'.htmlspecialchars($artikel->bauart,ENT_QUOTES,'UTF-8').'</a> </h3> </span>'
 					
 					?>
     		
@@ -143,18 +153,34 @@
 				</div>
 				</form>
     		</div>
+    		<div class="artikeldetails_bewertung" >
+    			<?php $artikelDetails->bewertungZeigen($_GET['pid']); ?>
+    		</div>
     		
-    		<p><strong>Eigenschaften</strong></p>
     		
-    		
-	        <ul type="disc">
-		        <li>32 Gänge + Rückwärtsgang</li>
-		        <li>Einparkassistent</li>
-		        <li>Allradantrieb</li>
-		        <li>Navigationssystem</li>
-		        <li>Tagfahrlicht</li>
-		        <li>Gratis Wackedackel für jedes Fahrrad :D</li>
-	        </ul>
+	        
+	        <?php 
+	        
+	        $eigenschaften = $artikelDetails ->EigenschaftenAnzeigen($_GET['pid']) ;
+	        
+	        if (count($eigenschaften)>0) {
+	        	
+	        	
+	        	if (count($eigenschaften)==1 && $eigenschaften[0]=="") {
+	        	}else {
+	        	
+	        	echo '<p><strong>Eigenschaften</strong></p>
+        				<ul type="disc">';
+	        	
+	        	foreach ($eigenschaften as $eigenschaft){
+	        		echo '<li>'.htmlspecialchars($eigenschaft,ENT_QUOTES,'UTF-8').'</li>';
+	        	}
+	        	echo '</ul>';
+	        	}
+	        }
+	        
+	        ?>
+		        
     	</div>
     	
     </content>

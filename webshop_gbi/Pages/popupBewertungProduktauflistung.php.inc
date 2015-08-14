@@ -22,7 +22,7 @@ if ($anzahlBewertungen > 0)
 					<span class="anzahlBewertung"> <?php echo $anzahl;?></span>
 			</div>
 			<div class="ZeileSterne">
-					<span class="beschriftung"> 2 Sterne:</span></td>
+					<span class="beschriftung"> 2 Sterne:</span>
 					<?php
 					$anzahl = $arr_sterne [1];
 					if ($anzahl == '') {
@@ -32,7 +32,7 @@ if ($anzahlBewertungen > 0)
 					<span class="anzahlBewertung"> <?php echo $anzahl;?></span>
 			</div>
 			<div class="ZeileSterne">
-					<span class="beschriftung"> 3 Sterne:</span></td>
+					<span class="beschriftung"> 3 Sterne:</span>
 					<?php
 					$anzahl = $arr_sterne [2];
 					if ($anzahl == '') {
@@ -42,7 +42,7 @@ if ($anzahlBewertungen > 0)
 					<span class="anzahlBewertung"><?php echo $anzahl;?></span>
 			</div>
 			<div class="ZeileSterne">
-					<span class="beschriftung"> 4 Sterne:</span></td>
+					<span class="beschriftung"> 4 Sterne:</span>
 					<?php
 					$anzahl = $arr_sterne [3];
 					if ($anzahl == '') {
@@ -53,7 +53,7 @@ if ($anzahlBewertungen > 0)
 
 			</div>
 			<div class="ZeileSterne">
-					<span class="beschriftung"> 5 Sterne:</span></td>
+					<span class="beschriftung"> 5 Sterne:</span>
 					<?php
 					$anzahl = $arr_sterne [4];
 					if ($anzahl == '') {
@@ -64,16 +64,6 @@ if ($anzahlBewertungen > 0)
 			</div>
 		</div>
 		<div class="popupBewertungLinkAlleBewertungen">
-			<?php
-			
-$text = '';
-			if ($anzahlBewertungen == 1) {
-				$text = 'Eine Bewertung anzeigen';
-			} elseif ($anzahlBewertungen > 1) {
-				$text = 'Alle ' . $anzahlBewertungen . ' Bewertung anzeigen';
-			}
-			?>
-			<a href="#"><?php echo $text; ?></a>
 		</div>
 	</div>
 </div>

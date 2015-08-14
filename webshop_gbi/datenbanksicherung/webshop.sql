@@ -63,7 +63,6 @@ CREATE TABLE `bestellprodukte` (
 
 LOCK TABLES `bestellprodukte` WRITE;
 /*!40000 ALTER TABLE `bestellprodukte` DISABLE KEYS */;
-INSERT INTO `bestellprodukte` VALUES (2,2,4),(3,2,2);
 /*!40000 ALTER TABLE `bestellprodukte` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -97,7 +96,7 @@ CREATE TABLE `bestellung` (
   PRIMARY KEY (`BestId`),
   KEY `bestellung_ibfk_2` (`KId`),
   CONSTRAINT `bestellung_ibfk_2` FOREIGN KEY (`KId`) REFERENCES `kunde` (`KId`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -106,7 +105,6 @@ CREATE TABLE `bestellung` (
 
 LOCK TABLES `bestellung` WRITE;
 /*!40000 ALTER TABLE `bestellung` DISABLE KEYS */;
-INSERT INTO `bestellung` VALUES (6,'Auftrag erhalten','2015-08-07','bankeinzug','2015-08-07 01:32:37','expressversand','nein',2,NULL,'DE08700901001234567890','1234567890a','Helena von Throja','weiblich','Helena','von Throja','Burgstraße','2','12345','Throja'),(6,'Auftrag erhalten','2015-08-07','vorkasse','2015-08-07 09:11:04','standardversand','nein',3,NULL,'','','','männlich','Otto','Tester','Teststraße','2','12345','Testhausen');
 /*!40000 ALTER TABLE `bestellung` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -232,6 +230,7 @@ CREATE TABLE `produkte` (
   `groesse` tinyint(3) DEFAULT NULL,
   `bauvariante` enum('Herrenrad','Damenrad') DEFAULT NULL,
   `marke` varchar(50) DEFAULT NULL,
+  `Eigenschaften` text,
   PRIMARY KEY (`PId`),
   KEY `bauart` (`bauart`),
   KEY `produktkategorie` (`produktkategorie`),
@@ -246,7 +245,7 @@ CREATE TABLE `produkte` (
 
 LOCK TABLES `produkte` WRITE;
 /*!40000 ALTER TABLE `produkte` DISABLE KEYS */;
-INSERT INTO `produkte` VALUES (1,NULL,'Das smarte Rockaway ist ein Freizeitbike, das überall zu Hause ist - von Alltagsstrecken in der Stadt bis auf Ausflugstouren übers Land. Ob auf Feld- und Waldwegen, auf Schotterstraßen oder asphaltierten Radwegen, das Rockaway bringt seinen Fahrer zuverlässig und flott ans Ziel. Auf kleinen Anstiegen findet sich mit der zuverlässigen Shimano Altus 21 Gang Schaltung schnell die passende Übersetzung. In Kombination mit Shimano Umwerfer und Shimano Zahnkranz sorgt dieser Antrieb für nachhaltigen Fahrspaß.\r\n\r\nDie Shimano Schalt- Bremshebelkombination bietet dabei gerade Einsteigern vor allem Komfort und Sicherheit. Die Federgabel von Suntour schluckt kleine Unebenheiten mühelos weg und macht zusammen mit den griffigen Reifen selbst holprige Pisten zum Vergnügen. Dank des komfortablen Sportsattels und der gemäßigt sportlichen Sitzposition, die Rahmengeometrie, Vorbau und Riserlenker vorgeben steigt der Rockawayfahrer auch nach längeren Ausflügen noch entspannt vom Rad. Stabile Laufräder mit Hohlkammerfelgen, ein wartungsfreies Patronen Innenlager und gut greifende V-Brakes runden das Bild ab. Mit dem Rockaway steht für einen wirklich günstigen Preis nicht nur ein guter Rahmen mit einer ausgewogenen Ausstattung zur Verfügung, sondern der Fahrspaß ist bereits schon all inklusive.',14,279.99,NULL,'blau','Serious Rockaway 26\"',2,NULL,'nein',1,NULL,NULL,NULL,NULL),(2,NULL,'Mit dem De Goya lässt sich auf Ausflugstour bequem durch malerische Landschaften cruisen oder komfortabel kurze Wege in der Stadt bewältigen.\r\n\r\nDie Federgabel dämpft selbst gröbere Unebenheiten locker weg und schont Wirbelsäule sowie Gelenke. Auf dem Touren Komfortsattel sitzt man in moderat aufrechter Sitzposition auch über längere Strecken gut; zumal die Sitzposition über den verstellbaren Vorbau je nach Bedarf angepasst werden kann. 7 Gänge erlauben bequemes Fahren, auch wenn es etwas bergan gehen sollte. Bergab sorgen gut greifende V-Brakes in Kombination mit der beliebten Rücktrittbremse für Sicherheit. Der Fahrspaß und die Sicherheit sind starke Argumente für ein De Goya, nicht zuletzt aber besticht es mit einer sehr ästhetischen Optik der Anbauteile, einem Hauch von Nostalgie durch den Sattel und die Griffe sowie zurückhaltendem Understatement des Rahmens in schlichtem schwarzmatt.\r\n\r\nIm Detail ist das de Goya mit hochwertiger Schwalbe Pannenschutzbereifung, rostfreien Speichen, stabilen Hohlkammerfelgen und wartungsfreiem Innenlager auch da erstklassig ausgestattet, wo man es nicht auf dem ersten Blick sieht, sich aber langfristig besonders auszahlt. ',3,400.00,NULL,'schwarz','Ortler deGoya Damen (2015)',4,NULL,'nein',1,NULL,NULL,'Damenrad','Oertler'),(666,'nein','abc',NULL,2.00,'2015-07-28 00:00:00','rot','Beispiel Zubehör',2,20,NULL,2,NULL,NULL,'Herrenrad','Hugo');
+INSERT INTO `produkte` VALUES (1,NULL,'Das smarte Rockaway ist ein Freizeitbike, das überall zu Hause ist - von Alltagsstrecken in der Stadt bis auf Ausflugstouren übers Land. Ob auf Feld- und Waldwegen, auf Schotterstraßen oder asphaltierten Radwegen, das Rockaway bringt seinen Fahrer zuverlässig und flott ans Ziel. Auf kleinen Anstiegen findet sich mit der zuverlässigen Shimano Altus 21 Gang Schaltung schnell die passende Übersetzung. In Kombination mit Shimano Umwerfer und Shimano Zahnkranz sorgt dieser Antrieb für nachhaltigen Fahrspaß.\r\n\r\nDie Shimano Schalt- Bremshebelkombination bietet dabei gerade Einsteigern vor allem Komfort und Sicherheit. Die Federgabel von Suntour schluckt kleine Unebenheiten mühelos weg und macht zusammen mit den griffigen Reifen selbst holprige Pisten zum Vergnügen. Dank des komfortablen Sportsattels und der gemäßigt sportlichen Sitzposition, die Rahmengeometrie, Vorbau und Riserlenker vorgeben steigt der Rockawayfahrer auch nach längeren Ausflügen noch entspannt vom Rad. Stabile Laufräder mit Hohlkammerfelgen, ein wartungsfreies Patronen Innenlager und gut greifende V-Brakes runden das Bild ab. Mit dem Rockaway steht für einen wirklich günstigen Preis nicht nur ein guter Rahmen mit einer ausgewogenen Ausstattung zur Verfügung, sondern der Fahrspaß ist bereits schon all inklusive.',14,279.99,NULL,'blau','Serious Rockaway 26\"',2,2,'nein',1,NULL,NULL,NULL,NULL,'32 Gänge + Rückwärtsgang;Einparkassistent;Allradantrieb;Navigationssystem;Tagfahrlicht;Gratis Wackedackel für jedes Fahrrad:D'),(2,'ja','Mit dem De Goya lässt sich auf Ausflugstour bequem durch malerische Landschaften cruisen oder komfortabel kurze Wege in der Stadt bewältigen.\r\n\r\nDie Federgabel dämpft selbst gröbere Unebenheiten locker weg und schont Wirbelsäule sowie Gelenke. Auf dem Touren Komfortsattel sitzt man in moderat aufrechter Sitzposition auch über längere Strecken gut; zumal die Sitzposition über den verstellbaren Vorbau je nach Bedarf angepasst werden kann. 7 Gänge erlauben bequemes Fahren, auch wenn es etwas bergan gehen sollte. Bergab sorgen gut greifende V-Brakes in Kombination mit der beliebten Rücktrittbremse für Sicherheit. Der Fahrspaß und die Sicherheit sind starke Argumente für ein De Goya, nicht zuletzt aber besticht es mit einer sehr ästhetischen Optik der Anbauteile, einem Hauch von Nostalgie durch den Sattel und die Griffe sowie zurückhaltendem Understatement des Rahmens in schlichtem schwarzmatt.\r\n\r\nIm Detail ist das de Goya mit hochwertiger Schwalbe Pannenschutzbereifung, rostfreien Speichen, stabilen Hohlkammerfelgen und wartungsfreiem Innenlager auch da erstklassig ausgestattet, wo man es nicht auf dem ersten Blick sieht, sich aber langfristig besonders auszahlt. ',3,400.00,NULL,'schwarz','Ortler deGoya Damen (2015)',4,3,'nein',1,NULL,NULL,'Damenrad','Oertler','500 Gänge + Rückwärtsgang;Anfahrhilfe;Turboantrieb;Stützräder;Nachtfahrlicht;Gratis Wackedackel für jedes Fahrrad :D'),(666,'nein','abc',NULL,2.00,'2015-07-28 00:00:00','rot','Beispiel Zubehör',2,21,NULL,2,NULL,NULL,'Herrenrad','Hugo',NULL);
 /*!40000 ALTER TABLE `produkte` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -283,4 +282,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-08-08 13:08:38
+-- Dump completed on 2015-08-14 13:27:56
