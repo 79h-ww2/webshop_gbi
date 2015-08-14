@@ -90,6 +90,39 @@ class ArtikelDetails extends  Artikelauflistung{
 		return $werte;
 	
 	}
+	
+	
+	
+	public function EigenschaftenAnzeigen($pid){
+		$query = $this->anfangszeilenSQLQuery(); //Vordefinierten Kopf abspeichern
+		//Verbindung zur Datenbank aufbauen
+		$db = datenbank_verbindung_aufbauen();
+		if ( !($db->db_connect()) ) die ("Es konnte keine Verbindung zur Datenbank aufgebaut werden");
+	
+		$pid=$db->db_real_escape_string($pid); //Sonderzeichen aus $pid entfernen
+	
+		//Anfrage ergänzen
+		$query = "select
+		Eigenschaften
+		from
+		produkte
+		where pid = '$pid'";
+		$result = $db->db_query($query);
+	
+		$werte = array();
+	
+		$i= 0;
+	
+		while ($db_werte = $db->db_fetch_array($result)){
+			$eigenschaften = $db_werte[0];
+			$werte = explode (";",$eigenschaften);
+		}
+	
+		$db ->db_close();
+	
+		return $werte;
+	
+	}
 		
 }
 ?>
