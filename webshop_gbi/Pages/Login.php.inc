@@ -17,6 +17,8 @@ $eingabe_ungueltig_login = isset ( $eingabe_ungueltig_login ) ? $eingabe_unguelt
 		}
 	}
 ?>
+<script type="text/javascript" src="./Funktions/JS/vorcheck_std_funktionen.js" >
+</script>
 <script type="text/javascript" src="./Funktions/JS/anmeldung.js" >
 </script>
 <form method="post" action="<?php echo $url; ?>" name="form_login"	id="login" onsubmit="return vorcheckEingabe_anmeldung('form_login');">

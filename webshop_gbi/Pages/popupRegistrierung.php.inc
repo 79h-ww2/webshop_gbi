@@ -3,6 +3,8 @@
 ?>
 <div class="popupRegistrierung" id="popupRegistrierung" 
 <?php if($eingabe_ungueltig_anmeldung  && !isset($_POST['type1'] ))	echo 'style="visibility: visible;"' ?> >
+	<script type="text/javascript" src="./Funktions/JS/vorcheck_std_funktionen.js" >
+    </script>
 	<script type="text/javascript" src="./Funktions/JS/anmeldung.js" >
 	</script>
 	<div class="haken_sprechblase" >
