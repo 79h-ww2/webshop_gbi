@@ -32,7 +32,7 @@
 						}
 					}
 				?>
-				<form method="post" action="<?php echo $url; ?>" name="anmeldung" onsubmit="return vorcheckEingabe_anmeldung();" >
+				<form method="post" action="<?php echo $url; ?>" name="anmeldung" onsubmit="return vorcheckEingabe_anmeldung('anmeldung');" >
 					<label for="anmedlung_email" >Email:</label>
 					<input autocomplete="off" type="text" name="anmedlung_email" value="<?php if ($eingabe_ungueltig_anmeldung) echo htmlspecialchars($_POST['anmedlung_email'],ENT_QUOTES,'UTF-8'); ?>" <?php if( $eingabe_ungueltig_anmeldung && $eingabe_check_result_anmeldung->get_feldstatus('anmedlung_email') ) echo 'style="border-color:red; border-style: solid"';  ?> /> 
 					<label for="anmedlung_passwort">Passwort:</label>

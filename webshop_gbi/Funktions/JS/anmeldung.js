@@ -2,7 +2,7 @@
  * überprüft die Formular-Eingabe, bevor sie an den Server gesendet wird
  * @returns {Boolean} gibt den Wert "true" zurück, wenn das Formular richtig ausgefüllt wurde. Wenn es falsch ausgefüllt wurde, wird ein "false" zurückgegeben.
  */
-function vorcheckEingabe_anmeldung(){
+function vorcheckEingabe_anmeldung(formularName){
 	
 	var fehlermeldung = '';
 	
@@ -21,17 +21,17 @@ function vorcheckEingabe_anmeldung(){
 	
 	//überprüft jedes Feld
 	for ( var i = 0; i < felder.length; i++){
-		if  ( document.forms['anmeldung'][felder[i]].value == ''){
+		if  ( document.forms[formularName][felder[i]].value == ''){
 			nicht_ausgefuellte_felder.push(meldungswort[i]);
 			
 			//Textbox rot umranden
-			document.forms['anmeldung'][felder[i]].style.borderColor = 'red';
-			document.forms['anmeldung'][felder[i]].style.borderStyle = 'solid';
+			document.forms[formularName][felder[i]].style.borderColor = 'red';
+			document.forms[formularName][felder[i]].style.borderStyle = 'solid';
 		}
 		else{
 			//alte Textboxumrandung löschen, falls der Fehler behoben wurde
-			document.forms['anmeldung'][felder[i]].style.borderColor = '';
-			document.forms['anmeldung'][felder[i]].style.borderStyle = '';
+			document.forms[formularName][felder[i]].style.borderColor = '';
+			document.forms[formularName][felder[i]].style.borderStyle = '';
 		}
 	}
 	
@@ -55,19 +55,21 @@ function vorcheckEingabe_anmeldung(){
 	else{
 		
 		//überprüft, ob die Email-Adresse gültig ist
-		if ( checkEmail(document.forms['anmeldung']['anmedlung_email'].value) == false ){
+		if ( checkEmail(document.forms[formularName]['anmedlung_email'].value) == false ){
 			fehlermeldung += fehlermeldung == '' ? '' : ' ';
 			fehlermeldung += "Die Email-Adresse ist ung&uuml;ltig.";
 			
 			//Textbox rot umranden
-			document.forms['anmeldung']['anmedlung_email'].style.borderColor = 'red';
-			document.forms['anmeldung']['anmedlung_email'].style.borderStyle = 'solid';
+			document.forms[formularName]['anmedlung_email'].style.borderColor = 'red';
+			document.forms[formularName]['anmedlung_email'].style.borderStyle = 'solid';
 		}
 	}
 	
+	var name_feld_fehlermeldung = formularName == 'anmeldung' ? 'fehlermeldung_anmelden' : 'fehlermeldung_login';
+	
 	//zeigt die Fehlermeldung auf der Webseite an
 	if (fehlermeldung != ''){
-		document.getElementById('fehlermeldung_anmelden').innerHTML = fehlermeldung;
+		document.getElementById(name_feld_fehlermeldung).innerHTML = fehlermeldung;
 	}
 	
 	//übergibt den Rückgabewert "true", wenn kein Fehler aufgetreten ist. Ist Fehler aufgetreten wird ein "false" ausgegeben

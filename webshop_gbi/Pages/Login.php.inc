@@ -1,11 +1,7 @@
 <?php
 $eingabe_ungueltig_login = isset ( $eingabe_ungueltig_login ) ? $eingabe_ungueltig_login : false;
-?>
-<script type="text/javascript" src="./Funktions/JS/login.js">
-	</script>
 
 
-<?php
 	//Setzt die Action-Url zusammen
 	$url = ( count($_GET) > 0 ) ?  "./?" : "./";
 		
@@ -21,9 +17,9 @@ $eingabe_ungueltig_login = isset ( $eingabe_ungueltig_login ) ? $eingabe_unguelt
 		}
 	}
 ?>
-
-<form method="post" action="<?php echo $url; ?>" name="form_login"
-	id="login" onsubmit="return vorcheckEingabe_login();">
+<script type="text/javascript" src="./Funktions/JS/anmeldung.js" >
+</script>
+<form method="post" action="<?php echo $url; ?>" name="form_login"	id="login" onsubmit="return vorcheckEingabe_anmeldung('form_login');">
 	<h2>
 	Anmeldung
 	</h2>
