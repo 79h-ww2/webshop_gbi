@@ -1436,3 +1436,7 @@ ul.werte_bestellvorgang_uebersicht{
 .artikeldetails_bewertung{
 	margin-top:15px;
 }
+
+.felder_warenkorb{
+	display: inline-block;
+}
