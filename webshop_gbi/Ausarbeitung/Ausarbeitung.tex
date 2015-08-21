@@ -1,0 +1,208 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage [ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%\renewcommand{\rmdefault}{phv} % Arial
+%\renewcommand{\sfdefault}{phv} % Arial
+\usepackage{color}
+\usepackage{xcolor,colortbl}
+\usepackage{fancyhdr}
+\usepackage{fancybox}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage {ulem}
+\usepackage{float}
+
+\newcommand*{\textoverline}[1]{$\overline{\hbox{#1}}$}
+
+
+\parindent0em
+
+\geometry{verbose,a4paper,bmargin=30mm,lmargin=25mm,rmargin=20mm}
+
+
+\pagestyle{fancy} %eigener Seitenstil
+\fancyhf{} %alle Kopf- und Fußzeilenfelder bereinigen
+\fancyhead[L]{Projekt BITS} %Kopfzeile links
+\fancyhead[C]{\begin{tabular}{cc}
+Stefan Schnürer & Benedikt Brüntrup\\Raphael Gregarek & Michael Dück
+\end{tabular}} %zentrierte Kopfzeile
+\fancyhead[R]{\includegraphics[width=4cm]{Bilder/HS_OWL_RGB_Rot.jpg}} %Kopfzeile rechts
+\renewcommand{\headrulewidth}{0.4pt} %obere Trennlinie
+\fancyfoot[C]{\thepage} %Seitennummer
+\renewcommand{\footrulewidth}{0.4pt} %untere Trennlinie
+\usepackage{listings}
+
+\setlength{\shadowsize}{1px}
+
+%Quellcode-Darstellung #####################################
+\definecolor{codeGray}{RGB}{240,240,240}
+\definecolor{codeBlack}{RGB}{0,0,0}
+\definecolor{codeRed}{RGB}{221,0,0}
+\definecolor{codeBlue}{rgb}{0,0,187}
+\definecolor{codeYellow}{RGB}{255,128,0}
+\definecolor{CodeGreen}{rgb}{0.0,0.4,0.0}
+
+
+\lstset{
+  columns=fullflexible,
+  showstringspaces=false,
+  basicstyle= \normalsize,
+  inputencoding=utf8,
+  extendedchars=true
+}
+\lstset{literate=%
+{Ö}{{\"O}}1
+{Ä}{{\"A}}1
+{Ü}{{\"U}}1
+{ß}{{\ss}}2
+{ü}{{\"u}}1
+{ä}{{\"a}}1
+{ö}{{\"o}}1
+{§}{{\S}}1
+{_}{{\_}}1
+}
+
+\lstset
+{
+	backgroundcolor={\color{codeGray}},% 
+    basicstyle={\small\ttfamily\color{codeBlack}},% 
+    commentstyle={\color{CodeGreen}},%
+    keywordstyle={\color{codeBlue}},%
+    stringstyle={\color{codeRed}},%
+    identifierstyle={\color{codeBlue}},%
+    %
+    % Zeilenumbrüche aktivieren, Leerzeichen nicht hervorheben
+    breaklines=true,%
+    showstringspaces=false,%
+    % 
+    % Listing-Caption unterhalb (bottom)
+    captionpos=b,%
+    frame=single,
+    numbers=left, 
+	numberstyle=\scriptsize,
+	xleftmargin=2em
+}
+
+\renewcommand{\lstlistingname}{Quellcode}
+
+\lstdefinelanguage{JavaScript} {
+	morekeywords={
+		break,const,continue,delete,do,while,export,for,in,function,
+		if,else,import,in,instanceOf,label,let,new,return,switch,this,
+		throw,try,catch,typeof,var,void,with,yield
+	},
+	sensitive=false,
+	morecomment=[l]{//},
+	morecomment=[s]{/*}{*/},
+	morestring=[b]",
+	morestring=[d]'
+}
+
+\lstdefinelanguage{CSS}
+{
+  morecomment=[s]{/*}{*/},
+  keywords={visibility},
+  morestring=[s]{\{}{\}},
+}
+
+\lstdefinelanguage{phpHtml}{
+	 language=html,
+	 alsolanguage=PHP,
+	 alsolanguage=CSS,
+	 alsolanguage=JavaScript
+}
+
+
+
+
+%###########################################
+
+
+%Links im Inhaltsverzeichnis
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+
+
+\lstset{literate=%
+{Ö}{{\"O}}1
+{Ä}{{\"A}}1
+{Ü}{{\"U}}1
+{ß}{{\ss}}2
+{ü}{{\"u}}1
+{ä}{{\"a}}1
+{ö}{{\"o}}1
+{§}{{\S}}1
+{_}{{\_}}1
+}
+
+%###############################################
+
+
+
+% Verbesserung der Silbentrennung
+\hyphenation{Sys-tem Sys-tem-en Java-Script}
+
+
+\begin{document}
+
+% ######################## Titelseite ######################## %
+
+\begin{titlepage}
+Hochschule Ostwestfalen-Lippe \\
+Fachbereich 8 - Umweltingeneurwesen und Angewandte Informatik \\
+Fachgebiet Angewandte Informatik \\
+Projekt Realisierung betrieblicher IT-Systeme \\
+4. Semester SoSe 2015\\
+\vspace{2cm}
+
+\begin{center}
+\begin{Large}
+\textbf{Ausarbeitung: \\Projekt Realisierung betrieblicher IT-Systeme } \\
+\end{Large}
+\vspace{2cm}
+
+\begin{Large}
+\textbf {Entwicklung eines Webshops\\ für das Fahrradproduktions- und Vertriebsunternehmen Global Bike Inc.} \\[0.35cm]
+\end{Large}
+\vspace{5mm}
+Von \\[0.25cm]
+Stefan Schnürer,\\[0.25cm]
+Benedikt Brüntrup,\\[0.25cm]
+Raphael Gregarek und\\[0.25cm]
+Michael Dück
+\end{center}
+
+\vfill
+Erstprüfer: Prof. Dr. rer. nat. Stefan Wolf\\
+Zweitprüfer: Prof. Dr. Ralf Hesse\\
+Drittprüfer: Prof. Dr. Jessica Rubart\\
+Vierprüfer: Prof. Dr. rer. nat. Burkhard Wrenger\\[0.25cm]
+Eingereicht am: \today
+\end{titlepage}
+
+% ######################## Dokument ######################## %
+
+\hspace{1pt}
+% ### Inhaltsverzeichnis ### %
+\tableofcontents
+\vfill
+
+
+%Projektplanung
+\include{Seiten/Projektplanung}
+
+%Realisierung
+\include{Seiten/Realisierung}
+
+
+
+\end{document}

@@ -1,0 +1,13 @@
+/* Blendet den Loginbereich standardmäßig aus */
+.popupRegistrierung, .popupWarenkorb{
+        ...
+	visibility:hidden;
+        ...
+}
+/* 
+ * Zeigt den Den Loginbereich an, 
+ * wenn die Maus sich auf auf dem Anmeldesymbol befindet 
+ */
+.accountCell:HOVER > .popupRegistrierung, .popupRegistrierung:hover{
+	visibility:visible;
+}
