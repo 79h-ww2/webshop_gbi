@@ -31,6 +31,7 @@ body {
     position: absolute;
     width: 1024px;
     top: 0px;
+    background: #82a143;
     background:linear-gradient(to bottom right ,#6c7b35 , 	#82a143 , #788A5F );
 }
 
@@ -124,6 +125,7 @@ img.account {
 /* Hauptmenü und Überschrift Registrierung*/
 .nav,  #registrierung h2, #suche_erweitert h2, #form_adresse_aendern h2, #form_email_passwort_aendern h2, #login h2, #form_bestellung h2{
    height: 40px;
+   background: gray;
    background: linear-gradient(to  bottom, black  , gray); 
 }
 
@@ -229,6 +231,7 @@ img.account {
 .detailCell img {
 	padding: 2px;
 	border: solid black 2px;
+	border-radius: 5px;
 }
 
 .detailMiddle{
@@ -469,6 +472,7 @@ input[type=submit], input[type=button], .link_button, .link_button_msgbox,.graue
 	border-color: #788A5F;
 	font-size: 16px;
 	border-style: outset;
+	background: gray;
 	background: linear-gradient(to  bottom, black  , gray);
 }
 
@@ -991,6 +995,7 @@ input[type="text"], input[type="email"], input[type="password"], select, input[t
 .zeile_suchergebnis_autovervollstaendigung_normale_suche:hover{
 	color: #000; 
     text-shadow: none;
+    background: orange;
     background: linear-gradient(to  bottom, #d56509  , orange 15%, #d56509); 
 }
 
@@ -1439,4 +1444,24 @@ ul.werte_bestellvorgang_uebersicht{
 
 .felder_warenkorb{
 	display: inline-block;
+}
+
+.artikelDesTages{
+	border-color: #eee;
+	background-color: #eee;
+	border-style: solid;
+	border-width:1px;
+	padding: 20px;
+	border-radius: 5px;
+}
+
+.artikelDesTages header h2{
+	text-align: center;
+}
+
+.artikelDesTages .BildMustermodell{
+	padding: 2px;
+	border: 1px solid #000;
+	border-color: black;
+	border-radius: 5px;
 }

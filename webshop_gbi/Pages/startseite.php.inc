@@ -12,7 +12,7 @@ $ArtikelDesTagesPId= $artikelDesTages->ArtikelDesTagesPIdSuchen();
 
 ?>
 <div class = "startseite">
-<article class="detailContent">
+<article class="detailContent artikelDesTages">
     <header>
         <h2>Fahrrad des Tages</h2>
     </header>
