@@ -5,13 +5,13 @@
 \contentsline {subsection}{\numberline {2.2}Anforderungsanalyse}{3}{subsection.2.2}
 \contentsline {subsection}{\numberline {2.3}Gesch\IeC {\"a}ftsprozess}{3}{subsection.2.3}
 \contentsline {subsection}{\numberline {2.4}Risikoanalyse}{5}{subsection.2.4}
-\contentsline {subsection}{\numberline {2.5}Wahl der Programmiersprache}{5}{subsection.2.5}
-\contentsline {subsection}{\numberline {2.6}Wahl der Programmierentwicklungsumgebung und des Versions-verwaltungs-Plugin}{5}{subsection.2.6}
-\contentsline {subsection}{\numberline {2.7}Grundlegender Aufbau und Ordnerstruktur der Webseite}{5}{subsection.2.7}
-\contentsline {subsection}{\numberline {2.8}Die Test-Server}{7}{subsection.2.8}
-\contentsline {section}{\numberline {3}Arbeitspakete}{8}{section.3}
-\contentsline {subsection}{\numberline {3.1}Einteilung der Arbeitspakete}{8}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Arbeitspaket von Herrn Schn\IeC {\"u}rer}{9}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Arbeitspakete von Herrn Br\IeC {\"u}ntrup}{15}{subsection.3.3}
-\contentsline {subsubsection}{\numberline {3.3.1}Arbeitspaket 5: Die Schnittstellendatenbank}{15}{subsubsection.3.3.1}
-\contentsline {subsubsection}{\numberline {3.3.2}Arbeitspaket 6: Registrierungs- und Anmeldungsfenster designen und programmieren}{21}{subsubsection.3.3.2}
+\contentsline {subsection}{\numberline {2.5}Wahl der Programmiersprache}{6}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.6}Wahl der Programmierentwicklungsumgebung und des Versions-verwaltungs-Plugin}{6}{subsection.2.6}
+\contentsline {subsection}{\numberline {2.7}Grundlegender Aufbau und Ordnerstruktur der Webseite}{7}{subsection.2.7}
+\contentsline {subsection}{\numberline {2.8}Die Test-Server}{9}{subsection.2.8}
+\contentsline {section}{\numberline {3}Arbeitspakete}{10}{section.3}
+\contentsline {subsection}{\numberline {3.1}Einteilung der Arbeitspakete}{10}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Arbeitspaket von Herrn Schn\IeC {\"u}rer}{11}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Arbeitspakete von Herrn Br\IeC {\"u}ntrup}{17}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}Arbeitspaket 5: Die Schnittstellendatenbank}{17}{subsubsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.2}Arbeitspaket 6: Registrierungs- und Anmeldungsfenster designen und programmieren}{23}{subsubsection.3.3.2}
