@@ -1447,12 +1447,13 @@ ul.werte_bestellvorgang_uebersicht{
 }
 
 .artikelDesTages{
-	border-color: #eee;
-	background-color: #eee;
+	border-color: #000;
+	background-color: #fff;
 	border-style: solid;
 	border-width:1px;
 	padding: 20px;
 	border-radius: 5px;
+	background:linear-gradient(to bottom, #eee , #fff,	#ABC673 ,#fff, #eee );
 }
 
 .artikelDesTages header h2{
@@ -1462,6 +1463,10 @@ ul.werte_bestellvorgang_uebersicht{
 .artikelDesTages .BildMustermodell{
 	padding: 2px;
 	border: 1px solid #000;
-	border-color: black;
+	border-color: #000;
 	border-radius: 5px;
+}
+
+.artikelDesTages a img{
+	border-width:1px;
 }
