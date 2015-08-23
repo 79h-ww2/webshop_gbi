@@ -1,18 +1,26 @@
 \select@language {ngerman}
-\contentsline {section}{\numberline {1}Projektaufgabenstellung}{2}{section.1}
-\contentsline {section}{\numberline {2}Projektplanung}{2}{section.2}
-\contentsline {subsection}{\numberline {2.1}Ideenfindung}{2}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Anforderungsanalyse}{3}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}Gesch\IeC {\"a}ftsprozess}{3}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Risikoanalyse}{5}{subsection.2.4}
-\contentsline {subsection}{\numberline {2.5}Wahl der Programmiersprache}{7}{subsection.2.5}
-\contentsline {subsection}{\numberline {2.6}Wahl der Programmierentwicklungsumgebung und des Versions-verwaltungs-Plugin}{8}{subsection.2.6}
-\contentsline {subsection}{\numberline {2.7}Grundlegender Aufbau und Ordnerstruktur der Webseite}{8}{subsection.2.7}
-\contentsline {subsection}{\numberline {2.8}Die Test-Server}{10}{subsection.2.8}
-\contentsline {section}{\numberline {3}Arbeitspakete}{11}{section.3}
-\contentsline {subsection}{\numberline {3.1}Einteilung der Arbeitspakete}{11}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Arbeitspaket von Herrn Schn\IeC {\"u}rer}{12}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Arbeitspakete von Herrn Br\IeC {\"u}ntrup}{18}{subsection.3.3}
-\contentsline {subsubsection}{\numberline {3.3.1}Arbeitspaket 5: Die Schnittstellendatenbank}{18}{subsubsection.3.3.1}
-\contentsline {subsubsection}{\numberline {3.3.2}Arbeitspaket 6: Registrierungs- und Anmeldungsfenster designen und programmieren}{24}{subsubsection.3.3.2}
-\contentsline {subsubsection}{\numberline {3.3.3}Arbeitspaket 7: Entwickeln einer Suchfunktion}{32}{subsubsection.3.3.3}
+\contentsline {section}{\numberline {1}Projektaufgabenstellung}{3}{section.1}
+\contentsline {section}{\numberline {2}Projektplanung}{3}{section.2}
+\contentsline {subsection}{\numberline {2.1}Ideenfindung}{3}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Anforderungsanalyse}{4}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Gesch\IeC {\"a}ftsprozess}{4}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Risikoanalyse}{6}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}Wahl der Programmiersprache}{8}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.6}Wahl der Programmierentwicklungsumgebung und des Versions-verwaltungs-Plugin}{9}{subsection.2.6}
+\contentsline {subsection}{\numberline {2.7}Grundlegender Aufbau und Ordnerstruktur der Webseite}{9}{subsection.2.7}
+\contentsline {subsection}{\numberline {2.8}Die Test-Server}{11}{subsection.2.8}
+\contentsline {section}{\numberline {3}Arbeitspakete}{12}{section.3}
+\contentsline {subsection}{\numberline {3.1}Einteilung der Arbeitspakete}{12}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Arbeitspaket von Herrn Schn\IeC {\"u}rer}{14}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Erster Seitenprototyp}{14}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}Startseite des Webshops}{15}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.3}Seitennavigation}{15}{subsubsection.3.2.3}
+\contentsline {subsubsection}{\numberline {3.2.4}Weitere Arbeiten an der Startseite des Webshops}{17}{subsubsection.3.2.4}
+\contentsline {subsubsection}{\numberline {3.2.5}Rechtsschutz}{18}{subsubsection.3.2.5}
+\contentsline {subsubsection}{\numberline {3.2.6}Dynamische Seitennavigation}{20}{subsubsection.3.2.6}
+\contentsline {subsubsection}{\numberline {3.2.7}Dynamische Artikelauflistung}{21}{subsubsection.3.2.7}
+\contentsline {subsubsection}{\numberline {3.2.8}Detaillierte dynamische Artikelbeschreibung}{22}{subsubsection.3.2.8}
+\contentsline {subsection}{\numberline {3.3}Arbeitspakete von Herrn Br\IeC {\"u}ntrup}{25}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}Arbeitspaket 5: Die Schnittstellendatenbank}{25}{subsubsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.2}Arbeitspaket 6: Registrierungs- und Anmeldungsfenster designen und programmieren}{31}{subsubsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.3}Arbeitspaket 7: Entwickeln einer Suchfunktion}{39}{subsubsection.3.3.3}
