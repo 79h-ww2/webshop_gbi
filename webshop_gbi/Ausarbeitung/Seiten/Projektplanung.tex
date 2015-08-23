@@ -46,7 +46,7 @@ Ein wichtiger Bestandteil der Projektplanung ist die Risikoanalyse. Sie umfasst 
   \centering
      \includegraphics[width=15cm]{Bilder/Risikoanalyse1.png}
   \caption{Einstufung der Risiken und entsprechende Gegenmaßnahmen}
-  \label{fig:Abbildung 1}
+  \label{fig:Abbildung 2}
 \end{figure}
 
 Die Risiken werden in drei Kategorien unterteilt. Kategorie A beschreibt Risiken, die eine hohe Tragweite und Wahrscheinlichkeit aufweisen. Kategorie B beschreibt Risiken, deren Tragweite und Wahrscheinlichkeit weder zu hoch noch zu gering eingestuft wurden. Kategorie C beschreibt Risiken, deren Tragweite und Wahrscheinlichkeit eher gering eingestuft wurden.
@@ -59,13 +59,13 @@ Der Kategorie C wurden die Risiken „Student fällt aus/ist nicht mehr da“, �
 \\
 Das Risiko „Student fällt aus/ist nicht mehr da“ wurde anfangs als gering eingestuft.  Zum jetzigen Zeitpunkt wird dieses Risiko allerdings als hoch eingestuft, da die Gruppenmitglieder Herr Gregarek und Herr Dück schon mehrfach ausgefallen sind.
 \\
-Abbildung 3 zeigt die Ergebnisse der Risikoanalyse anhand einer Grafik:
+\textit{Abbildung 3} zeigt die Ergebnisse der Risikoanalyse anhand einer Grafik:
 
 \begin{figure}[H] 
   \centering
      \includegraphics[width=15cm]{Bilder/Risikoanalyse2.png}
   \caption{Ergebnisse der Risikoanalyse}
-  \label{fig:Abbildung 1}
+  \label{fig:Abbildung 3}
 \end{figure}
 
 Dabei lässt die Einteilung der Risiken in den einzelnen Kategorien besser nachvollziehen.
@@ -87,7 +87,7 @@ Da sich für die objektorientierte Programmierung entschieden wurde, hat sich di
   \centering
      \includegraphics[width=45mm]{Bilder/ordnerstruktur.png}
   \caption{Ordnerstruktur des Projekts}
-  \label{fig:Abbildung 1}
+  \label{fig:Abbildung 4}
 \end{figure}
 Der Ordner \glqq Classes\grqq{} beinhaltet alle PHP-Klasse des Projekts. Dieser Ordner enthält zum Beispiel Klassen zur Umsetzung des Warenkorbs, des Datenbankzugriffs, des Kundens, der Kundenbestellung und so weiter. Der Ordner \glqq datenbanksicherung\grqq{} enthält die jeweils aktuelle Sicherung der Datenbank. Der folgende Ordner ist in zwei Unterordner aufgeteilt. Dieser Ordner wurde mit dem Namen \glqq Funktions\grqq{} bezeichnet. Der erste Unterordner, der den Namen \glqq JS\grqq{} trägt, enthält die clientseitig programmierten Funktionen. Die clientseitige Programmierung sollte in JavaScript umgesetzt werden. Aus diesen Grund sind in diesen Ordner JavaScript-Dateien vorzufinden. Die JavaScripts werden unter anderen dafür verwendet eine Formulareingabe vor den Absenden auf Gültigkeit zu überprüfen. Dieses sorgt dafür, dass es nicht zu unnötigen Datenverkehr zwischen Browser und Webserver kommt. Der Unterordner \glqq PHP\grqq{} enthält die Funktionen, die zum Beispiel nach dem Absenden einer Formulareingabe an den Webserver aufgerufen werden. Diese Funktionen instanziieren die Klassen. Zudem rufen die Funktionen-Dateien die entsprechenden Methoden auf, um die von Formular empfangenen Eingaben zu verarbeiten. Dieser Ordner enthält noch zwei weitere Dateien. Die erste Datei der beiden heißt \glqq set\_page.php.inc\grqq{}. Diese Datei ließt einen über die Adressenzeile erhaltenden Parameter aus. An Hand des Parameters bestimmt die Datei, welcher Inhalt aktuell auf der Webseite angezeigt werden soll. Hierzu includiert die Datei die entsprechende HTML-Seite aus den Ordner \glqq Pages\grqq{}. Die zweite Datei heißt \glqq  set\_control.php.inc\grqq{}. Diese Datei includiert die benötigte Funktions-Datei, die z.B. die Formulareingaben bearbeiten. \\
 In diesen Projekt werden keine in PHP programmierten Funktionen und Inhaltseiten direkt aufgerufen. Diese Dateien werden immer in die Index.php includiert. Der Grund hierfür ist, dass so den Anwender der interne Aufbau der Webseite verborgen bleibt.\\
