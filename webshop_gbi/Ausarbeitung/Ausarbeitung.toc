@@ -12,6 +12,7 @@
 \contentsline {section}{\numberline {3}Arbeitspakete}{11}{section.3}
 \contentsline {subsection}{\numberline {3.1}Einteilung der Arbeitspakete}{11}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}Arbeitspaket von Herrn Schn\IeC {\"u}rer}{12}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Arbeitspakete von Herrn Br\IeC {\"u}ntrup}{19}{subsection.3.3}
-\contentsline {subsubsection}{\numberline {3.3.1}Arbeitspaket 5: Die Schnittstellendatenbank}{19}{subsubsection.3.3.1}
-\contentsline {subsubsection}{\numberline {3.3.2}Arbeitspaket 6: Registrierungs- und Anmeldungsfenster designen und programmieren}{25}{subsubsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3}Arbeitspakete von Herrn Br\IeC {\"u}ntrup}{18}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}Arbeitspaket 5: Die Schnittstellendatenbank}{18}{subsubsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.2}Arbeitspaket 6: Registrierungs- und Anmeldungsfenster designen und programmieren}{24}{subsubsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.3}Arbeitspaket 7: Entwickeln einer Suchfunktion}{32}{subsubsection.3.3.3}
