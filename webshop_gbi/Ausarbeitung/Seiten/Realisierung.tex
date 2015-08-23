@@ -72,11 +72,14 @@ Die oben genannten Arbeitspakete hat sich die Gruppe untereinander aufgeteilt. S
 %Nachfolgend soll auf die einzelnen Zwischenschritte des Projektes eingegangen werden.Das Projekt beginnt mit der Projektplanung. Hierbei werden die Arbeitspakete definiert und an den entsprechenden Gruppenmitgliedern verteilt. Pro Arbeitspaket wird eine Bearbeitungsdauer von zwei Wochen festgelegt. Es wird ein Projektzeitplan sowie eine Risikoanalyse erstellt. Im Anschluss daran werden grobe Design Entwürfe für die Homepage erstellt. Es wird sich für den Design Entwurf von Herrn Brüntrup entschieden. Die Homepage wird in einem matten Grün-Ton designt, um den Kunden die Umweltaspekte von Fahrrädern zu verdeutlichen.
 %\textbf{Was machen Herr Gregarek und Herr Dück?}
 
+\newpage
 \subsection{Arbeitspaket von Herrn Schnürer}
 
-In den nachfolgenden Wochen wird die Homepage nach Vorlage des Designs Entwurfs von Herrn Brüntrup erstellt. Der erste Prototyp der Seite basiert auf den Standardaufbau einer Webseite. Dabei wird der Inhalt der Seite in HTML geschrieben, während eine CSS Datei für das Seitenlayout der Webseite verantwortlich ist. Abbildung 1 zeigt einen ersten groben Designentwurf der Startseite:
+Dieser Abschnitt beschreibt den Aufgabenteil von Herrn Schnürer und wie dieser den Seitenprototyp, den statischen und dynamischen Inhalt und Aufbau der Seite sowie die CSS-Datei zur Anzeige des Webshops auf Desktop Rechnern entwickelt hat.
 
+\subsubsection{Erster Seitenprototyp}
 
+Der erste Prototyp der Seite basiert auf den Standardverfahren einer Webseite. Dabei wird der Inhalt der Seite in HTML geschrieben, während eine CSS Datei für das Seitenlayout der Webseite verantwortlich ist. Abbildung 1 zeigt einen ersten groben Designentwurf der Startseite, anhand dessen orientiert sich auch der erste Seitenprototyp von Herrn Schnürer:
 
 \begin{figure}[H]
 \begin{center}
@@ -86,11 +89,14 @@ In den nachfolgenden Wochen wird die Homepage nach Vorlage des Designs Entwurfs 
 \label{Abbildung2-Erster grober Designentwurf der Startseite}
 \end{figure}
 
-
+\subsubsection{Startseite des Webshops}
 
 Die Startseite wird zunächst mit zwei einfachen Artikeln versehen. Sie sollen eine grobe Vorstellung liefern, wie die fertige Startseite aussehen könnte.
+
+\subsubsection{Seitennavigation}
+
 In den darauf folgenden Wochen liegt der Fokus auf die Seitennavigation in der Kopfzeile (nachfolgend Header) der Seite. Die Seitennavigation wird mithilfe von CSS an den Designentwurf angepasst. Es werden die Hauptkategorien „Fahrräder“, „Zubehör“, „Fahrradteile“, „Fahrradbekleidung“, „Marken“ und eine Rubrik „HowTo“ angezeigt. Letztere verlinkt auf eine Internetquelle, mit dessen Hilfe die Seitennavigation umgesetzt wurde. Diese Kategorie dient den anderen Gruppenmitgliedern als Referenz und wird in späteren Versionen des Webshops wieder entfernt. Fährt der Nutzer mit der Maus über die Kategorie „Fahrräder“ öffnet sich ein Drop-Down-Menü, welches den Nutzer verschiedene Fahrradmodelle auswählen lässt. Die komplette Seitennavigation wurde in CSS3 umgesetzt. CSS3 kann von nahezu jeden aktuellen Browser gelesen werden und bietet zudem den Vorteil, dass der entsprechende Code in der bisherigen CSS-Datei eingefügt werden kann. Da CSS3 unabhängig von Java Script ist, lässt sich die Seite zudem problemlos bedienen, wenn Java Script auf den jeweiligen Browsern deaktiviert ist. Dies begründet die Entscheidung CSS3 für die Seitennavigation zu verwenden.
-Abbildung 2 und 3 zeigen den bisherigen Seitenprototypen:
+Abbildung 3 und 4 zeigen den bisherigen Seitenprototypen:
 
 
 
@@ -114,6 +120,9 @@ Abbildung 2 und 3 zeigen den bisherigen Seitenprototypen:
 
 
 %Ein paar Wochen später wird sich dazu entschlossen das Programm „Eclipse“ zum Programmieren des Webshops zu nutzen. Das Programm bietet neben einer Autovervollständigung und der Unterstützung mehrerer Programmiersprachen noch zusätzlich den Vorteil, dass es durch Plug-Ins erweiterbar ist. So lässt sich „Eclipse“ durch das Plug-In „GitHub“ erweitern. „GitHub“ ist eine Cloud basierte Lösung zum gemeinsam bearbeiten von Programmcode. Das komplette Projekt wird dabei auf einen Server hochgeladen. Jedes Gruppenmitglied, das einen Acount bei „GitHub“ erstellt hat, kann dem Projekt beitreten, indem es bei den Gruppen- Administrator um Erlaubnis bittet. Dadurch kann ein Dokument von mehreren Gruppenmitgliedern gemeinsam bearbeitet werden. So entstehen mehrere Versionen von einem Dokument, die anschließend wieder zu einem Dokument zusammengefügt werden können.%
+
+\subsubsection{Weitere Arbeiten an der Startseite des Webshops}
+
 Im Laufe der nächsten Woche wird die Startseite des Webshops gemäß dem Designentwurfs erstellt (siehe Abbildung 4). Auf der Startseite ist das „Angebot des Tages“ zu sehen. Es gibt eine Kurzbeschreibung zu dem Artikel mit den wichtigsten Eigenschafen. Der untere Teil der Startseite zeigt die meist angesehenen Artikel des Nutzers an. 
 
 \begin{figure}[H]
@@ -125,7 +134,10 @@ Im Laufe der nächsten Woche wird die Startseite des Webshops gemäß dem Design
 \label{Abbildung5-Startseite des Webshops}
 \end{figure}
 
-In den nächsten Tagen wird das Thema Rechtschutz behandelt. Dem Webshop werden ein Impressum, die AGB sowie Hinweise zum Datenschutz hinzugefügt:
+
+\subsubsection{Rechtsschutz}
+
+In den nächsten Tagen wird das Thema Rechtsschutz behandelt. Dem Webshop werden ein Impressum, die AGB sowie Hinweise zum Datenschutz hinzugefügt:
 
 \begin{figure}[H]
 \begin{center}
@@ -150,6 +162,68 @@ In den nächsten Tagen wird das Thema Rechtschutz behandelt. Dem Webshop werden 
 \caption{Datenschutz des Webshops}
 \label{Abbildung7-Datenschutz des Webshops}
 \end{figure}
+
+\subsubsection{Dynamische Seitennavigation}
+
+In den nächsten Wochen wird der statische Inhalt des Webshops durch dynamischen Inhalt ersetzt. Das bedeutet, dass die Daten fortan aus einer Datenbank geladen werden. Diese Datenbank wird mit der Datenbank aus dem SAP- System synchronisiert. Zunächst wird die Navigation des Webshops durch dynamische Inhalte ersetzt. Wird nun eine neue Haupt- oder Unterkategorie hinzugefügt oder entfernt, ändert sich die Navigation entsprechend. Zum besseren Verständnis ein kurzes Beispiel: Angenommen die GBI würde jetzt auch Helmkameras anbieten, so würde in der Datenbank eine neue Kategorie „Helmkameras“ erstellt und zur ihr Kameramodelle von „GoPro“ und „Rollei“. Die Navigation hätte jetzt die Hauptkategorien „Fahrräder“, „Zubehör“, „Fahrradteile“, „Fahrradbekleidung“ und die Hauptkategorie „Helmkameras“. Unter letzterer würden die beiden Unterkategorien „GoPro“ und „Rollei“ aufgeführt. Abbildung 8 zeigt die dynamische Navigation:
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=150mm]{Bilder/Abbildung9-DynamischeNaviagtionDesWebshops.png}
+\end{center}
+\caption{Dynamische Navigation}
+\label{Abbildung9-Dynamische Navigation}
+\end{figure}
+
+
+\subsubsection{Dynamische Artikelauflistung}
+
+Ein paar Tage später erstellt Herr Schnürer eine dynamische Artikelauflistung. In ihr werden alle Fahrräder einer bestimmten Kategorie aufgelistet. Wählt der Nutzer in der Seitennavigation die Hauptkategorie „Fahrrad“ und anschließend die Unterkategorie „Cityrad“ werden ihm alle „Cityräder“ aufgelistet, wählt er die Unterkategorie „Mountainbike“ werden ihm alle „Mountainbikes“ aufgelistet usw. Abbildung 9 zeigt die dynamische Artikelauflistung aller „Cityräder“ (Anmerkung: Es wird an dieser Stelle nur ein Cityrad aufgelistet, da sich nur ein Produkt mit der Kategorie „Cityrad“ in der Datenbank befindet. Man müsste nur weitere Cityräder in der Datenbank hinterlegen, damit entsprechend mehr Produkte aufgelistet werden):
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=150mm]{Bilder/Abbildung10-DynamischeArtikelauflistungAllerCitybikes.png}
+\end{center}
+\caption{Dynamische Artikelauflistung aller Cityräder}
+\label{Abbildung10-Dynamische Artikelauflistung aller Cityräder}
+\end{figure}
+
+
+\subsubsection{Detaillierte dynamische Artikelbeschreibung}
+
+Eine Woche später wird eine detaillierte und dynamische Beschreibung für die Artikel erstellt. Wählt der Nutzer einen Artikel aus, erscheint eine detaillierte Beschreibung dessen. Der oberer Teil ist dabei an die Artikelbeschreibung der Startseite angelehnt und zunähst noch statisch, der untere Teil beschreibt den Artikel näher und ist bereits dynamisch umgesetzt. So erscheint unter der Überschrift „Artikelbeschreibung“ die jeweilige Beschreibung des zuvor ausgewählten Artikels. Abbildung 10 zeigt eine solche Beschreibung für das Fahrrad „Ortler deGoya Damen (2015)“:
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=150mm]{Bilder/Abbildung11-DynamischeDetailierteArtikelbeschreibung.png}
+\end{center}
+\caption{Detaillierte dynamische Artikelbeschreibung}
+\label{Abbildung11-Detaillierte dynamische Artikelbeschreibung}
+\end{figure}
+
+Wie bereits erwähnt ist der obere Teil zunähst nur statisch programmiert worden, weshalb die Überschrift noch nicht zum ausgewählten Artikel passt. Der Text „Artikelbeschreibung“ hingegen wird bereits aus der Datenbank geladen.
+\\
+In den Sommersemesterferien hat Herr Schnürer auch den oberen Teil dieser Seite dynamisch erstellt. Die Produktbilder und Eigenschaften des Artikels werden nun ebenfalls aus der Datenbank geladen. Zudem wird noch ein kleines Extra eingebaut: Klickt der Nutzer eines der Produktbilder an, wird mithilfe eines Java Scripts eine „lightbox“ aufgerufen. Diese zeigt die Produktbilder in ihrer normalen Auflösung und ermöglicht das einfache Durchklicken der Produktbilder. Abbildung 12 zeigt den fertigen oberen der der Artikelbeschreibung, während Abbildung 13 die „lightbox“ veranschaulicht:
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=150mm]{Bilder/Abbildung12-DynamischeDetailierteArtikelbeschreibungFertig.png}
+\end{center}
+\caption{Abbildung 12 Fertige dynamische Artikelbeschreibung}
+\label{Abbildung12-Fertige dynamische Artikelbeschreibung}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=150mm]{Bilder/Abbildung13-Lightbox.png}
+\end{center}
+\caption{Abbildung 13 "Lightbox" zur besseren Darstellung der Produktbilder}
+\label{Abbildung13-"Lightbox" zur besseren Darstellung der Produktbilder}
+\end{figure}
+
+
+
+
 
 \subsection{Arbeitspakete von Herrn Brüntrup}
 In diesen Abschnitt wird beschrieben, wie Herr Brüntrup seine Arbeitspakete gelöst hat. Zudem wird in diesen Abschnitt noch beschrieben welche Arbeitspakete wegen Zeitmangel und fehlender Arbeitsbereitschaft zusätzlich noch übernommen wurden.
