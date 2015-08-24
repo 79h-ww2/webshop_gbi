@@ -9,18 +9,18 @@
 \contentsline {subsection}{\numberline {2.6}Wahl der Programmierentwicklungsumgebung und des Versions-verwaltungs-Plugin}{6}{subsection.2.6}
 \contentsline {subsection}{\numberline {2.7}Grundlegender Aufbau und Ordnerstruktur der Webseite}{7}{subsection.2.7}
 \contentsline {subsection}{\numberline {2.8}Die Test-Server}{9}{subsection.2.8}
-\contentsline {section}{\numberline {3}Arbeitspakete}{10}{section.3}
-\contentsline {subsection}{\numberline {3.1}Einteilung der Arbeitspakete}{10}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Arbeitspaket von Herrn Schn\IeC {\"u}rer}{12}{subsection.3.2}
-\contentsline {subsubsection}{\numberline {3.2.1}Erster Seitenprototyp}{12}{subsubsection.3.2.1}
-\contentsline {subsubsection}{\numberline {3.2.2}Startseite des Webshops}{13}{subsubsection.3.2.2}
-\contentsline {subsubsection}{\numberline {3.2.3}Seitennavigation}{13}{subsubsection.3.2.3}
-\contentsline {subsubsection}{\numberline {3.2.4}Weitere Arbeiten an der Startseite des Webshops}{15}{subsubsection.3.2.4}
-\contentsline {subsubsection}{\numberline {3.2.5}Rechtsschutz}{16}{subsubsection.3.2.5}
-\contentsline {subsubsection}{\numberline {3.2.6}Dynamische Seitennavigation}{18}{subsubsection.3.2.6}
-\contentsline {subsubsection}{\numberline {3.2.7}Dynamische Artikelauflistung}{19}{subsubsection.3.2.7}
-\contentsline {subsubsection}{\numberline {3.2.8}Detaillierte dynamische Artikelbeschreibung}{20}{subsubsection.3.2.8}
-\contentsline {subsection}{\numberline {3.3}Arbeitspakete von Herrn Br\IeC {\"u}ntrup}{23}{subsection.3.3}
-\contentsline {subsubsection}{\numberline {3.3.1}Arbeitspaket 5: Die Schnittstellendatenbank}{23}{subsubsection.3.3.1}
-\contentsline {subsubsection}{\numberline {3.3.2}Arbeitspaket 6: Registrierungs- und Anmeldungsfenster designen und programmieren}{28}{subsubsection.3.3.2}
-\contentsline {subsubsection}{\numberline {3.3.3}Arbeitspaket 7: Entwickeln einer Suchfunktion}{36}{subsubsection.3.3.3}
+\contentsline {section}{\numberline {3}Arbeitspakete}{9}{section.3}
+\contentsline {subsection}{\numberline {3.1}Einteilung der Arbeitspakete}{9}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Arbeitspaket von Herrn Schn\IeC {\"u}rer}{11}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Erster Seitenprototyp}{11}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}Startseite des Webshops}{12}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.3}Seitennavigation}{12}{subsubsection.3.2.3}
+\contentsline {subsubsection}{\numberline {3.2.4}Weitere Arbeiten an der Startseite des Webshops}{14}{subsubsection.3.2.4}
+\contentsline {subsubsection}{\numberline {3.2.5}Rechtsschutz}{15}{subsubsection.3.2.5}
+\contentsline {subsubsection}{\numberline {3.2.6}Dynamische Seitennavigation}{17}{subsubsection.3.2.6}
+\contentsline {subsubsection}{\numberline {3.2.7}Dynamische Artikelauflistung}{18}{subsubsection.3.2.7}
+\contentsline {subsubsection}{\numberline {3.2.8}Detaillierte dynamische Artikelbeschreibung}{19}{subsubsection.3.2.8}
+\contentsline {subsection}{\numberline {3.3}Arbeitspakete von Herrn Br\IeC {\"u}ntrup}{22}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}Arbeitspaket 5: Die Schnittstellendatenbank}{22}{subsubsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.2}Arbeitspaket 6: Registrierungs- und Anmeldungsfenster designen und programmieren}{27}{subsubsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.3}Arbeitspaket 7: Entwickeln einer Suchfunktion}{35}{subsubsection.3.3.3}
