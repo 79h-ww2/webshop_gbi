@@ -1,0 +1,35 @@
+/*
+* Der Quellcode zeigt nur einen kleinen Ausschnitt aus der kompletten CSS Datei.
+* Der nachfolgende Quellcode wurde von Herrn Schnürer generiert.
+*/
+
+/* Drop-Down Menü */
+.navigation li:hover > ul {
+	/* Blendet das Dropdown- Menü ein, wenn die Maus über eine Kategorie ist. */
+    visibility: visible; 
+    padding: 0;
+}
+
+.navigation ul, .navigation ul li ul {
+    /* Verbirgt das Dropdown- Menü wenn die Maus über keine Kategorie ist. */
+	visibility: hidden; 
+    list-style: none;;
+    border-top : 12px solid #6c7b35 ;
+	/* Farbverlauf */
+    background: linear-gradient(to  bottom, gray  , black); 
+    position: absolute;
+      
+}
+
+.Untermenu{
+    width: 100px;
+    text-align: center;
+}
+
+
+.navigation .Spalte {
+    width: 150px;
+    height: auto;
+    float: left;  
+    display: inline; 
+}

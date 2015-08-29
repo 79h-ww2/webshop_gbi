@@ -15,11 +15,11 @@
 \contentsline {subsubsection}{\numberline {3.2.1}Erster Seitenprototyp}{12}{subsubsection.3.2.1}
 \contentsline {subsubsection}{\numberline {3.2.2}Startseite des Webshops}{13}{subsubsection.3.2.2}
 \contentsline {subsubsection}{\numberline {3.2.3}Seitennavigation}{13}{subsubsection.3.2.3}
-\contentsline {subsubsection}{\numberline {3.2.4}Weitere Arbeiten an der Startseite des Webshops}{15}{subsubsection.3.2.4}
-\contentsline {subsubsection}{\numberline {3.2.5}Rechtsschutz}{16}{subsubsection.3.2.5}
-\contentsline {subsubsection}{\numberline {3.2.6}Dynamische Seitennavigation}{18}{subsubsection.3.2.6}
-\contentsline {subsubsection}{\numberline {3.2.7}Dynamische Artikelauflistung}{19}{subsubsection.3.2.7}
-\contentsline {subsubsection}{\numberline {3.2.8}Detaillierte dynamische Artikelbeschreibung}{20}{subsubsection.3.2.8}
-\contentsline {subsection}{\numberline {3.3}Arbeitspakete von Herrn Br\IeC {\"u}ntrup}{23}{subsection.3.3}
-\contentsline {subsubsection}{\numberline {3.3.1}Arbeitspaket 5: Die Schnittstellendatenbank}{23}{subsubsection.3.3.1}
-\contentsline {subsubsection}{\numberline {3.3.2}Arbeitspaket 6: Registrierungs- und Anmeldungsfenster designen und programmieren}{28}{subsubsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.2.4}Weitere Arbeiten an der Startseite des Webshops}{16}{subsubsection.3.2.4}
+\contentsline {subsubsection}{\numberline {3.2.5}Rechtsschutz}{17}{subsubsection.3.2.5}
+\contentsline {subsubsection}{\numberline {3.2.6}Dynamische Seitennavigation}{19}{subsubsection.3.2.6}
+\contentsline {subsubsection}{\numberline {3.2.7}Dynamische Artikelauflistung}{22}{subsubsection.3.2.7}
+\contentsline {subsubsection}{\numberline {3.2.8}Detaillierte dynamische Artikelbeschreibung}{22}{subsubsection.3.2.8}
+\contentsline {subsection}{\numberline {3.3}Arbeitspakete von Herrn Br\IeC {\"u}ntrup}{25}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}Arbeitspaket 5: Die Schnittstellendatenbank}{25}{subsubsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.2}Arbeitspaket 6: Registrierungs- und Anmeldungsfenster designen und programmieren}{31}{subsubsection.3.3.2}
