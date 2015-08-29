@@ -20,7 +20,7 @@ $ArtikelDesTagesPId= $artikelDesTages->ArtikelDesTagesPIdSuchen();
     <content>
     
     <div class="detailLeft"> 
-    	Detailansichten:
+    	<div class="detailCellUeberschrift">Detailansichten:</div>
     		<div class="detailCell">
     		
     		<?php 

@@ -13,6 +13,7 @@
 \usepackage{array}
 \usepackage {ulem}
 \usepackage{float}
+\usepackage{eurosym}
 
 \newcommand*{\textoverline}[1]{$\overline{\hbox{#1}}$}
 
@@ -50,7 +51,7 @@ Stefan Schnürer & Benedikt Brüntrup\\Raphael Gregarek & Michael Dück
   showstringspaces=false,
   basicstyle= \normalsize,
   inputencoding=utf8,
-  extendedchars=true
+  extendedchars=true,
 }
 \lstset{literate=%
 {Ö}{{\"O}}1
@@ -131,21 +132,10 @@ Stefan Schnürer & Benedikt Brüntrup\\Raphael Gregarek & Michael Dück
 }
 
 
-
-\lstset{literate=%
-{Ö}{{\"O}}1
-{Ä}{{\"A}}1
-{Ü}{{\"U}}1
-{ß}{{\ss}}2
-{ü}{{\"u}}1
-{ä}{{\"a}}1
-{ö}{{\"o}}1
-{§}{{\S}}1
-{_}{{\_}}1
-}
-
 %###############################################
 
+%Definition von Sonderzeichen
+\DeclareUnicodeCharacter{20AC}{\euro}
 
 
 % Verbesserung der Silbentrennung
@@ -198,10 +188,13 @@ Eingereicht am: \today
 
 
 %Projektplanung
-\include{Seiten/Projektplanung}
+\input{Seiten/Projektplanung}
 
 %Realisierung
-\include{Seiten/Realisierung}
+\input{Seiten/Realisierung}
+
+%Webshopsicherheit
+\input{Seiten/Webshopsicherheit}
 
 
 

@@ -1447,13 +1447,13 @@ ul.werte_bestellvorgang_uebersicht{
 }
 
 .artikelDesTages{
-	border-color: #000;
+	/*border-color: #000;*/
 	background-color: #fff;
-	border-style: solid;
+	/*border-style: solid;*/
 	border-width:1px;
 	padding: 20px;
-	border-radius: 5px;
-	background:linear-gradient(to bottom, #eee , #fff,	#ABC673 ,#fff, #eee );
+	/*border-radius: 5px;*/
+	/*background:linear-gradient(to bottom, #eee , #fff,	#ABC673 ,#fff, #eee );*/
 }
 
 .artikelDesTages header h2{
@@ -1462,11 +1462,21 @@ ul.werte_bestellvorgang_uebersicht{
 
 .artikelDesTages .BildMustermodell{
 	padding: 2px;
-	border: 1px solid #000;
+	/*border: 1px solid #000;
 	border-color: #000;
-	border-radius: 5px;
+	border-radius: 5px;*/
+	border-bottom: solid;
 }
 
 .artikelDesTages a img{
-	border-width:1px;
+	/*border-width:1px;*/
+}
+
+.artikelDesTages .detailContentText{
+	border-bottom: solid #D56509;
+}
+
+.artikelDesTages .detailCellUeberschrift{
+	padding-top:15px;
+	border-top: solid #D56509;
 }
