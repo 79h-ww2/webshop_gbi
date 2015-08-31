@@ -72,7 +72,7 @@ Die oben genannten Arbeitspakete hat sich die Gruppe untereinander aufgeteilt. S
 %Nachfolgend soll auf die einzelnen Zwischenschritte des Projektes eingegangen werden.Das Projekt beginnt mit der Projektplanung. Hierbei werden die Arbeitspakete definiert und an den entsprechenden Gruppenmitgliedern verteilt. Pro Arbeitspaket wird eine Bearbeitungsdauer von zwei Wochen festgelegt. Es wird ein Projektzeitplan sowie eine Risikoanalyse erstellt. Im Anschluss daran werden grobe Design Entwürfe für die Homepage erstellt. Es wird sich für den Design Entwurf von Herrn Brüntrup entschieden. Die Homepage wird in einem matten Grün-Ton designt, um den Kunden die Umweltaspekte von Fahrrädern zu verdeutlichen.
 %\textbf{Was machen Herr Gregarek und Herr Dück?}
 
-\newpage
+
 \subsection{Arbeitspaket von Herrn Schnürer}
 
 Dieser Abschnitt beschreibt den Aufgabenteil von Herrn Schnürer und wie dieser den Seitenprototyp, den statischen und dynamischen Inhalt und Aufbau der Seite sowie die CSS-Datei zur Anzeige des Webshops auf Desktop Rechnern entwickelt hat.
@@ -229,6 +229,7 @@ In den Sommersemesterferien hat Herr Schnürer auch den oberen Teil dieser Seite
 \label{Abbildung13-"Lightbox" zur besseren Darstellung der Produktbilder}
 \end{figure}
 
+\newpage
 \begin{center}
 	\begin{lstinputlisting}[language=PHP, caption={Auszug aus der Seite Artikel Detailansicht}]
 		{Quellcode/ArtikelDetailansicht.php.inc}
@@ -432,3 +433,35 @@ Die \textit{Abbildung 25} zeigt wie ein Suchergebnis des Webshop aussieht. Beim 
 \end{figure}
 
 \subsubsection{Zum Teil übernommens Arbeitspaket: Warenkorb}
+Auf Grund von mehreren Fehlstunden des Gruppenmitglieds Raphael Gregarek war es beim Projektverlauf zu größeren zeitlichen Rückständen beim Arbeitspaket \glqq Warenkorb\grqq{} gekommen. Da die Arbeitspakete von Benedikt Brüntrup schon weitgehend fertig waren, wurde somit die restlichen Aufgaben des Arbeitspaketes \glqq Warenkorb\grqq{} von Herrn Brüntrup übernommen. Die Einarbeitungszeit in den bestehenden Quellcode war recht kurz, da dieser schon von Hilfestellungsarbeiten bekannt war. In den folgenden Zeilen wird beschrieben welche Funktionen des Arbeitspaketes Herr Brüntrup umgesetzt hat.\\
+
+\textbf{Eingabeüberprüfung}\\
+Wie bei den anderen Formularen wurde auch beim Warenkorb eine Eingabeüberprüfung programmiert. Diese wurde clientseitig in der Datei \glqq /Funktions/JS/vorcheck\_warenkorb.js\grqq{} und serverseitig in der Datei \glqq /Funktions/PHP/warenkorb.php.inc\grqq{} umgesetzt. Die Überprüfung wurde, wie bei den anderen Formularen umgesetzt und wird deswegen nicht weiter in dieser Ausarbeitung erläutert. Die Eingabeüberprüfung überprüft, ob überhaupt eine Menge angegeben wurde und ob diese im gültigen Bereich liegt. Es können somit keine negative Mengen bestellt werden und nicht mehr Produkte, als auf Lager sind. Zudem wird als Wert nur einen ganze Zahl unterstützt. Die \textit{Abbildung 36} zeigt die Fehlermeldung der Eingabeüberprüfung, wenn der Kunde mehr Artikel bestellen will, als auf Lager sind.\\
+
+\begin{figure}[H]
+	\begin{center}
+			\includegraphics[width=55mm]{Bilder/warenkorb_eingabepruefung.png}
+	\end{center}
+	\caption{Eingabeüberprüfung Warenkorb}
+\end{figure}
+
+\textbf{Warenkorbübersichtsseite}\\
+Bei der Warenkorbübersichtsseite handelt es sich um eine Seite, wo der Kunde den Warenkorbinhalt genausten aufgelistet bekommt. Auf dieser Seite kann der Kunde die Bestellmenge nachträglich verändern oder das Produkt ganz aus dem Warenkorb entfernen.
+Zur Umsetzung dieser Seite wurden die schon von Herrn Gregarek entwickelten Klassen um Methoden erweitert. Herr Gregarek hatte bis zum Zeitpunkt der Erstellung der Warenkorbübersichtsseite schon ein Flyouts im Header der Webseite entwickelt, welches den Kunden übersichtlich die Artikel anzeigt, die sich im Warenkorb befinden. Das Flyout dient nur als Schnellübersicht und bietet keine Funktionen, um den Inhalt des Warenkorbs bearbeiten zu können. Die \textit{Abbildung 37} die Warenkorbübersichtsseite.
+
+\begin{figure}[H]
+	\begin{center}
+			\includegraphics[width=130mm]{Bilder/warenkorb.png}
+	\end{center}
+	\caption{Warenkorbübersichtsseite}
+\end{figure}
+
+\textbf{Änderung der Bestellmenge}\\
+Die Änderung der Bestellmenge erfolgt durch einen Klick auf dem Hyperlink mit dem Stift-Symbole. Um die Webseite nicht ganz so altmodisch wirken zu lassen, aber trotzdem bei abgeschalteten JavaScript lauffähig zu haben, wurde sich entschlossen die Mengenänderung mit einen Dialog-Fenster zu lösen. Der Hyperlink lädt die aktuelle Webseite neu und gibt als \glqq GET-Parameter\grqq{} an, dass die Menge des Artikels mit der Artikelnummer x geändert werden soll. Die Datei \glqq /Funktions/warenkorb.php,inc\grqq{} nimmt die Parameter entgegen und ruft ein für vorherige Projekte entwickeltes Dialog-Fenster auf. Das Dialog-Fenster schwebt durch die Style-Anweisung \glqq position:absolute;\grqq{} über der  Webseite. Beim Klicken des \glqq OK\grqq{}-Buttons wird die Seite wieder neugeladen und über \glqq POST\grqq{} die neue Menge des Artikels an den Server übertragen. Wie dieses Dialog-Fenster aussieht kann der \textit{Abbildung 38} entnommen werden. Bei gültiger Eingabe ruft der Server die Methode \glqq aendere\_bestellmenge\_artikel\_im\_warenkorb(\$pid, \$menge)\grqq{} auf und ändert die Mengenangabe im Warenkorb.
+
+\begin{figure}[H]
+	\begin{center}
+			\includegraphics[width=70mm]{Bilder/mengenaenderung.png}
+	\end{center}
+	\caption{Dialog: Bestellmenge ändern}
+\end{figure}
