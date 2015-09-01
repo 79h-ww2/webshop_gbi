@@ -432,7 +432,7 @@ Die \textit{Abbildung 25} zeigt wie ein Suchergebnis des Webshop aussieht. Beim 
 	\caption{Suchergebnis}
 \end{figure}
 
-\subsubsection{Zum Teil übernommens Arbeitspaket: Warenkorb}
+\subsubsection{Zum Teil übernommenes Arbeitspaket: Warenkorb}
 Auf Grund von mehreren Fehlstunden des Gruppenmitglieds Raphael Gregarek war es beim Projektverlauf zu größeren zeitlichen Rückständen beim Arbeitspaket \glqq Warenkorb\grqq{} gekommen. Da die Arbeitspakete von Benedikt Brüntrup schon weitgehend fertig waren, wurde somit die restlichen Aufgaben des Arbeitspaketes \glqq Warenkorb\grqq{} von Herrn Brüntrup übernommen. Die Einarbeitungszeit in den bestehenden Quellcode war recht kurz, da dieser schon von Hilfestellungsarbeiten bekannt war. In den folgenden Zeilen wird beschrieben welche Funktionen des Arbeitspaketes Herr Brüntrup umgesetzt hat.\\
 
 \textbf{Eingabeüberprüfung}\\
@@ -475,4 +475,14 @@ Eine weitere Löschfunktion wurde mit Checkenboxen umgesetzt. Durch die Checkbox
 			\includegraphics[width=70mm]{Bilder/sicherheitsfrage_artikel_loeschen.png}
 	\end{center}
 	\caption{Dialog: Sicherheitsfrage Artikel löschen}
+\end{figure}
+
+\subsubsection{Zum Teil übernommenes Arbeitspaket: Bestellvorgang}
+Da auch der Bestellvorgang etwas hinter den Zeitplan lag, wurde hier auch ein Teil von Herrn Brüntrup übernommen. Es wurde eine Routine programmiert, die nach dem Klicken des Buttons \glqq Zur Kasse\grqq{} abgelaufen wird. In dieser Routine stellt der Kunde alle Einstellungen, die mit der Bestellung zu tun haben, ein. Hierzu gehört die Versandart, eine nochmalige Möglichkeit den Warenkorb zu ändern, die Zahlungsart und die Lieferadresse. Die letzte Seite der Bestellroutine zeigt nochmal alle Einstellungen übersichtlich auf einer Seite zusammen gefasst. Auf dieser Seite können alle Einstellungen nachträglich verändert werden. Die Übersichtseite entspricht somit den Gesetz des bürgerlichen Gesetzbuches §312g Absatz 1. Bei diesen Gesetz muss den Kunden die Möglichkeit gegeben werden nochmal vor dem Absenden der Bestellung alle Einstellungen bezüglich der Bestellung ändern zu können. Bei online Shops existiert auch eine \glqq Ausgestaltungspflicht des Bestellbuttons\grqq{}. Der Button zum Bestellabschluss muss aus den anderen Button hervorstechen und eindeutig beschriftet sein. Es muss also den Kunden klar werden, dass die Bestellung mit den Button abgeschlossen wird und diese kostenpflichtig ist. Bei diesem Webshop wurde der Button deswegen in einer anderen Farbe gefärbt und mit \glqq Jetzt kostenpflichtig bestellen\grqq{} beschriftet. Der Kunde kann allerdings nur die Bestellung abschließen, wenn dieser die AGB des Webshop akzeptiert hat. Somit wird die AGB ebenso auf der Bestellübersicht angezeigt. Akzeptieren kann der Kunde die AGB indem dieser bei der Checkbox \glqq Ich akzeptiere die AGB.\grqq{} einen Hacken setzt. Wie auf der \textit{Abbildung 40} zu sehen ist wurde bei der Übersichtsseite die Änderungsfunktionen über einen Hyperlink mit Stiftsymbol umgesetzt. Dieser Hyperlink leitet den Kunden zu der Seite der Bestellroutine zurück, wo die entsprechende Einstellung getätigt wurde.
+
+\begin{figure}[H]
+	\begin{center}
+			\includegraphics[width=100mm]{Bilder/bestelluebersicht.png}
+	\end{center}
+	\caption{Bestellroutine: Bestellübersicht}
 \end{figure}
