@@ -5,7 +5,7 @@
         ...
 }
 /* 
- * Zeigt den Den Loginbereich an, 
+ * Zeigt den Loginbereich an, 
  * wenn die Maus sich auf auf dem Anmeldesymbol befindet 
  */
 .accountCell:HOVER > .popupRegistrierung, .popupRegistrierung:hover{
