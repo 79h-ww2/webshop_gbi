@@ -348,7 +348,6 @@ Der Einlogvorgang wurde wie folgt umgesetzt. Die Anmelde-Email-Adresse wird in e
 \textbf{Die clientseitige Überprüfung}\\
 Wenn JavaScript aktiviert ist, werden, wie oben schon erwähnt, die Formulareingaben zuvor im Browser überprüft. Dafür wird beim Formular den Attribut \glqq onsubmit\grqq{} eine JavaScript-Funktion übergeben. Die Formulareingabe wird hierbei nur an den Server weitergeleitet, wenn diese Methode als Rückgabewert \glqq true\grqq{} zurückgibt. Die JavaScript-Funktion überprüft bei der Eingabe, ob überhaupt ein Text in die Textfelder eingegeben wurde und die Eingabe gültig ist. Zum Beispiel darf eine Postleitzahl nur aus 5 Ziffern bestehen. Die clientseitige Programmierung findet bei der Anmeldung in der Datei \glqq /Funktions/JS/anmeldung.js\grqq{} und bei der Registierung in der Datei \glqq /Funktions/JS/registrierung.js\grqq{} statt.
 
-\newpage
 \begin{center}
 	\begin{lstinputlisting}[language=HTML, caption={Login-Formular (vereinfacht)}]
 		{Quellcode/login-formular.php.inc}
@@ -498,3 +497,5 @@ Beim Klicken auf dem  Bestellbuttons wird die Seite neugeladen. Die neugeladene 
 
 
 Mit der Übersichtseite inbegriffen besteht die Bestellroutine aus fünf Seiten. Damit die Webseite möglich übersichtlich gestaltet ist, wird deswegen auf jeder Seite nur eine Einstellung vorgenommen. Bei der ersten Seite wird z.B. nur die Versandart festgelegt. Sind für die Einstellung Eingabefenster nötig, so werden diese, wie schon mehrfach erklärt client- und serverseitig überprüft. Es wurde sich dazu entschlossen immer nur eine Einstellung auf eine Seite zu packen, da bei bestehenden Anbietern, wie z.B. Amazon das \glqq Vollpacken\grqq{} der Seiten der Bestellroutine als sehr unübersichtlich angesehen wurde. 
+
+\input{Seiten/Arbeitspaket_raphael.tex}
