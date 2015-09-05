@@ -11,7 +11,7 @@ Der nachfolgende Quellcode wurde von Herrn Schnürer geeriert.
   for ($i = 0; $i < count($arr_kategorie); $i++){
    $kategorie = $arr_kategorie[$i];
    if ( $i != 0){
-    //Auflistung der Produktkategorie (mit Link) 
+    //Auflistung der Produktkategorie (Zubehör)
    }
    else{
     //Auslistung der Produktkategorie (ohne Link)
