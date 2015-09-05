@@ -27,10 +27,12 @@ Formatierungen und Farben werden größtenteils von der CSS-Datei für Desktop-G
 Der Designentwurf für mobile Endgeräte sieht folgendermaßen aus:
 
 	
-\begin{figure}
-    \subfigure[Designentwurf]{\includegraphics[height=10cm]{Bilder/Michael_Abbildung2-Desingentwurf.png}}
-    \subfigure[Designentwurf mit Dropdown-Menü]{\includegraphics[height=10cm]{Bilder/Michael_Abbildung3-DesingentwurfMitDropDownMenue.png}}
-\caption{Titel unterm gesamten Bild}
+\begin{figure}[H]
+\begin{center}
+    \subfigure[Ohne Dropdown-Menü]{\includegraphics[height=10cm]{Bilder/Michael_Abbildung2-Desingentwurf.png}}
+    \subfigure[Mit Dropdown-Menü]{\includegraphics[height=10cm]{Bilder/Michael_Abbildung3-DesingentwurfMitDropDownMenue.png}}
+\caption{Designentwurf}
+\end{center}
 \end{figure}
 
 \textbf{Unterscheidung zwischen Desktop- und mobilen System:}
@@ -59,13 +61,15 @@ Mit diesem Ausdruck wird die Seite auf angenehme Größe heran gezoomt und kann 
 Um das Benutzen der Website praktischer zu gestalten, sollte die Website auf einem mobilen Gerät nur in der vertikalen scrollbar sein. Das gilt sowohl für Handys als auch für Tablets. Im Grunde heißt das, dass die Breite der Website an die Breite des mobilen Gerätes angepasst werden muss. Da in der ‚style.css‘ viel mit Pixel-Breiten gearbeitet wird, bedeutet das, dass alle entsprechenden Elemente umformatiert werden müssen.
 Zudem werden außer Größen auch Anordnungen von Elementen und Farben geändert. Der Grund hierfür ist einfach, das die Website an einigen Stellen zu starke Farben hat und das evtl. unangenehm für den Benutzer werden kann. 
 
+
+
 \begin{figure}[H]
 \begin{center}
-\includegraphics[width=12cm]{Bilder/Michael_Abbildung4-FarbaenderungenFuerBessereLesbarkeit.png}
-\end{center}
+    \subfigure[]{\includegraphics[height=8cm]{Bilder/Michael_Abbildung4-FarbaenderungenFuerBessereLesbarkeit1.png}}
+    \subfigure[]{\includegraphics[height=8cm]{Bilder/Michael_Abbildung4-FarbaenderungenFuerBessereLesbarkeit2.png}}
 \caption{Farbänderungen für bessere Lesbarkeit}
+\end{center}
 \end{figure}
-
 \textbf{Menü}
 \\
 Ein großer Punkt bei der Gestaltung von mobilfähigen Websites ist das Menü. Das Menü kann auf einem Smartphone meist nicht so dargestellt werden, wie es auf der Desktop-Seite der Fall ist. Dort sind alle Menüpunkte in einer Reihe und dafür fehlt der Platz auf mobilen Geräten. Wenn die Menüpunkte untereinander angeordnet werden, ist der Header der Website zu großflächig. Es ist kaum was von dem Inhalt der Seite zu sehen. Aus diesem Grund ist ein Dropdown-Menü genau das richtige. So kann per Druck auf einen Button das Menü aus-, beziehungsweise eingefahren werden. Um den Platz noch sinnvoller zu nutzen, werden die drei Headerfunktionen, die Suche, der Warenkorb und die Kontofunktion, ebenfalls in das Dropdown-Menü versetzt.
@@ -208,7 +212,7 @@ Die E-Mail wird versandt, nachdem die Eingabe bei der Registrierung auf dessen G
 \begin{center}
 \includegraphics[width=12cm]{Bilder/Michael_Quellcode1.png}
 \end{center}
-\caption{IN QUELLCODE UMWANDELN!!!}
+\caption{IN QUELLCODE UMWANDELN Klasse Kunde ab Zeile 484!!!}
 \end{figure}
 
 Die Methode \glqq{$sende_aktivierungsmail_registrierung$}\grqq{} der Klasse \glqq{Kunde}\grqq{} wird aufgerufen. In dieser Methode wird eine Verbindung zu der Datenbank hergestellt, um die Daten des Kunden auszulesen.  Dies ist erforderlich um die E-Mail Kundenspezifischer zu gestalten.

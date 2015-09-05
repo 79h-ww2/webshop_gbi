@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.12)  5 SEP 2015 14:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.12)  5 SEP 2015 14:51
 entering extended mode
 **ArbeitspaketDueck.tex
 
@@ -1957,7 +1957,7 @@ or  <return>  to continue without it.
 
 ! Undefined control sequence.
 l.31     \subfigure
-                   [Designentwurf]{\includegraphics[height=12cm]{Bilder/Mich...
+                   [Ohne Dropdown-Menü]{\includegraphics[height=10cm]{Bilde...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1965,23 +1965,28 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 Missing character: There is no [ in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
 Missing character: There is no D in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no w in font nullfont!
-Missing character: There is no u in font nullfont!
 Missing character: There is no r in font nullfont!
-Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no M in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no � in font nullfont!
+Missing character: There is no � in font nullfont!
 Missing character: There is no ] in font nullfont!
 ! Undefined control sequence.
-l.31 ...\subfigure[Designentwurf]{\includegraphics
-                                                  [height=12cm]{Bilder/Micha...
+l.31 ...gure[Ohne Dropdown-Menü]{\includegraphics
+                                                  [height=10cm]{Bilder/Micha...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1997,7 +2002,7 @@ Missing character: There is no h in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no = in font nullfont!
 Missing character: There is no 1 in font nullfont!
-Missing character: There is no 2 in font nullfont!
+Missing character: There is no 0 in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no m in font nullfont!
 Missing character: There is no ] in font nullfont!
@@ -2018,7 +2023,7 @@ Missing character: There is no l in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.31 ...cludegraphics[height=12cm]{Bilder/Michael_
+l.31 ...cludegraphics[height=10cm]{Bilder/Michael_
                                                   Abbildung2-Desingentwurf.p...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2043,7 +2048,7 @@ deleted material, e.g., by typing `I$}'.
 
 ! Undefined control sequence.
 l.32     \subfigure
-                   [Designentwurf mit Dropdown-Menü]{\includegraphics[heigh...
+                   [Mit Dropdown-Menü]{\includegraphics[height=10cm]{Bilder...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -2051,8 +2056,8 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.32 ...twurf mit Dropdown-Menü]{\includegraphics
-                                                  [height=12cm]{Bilder/Micha...
+l.32 ...igure[Mit Dropdown-Menü]{\includegraphics
+                                                  [height=10cm]{Bilder/Micha...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -2067,7 +2072,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.33 \caption
-             {Titel unterm gesamten Bild}
+             {Designentwurf}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -2120,18 +2125,23 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (76.561pt too wide) in paragraph at lines 31--35
-[]$[]\OML/cmm/m/it/10 bbildung\OT1/cmr/m/n/10 2 \OMS/cmsy/m/n/10  $
+Overfull \hbox (20.0pt too wide) in paragraph at lines 31--35
+[]
  []
 
 
-Overfull \hbox (232.80544pt too wide) in paragraph at lines 31--35
-$\OML/cmm/m/it/10 Desingentwurf:png\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 Designentw
-urfmitDropdown \OMS/cmsy/m/n/10  $
+Overfull \hbox (56.561pt too wide) in paragraph at lines 31--35
+$[]\OML/cmm/m/it/10 bbildung\OT1/cmr/m/n/10 2 \OMS/cmsy/m/n/10  $
  []
 
 
-Overfull \hbox (534.40758pt too wide) in paragraph at lines 31--35
+Overfull \hbox (164.15611pt too wide) in paragraph at lines 31--35
+$\OML/cmm/m/it/10 Desingentwurf:png\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 MitDropdow
+n \OMS/cmsy/m/n/10  $
+ []
+
+
+Overfull \hbox (486.65352pt too wide) in paragraph at lines 31--35
 $\OML/cmm/m/it/10 Men\OT1/cmr/m/n/10 ][][]$ 
  []
 
@@ -11517,7 +11527,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.211 \caption
-              {IN QUELLCODE UMWANDELN!!!}
+              {IN QUELLCODE UMWANDELN Klasse Kunde ab Zeile 484!!!}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -11541,6 +11551,27 @@ Missing character: There is no D in font nullfont!
 Missing character: There is no E in font nullfont!
 Missing character: There is no L in font nullfont!
 Missing character: There is no N in font nullfont!
+Missing character: There is no K in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no K in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no Z in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 4 in font nullfont!
 Missing character: There is no ! in font nullfont!
 Missing character: There is no ! in font nullfont!
 Missing character: There is no ! in font nullfont!
