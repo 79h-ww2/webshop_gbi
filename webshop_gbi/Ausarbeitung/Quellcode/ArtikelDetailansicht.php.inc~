@@ -1,5 +1,5 @@
 //Der Quellcode zeigt nur einen kleinen 
-//Ausschnitt aus der kompletten Index-Datei.
+//Ausschnitt aus der kompletten Index Datei.
 //Der nachfolgende Quellcode wurde von Herrn Schnuerer geeriert.
 <?php include_once 'Classes/ArtikelDetails.php.inc';?>
 <div class = "startseite">
