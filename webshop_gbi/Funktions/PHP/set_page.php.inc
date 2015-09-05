@@ -47,6 +47,9 @@ if (isset ( $_GET ['page'] ) && $_GET ['page'] != "") {
 		case 'bestellung':
 			include_once './Pages/bestellvorgang.php.inc';
 			break;
+		case 'bestellungen':
+			include_once './Pages/bestellungen.php.inc';
+			break;
 		default :
 			echo "<br/><h2>Gewünschte Seite wurde nicht gefunden.</h2>";
 	}
