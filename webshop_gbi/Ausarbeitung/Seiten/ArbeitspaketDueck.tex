@@ -1,7 +1,7 @@
 \newpage
 \subsection{Arbeitspaket von Herrn Dück$^4$}
 
-Dieser Abschnitt beschreibt, wie Herr Dück die ihm zugeteilten Arbeitspakete in bearbeitet und gelöst hat. Darunter fällt die Erstellung einer CSS-Datei für mobile Systeme, die Bewertung von Artikeln sowie die Gestaltung der Bestätigungs-Email.
+Dieser Abschnitt beschreibt, wie Herr Dück die ihm zugeteilten Arbeitspakete bearbeitet und gelöst hat. Darunter fällt die Erstellung einer CSS-Datei für mobile Systeme, die Bewertung von Artikeln sowie die Gestaltung der Bestätigungs-E-Mail.
 
 
 \subsubsection{Arbeitspaket 2: Die CSS-Datei für die Darstellung auf mobilen Geräten}
@@ -18,13 +18,13 @@ Der Grund für eine zweite CSS ist der, dass auch auf Smartphones und Tablets di
 \end{figure}
 
 Mit Tablets wird man damit nicht so große Probleme haben, dennoch muss auch für Tablets das Layout geändert werden. 
-Mobile Geräte werden nicht mit einer externen Maus bedient sondern durch eine Touch-Funktion. Das Verhindert die Darstellung von Dropdown-Menüs oder Popups durch die CSS-Formatierung ‚hover‘. Dieses Problem wird gelöst, in dem zusätzliche Seiten geschrieben werden, die dann das Dropdown-Menü und Popups ersetzen sollen.
+Mobile Geräte werden nicht mit einer externen Maus bedient sondern durch eine Touch-Funktion. Das verhindert die Darstellung von Dropdown-Menüs oder Popups durch die CSS-Formatierung ‚hover‘. Dieses Problem wird gelöst, in dem zusätzliche Seiten geschrieben werden, die dann das Dropdown-Menü und Popups ersetzen sollen.
 
 \newpage
 \textbf{Layoutgestaltung:}
 \\
-Zu Beginn der Bearbeitung dieses Paketes muss ein Design der mobilen Ansicht festgelegt werden. Angelehnt an den meisten Webseiten soll auch hier ein verstecktes Menü eingebaut werden. Bei Klick auf einen Button fährt das Menü vertikal aus bzw. ein. Sowohl die Menüpunkte als auch die Funktionen, die im Header der Website sind, sollen in dieses Dropdown-Menü gelagert werden. Darunter fällt die Suchfunktion, der Zugriff auf den Warenkorb und der Login- bzw. Kontobereich. Der Header wird dementsprechend kleiner. Er enthält nur den Menü-Button und das Logo der GBI.
-Formatierungen und Farben werden größtenteils von der CSS-Datei für Desktop-Geräte übernommen. 
+Zu Beginn der Bearbeitung dieses Paketes musste ein Design der mobilen Ansicht festgelegt werden. Angelehnt an den meisten Webseiten sollte auch hier ein verstecktes Menü eingebaut werden. Bei Klick auf einen Button fährt das Menü vertikal aus bzw. ein. Sowohl die Menüpunkte als auch die Funktionen, die im Header der Website sind, sollten in dieses Dropdown-Menü gelagert werden. Darunter fällt die Suchfunktion, der Zugriff auf den Warenkorb und der Login- bzw. Kontobereich. Der Header wird dementsprechend kleiner. Er enthält nur den Menü-Button und das Logo der GBI.
+Formatierungen und Farben wurden größtenteils von der CSS-Datei für Desktop-Geräte übernommen. 
 Der Designentwurf für mobile Endgeräte sieht folgendermaßen aus:
 
 	
@@ -38,7 +38,7 @@ Der Designentwurf für mobile Endgeräte sieht folgendermaßen aus:
 
 \textbf{Unterscheidung zwischen Desktop- und mobilen System:}
 \\
-Zunächst muss die Website beim Öffnen zwischen einen Desktop-System und einem mobilen Gerät unterscheiden können. Dies wird mit folgender Methode gelöst.
+Zunächst musste die Website beim Öffnen zwischen einen Desktop-System und einem mobilen Gerät unterscheiden können. Dies wird mit folgender Methode gelöst.
 \newpage
 \begin{center}
 	\begin{lstinputlisting}[language=PHP, caption={Unterscheidung Desktop und mobiles Gerät}]
@@ -46,7 +46,7 @@ Zunächst muss die Website beim Öffnen zwischen einen Desktop-System und einem 
 	\end{lstinputlisting}
 \end{center}
 
-Wenn die Methode ‚check\_mobile()‘ den Wert ‚false‘ ausgibt, handelt es sich um Desktop-System. Andern falls ist das Endgerät ein mobiles und zu der schon vorhandenen ‚style.css‘ wird die neue ‚mobile.css‘ importiert. Alle Änderungen, die notwendig für die Darstellung auf einem mobilen Gerät sind, werden hier gespeichert und überschreiben ggf. die Formatierungen in der ‚style.css‘.
+Wenn die Methode ‚check\_mobile()‘ den Wert ‚false‘ ausgibt, handelt es sich um Desktop-System. Andern falls ist das Endgerät ein mobiles und zu der schon vorhandenen ‚style.css‘ wird die neue ‚mobile.css‘ importiert. Alle Änderungen, die notwendig für die Darstellung auf einem mobilen Gerät sind, werden hier gespeichert und überschreiben ggf. die Formatierungen in der ‚style.css‘. \\ \\
 
 \textit{Anpassen der Größen:}
 \\
@@ -60,7 +60,7 @@ Es ist klar, dass die Website, so wie sie  vom ursprünglichen Desktop-Layout er
 
 Mit diesem Ausdruck wird die Seite auf angenehme Größe heran gezoomt und kann nicht von Benutzer skaliert werden. 
 Um das Benutzen der Website praktischer zu gestalten, sollte die Website auf einem mobilen Gerät nur in der vertikalen scrollbar sein. Das gilt sowohl für Handys als auch für Tablets. Im Grunde heißt das, dass die Breite der Website an die Breite des mobilen Gerätes angepasst werden muss. Da in der ‚style.css‘ viel mit Pixel-Breiten gearbeitet wird, bedeutet das, dass alle entsprechenden Elemente umformatiert werden müssen.
-Zudem werden außer Größen auch Anordnungen von Elementen und Farben geändert. Der Grund hierfür ist einfach, das die Website an einigen Stellen zu starke Farben hat und das evtl. unangenehm für den Benutzer werden kann. 
+Zudem wurden außer Größen auch Anordnungen von Elementen und Farben geändert. Der Grund hierfür ist einfach, das die Website an einigen Stellen zu starke Farben hat und das evtl. unangenehm für den Benutzer werden kann. 
 
 
 
@@ -87,7 +87,7 @@ Der Header ist auf den Parameter ‚position: fixed‘ eingestellt, das heißt e
 \\ \\
 \textbf{Neue Seiten:}
 \\
-Im Laufe der Entwicklung der mobilen CSS werden mehrere neue Seiten geschrieben. Das liegt daran, dass Funktionen, die auf dem Desktop-System recht praktisch sind, auf mobilen Geräten eher stören. Dazu zählen alle Popups als auch das Untermenü, welches erscheint, wenn man mit der Maus über den Menüpunkt ‚Fahrrad‘ geht. Um trotzdem nicht eingeschränkt zu sein, müssen folgende drei Seiten zusätzlich geschrieben werden:
+Im Laufe der Entwicklung der mobilen CSS wurden mehrere neue Seiten geschrieben. Das liegt daran, dass Funktionen, die auf dem Desktop-System recht praktisch sind, auf mobilen Geräten eher stören. Dazu zählen alle Popups als auch das Untermenü, welches erscheint, wenn man mit der Maus über den Menüpunkt ‚Fahrrad‘ geht. Um trotzdem nicht eingeschränkt zu sein, müssen folgende drei Seiten zusätzlich geschrieben werden:
 \begin{enumerate}
 \item Die Übersicht der Fahrradkategorien 
 \item Eine Login-Seite
@@ -99,7 +99,7 @@ Die Übersicht ist tatsächlich nur eine Auflistung aller Fahrradkategorien. Die
 \\ \\
 Eine Login-Seite
 \\
-Da Popups auf mobilen Geräten nicht angezeigt werden, gibt es sonst keine Möglichkeit sich anzumelden. Deswegen muss eine separate Seite geschrieben werden, auf die man gelangt, wenn man im Menü den Login-Button betätigt. Die Login-Seite bietet ebenfalls eine Weiterleitung zu der Registrierungs-Seite.
+Da Popups auf mobilen Geräten nicht angezeigt werden, gibt es sonst keine Möglichkeit sich anzumelden. Deswegen musste eine separate Seite geschrieben werden, auf die man gelangt, wenn man im Menü den Login-Button betätigt. Die Login-Seite bietet ebenfalls eine Weiterleitung zu der Registrierungs-Seite.
 
 \begin{figure}[H]
 \begin{center}
@@ -123,7 +123,7 @@ Wie im vorherigen Punkt gibt es auch hier keine Möglichkeit, ohne Popup auf die
 \newpage
 \textbf{Probleme/Hindernisse:}
 \\
-Ein Problem bei der Bearbeitung dieses Arbeitspaketes ist die stetige Veränderung der Website, sowohl der php-Seiten als auch der CSS-Dateien. Dadurch wird das Erstellen einer CSS-Datei für mobile Geräte zu einer Langzeitaufgabe, da immer wieder Teile geändert und angepasst werden müssen. 
+Ein Problem bei der Bearbeitung dieses Arbeitspaketes war die stetige Veränderung der Website, sowohl der PHP-Seiten als auch der CSS-Dateien. Dadurch wurde das Erstellen einer CSS-Datei für mobile Geräte zu einer Langzeitaufgabe, da immer wieder Teile geändert und angepasst werden mussten. 
 
 
 \subsubsection{Arbeitspaket 11: Die Bewertungsfunktion von Artikeln}
@@ -131,7 +131,7 @@ Ein Problem bei der Bearbeitung dieses Arbeitspaketes ist die stetige Veränderu
 Die Bewertung ist in einem Webshop eine große Hilfe bei der Findung guter Produkte. Deshalb soll diese Funktion in GBI-Webshop auch nicht fehlen. 
 In diesem Abschnitt wird alles rund um die Bewertung von Produkten beschrieben. Dabei wird auf das Ansehen und auf das Verfassen einer solchen eingegangen.
 \\ \\
-Bewertung Popup
+Popup zur Bewertung
 \\
 Um sofort für jeden ersichtlich zu machen, wie ein Artikel bewertet wurde, befindet sich in der Artikelbeschreibung ein Feld mit der Durchschnittlichen Sternebewertung und dahinter eine Angabe, wie viele Bewertungen abgegeben wurden. So kann der Benutzer von vornherein sehen, ob dieser Artikel sich lohnt oder nicht. Will man genau wissen, wie die Aufteilung der Bewertungen auf die Sterne ist, bietet das Feld ein Popupfenster, welches erscheint, wenn man mit der Maus darüber fährt. Zusätzlich befindet sich in diesem Popup ein Link, über den man zu allen Rezensionen dieses Artikels weitergeleitet wird.
 
@@ -145,7 +145,7 @@ Um sofort für jeden ersichtlich zu machen, wie ein Artikel bewertet wurde, befi
 Einen Artikel bewerten
 \\
 Um selber eine Rezension zu diesem Artikel zu verfassen, befindet sich auf der Artikelseite der Link „Artikel bewerten“, über den man zu der Bewertungsseite gelangt. 
-. Voraussetzung um eine Bewertung abgeben zu können, ist sich zuvor angemeldet zu haben. Ist das nicht der Fall, soll auf die Login-Seite weitergeleitet werden mit einem Hinweis sich anzumelden.
+Voraussetzung um eine Bewertung abgeben zu können, ist sich zuvor angemeldet zu haben. Ist das nicht der Fall, soll auf die Login-Seite weitergeleitet werden mit einem Hinweis sich anzumelden.
 
 \begin{figure}[H]
 \begin{center}
@@ -165,7 +165,7 @@ Die Idee der Bewertungsfunktion ist angelehnt an die von Amazon. Der Benutzer mu
 \end{figure}
 
 \newpage
-Wird der Submit-Button geklickt, wird, wie auch bei der Suche oder Registrierung, über JavaScript überprüft, ob die Eingabe gültig ist. Dabei kommt es nicht auf den Inhalt des Geschriebenen an, sondern einfach nur dass alle Felder ausgefüllt sind. Sind alle Angaben gemacht worden, werden die Daten in die Datenbank geladen. Dazu wird die dafür zuständige Methode in der Klasse „Kommentar“ aufgerufen. Es wird sowohl die Produkt-ID als auch die Kunden-ID gespeichert. Das ermöglicht es, Alle Bewertungen eines Produktes anzeigen zu lassen, als auch alle Bewertungen eines Kunden. Wenn ein Benutzer einen  Artikel bewerten will, welcher schon zuvor von ihm bewertet wurde, wird seine ursprüngliche Bewertung angezeigt. Diese kann er dann nach Belieben ändern.
+Wird der Submit-Button geklickt, wird, wie auch bei der Suche oder Registrierung, über JavaScript überprüft, ob die Eingabe gültig ist. Dabei kommt es nicht auf den Inhalt des Geschriebenen an, sondern einfach nur dass alle Felder ausgefüllt sind. Sind alle Angaben gemacht worden, werden die Daten in die Datenbank geladen. Dazu wird die dafür zuständige Methode in der Klasse „Kommentar“ aufgerufen. Es wird sowohl die Produkt-ID als auch die Kunden-ID gespeichert. Das ermöglicht es, alle Bewertungen eines Produktes anzeigen zu lassen, als auch alle Bewertungen eines Kunden. Wenn ein Benutzer einen Artikel bewerten will, welcher schon zuvor von ihm bewertet wurde, wird seine ursprüngliche Bewertung angezeigt. Diese kann er dann nach Belieben ändern.
 \\
 Der Menüpunkt „Meine Rezensionen“
 \\
@@ -211,7 +211,7 @@ Die E-Mail wird versandt, nachdem die Eingabe bei der Registrierung auf dessen G
 	\end{lstinputlisting}
 \end{center}
 
-Die Methode \glqq sende\_aktivierungsmail\_registrierung\grqq{} der Klasse \glqq{Kunde}\grqq{} wird aufgerufen. In dieser Methode wird eine Verbindung zu der Datenbank hergestellt, um die Daten des Kunden auszulesen.  Dies ist erforderlich um die E-Mail Kundenspezifischer zu gestalten.
+Die Methode \glqq sende\_aktivierungsmail\_registrierung\grqq{} der Klasse \glqq{Kunde}\grqq{} wird aufgerufen. In dieser Methode wird eine Verbindung zu der Datenbank hergestellt, um die Daten des Kunden auszulesen.  Dies ist erforderlich um die E-Mail kundenspezifischer zu gestalten.
 Weiter wird der Anredesatz und die E-Mail-Nachricht verfasst.
 
 %\begin{figure}[H]
