@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.12)  5 SEP 2015 15:21
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.8.12)  6 SEP 2015 13:37
 entering extended mode
 **Ausarbeitung.tex
 
@@ -695,7 +695,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.40 ...taccess\grqq {}-Datei}{66}{subsection.4.1}
+l.40 ...taccess\grqq {}-Datei}{68}{subsection.4.1}
                                                    [1 <G:/Programme/xampp/htdoc
 s/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/HS_OWL_RGB_Rot.jpg>])
 \tf@toc=\write5
@@ -816,14 +816,14 @@ File: Bilder/projektstand1.png Graphic file (type png)
 
 <use Bilder/projektstand1.png>
 Package pdftex.def Info: Bilder/projektstand1.png used on input line 118.
-(pdftex.def)             Requested size: 227.62204pt x 230.97202pt.
+(pdftex.def)             Requested size: 284.52756pt x 288.72888pt.
 
 <Bilder/projektstand3.png, id=301, 373.395pt x 336.50719pt>
 File: Bilder/projektstand3.png Graphic file (type png)
 
 <use Bilder/projektstand3.png>
 Package pdftex.def Info: Bilder/projektstand3.png used on input line 126.
-(pdftex.def)             Requested size: 227.62204pt x 205.13557pt.
+(pdftex.def)             Requested size: 284.52756pt x 256.43102pt.
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
  <use Bilder/HS_OWL_RGB_Rot.jpg>
 Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 129.
@@ -836,14 +836,14 @@ File: Bilder/projektstand5.png Graphic file (type png)
 
 <use Bilder/projektstand5.png>
 Package pdftex.def Info: Bilder/projektstand5.png used on input line 134.
-(pdftex.def)             Requested size: 227.62204pt x 202.76006pt.
+(pdftex.def)             Requested size: 284.52756pt x 253.45126pt.
 
 <Bilder/projektstand7.png, id=311, 347.04657pt x 226.59656pt>
 File: Bilder/projektstand7.png Graphic file (type png)
 
 <use Bilder/projektstand7.png>
 Package pdftex.def Info: Bilder/projektstand7.png used on input line 142.
-(pdftex.def)             Requested size: 227.62204pt x 148.62408pt.
+(pdftex.def)             Requested size: 284.52756pt x 185.7827pt.
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
  <use Bilder/HS_OWL_RGB_Rot.jpg>
 Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 145.
@@ -855,62 +855,67 @@ jektstand3.png> <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung
 rung.tex
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
  <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 29.
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 1.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
  [13 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/pro
 jektstand7.png>]
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
 
 <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 81.
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 44.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
  [14]
-<Bilder/Abbildung2-GroberDesignEntwurfDesWebshops.png, id=343, 612.8496pt x 606
+File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
+ <use Bilder/HS_OWL_RGB_Rot.jpg>
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 76.
+(pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
+ [15]
+<Bilder/Abbildung2-GroberDesignEntwurfDesWebshops.png, id=347, 612.8496pt x 606
 .1044pt>
 File: Bilder/Abbildung2-GroberDesignEntwurfDesWebshops.png Graphic file (type p
 ng)
  <use Bilder/Abbildung2-GroberDesignEntwurfDesWebshops.png>
 Package pdftex.def Info: Bilder/Abbildung2-GroberDesignEntwurfDesWebshops.png u
-sed on input line 87.
+sed on input line 88.
 (pdftex.def)             Requested size: 227.62204pt x 225.11522pt.
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
 
 <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 102.
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 103.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [15 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Abb
+ [16 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Abb
 ildung2-GroberDesignEntwurfDesWebshops.png>]
-<Bilder/Abbildung3-Seitenprototyp.png, id=350, 515.80942pt x 550.52736pt>
+<Bilder/Abbildung3-Seitenprototyp.png, id=354, 515.80942pt x 550.52736pt>
 File: Bilder/Abbildung3-Seitenprototyp.png Graphic file (type png)
 
 <use Bilder/Abbildung3-Seitenprototyp.png>
 Package pdftex.def Info: Bilder/Abbildung3-Seitenprototyp.png used on input lin
-e 105.
+e 106.
 (pdftex.def)             Requested size: 426.79134pt x 455.53471pt.
 
-<Bilder/Abbildung4-SeitenprototypMitDropDownMenue.png, id=351, 517.22647pt x 55
+<Bilder/Abbildung4-SeitenprototypMitDropDownMenue.png, id=355, 517.22647pt x 55
 0.52736pt>
 File: Bilder/Abbildung4-SeitenprototypMitDropDownMenue.png Graphic file (type p
 ng)
  <use Bilder/Abbildung4-SeitenprototypMitDropDownMenue.png>
 Package pdftex.def Info: Bilder/Abbildung4-SeitenprototypMitDropDownMenue.png u
-sed on input line 113.
+sed on input line 114.
 (pdftex.def)             Requested size: 426.79134pt x 454.27467pt.
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
 
 <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 117.
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 119.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [16 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Abb
+ [17 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Abb
 ildung3-Seitenprototyp.png>]
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
 
 <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 118.
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 119.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [17 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Abb
+ [18 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Abb
 ildung4-SeitenprototypMitDropDownMenue.png>]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 121.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 122.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
@@ -921,69 +926,69 @@ File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 (G:\Programme\xampp\htdocs\webshop_gbi\webshop_gbi\Ausarbeitung\Quellcode/stati
 scheNavigation.css)
-<Bilder/Abbildung5-StartseiteDesWebshops.png, id=364, 637.47594pt x 550.8883pt>
+<Bilder/Abbildung5-StartseiteDesWebshops.png, id=369, 637.47594pt x 550.8883pt>
 File: Bilder/Abbildung5-StartseiteDesWebshops.png Graphic file (type png)
 <use Bilder/Abbildung5-StartseiteDesWebshops.png>
 Package pdftex.def Info: Bilder/Abbildung5-StartseiteDesWebshops.png used on in
-put line 135.
-(pdftex.def)             Requested size: 227.62204pt x 196.7057pt.
+put line 136.
+(pdftex.def)             Requested size: 284.52756pt x 245.88004pt.
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
 
 <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 139.
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 140.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [18]
-<Bilder/Abbildung6-ImpressumDesWebshops.png, id=398, 731.11981pt x 432.91835pt>
+ [19]
+<Bilder/Abbildung6-ImpressumDesWebshops.png, id=402, 731.11981pt x 432.91835pt>
 File: Bilder/Abbildung6-ImpressumDesWebshops.png Graphic file (type png)
 <use Bilder/Abbildung6-ImpressumDesWebshops.png>
 Package pdftex.def Info: Bilder/Abbildung6-ImpressumDesWebshops.png used on inp
-ut line 147.
-(pdftex.def)             Requested size: 227.62204pt x 134.778pt.
+ut line 148.
+(pdftex.def)             Requested size: 284.52756pt x 168.48076pt.
 
-<Bilder/Abbildung7-AGBDesWebshops.png, id=399, 731.11981pt x 468.00087pt>
+<Bilder/Abbildung7-AGBDesWebshops.png, id=403, 731.11981pt x 468.00087pt>
 File: Bilder/Abbildung7-AGBDesWebshops.png Graphic file (type png)
 
 <use Bilder/Abbildung7-AGBDesWebshops.png>
 Package pdftex.def Info: Bilder/Abbildung7-AGBDesWebshops.png used on input lin
-e 154.
-(pdftex.def)             Requested size: 227.62204pt x 145.70004pt.
-File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
- <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 158.
-(pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
+e 155.
+(pdftex.def)             Requested size: 284.52756pt x 182.13397pt.
 
-[19 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Abbi
-ldung5-StartseiteDesWebshops.png> <G:/Programme/xampp/htdocs/webshop_gbi/websho
-p_gbi/Ausarbeitung/Bilder/Abbildung6-ImpressumDesWebshops.png>]
-<Bilder/Abbildung8-DatenschutzDesWebshops.png, id=408, 690.79703pt x 537.22832p
+<Bilder/Abbildung8-DatenschutzDesWebshops.png, id=404, 690.79703pt x 537.22832p
 t>
 File: Bilder/Abbildung8-DatenschutzDesWebshops.png Graphic file (type png)
  <use Bilder/Abbildung8-DatenschutzDesWebshops.png>
 Package pdftex.def Info: Bilder/Abbildung8-DatenschutzDesWebshops.png used on i
-nput line 161.
-(pdftex.def)             Requested size: 227.62204pt x 177.02357pt.
+nput line 162.
+(pdftex.def)             Requested size: 284.52756pt x 221.27332pt.
+File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
 
-<Bilder/Abbildung9-DynamischeNaviagtionDesWebshops.png, id=409, 733.9264pt x 39
+<use Bilder/HS_OWL_RGB_Rot.jpg>
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 167.
+(pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
+ [20 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Abb
+ildung5-StartseiteDesWebshops.png> <G:/Programme/xampp/htdocs/webshop_gbi/websh
+op_gbi/Ausarbeitung/Bilder/Abbildung6-ImpressumDesWebshops.png>]
+File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
+ <use Bilder/HS_OWL_RGB_Rot.jpg>
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 167.
+(pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
+ [21 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Abb
+ildung7-AGBDesWebshops.png> <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/
+Ausarbeitung/Bilder/Abbildung8-DatenschutzDesWebshops.png>]
+<Bilder/Abbildung9-DynamischeNaviagtionDesWebshops.png, id=421, 733.9264pt x 39
 3.62592pt>
 File: Bilder/Abbildung9-DynamischeNaviagtionDesWebshops.png Graphic file (type 
 png)
  <use Bilder/Abbildung9-DynamischeNaviagtionDesWebshops.png>
 Package pdftex.def Info: Bilder/Abbildung9-DynamischeNaviagtionDesWebshops.png 
-used on input line 173.
-(pdftex.def)             Requested size: 227.62204pt x 122.07681pt.
+used on input line 177.
+(pdftex.def)             Requested size: 341.43306pt x 183.12424pt.
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
 
 <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 178.
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 185.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [20 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Abb
-ildung7-AGBDesWebshops.png> <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/
-Ausarbeitung/Bilder/Abbildung8-DatenschutzDesWebshops.png>]
-File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
- <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 179.
-(pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [21 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Abb
+ [22 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Abb
 ildung9-DynamischeNaviagtionDesWebshops.png>]
 (C:\Users\Stefan\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
@@ -998,132 +1003,139 @@ File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 ation.php.inc)
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
  <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 190.
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 192.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [22]
-<Bilder/Abbildung10-DynamischeArtikelauflistungAllerCitybikes.png, id=465, 733.
+ [23]
+<Bilder/Abbildung10-DynamischeArtikelauflistungAllerCitybikes.png, id=469, 733.
 9264pt x 316.44437pt>
 File: Bilder/Abbildung10-DynamischeArtikelauflistungAllerCitybikes.png Graphic 
 file (type png)
 
 <use Bilder/Abbildung10-DynamischeArtikelauflistungAllerCitybikes.png>
 Package pdftex.def Info: Bilder/Abbildung10-DynamischeArtikelauflistungAllerCit
-ybikes.png used on input line 193.
-(pdftex.def)             Requested size: 227.62204pt x 98.14018pt.
+ybikes.png used on input line 199.
+(pdftex.def)             Requested size: 284.52756pt x 122.67886pt.
 
-<Bilder/Abbildung11-DynamischeDetailierteArtikelbeschreibung.png, id=466, 542.0
+<Bilder/Abbildung11-DynamischeDetailierteArtikelbeschreibung.png, id=470, 542.0
 25pt x 407.27156pt>
 File: Bilder/Abbildung11-DynamischeDetailierteArtikelbeschreibung.png Graphic f
 ile (type png)
 
 <use Bilder/Abbildung11-DynamischeDetailierteArtikelbeschreibung.png>
 Package pdftex.def Info: Bilder/Abbildung11-DynamischeDetailierteArtikelbeschre
-ibung.png used on input line 207.
-(pdftex.def)             Requested size: 227.62204pt x 171.03424pt.
+ibung.png used on input line 213.
+(pdftex.def)             Requested size: 284.52756pt x 213.7959pt.
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
 
 <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 216.
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 218.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [23 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Abb
-ildung10-DynamischeArtikelauflistungAllerCitybikes.png> <G:/Programme/xampp/htd
-ocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Abbildung11-DynamischeDetailier
-teArtikelbeschreibung.png>]
-<Bilder/Abbildung12-DynamischeDetailierteArtikelbeschreibungFertig.png, id=475,
+ [24 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Abb
+ildung10-DynamischeArtikelauflistungAllerCitybikes.png>]
+<Bilder/Abbildung12-DynamischeDetailierteArtikelbeschreibungFertig.png, id=478,
  701.62125pt x 385.44pt>
 File: Bilder/Abbildung12-DynamischeDetailierteArtikelbeschreibungFertig.png Gra
 phic file (type png)
 
 <use Bilder/Abbildung12-DynamischeDetailierteArtikelbeschreibungFertig.png>
 Package pdftex.def Info: Bilder/Abbildung12-DynamischeDetailierteArtikelbeschre
-ibungFertig.png used on input line 219.
-(pdftex.def)             Requested size: 227.62204pt x 125.04301pt.
+ibungFertig.png used on input line 225.
+(pdftex.def)             Requested size: 284.52756pt x 156.30818pt.
 
-<Bilder/Abbildung13-Lightbox.png, id=476, 734.04819pt x 453.33pt>
+<Bilder/Abbildung13-Lightbox.png, id=479, 734.04819pt x 453.33pt>
 File: Bilder/Abbildung13-Lightbox.png Graphic file (type png)
 
 <use Bilder/Abbildung13-Lightbox.png>
-Package pdftex.def Info: Bilder/Abbildung13-Lightbox.png used on input line 227
+Package pdftex.def Info: Bilder/Abbildung13-Lightbox.png used on input line 233
 .
 (pdftex.def)             Requested size: 227.62204pt x 140.57234pt.
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
  <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 233.
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 238.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [24 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Abb
-ildung12-DynamischeDetailierteArtikelbeschreibungFertig.png> <G:/Programme/xamp
-p/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Abbildung13-Lightbox.png>]
-
+ [25 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Abb
+ildung11-DynamischeDetailierteArtikelbeschreibung.png> <G:/Programme/xampp/htdo
+cs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Abbildung12-DynamischeDetailiert
+eArtikelbeschreibungFertig.png>]
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 (G:\Programme\xampp\htdocs\webshop_gbi\webshop_gbi\Ausarbeitung\Quellcode/Artik
 elDetailansicht.php.inc)
-<Bilder/Abbildung14-StartseiteAngebotDesTages.png, id=486, 549.55313pt x 484.81
+<Bilder/Abbildung14-StartseiteAngebotDesTages.png, id=488, 549.55313pt x 484.81
 125pt>
 File: Bilder/Abbildung14-StartseiteAngebotDesTages.png Graphic file (type png)
  <use Bilder/Abbildung14-StartseiteAngebotDesTages.png>
 Package pdftex.def Info: Bilder/Abbildung14-StartseiteAngebotDesTages.png used 
-on input line 252.
-(pdftex.def)             Requested size: 227.62204pt x 200.80084pt.
+on input line 255.
+(pdftex.def)             Requested size: 284.52756pt x 251.01584pt.
+File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--264
+<use Bilder/HS_OWL_RGB_Rot.jpg>
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 259.
+(pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
+ [26 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Abb
+ildung13-Lightbox.png>]
+File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
+
+<use Bilder/HS_OWL_RGB_Rot.jpg>
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 261.
+(pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
+ [27 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Abb
+ildung14-StartseiteAngebotDesTages.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 266--267
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 268--270
 
  []
 
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
 <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 264.
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 278.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [25 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Abb
-ildung14-StartseiteAngebotDesTages.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 265--267
-
- []
-
-<Bilder/Abbildung10-erd_alt.jpg, id=507, 1035.87pt x 651.43375pt>
+ [28]
+<Bilder/Abbildung10-erd_alt.jpg, id=520, 1035.87pt x 651.43375pt>
 File: Bilder/Abbildung10-erd_alt.jpg Graphic file (type jpg)
 
 <use Bilder/Abbildung10-erd_alt.jpg>
-Package pdftex.def Info: Bilder/Abbildung10-erd_alt.jpg used on input line 280.
+Package pdftex.def Info: Bilder/Abbildung10-erd_alt.jpg used on input line 283.
 
 (pdftex.def)             Requested size: 426.79134pt x 268.40164pt.
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
  <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 283.
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 290.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [26]
-<Bilder/Abbildung11-erd.jpg, id=513, 1489.565pt x 875.27pt>
+ [29 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Abb
+ildung10-erd_alt.jpg>] <Bilder/Abbildung11-erd.jpg, id=526, 1489.565pt x 875.27
+pt>
 File: Bilder/Abbildung11-erd.jpg Graphic file (type jpg)
 
 <use Bilder/Abbildung11-erd.jpg>
-Package pdftex.def Info: Bilder/Abbildung11-erd.jpg used on input line 293.
+Package pdftex.def Info: Bilder/Abbildung11-erd.jpg used on input line 296.
 (pdftex.def)             Requested size: 426.79134pt x 250.77673pt.
-File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
- <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 297.
-(pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [27 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Abb
-ildung10-erd_alt.jpg>] <Bilder/Abbildung12-mysql_apis.png, id=519, 676.5275pt x
- 433.62pt>
+
+<Bilder/Abbildung12-mysql_apis.png, id=527, 676.5275pt x 433.62pt>
 File: Bilder/Abbildung12-mysql_apis.png Graphic file (type png)
 
 <use Bilder/Abbildung12-mysql_apis.png>
 Package pdftex.def Info: Bilder/Abbildung12-mysql_apis.png used on input line 3
-08.
+11.
 (pdftex.def)             Requested size: 426.79134pt x 273.55919pt.
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
  <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 312.
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 314.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
 
-[28 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Abbi
+[30 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Abbi
 ldung11-erd.jpg>]
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
  <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 317.
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 320.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [29 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Abb
+ [31 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Abb
 ildung12-mysql_apis.png>]
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
@@ -1132,49 +1144,49 @@ File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 g.php.inc)
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
  <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 327.
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 330.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [30]
-Underfull \hbox (badness 10000) in paragraph at lines 329--330
+ [32]
+Underfull \hbox (badness 10000) in paragraph at lines 332--333
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 334--335
+Underfull \hbox (badness 10000) in paragraph at lines 337--338
 
  []
 
-<Bilder/Abbildung13_Reg_Vorgang.png, id=554, 330.48468pt x 924.45375pt>
+<Bilder/Abbildung13_Reg_Vorgang.png, id=562, 330.48468pt x 924.45375pt>
 File: Bilder/Abbildung13_Reg_Vorgang.png Graphic file (type png)
 
 <use Bilder/Abbildung13_Reg_Vorgang.png>
 Package pdftex.def Info: Bilder/Abbildung13_Reg_Vorgang.png used on input line 
-338.
+341.
 (pdftex.def)             Requested size: 225.0pt x 629.41017pt.
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
  <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 343.
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 346.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
 
-[31]
+[33]
 Overfull \vbox (10.961pt too high) has occurred while \output is active []
 
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
 
 <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 343.
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 346.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [32 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Abb
+ [34 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Abb
 ildung13_Reg_Vorgang.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 345--348
+Underfull \hbox (badness 10000) in paragraph at lines 348--351
 
  []
 
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
 <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 352.
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 355.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [33]
+ [35]
 (C:\Users\Stefan\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
@@ -1186,192 +1198,191 @@ File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 (G:\Programme\xampp\htdocs\webshop_gbi\webshop_gbi\Ausarbeitung\Quellcode/login
 -formular.php.inc)
-Underfull \hbox (badness 10000) in paragraph at lines 361--364
+Underfull \hbox (badness 10000) in paragraph at lines 364--367
 
  []
 
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
 <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 364.
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 367.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [34]
-Overfull \hbox (5.144pt too wide) in paragraph at lines 365--370
+ [36]
+Overfull \hbox (5.144pt too wide) in paragraph at lines 368--373
 \T1/cmr/m/n/12 dung_durchfuehren.php.inc, kun-de_aktivieren.php.inc und kun
 -de_aendern.php.inc. Der
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--370
+Underfull \hbox (badness 10000) in paragraph at lines 368--373
 
  []
 
-<Bilder/Abbildung14_Loginbereich.png, id=603, 510.90875pt x 342.27875pt>
+<Bilder/Abbildung14_Loginbereich.png, id=612, 510.90875pt x 342.27875pt>
 File: Bilder/Abbildung14_Loginbereich.png Graphic file (type png)
 
 <use Bilder/Abbildung14_Loginbereich.png>
 Package pdftex.def Info: Bilder/Abbildung14_Loginbereich.png used on input line
- 376.
+ 379.
 (pdftex.def)             Requested size: 213.39566pt x 142.96222pt.
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
  <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 380.
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 383.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
 
-[35] ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
+[37] ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 (G:\Programme\xampp\htdocs\webshop_gbi\webshop_gbi\Ausarbeitung\Quellcode/flyla
 yout.css)
-<Bilder/Abbildung15_Menue_Profil_aendern.png, id=608, 278.03876pt x 308.15125pt
+<Bilder/Abbildung15_Menue_Profil_aendern.png, id=617, 278.03876pt x 308.15125pt
 >
 File: Bilder/Abbildung15_Menue_Profil_aendern.png Graphic file (type png)
  <use Bilder/Abbildung15_Menue_Profil_aendern.png>
 Package pdftex.def Info: Bilder/Abbildung15_Menue_Profil_aendern.png used on in
-put line 393.
+put line 396.
 (pdftex.def)             Requested size: 156.49014pt x 173.43808pt.
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
 
 <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 396.
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 399.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [36 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Abb
+ [38 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Abb
 ildung14_Loginbereich.png>]
-<Bilder/formulare_profil_aendern.png, id=630, 547.78566pt x 486.51326pt>
+<Bilder/formulare_profil_aendern.png, id=638, 547.78566pt x 486.51326pt>
 File: Bilder/formulare_profil_aendern.png Graphic file (type png)
 
 <use Bilder/formulare_profil_aendern.png>
 Package pdftex.def Info: Bilder/formulare_profil_aendern.png used on input line
- 400.
+ 403.
 (pdftex.def)             Requested size: 369.88582pt x 328.50848pt.
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
  <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 404.
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 407.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
 
-[37 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Abbi
+[39 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Abbi
 ldung15_Menue_Profil_aendern.png>]
-Overfull \hbox (0.43675pt too wide) in paragraph at lines 404--406
+Overfull \hbox (0.43675pt too wide) in paragraph at lines 407--409
 \T1/cmr/m/n/12 ak-ti-viert ist, über-prüft die JavaScript-Funktion vor-check-E
 in-ga-beE-mail-Pass-wort() oder vor-
  []
 
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
 <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 406.
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 409.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [38 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/for
+ [40 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/for
 mulare_profil_aendern.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 408--409
+Underfull \hbox (badness 10000) in paragraph at lines 411--412
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 410--413
+Underfull \hbox (badness 10000) in paragraph at lines 413--416
 
  []
 
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
 <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 416.
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 417.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [39]
-<Bilder/erweiterte_suche.png, id=647, 647.41875pt x 475.7775pt>
+ [41]
+<Bilder/erweiterte_suche.png, id=655, 647.41875pt x 475.7775pt>
 File: Bilder/erweiterte_suche.png Graphic file (type png)
 
 <use Bilder/erweiterte_suche.png>
-Package pdftex.def Info: Bilder/erweiterte_suche.png used on input line 419.
+Package pdftex.def Info: Bilder/erweiterte_suche.png used on input line 423.
 (pdftex.def)             Requested size: 327.20668pt x 240.45811pt.
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
  <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 428.
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 432.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [40 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/erw
-eiterte_suche.png>] <Bilder/suchergebnis.png, id=653, 735.97408pt x 319.31541pt
+ [42 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/erw
+eiterte_suche.png>] <Bilder/suchergebnis.png, id=662, 735.97408pt x 319.31541pt
 >
 File: Bilder/suchergebnis.png Graphic file (type png)
 
 <use Bilder/suchergebnis.png>
-Package pdftex.def Info: Bilder/suchergebnis.png used on input line 431.
+Package pdftex.def Info: Bilder/suchergebnis.png used on input line 435.
 (pdftex.def)             Requested size: 369.88582pt x 160.48073pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 437--438
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 439--441
+Underfull \hbox (badness 10000) in paragraph at lines 441--442
 
  []
 
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
 <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 441.
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 443.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [41 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/suc
+ [43 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/suc
 hergebnis.png>]
-<Bilder/warenkorb_eingabepruefung.png, id=661, 258.9675pt x 116.68594pt>
+Underfull \hbox (badness 10000) in paragraph at lines 444--446
+
+ []
+
+<Bilder/warenkorb_eingabepruefung.png, id=670, 258.9675pt x 116.68594pt>
 File: Bilder/warenkorb_eingabepruefung.png Graphic file (type png)
 
 <use Bilder/warenkorb_eingabepruefung.png>
 Package pdftex.def Info: Bilder/warenkorb_eingabepruefung.png used on input lin
-e 444.
+e 449.
 (pdftex.def)             Requested size: 156.49014pt x 70.51419pt.
 
-<Bilder/warenkorb.png, id=662, 631.60968pt x 255.20343pt>
+<Bilder/warenkorb.png, id=671, 631.60968pt x 255.20343pt>
 File: Bilder/warenkorb.png Graphic file (type png)
 
 <use Bilder/warenkorb.png>
-Package pdftex.def Info: Bilder/warenkorb.png used on input line 455.
+Package pdftex.def Info: Bilder/warenkorb.png used on input line 460.
 (pdftex.def)             Requested size: 369.88582pt x 149.455pt.
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
  <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 462.
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 467.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [42 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/war
+ [44 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/war
 enkorb_eingabepruefung.png> <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/
-Ausarbeitung/Bilder/warenkorb.png>] <Bilder/mengenaenderung.png, id=672, 405.51
+Ausarbeitung/Bilder/warenkorb.png>] <Bilder/mengenaenderung.png, id=680, 405.51
 5pt x 233.87375pt>
 File: Bilder/mengenaenderung.png Graphic file (type png)
 
 <use Bilder/mengenaenderung.png>
-Package pdftex.def Info: Bilder/mengenaenderung.png used on input line 465.
+Package pdftex.def Info: Bilder/mengenaenderung.png used on input line 470.
 (pdftex.def)             Requested size: 199.16928pt x 114.87033pt.
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
  <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 473.
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 478.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [43 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/men
+ [45 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/men
 genaenderung.png>]
-<Bilder/sicherheitsfrage_artikel_loeschen.png, id=678, 404.51125pt x 169.63374p
+<Bilder/sicherheitsfrage_artikel_loeschen.png, id=686, 404.51125pt x 169.63374p
 t>
 File: Bilder/sicherheitsfrage_artikel_loeschen.png Graphic file (type png)
  <use Bilder/sicherheitsfrage_artikel_loeschen.png>
 Package pdftex.def Info: Bilder/sicherheitsfrage_artikel_loeschen.png used on i
-nput line 476.
+nput line 481.
 (pdftex.def)             Requested size: 199.16928pt x 83.52245pt.
 
-<Bilder/bestelluebersicht.png, id=679, 649.42625pt x 965.6075pt>
+<Bilder/bestelluebersicht.png, id=687, 649.42625pt x 965.6075pt>
 File: Bilder/bestelluebersicht.png Graphic file (type png)
 
 <use Bilder/bestelluebersicht.png>
-Package pdftex.def Info: Bilder/bestelluebersicht.png used on input line 486.
+Package pdftex.def Info: Bilder/bestelluebersicht.png used on input line 491.
 (pdftex.def)             Requested size: 284.52756pt x 423.05634pt.
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
  <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 490.
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 495.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [44 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/sic
+ [46 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/sic
 herheitsfrage_artikel_loeschen.png>]
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
  <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 492.
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 497.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [45 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/bes
+ [47 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/bes
 telluebersicht.png>]
-<Bilder/email.png, id=691, 648.00076pt x 556.29681pt>
+<Bilder/email.png, id=699, 648.00076pt x 556.29681pt>
 File: Bilder/email.png Graphic file (type png)
  <use Bilder/email.png>
-Package pdftex.def Info: Bilder/email.png used on input line 495.
+Package pdftex.def Info: Bilder/email.png used on input line 500.
 (pdftex.def)             Requested size: 355.65944pt x 305.33604pt.
 
 (G:\Programme\xampp\htdocs\webshop_gbi\webshop_gbi\Ausarbeitung\Seiten/Arbeitsp
@@ -1380,13 +1391,13 @@ File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
  <use Bilder/HS_OWL_RGB_Rot.jpg>
 Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 1.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [46 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/ema
+ [48 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/ema
 il.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
  []
 
-<Bilder/warenkorb_flyout.png, id=698, 395.97937pt x 238.64156pt>
+<Bilder/warenkorb_flyout.png, id=707, 395.97937pt x 238.64156pt>
 File: Bilder/warenkorb_flyout.png Graphic file (type png)
 
 <use Bilder/warenkorb_flyout.png>
@@ -1397,7 +1408,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--14
 
  []
 
-<Bilder/Warenkorb_symbol.png, id=699, 88.07906pt x 73.02281pt>
+<Bilder/Warenkorb_symbol.png, id=708, 88.07906pt x 73.02281pt>
 File: Bilder/Warenkorb_symbol.png Graphic file (type png)
 
 <use Bilder/Warenkorb_symbol.png>
@@ -1407,7 +1418,7 @@ File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
  <use Bilder/HS_OWL_RGB_Rot.jpg>
 Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 24.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [47 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/war
+ [49 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/war
 enkorb_flyout.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 29--32
 
@@ -1427,9 +1438,9 @@ File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
 <use Bilder/HS_OWL_RGB_Rot.jpg>
 Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 38.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [48 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/War
+ [50 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/War
 enkorb_symbol.png>]
-<Bilder/umsatz_fahrrad_verkaeufe_de.png, id=715, 783.92876pt x 493.845pt>
+<Bilder/umsatz_fahrrad_verkaeufe_de.png, id=723, 783.92876pt x 493.845pt>
 File: Bilder/umsatz_fahrrad_verkaeufe_de.png Graphic file (type png)
 
 <use Bilder/umsatz_fahrrad_verkaeufe_de.png>
@@ -1441,62 +1452,62 @@ File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
 Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 64.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
 
-[49 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/umsa
+[51 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/umsa
 tz_fahrrad_verkaeufe_de.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 66--67
+Underfull \hbox (badness 10000) in paragraph at lines 65--66
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--70
+Underfull \hbox (badness 10000) in paragraph at lines 67--69
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--74
+Underfull \hbox (badness 10000) in paragraph at lines 70--73
 
  []
 
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
 <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 81.
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 80.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [50]
-Underfull \hbox (badness 10000) in paragraph at lines 84--85
+ [52]
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
 
  []
 
-<Bilder/vertriebskanaele.png, id=728, 435.6275pt x 265.99374pt>
+<Bilder/vertriebskanaele.png, id=736, 435.6275pt x 265.99374pt>
 File: Bilder/vertriebskanaele.png Graphic file (type png)
 
 <use Bilder/vertriebskanaele.png>
-Package pdftex.def Info: Bilder/vertriebskanaele.png used on input line 91.
+Package pdftex.def Info: Bilder/vertriebskanaele.png used on input line 90.
 (pdftex.def)             Requested size: 256.0748pt x 156.3586pt.
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
  <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 95.
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 94.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [51]
-<Bilder/Werbemoeglichkeiten.png, id=733, 573.14125pt x 409.53pt>
+ [53]
+<Bilder/Werbemoeglichkeiten.png, id=741, 573.14125pt x 409.53pt>
 File: Bilder/Werbemoeglichkeiten.png Graphic file (type png)
 
 <use Bilder/Werbemoeglichkeiten.png>
-Package pdftex.def Info: Bilder/Werbemoeglichkeiten.png used on input line 102.
+Package pdftex.def Info: Bilder/Werbemoeglichkeiten.png used on input line 101.
 
 (pdftex.def)             Requested size: 256.0748pt x 182.97452pt.
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
  <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 109.
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 108.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [52 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/ver
+ [54 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/ver
 triebskanaele.png> <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeit
 ung/Bilder/Werbemoeglichkeiten.png>]
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
  <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 126.
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 125.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [53]
-Underfull \hbox (badness 10000) in paragraph at lines 129--130
+ [55]
+Underfull \hbox (badness 10000) in paragraph at lines 128--129
 
  []
 
@@ -1507,24 +1518,24 @@ File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
  <use Bilder/HS_OWL_RGB_Rot.jpg>
 Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 1.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [54]
-<Bilder/Michael_Abbildung1-DarstellungDerWebsiteOhneMobileCSS.png, id=756, 397.
-485pt x 407.27156pt>
+ [56]
+<Bilder/Michael_Abbildung1-DarstellungDerWebsiteOhneMobileCSS.png, id=764, 395.
+97937pt x 347.04657pt>
 File: Bilder/Michael_Abbildung1-DarstellungDerWebsiteOhneMobileCSS.png Graphic 
 file (type png)
 
 <use Bilder/Michael_Abbildung1-DarstellungDerWebsiteOhneMobileCSS.png>
 Package pdftex.def Info: Bilder/Michael_Abbildung1-DarstellungDerWebsiteOhneMob
 ileCSS.png used on input line 15.
-(pdftex.def)             Requested size: 284.52756pt x 291.53874pt.
+(pdftex.def)             Requested size: 341.43306pt x 299.24326pt.
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
 
 <use Bilder/HS_OWL_RGB_Rot.jpg>
 Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 23.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [55 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Mic
+ [57 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Mic
 hael_Abbildung1-DarstellungDerWebsiteOhneMobileCSS.png>]
-<Bilder/Michael_Abbildung2-Desingentwurf.png, id=763, 263.48438pt x 376.40625pt
+<Bilder/Michael_Abbildung2-Desingentwurf.png, id=771, 263.48438pt x 376.40625pt
 >
 File: Bilder/Michael_Abbildung2-Desingentwurf.png Graphic file (type png)
  <use Bilder/Michael_Abbildung2-Desingentwurf.png>
@@ -1532,7 +1543,7 @@ Package pdftex.def Info: Bilder/Michael_Abbildung2-Desingentwurf.png used on in
 put line 32.
 (pdftex.def)             Requested size: 199.18477pt x 284.52756pt.
 
-<Bilder/Michael_Abbildung3-DesingentwurfMitDropDownMenue.png, id=764, 263.48438
+<Bilder/Michael_Abbildung3-DesingentwurfMitDropDownMenue.png, id=772, 263.48438
 pt x 376.40625pt>
 File: Bilder/Michael_Abbildung3-DesingentwurfMitDropDownMenue.png Graphic file 
 (type png)
@@ -1541,115 +1552,114 @@ File: Bilder/Michael_Abbildung3-DesingentwurfMitDropDownMenue.png Graphic file
 Package pdftex.def Info: Bilder/Michael_Abbildung3-DesingentwurfMitDropDownMenu
 e.png used on input line 33.
 (pdftex.def)             Requested size: 199.18477pt x 284.52756pt.
+File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
 
+<use Bilder/HS_OWL_RGB_Rot.jpg>
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 42.
+(pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
+ [58 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Mic
+hael_Abbildung2-Desingentwurf.png> <G:/Programme/xampp/htdocs/webshop_gbi/websh
+op_gbi/Ausarbeitung/Bilder/Michael_Abbildung3-DesingentwurfMitDropDownMenue.png
+>]
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 (G:\Programme\xampp\htdocs\webshop_gbi\webshop_gbi\Ausarbeitung\Quellcode/Micha
-el-Quellcode1.php
-File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
- <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 11.
-(pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [56 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Mic
-hael_Abbildung2-Desingentwurf.png> <G:/Programme/xampp/htdocs/webshop_gbi/websh
-op_gbi/Ausarbeitung/Bilder/Michael_Abbildung3-DesingentwurfMitDropDownMenue.png
->])
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 48.
+el-Quellcode1.php)
+Underfull \hbox (badness 10000) in paragraph at lines 49--54
 
-
-LaTeX Warning: Command \quotesinglbase invalid in math mode on input line 48.
-
-
-LaTeX Warning: Command \textquoteleft invalid in math mode on input line 48.
+ []
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 (G:\Programme\xampp\htdocs\webshop_gbi\webshop_gbi\Ausarbeitung\Quellcode/Micha
 el-Quellcode2.php)
-<Bilder/Michael_Abbildung4-FarbaenderungenFuerBessereLesbarkeit1.png, id=783, 1
+File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
+ <use Bilder/HS_OWL_RGB_Rot.jpg>
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 64.
+(pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
+ [59]
+<Bilder/Michael_Abbildung4-FarbaenderungenFuerBessereLesbarkeit1.png, id=815, 1
 49.05687pt x 215.30438pt>
 File: Bilder/Michael_Abbildung4-FarbaenderungenFuerBessereLesbarkeit1.png Graph
 ic file (type png)
 
 <use Bilder/Michael_Abbildung4-FarbaenderungenFuerBessereLesbarkeit1.png>
 Package pdftex.def Info: Bilder/Michael_Abbildung4-FarbaenderungenFuerBessereLe
-sbarkeit1.png used on input line 68.
+sbarkeit1.png used on input line 69.
 (pdftex.def)             Requested size: 157.58784pt x 227.62204pt.
 
-<Bilder/Michael_Abbildung4-FarbaenderungenFuerBessereLesbarkeit2.png, id=784, 1
+<Bilder/Michael_Abbildung4-FarbaenderungenFuerBessereLesbarkeit2.png, id=816, 1
 49.8097pt x 213.79875pt>
 File: Bilder/Michael_Abbildung4-FarbaenderungenFuerBessereLesbarkeit2.png Graph
 ic file (type png)
 
 <use Bilder/Michael_Abbildung4-FarbaenderungenFuerBessereLesbarkeit2.png>
 Package pdftex.def Info: Bilder/Michael_Abbildung4-FarbaenderungenFuerBessereLe
-sbarkeit2.png used on input line 69.
+sbarkeit2.png used on input line 70.
 (pdftex.def)             Requested size: 159.4947pt x 227.62204pt.
-File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
 
-<use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 73.
-(pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [57]
-<Bilder/Michael_Abbildung5-DasDropDownMenue.png, id=812, 182.93344pt x 286.0687
+<Bilder/Michael_Abbildung5-DasDropDownMenue.png, id=817, 182.93344pt x 286.0687
 6pt>
 File: Bilder/Michael_Abbildung5-DasDropDownMenue.png Graphic file (type png)
  <use Bilder/Michael_Abbildung5-DasDropDownMenue.png>
 Package pdftex.def Info: Bilder/Michael_Abbildung5-DasDropDownMenue.png used on
- input line 79.
+ input line 80.
 (pdftex.def)             Requested size: 142.26378pt x 222.48233pt.
-File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
 
-<use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 83.
-(pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [58 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Mic
-hael_Abbildung4-FarbaenderungenFuerBessereLesbarkeit1.png> <G:/Programme/xampp/
-htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Michael_Abbildung4-Farbaende
-rungenFuerBessereLesbarkeit2.png>]
-<Bilder/Michael_Abbildung6-HeaderMitFesterPosition.png, id=822, 184.43906pt x 2
+<Bilder/Michael_Abbildung6-HeaderMitFesterPosition.png, id=818, 184.43906pt x 2
 88.3272pt>
 File: Bilder/Michael_Abbildung6-HeaderMitFesterPosition.png Graphic file (type 
 png)
  <use Bilder/Michael_Abbildung6-HeaderMitFesterPosition.png>
 Package pdftex.def Info: Bilder/Michael_Abbildung6-HeaderMitFesterPosition.png 
-used on input line 88.
+used on input line 81.
 (pdftex.def)             Requested size: 142.26378pt x 222.39537pt.
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
 
 <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 96.
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 85.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [59 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Mic
-hael_Abbildung5-DasDropDownMenue.png> <G:/Programme/xampp/htdocs/webshop_gbi/we
-bshop_gbi/Ausarbeitung/Bilder/Michael_Abbildung6-HeaderMitFesterPosition.png>]
-<Bilder/Michael_Abbildung7-AuflistungDerFahrradkategorien.png, id=831, 222.0796
-8pt x 353.82187pt>
+ [60 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Mic
+hael_Abbildung4-FarbaenderungenFuerBessereLesbarkeit1.png> <G:/Programme/xampp/
+htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Michael_Abbildung4-Farbaende
+rungenFuerBessereLesbarkeit2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 86--91
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--103
+
+ []
+
+
+<Bilder/Michael_Abbildung7-AuflistungDerFahrradkategorien.png, id=829, 221.3268
+7pt x 322.95656pt>
 File: Bilder/Michael_Abbildung7-AuflistungDerFahrradkategorien.png Graphic file
  (type png)
 
 <use Bilder/Michael_Abbildung7-AuflistungDerFahrradkategorien.png>
 Package pdftex.def Info: Bilder/Michael_Abbildung7-AuflistungDerFahrradkategori
-en.png used on input line 107.
-(pdftex.def)             Requested size: 142.26378pt x 226.65578pt.
+en.png used on input line 106.
+(pdftex.def)             Requested size: 155.99155pt x 227.62204pt.
 
-<Bilder/Michael_Abbildung8-DieLogin-Seite.png, id=832, 241.65282pt x 319.1925pt
->
+<Bilder/Michael_Abbildung8-DieLogin-Seite.png, id=830, 240.14719pt x 280.04625p
+t>
 File: Bilder/Michael_Abbildung8-DieLogin-Seite.png Graphic file (type png)
  <use Bilder/Michael_Abbildung8-DieLogin-Seite.png>
 Package pdftex.def Info: Bilder/Michael_Abbildung8-DieLogin-Seite.png used on i
-nput line 118.
-(pdftex.def)             Requested size: 142.26378pt x 187.91768pt.
+nput line 107.
+(pdftex.def)             Requested size: 195.1997pt x 227.62204pt.
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
 
 <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 122.
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 111.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [60 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Mic
-hael_Abbildung7-AuflistungDerFahrradkategorien.png>]
+ [61 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Mic
+hael_Abbildung5-DasDropDownMenue.png> <G:/Programme/xampp/htdocs/webshop_gbi/we
+bshop_gbi/Ausarbeitung/Bilder/Michael_Abbildung6-HeaderMitFesterPosition.png>]
 <Bilder/Michael_Abbildung9-UebersichtDerKontofunktionen.png, id=843, 239.39438p
 t x 246.1697pt>
 File: Bilder/Michael_Abbildung9-UebersichtDerKontofunktionen.png Graphic file (
@@ -1657,151 +1667,133 @@ type png)
 
 <use Bilder/Michael_Abbildung9-UebersichtDerKontofunktionen.png>
 Package pdftex.def Info: Bilder/Michael_Abbildung9-UebersichtDerKontofunktionen
-.png used on input line 129.
-(pdftex.def)             Requested size: 142.26378pt x 146.2906pt.
+.png used on input line 118.
+(pdftex.def)             Requested size: 221.36691pt x 227.62204pt.
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
 
 <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 134.
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 123.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [61 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Mic
-hael_Abbildung8-DieLogin-Seite.png> <G:/Programme/xampp/htdocs/webshop_gbi/webs
-hop_gbi/Ausarbeitung/Bilder/Michael_Abbildung9-UebersichtDerKontofunktionen.png
->]
-<Bilder/Michael_Abbildung10-BewertungPopup.png, id=852, 664.73344pt x 230.36063
+ [62 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Mic
+hael_Abbildung7-AuflistungDerFahrradkategorien.png> <G:/Programme/xampp/htdocs/
+webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Michael_Abbildung8-DieLogin-Seite.p
+ng> <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Mich
+ael_Abbildung9-UebersichtDerKontofunktionen.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 131--137
+
+ []
+
+
+<Bilder/Michael_Abbildung10-BewertungPopup.png, id=855, 664.73344pt x 230.36063
 pt>
 File: Bilder/Michael_Abbildung10-BewertungPopup.png Graphic file (type png)
  <use Bilder/Michael_Abbildung10-BewertungPopup.png>
 Package pdftex.def Info: Bilder/Michael_Abbildung10-BewertungPopup.png used on 
-input line 151.
+input line 140.
 (pdftex.def)             Requested size: 341.43306pt x 118.32243pt.
 
-<Bilder/Michael_Abbildung11-ArtikelBewertenOhneAnmeldung.png, id=853, 517.18219
+<Bilder/Michael_Abbildung11-ArtikelBewertenOhneAnmeldung.png, id=856, 517.18219
 pt x 258.9675pt>
 File: Bilder/Michael_Abbildung11-ArtikelBewertenOhneAnmeldung.png Graphic file 
 (type png)
 
 <use Bilder/Michael_Abbildung11-ArtikelBewertenOhneAnmeldung.png>
 Package pdftex.def Info: Bilder/Michael_Abbildung11-ArtikelBewertenOhneAnmeldun
-g.png used on input line 163.
+g.png used on input line 152.
 (pdftex.def)             Requested size: 341.43306pt x 170.97043pt.
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
 
 <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 167.
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 156.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [62 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Mic
+ [63 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Mic
 hael_Abbildung10-BewertungPopup.png>]
-<Bilder/Michael_Abbildung12-ArtikelBewertenMitAnmeldung.png, id=860, 517.935pt 
+<Bilder/Michael_Abbildung12-ArtikelBewertenMitAnmeldung.png, id=863, 517.935pt 
 x 396.7322pt>
 File: Bilder/Michael_Abbildung12-ArtikelBewertenMitAnmeldung.png Graphic file (
 type png)
  <use Bilder/Michael_Abbildung12-ArtikelBewertenMitAnmeldung.png>
 Package pdftex.def Info: Bilder/Michael_Abbildung12-ArtikelBewertenMitAnmeldung
-.png used on input line 173.
-(pdftex.def)             Requested size: 284.52756pt x 217.95517pt.
+.png used on input line 162.
+(pdftex.def)             Requested size: 341.43306pt x 261.54742pt.
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
 
 <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 183.
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 167.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [63 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Mic
+ [64 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Mic
 hael_Abbildung11-ArtikelBewertenOhneAnmeldung.png> <G:/Programme/xampp/htdocs/w
 ebshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Michael_Abbildung12-ArtikelBewertenM
 itAnmeldung.png>]
-<Bilder/Michael_Abbildung13-ZusaetzlicherMenuepunkt.png, id=869, 274.02374pt x 
-344.03531pt>
-File: Bilder/Michael_Abbildung13-ZusaetzlicherMenuepunkt.png Graphic file (type
- png)
- <use Bilder/Michael_Abbildung13-ZusaetzlicherMenuepunkt.png>
-Package pdftex.def Info: Bilder/Michael_Abbildung13-ZusaetzlicherMenuepunkt.png
- used on input line 186.
-(pdftex.def)             Requested size: 113.81102pt x 142.89273pt.
-
-<Bilder/Michael_Abbildung14-AnzeigeAllerRezensionenEinesBenutzers.png, id=870, 
+<Bilder/Michael_Abbildung14-AnzeigeAllerRezensionenEinesBenutzers.png, id=872, 
 679.03688pt x 193.47281pt>
 File: Bilder/Michael_Abbildung14-AnzeigeAllerRezensionenEinesBenutzers.png Grap
 hic file (type png)
 
 <use Bilder/Michael_Abbildung14-AnzeigeAllerRezensionenEinesBenutzers.png>
 Package pdftex.def Info: Bilder/Michael_Abbildung14-AnzeigeAllerRezensionenEine
-sBenutzers.png used on input line 195.
+sBenutzers.png used on input line 185.
 (pdftex.def)             Requested size: 341.43306pt x 97.2823pt.
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
 
 <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 200.
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 190.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [64 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Mic
-hael_Abbildung13-ZusaetzlicherMenuepunkt.png> <G:/Programme/xampp/htdocs/websho
-p_gbi/webshop_gbi/Ausarbeitung/Bilder/Michael_Abbildung14-AnzeigeAllerRezension
-enEinesBenutzers.png>]
-<Bilder/Michael_Quellcode1.png, id=879, 503.63156pt x 42.1575pt>
-File: Bilder/Michael_Quellcode1.png Graphic file (type png)
-
-<use Bilder/Michael_Quellcode1.png>
-Package pdftex.def Info: Bilder/Michael_Quellcode1.png used on input line 213.
-(pdftex.def)             Requested size: 341.43306pt x 28.5805pt.
-
-<Bilder/Michael_Quellcode2.png, id=880, 679.78969pt x 33.87656pt>
-File: Bilder/Michael_Quellcode2.png Graphic file (type png)
-
-<use Bilder/Michael_Quellcode2.png>
-Package pdftex.def Info: Bilder/Michael_Quellcode2.png used on input line 223.
-(pdftex.def)             Requested size: 341.43306pt x 17.01472pt.
-
-<Bilder/Michael_Quellcode3.png, id=881, 666.99188pt x 120.45pt>
-File: Bilder/Michael_Quellcode3.png Graphic file (type png)
-
-<use Bilder/Michael_Quellcode3.png>
-Package pdftex.def Info: Bilder/Michael_Quellcode3.png used on input line 232.
-(pdftex.def)             Requested size: 341.43306pt x 61.66025pt.
+ [65 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Mic
+hael_Abbildung14-AnzeigeAllerRezensionenEinesBenutzers.png>] ("C:\Program Files
+ (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
-Overfull \hbox (99.28496pt too wide) in paragraph at lines 237--199
-[]\T1/cmr/m/n/10.95 Um den Kun-den zu ak-ti-vie-ren, be-fin-den sich in der gle
-i-chen Klas-se die Me-tho-de $\OML/cmm/m/it/10.95 aktiviere[]unde[]urch[]ktivi
-erungs[]ode$\T1/cmr/m/n/10.95 .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 237--199
-
- []
-
-
+(G:\Programme\xampp\htdocs\webshop_gbi\webshop_gbi\Ausarbeitung\Quellcode/Micha
+el-Quellcode3.php)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 214.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+)
+(G:\Programme\xampp\htdocs\webshop_gbi\webshop_gbi\Ausarbeitung\Quellcode/Micha
+el-Quellcode4.php)
+File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
+ <use Bilder/HS_OWL_RGB_Rot.jpg>
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 230.
+(pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
+ [66]
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+)
+(G:\Programme\xampp\htdocs\webshop_gbi\webshop_gbi\Ausarbeitung\Quellcode/Micha
+el-Quellcode5.php))
 (G:\Programme\xampp\htdocs\webshop_gbi\webshop_gbi\Ausarbeitung\Seiten/Webshops
 icherheit.tex
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
  <use Bilder/HS_OWL_RGB_Rot.jpg>
 Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 1.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [65 <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbeitung/Bilder/Mic
-hael_Quellcode1.png> <G:/Programme/xampp/htdocs/webshop_gbi/webshop_gbi/Ausarbe
-itung/Bilder/Michael_Quellcode2.png> <G:/Programme/xampp/htdocs/webshop_gbi/web
-shop_gbi/Ausarbeitung/Bilder/Michael_Quellcode3.png>])
+ [67])
 (G:\Programme\xampp\htdocs\webshop_gbi\webshop_gbi\Ausarbeitung\Seiten/Fazit.te
 x
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
  <use Bilder/HS_OWL_RGB_Rot.jpg>
 Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 4.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [66])
+ [68])
 (G:\Programme\xampp\htdocs\webshop_gbi\webshop_gbi\Ausarbeitung\Seiten/Quellenv
 erzeichnis.tex
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 5.
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
  <use Bilder/HS_OWL_RGB_Rot.jpg>
-Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 20.
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 1.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [67])
+ [69]
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 6.
+)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 211.
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
 
 <use Bilder/HS_OWL_RGB_Rot.jpg>
 Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 211.
 (pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
- [68]
+ [70]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 211.
 
 (G:\Programme\xampp\htdocs\webshop_gbi\webshop_gbi\Ausarbeitung\Ausarbeitung.au
@@ -1810,16 +1802,20 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 211.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 211.
 Package rerunfilecheck Info: File `Ausarbeitung.out' has not changed.
 (rerunfilecheck)             Checksum: F0F869B05AC457A397A73E32E30376BD;4006.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 211.
  ) 
 Here is how much of TeX's memory you used:
- 12028 strings out of 493921
- 185837 string characters out of 3144873
- 631027 words of memory out of 3000000
+ 12067 strings out of 493921
+ 186662 string characters out of 3144873
+ 632940 words of memory out of 3000000
  14673 multiletter control sequences out of 15000+200000
  18015 words of font info for 44 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
- 35i,18n,52p,2038b,3407s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,18n,52p,2038b,3407s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Stefan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
 \eccc1095.pk> <C:\Users\Stefan\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
 n\ec\dpi600\ecti1095.pk> <C:\Users\Stefan\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
@@ -1840,9 +1836,9 @@ X 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2
 .9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9
 /fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
 nts/type1/public/eurosym/feymr10.pfb>
-Output written on Ausarbeitung.pdf (69 pages, 7320787 bytes).
+Output written on Ausarbeitung.pdf (71 pages, 7265801 bytes).
 PDF statistics:
- 1648 PDF objects out of 1728 (max. 8388607)
- 373 named destinations out of 1000 (max. 500000)
- 671 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1692 PDF objects out of 1728 (max. 8388607)
+ 401 named destinations out of 1000 (max. 500000)
+ 651 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -10,37 +10,37 @@
 \contentsline {subsection}{\numberline {2.7}Grundlegender Aufbau und Ordnerstruktur der Webseite}{8}{subsection.2.7}
 \contentsline {subsection}{\numberline {2.8}Die Test-Server}{10}{subsection.2.8}
 \contentsline {subsection}{\numberline {2.9}Zeitplan}{10}{subsection.2.9}
-\contentsline {section}{\numberline {3}Arbeitspakete}{13}{section.3}
-\contentsline {subsection}{\numberline {3.1}Einteilung der Arbeitspakete}{13}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Arbeitspaket von Herrn Schn\IeC {\"u}rer}{15}{subsection.3.2}
-\contentsline {subsubsection}{\numberline {3.2.1}Arbeitspaket 1: Erster Seitenprototyp}{15}{subsubsection.3.2.1}
-\contentsline {subsubsection}{\numberline {3.2.2}Arbeitspaket 1 und 4: Startseite des Webshops}{15}{subsubsection.3.2.2}
-\contentsline {subsubsection}{\numberline {3.2.3}Arbeitspaket 3: Seitennavigation}{15}{subsubsection.3.2.3}
-\contentsline {subsubsection}{\numberline {3.2.4}Arbeitspaket 4: Weitere Arbeiten an der Startseite des Webshops}{18}{subsubsection.3.2.4}
-\contentsline {subsubsection}{\numberline {3.2.5}Arbeitspaket 4: Rechtsschutz}{19}{subsubsection.3.2.5}
-\contentsline {subsubsection}{\numberline {3.2.6}Arbeitspaket 3: Dynamische Seitennavigation}{20}{subsubsection.3.2.6}
-\contentsline {subsubsection}{\numberline {3.2.7}Arbeitspaket 4: Dynamische Artikelauflistung}{22}{subsubsection.3.2.7}
-\contentsline {subsubsection}{\numberline {3.2.8}Arbeitspaket 4: Detaillierte dynamische Artikelbeschreibung}{23}{subsubsection.3.2.8}
-\contentsline {subsubsection}{\numberline {3.2.9}Arbeitspaket 4: Startseite-Angebot des Tages}{25}{subsubsection.3.2.9}
-\contentsline {subsection}{\numberline {3.3}Arbeitspakete von Herrn Br\IeC {\"u}ntrup}{25}{subsection.3.3}
-\contentsline {subsubsection}{\numberline {3.3.1}Arbeitspaket 5: Die Schnittstellendatenbank}{26}{subsubsection.3.3.1}
-\contentsline {subsubsection}{\numberline {3.3.2}Arbeitspaket 6: Registrierungs- und Anmeldungsfenster designen und programmieren}{31}{subsubsection.3.3.2}
-\contentsline {subsubsection}{\numberline {3.3.3}Arbeitspaket 7: Entwickeln einer Suchfunktion}{39}{subsubsection.3.3.3}
-\contentsline {subsubsection}{\numberline {3.3.4}Zum Teil \IeC {\"u}bernommenes Arbeitspaket: Warenkorb}{41}{subsubsection.3.3.4}
-\contentsline {subsubsection}{\numberline {3.3.5}Zum Teil \IeC {\"u}bernommenes Arbeitspaket: Bestellvorgang}{44}{subsubsection.3.3.5}
-\contentsline {subsection}{\numberline {3.4}Arbeitspakete von Raphael Gregarek}{47}{subsection.3.4}
-\contentsline {subsubsection}{\numberline {3.4.1}Arbeitspaket 8: Warenkorb}{47}{subsubsection.3.4.1}
-\contentsline {subsubsection}{\numberline {3.4.2}Arbeitspaket 9: Bestellvorgang}{48}{subsubsection.3.4.2}
-\contentsline {subsubsection}{\numberline {3.4.3}Arbeitspaket 10: Erstellung eines Marketing Mix}{48}{subsubsection.3.4.3}
-\contentsline {subsection}{\numberline {3.5}Arbeitspaket von Herrn D\IeC {\"u}ck}{55}{subsection.3.5}
-\contentsline {subsubsection}{\numberline {3.5.1}Arbeitspaket 2: Die CSS-Datei f\IeC {\"u}r die Darstellung auf mobilen Ger\IeC {\"a}ten}{55}{subsubsection.3.5.1}
-\contentsline {subsubsection}{\numberline {3.5.2}Arbeitspaket 11: Die Bewertungsfunktion von Artikeln}{62}{subsubsection.3.5.2}
-\contentsline {subsubsection}{\numberline {3.5.3}Arbeitspaket 12: Die Gestaltung einer Best\IeC {\"a}tigungs-Email}{65}{subsubsection.3.5.3}
-\contentsline {section}{\numberline {4}Sicherheit}{66}{section.4}
-\contentsline {subsection}{\numberline {4.1}\glqq .htaccess\grqq {}-Datei}{66}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Schutz vor: Cross-Site-Scripting (XSS) und SQL Injection}{66}{subsection.4.2}
-\contentsline {section}{\numberline {5}Fazit}{67}{section.5}
-\contentsline {subsection}{\numberline {5.1}Motivation innerhalb der Gruppe}{67}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Zusammenarbeit mit anderen Gruppen}{67}{subsection.5.2}
-\contentsline {subsection}{\numberline {5.3}Verlauf des Projektes}{67}{subsection.5.3}
-\contentsline {section}{\numberline {6}Quellenverzeichnis}{67}{section.6}
+\contentsline {section}{\numberline {3}Arbeitspakete}{14}{section.3}
+\contentsline {subsection}{\numberline {3.1}Einteilung der Arbeitspakete}{14}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Arbeitspaket von Herrn Schn\IeC {\"u}rer}{16}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Arbeitspaket 1: Erster Seitenprototyp}{16}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}Arbeitspaket 1 und 4: Startseite des Webshops}{16}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.3}Arbeitspaket 3: Seitennavigation}{16}{subsubsection.3.2.3}
+\contentsline {subsubsection}{\numberline {3.2.4}Arbeitspaket 4: Weitere Arbeiten an der Startseite des Webshops}{19}{subsubsection.3.2.4}
+\contentsline {subsubsection}{\numberline {3.2.5}Arbeitspaket 4: Rechtsschutz}{20}{subsubsection.3.2.5}
+\contentsline {subsubsection}{\numberline {3.2.6}Arbeitspaket 3: Dynamische Seitennavigation}{22}{subsubsection.3.2.6}
+\contentsline {subsubsection}{\numberline {3.2.7}Arbeitspaket 4: Dynamische Artikelauflistung}{24}{subsubsection.3.2.7}
+\contentsline {subsubsection}{\numberline {3.2.8}Arbeitspaket 4: Detaillierte dynamische Artikelbeschreibung}{24}{subsubsection.3.2.8}
+\contentsline {subsubsection}{\numberline {3.2.9}Arbeitspaket 4: Startseite-Angebot des Tages}{26}{subsubsection.3.2.9}
+\contentsline {subsection}{\numberline {3.3}Arbeitspakete von Herrn Br\IeC {\"u}ntrup}{28}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}Arbeitspaket 5: Die Schnittstellendatenbank}{28}{subsubsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.2}Arbeitspaket 6: Registrierungs- und Anmeldungsfenster designen und programmieren}{33}{subsubsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.3}Arbeitspaket 7: Entwickeln einer Suchfunktion}{41}{subsubsection.3.3.3}
+\contentsline {subsubsection}{\numberline {3.3.4}Zum Teil \IeC {\"u}bernommenes Arbeitspaket: Warenkorb}{43}{subsubsection.3.3.4}
+\contentsline {subsubsection}{\numberline {3.3.5}Zum Teil \IeC {\"u}bernommenes Arbeitspaket: Bestellvorgang}{46}{subsubsection.3.3.5}
+\contentsline {subsection}{\numberline {3.4}Arbeitspakete von Raphael Gregarek}{49}{subsection.3.4}
+\contentsline {subsubsection}{\numberline {3.4.1}Arbeitspaket 8: Warenkorb}{49}{subsubsection.3.4.1}
+\contentsline {subsubsection}{\numberline {3.4.2}Arbeitspaket 9: Bestellvorgang}{50}{subsubsection.3.4.2}
+\contentsline {subsubsection}{\numberline {3.4.3}Arbeitspaket 10: Erstellung eines Marketing Mix}{50}{subsubsection.3.4.3}
+\contentsline {subsection}{\numberline {3.5}Arbeitspaket von Herrn D\IeC {\"u}ck}{57}{subsection.3.5}
+\contentsline {subsubsection}{\numberline {3.5.1}Arbeitspaket 2: Die CSS-Datei f\IeC {\"u}r die Darstellung auf mobilen Ger\IeC {\"a}ten}{57}{subsubsection.3.5.1}
+\contentsline {subsubsection}{\numberline {3.5.2}Arbeitspaket 11: Die Bewertungsfunktion von Artikeln}{63}{subsubsection.3.5.2}
+\contentsline {subsubsection}{\numberline {3.5.3}Arbeitspaket 12: Die Gestaltung einer Best\IeC {\"a}tigungs-Email}{66}{subsubsection.3.5.3}
+\contentsline {section}{\numberline {4}Sicherheit}{68}{section.4}
+\contentsline {subsection}{\numberline {4.1}\glqq .htaccess\grqq {}-Datei}{68}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Schutz vor: Cross-Site-Scripting (XSS) und SQL Injection}{68}{subsection.4.2}
+\contentsline {section}{\numberline {5}Fazit}{69}{section.5}
+\contentsline {subsection}{\numberline {5.1}Motivation innerhalb der Gruppe}{69}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Zusammenarbeit mit anderen Gruppen}{69}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Verlauf des Projektes}{69}{subsection.5.3}
+\contentsline {section}{\numberline {6}Quellenverzeichnis}{70}{section.6}

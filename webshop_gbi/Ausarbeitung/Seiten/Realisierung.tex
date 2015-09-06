@@ -1,3 +1,4 @@
+\newpage
 \section{Arbeitspakete}
 Dieser Abschnitt beschreibt die Unterteilung des Projekts in Arbeitspakete und wie die Gruppenmitglieder die zugeteilten Arbeitspakte abarbeitet haben. Es wird auch auf den unvorhergesehenen Arbeitsbereitschaftsmangel der Gruppenmitglieder Herr Gregarek und Herr Dück eingegangen.
 
@@ -72,7 +73,7 @@ Die oben genannten Arbeitspakete hat sich die Gruppe untereinander aufgeteilt. S
 %Nachfolgend soll auf die einzelnen Zwischenschritte des Projekts eingegangen werden.Das Projekt beginnt mit der Projektplanung. Hierbei werden die Arbeitspakete definiert und an den entsprechenden Gruppenmitgliedern verteilt. Pro Arbeitspaket wird eine Bearbeitungsdauer von zwei Wochen festgelegt. Es wird ein Projektzeitplan sowie eine Risikoanalyse erstellt. Im Anschluss daran werden grobe Design Entwürfe für die Homepage erstellt. Es wird sich für den Design Entwurf von Herrn Brüntrup entschieden. Die Homepage wird in einem matten Grün-Ton designt, um den Kunden die Umweltaspekte von Fahrrädern zu verdeutlichen.
 %\textbf{Was machen Herr Gregarek und Herr Dück?}
 
-
+\newpage
 \subsection{Arbeitspaket von Herrn Schnürer}
 
 Dieser Abschnitt beschreibt den Aufgabenteil von Herrn Schnürer und wie dieser den Seitenprototyp, den statischen und dynamischen Inhalt und Aufbau der Seite sowie die CSS-Datei zur Anzeige des Webshops auf Desktop Rechnern entwickelt hat.
@@ -108,7 +109,7 @@ In den darauf folgenden Wochen liegt der Fokus auf die Seitennavigation in der K
 \end{figure}
 
 
-\begin{figure}[H]
+\begin{figure}
 \begin{center}
 \includegraphics[width=150mm]{Bilder/Abbildung4-SeitenprototypMitDropDownMenue.png}
 \end{center}
@@ -132,7 +133,7 @@ Im Laufe der nächsten Woche wird die Startseite des Webshops gemäß dem Design
 \begin{figure}[H]
 \begin{center}
 
-\includegraphics[width=8cm]{Bilder/Abbildung5-StartseiteDesWebshops.png}
+\includegraphics[width=10cm]{Bilder/Abbildung5-StartseiteDesWebshops.png}
 \end{center}
 \caption{Startseite des Webshops}
 \end{figure}
@@ -144,37 +145,42 @@ In den nächsten Tagen wird das Thema Rechtsschutz behandelt. Dem Webshop werden
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[width=8cm]{Bilder/Abbildung6-ImpressumDesWebshops.png}
+\includegraphics[width=10cm]{Bilder/Abbildung6-ImpressumDesWebshops.png}
 \end{center}
 \caption{Impressum des Webshops}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}
 \begin{center}
-\includegraphics[width=8cm]{Bilder/Abbildung7-AGBDesWebshops.png}
+\includegraphics[width=10cm]{Bilder/Abbildung7-AGBDesWebshops.png}
 \end{center}
 \caption{AGB des Webshops}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}
 \begin{center}
-\includegraphics[width=8cm]{Bilder/Abbildung8-DatenschutzDesWebshops.png}
+\includegraphics[width=10cm]{Bilder/Abbildung8-DatenschutzDesWebshops.png}
 \end{center}
 \caption{Datenschutz des Webshops}
 \end{figure}
 
+\newpage
 \subsubsection{Arbeitspaket 3: Dynamische Seitennavigation}
 
 In den nächsten Wochen wird der statische Inhalt des Webshops durch dynamischen Inhalt ersetzt. Das bedeutet, dass die Daten fortan aus einer Datenbank geladen werden. Diese Datenbank wird mit der Datenbank aus dem SAP- System synchronisiert. Zunächst wird die Navigation des Webshops durch dynamische Inhalte ersetzt. Wird nun eine neue Haupt- oder Unterkategorie hinzugefügt oder entfernt, ändert sich die Navigation entsprechend. Zum besseren Verständnis ein kurzes Beispiel: Angenommen die GBI würde jetzt auch Helmkameras anbieten, so würde in der Datenbank eine neue Kategorie \glqq{Helmkameras}\grqq{} erstellt und zur ihr Kameramodelle von \glqq{GoPro}\grqq{} und \glqq{Rollei}\grqq{}. Die Navigation hätte jetzt die Hauptkategorien \glqq{Fahrräder}\grqq{}, \glqq{Zubehör}\grqq{}, \glqq{Fahrradteile}\grqq{}, \glqq{Fahrradbekleidung}\grqq{} und die Hauptkategorie \glqq{Helmkameras}\grqq{}. Unter letzterer würden die beiden Unterkategorien \glqq{GoPro}\grqq{} und \glqq{Rollei}\grqq{} aufgeführt. \textit{Abbildung 18} zeigt die dynamische Navigation.
 \textit{Quellcode 2} zeigt den entsprechenden Quellcode der die Methoden der Klasse Navigation aufruft, um diese dynamisch zu erstellen:
 
+\vfill
+
 \begin{figure}[H]
 \begin{center}
-\includegraphics[width=8cm]{Bilder/Abbildung9-DynamischeNaviagtionDesWebshops.png}
+\includegraphics[width=12cm]{Bilder/Abbildung9-DynamischeNaviagtionDesWebshops.png}
 \end{center}
 \caption{Dynamische Navigation}
 \label{Abbildung9-Dynamische Navigation}
 \end{figure}
+
+\vfill
 
 \newpage
 \begin{center}
@@ -183,14 +189,14 @@ In den nächsten Wochen wird der statische Inhalt des Webshops durch dynamischen
 	\end{lstinputlisting}
 \end{center}
 
-
+\newpage
 \subsubsection{Arbeitspaket 4: Dynamische Artikelauflistung}
 
 Ein paar Tage später erstellt Herr Schnürer eine dynamische Artikelauflistung. In ihr werden alle Fahrräder einer bestimmten Kategorie aufgelistet. Wählt der Nutzer in der Seitennavigation die Hauptkategorie \glqq{Fahrrad}\grqq{} und anschließend die Unterkategorie \glqq{Cityrad}\grqq{} werden ihm alle \glqq{Cityräder}\grqq{} aufgelistet, wählt er die Unterkategorie \glqq{Mountainbike}\grqq{} werden ihm alle \glqq{Mountainbikes}\grqq{} aufgelistet usw. \textit{Abbildung 19} zeigt die dynamische Artikelauflistung aller \glqq{Cityräder}\grqq{} (Anmerkung: Es wird an dieser Stelle nur ein Cityrad aufgelistet, da sich nur ein Produkt mit der Kategorie \glqq{Cityrad}\grqq{} in der Datenbank befindet. Man müsste nur weitere Cityräder in der Datenbank hinterlegen, damit entsprechend mehr Produkte aufgelistet werden):
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[width=8cm]{Bilder/Abbildung10-DynamischeArtikelauflistungAllerCitybikes.png}
+\includegraphics[width=10cm]{Bilder/Abbildung10-DynamischeArtikelauflistungAllerCitybikes.png}
 \end{center}
 \caption{Dynamische Artikelauflistung aller Cityräder}
 \label{Abbildung10-Dynamische Artikelauflistung aller Cityräder}
@@ -204,7 +210,7 @@ Eine Woche später wird eine detaillierte und dynamische Beschreibung für die A
 \begin{figure}[H]
 \begin{center}
 \fbox{
-\includegraphics[width=8cm]{Bilder/Abbildung11-DynamischeDetailierteArtikelbeschreibung.png}}
+\includegraphics[width=10cm]{Bilder/Abbildung11-DynamischeDetailierteArtikelbeschreibung.png}}
 \end{center}
 \caption{Detaillierte dynamische Artikelbeschreibung}
 \label{Abbildung11-Detaillierte dynamische Artikelbeschreibung}
@@ -216,9 +222,9 @@ In den Sommersemesterferien hat Herr Schnürer auch den oberen Teil dieser Seite
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[width=8cm]{Bilder/Abbildung12-DynamischeDetailierteArtikelbeschreibungFertig.png}
+\includegraphics[width=10cm]{Bilder/Abbildung12-DynamischeDetailierteArtikelbeschreibungFertig.png}
 \end{center}
-\caption{Abbildung 12 Fertige dynamische Artikelbeschreibung}
+\caption{Fertige dynamische Artikelbeschreibung}
 \label{Abbildung12-Fertige dynamische Artikelbeschreibung}
 \end{figure}
 
@@ -226,20 +232,17 @@ In den Sommersemesterferien hat Herr Schnürer auch den oberen Teil dieser Seite
 \begin{center}
 \includegraphics[width=8cm]{Bilder/Abbildung13-Lightbox.png}
 \end{center}
-\caption{Abbildung 13 \glqq{Lightbox}\grqq{} zur besseren Darstellung der Produktbilder}
+\caption{\glqq{Lightbox}\grqq{} zur besseren Darstellung der Produktbilder}
 \label{Abbildung13-"Lightbox" zur besseren Darstellung der Produktbilder}
 \end{figure}
 
-\newpage
+
 \begin{center}
 	\begin{lstinputlisting}[language=PHP, caption={Auszug aus der Seite Artikel Detailansicht}]
 		{Quellcode/ArtikelDetailansicht.php.inc}
 	\end{lstinputlisting}
 \end{center}
 
-%=======================================================
-%Startseite: Angebot des Tages noch beschreiben!!!
-%=======================================================
 
 \subsubsection{Arbeitspaket 4: Startseite-Angebot des Tages}
 
@@ -248,14 +251,14 @@ Zum Ende des Projekts wurde die Startseite des Webshops fertiggestellt. Sie zeig
 \begin{figure}[H]
 \begin{center}
 \fbox{
-\includegraphics[width=8cm]{Bilder/Abbildung14-StartseiteAngebotDesTages.png}
+\includegraphics[width=10cm]{Bilder/Abbildung14-StartseiteAngebotDesTages.png}
 }
 \end{center}
-\caption{Abbildung 14 Startseite-\glqq{Angebot des Tages}\grqq{}}
+\caption{\glqq{Angebot des Tages}\grqq{}}
 \end{figure}
 
 
-
+\newpage
 \subsection{Arbeitspakete von Herrn Brüntrup}
 In diesem Abschnitt wird beschrieben, wie Herr Brüntrup seine Arbeitspakete gelöst hat. Zudem wird in diesem Abschnitt noch beschrieben welche Arbeitspakete wegen Zeitmangel und fehlender Arbeitsbereitschaft zusätzlich noch übernommen wurden.
 
@@ -411,6 +414,7 @@ Dieser Abschnitt beschreibt, wie die Suche beim Projekt umgesetzt wurde. Der Web
 Die Suchfunktion wurde beim Webshop mit einer Suchwortvervollständigung ausgerüstet. Diese Vervollständigungsfunktion ist mit Ajax programmiert worden. Mit Ajax kann der Browser über JavaScript, während eine Webseite geöffnet ist, Anfragen an den Server senden und die Antwort des Servers entgegen nehmen. Für den Webserver sind diese Anfragen wie ganz normale Seitenaufrufe. Will der Browser Parameter zur Anfrage hinzufügen, werden diese über \glqq GET\grqq{} übermittelt. Dieses heißt, dass die Parameter an die Adressenzeile angehängt werden.\\
 Programmiert wurde die Suchwortvervollständigung, wie es in den folgenden Zeilen beschrieben wird. Beim Textfeld ruft das Attribut \glqq onkeyup\grqq{} eine JavaScript-Funktion der Datei \glqq /Funktions/JS/suche.js\grqq{} auf. Diese Funktion sendet mit AJAX eine Anfrage an den Server. Bei dieser Anfrage fragt der Browser den Server an, ob zu der Eingabe etwas in der Datenbank gefunden werden kann. Mit der Zeile \glqq html2.onreadystatechange = autovervollstaendigung\_normale\_suche\_result\_erweiterte\_suche;\grqq{} wird die Funktion festgelegt, die der JavaScript aufrufen soll, falls der Server antwortet. Diese Funktion nimmt den Rückgabewert des Servers entgegen und gibt diesen in einen DIV auf der Webseite aus.  Der Rückgabewert ist mit Hyperlinks versehen. Diese Hyperlinks sorgen dafür, dass bei Anwahl eines der Rückgabewerte das Suchtextfeld mit diesen Wert gefüllt wird und somit das Suchwort vervollständigt wurde. Die serverseitige Umsetzung der Suchwortvervollständigung findet in der Datei \glqq /Funktions/PHP/ajax\_autovervollstaendigung\_suche.php\grqq{} statt. Diese Datei instanziiert eine für die Suche entwickelte Klasse, wenn beim Aufruf der Datei ein Suchwort via GET-Parameter übergeben wurde. Die entwickelte Klasse trägt den Namen  \glqq Suche\grqq{}. Nach der Instanziierung ruft die Datei eine Suchmethode der Klasse auf und gibt das Suchergebnis mit den Befehl \glqq echo\grqq{} aus. Der Suchmethode wird als Parameter der Suchbegriff übergeben. Die aufgerufene Methode ist abhänig von der Suchfunktion. Wurde die Anfrage von der \glqq normalen\grqq{} Suchfunkton gesendet wird die Methode \glqq normale\_suche\_autovervollstaendigung()\grqq{} aufgerufen. Ist der Absender der Anfrage die \glqq erweiterte\grqq{} Suche, so wird die Methode \glqq erweiterte\_suche\_autovervollstaendigung()\grqq{} aufgerufen. Die Ausgabe der Datei wird später von den JavaScript als den eben genannten Rückgabewert entgegengenommen. \\
 
+\newpage
 \textbf{Die eigentliche Suchfunktion}\\
 Beim Webshop wurden zwei Suchfunktionen implementiert. Eine \glqq normale\grqq{} Suche im Header der Webseite und eine \glqq erweiterte\grqq{} Suche. Bei der erweiterten Suche (siehe \textit{Abbildung 34}) kann der Kunde die Suche noch genauer spezifizieren. Der Kunde kann z.B. Angaben machen, um was für eine Bauart von Fahrrad es sich handeln soll (Mountainbike, Rennrad,...). Der Suchvorgang läuft bei beiden Suchfunktionen gleich ab. Wird der Submit-Button geklickt, wird zunächst erst über JavaScript überprüft, ob die Eingabe gültig ist. Wie schon beim letzten Arbeitspaket erläutert, dient die browserseitige Überprüfung mit JavaScript nur zur Einsparung von unnötigen Datenverkehr zwischen Server und Browser. Aus den von letzten Arbeitspaket bekanntem Grund wird die Eingabeüberprüfung nochmal mit PHP durchgeführt. War die Eingabeüberprüfung mit PHP erfolgreich, wird die für die Suchfunktion entsprechende Methode der Klasse \glqq Suche\grqq{} aufgerufen. Die Suche wird innerhalb der Methoden rein in SQL umgesetzt. Bei SQL-Datenbanken ist die Suche praktisch schon fertig erhältlich. Der Programmierer muss nur einen entsprechende Abfrage formulieren und bekommt von der Datenbank die entsprechenden Rückgabewerte. Wird bei SQL der \glqq like\grqq{}-Operator verwendet, so unterstützt SQL auch Platzhalter für mehrere Zeichen. Diese wurden bei den Suchfunktionen benutzt, um festzulegen, dass hinter und vor den Suchbegriff noch andere Zeichen stehen dürfen.
 
@@ -436,6 +440,7 @@ Die \textit{Abbildung 32} zeigt wie ein Suchergebnis des Webshops aussieht. Beim
 \subsubsection{Zum Teil übernommenes Arbeitspaket: Warenkorb}
 Auf Grund von mehreren Fehlstunden des Gruppenmitglieds Raphael Gregarek war es beim Projektverlauf zu größeren zeitlichen Rückständen beim Arbeitspaket \glqq Warenkorb\grqq{} gekommen. Da die Arbeitspakete von Benedikt Brüntrup schon weitgehend fertig waren, wurde somit die restlichen Aufgaben des Arbeitspaketes \glqq Warenkorb\grqq{} von Herrn Brüntrup übernommen. Die Einarbeitungszeit in den bestehenden Quellcode war recht kurz, da dieser schon von Hilfestellungsarbeiten bekannt war. In den folgenden Zeilen wird beschrieben welche Funktionen des Arbeitspaketes Herr Brüntrup umgesetzt hat.\\
 
+\newpage
 \textbf{Eingabeüberprüfung}\\
 Wie bei den anderen Formularen wurde auch beim Warenkorb eine Eingabeüberprüfung programmiert. Diese wurde clientseitig in der Datei \glqq /Funktions/JS/vorcheck\_warenkorb.js\grqq{} und serverseitig in der Datei \glqq /Funktions/PHP/warenkorb.php.inc\grqq{} umgesetzt. Die Überprüfung wurde, wie bei den anderen Formularen umgesetzt und wird deswegen nicht weiter in dieser Ausarbeitung erläutert. Die Eingabeüberprüfung überprüft, ob überhaupt eine Menge angegeben wurde und ob diese im gültigen Bereich liegt. Es können somit keine negative Mengen und auch nicht mehr Produkte als auf Lager sind bestellt werden. Zudem wird als Wert nur eine ganze Zahl unterstützt. Die \textit{Abbildung 33} zeigt die Fehlermeldung der Eingabeüberprüfung, wenn der Kunde mehr Artikel bestellen will, als auf Lager sind.\\
 
