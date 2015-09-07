@@ -28,7 +28,7 @@
 \contentsline {subsubsection}{\numberline {3.3.3}Arbeitspaket 7: Entwickeln einer Suchfunktion}{41}{subsubsection.3.3.3}
 \contentsline {subsubsection}{\numberline {3.3.4}Zum Teil \IeC {\"u}bernommenes Arbeitspaket: Warenkorb}{43}{subsubsection.3.3.4}
 \contentsline {subsubsection}{\numberline {3.3.5}Zum Teil \IeC {\"u}bernommenes Arbeitspaket: Bestellvorgang}{46}{subsubsection.3.3.5}
-\contentsline {subsection}{\numberline {3.4}Arbeitspakete von Raphael Gregarek$^3$}{49}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.4}Arbeitspakete von Herrn Gregarek$^3$}{49}{subsection.3.4}
 \contentsline {subsubsection}{\numberline {3.4.1}Arbeitspaket 8: Warenkorb}{49}{subsubsection.3.4.1}
 \contentsline {subsubsection}{\numberline {3.4.2}Arbeitspaket 9: Bestellvorgang}{50}{subsubsection.3.4.2}
 \contentsline {subsubsection}{\numberline {3.4.3}Arbeitspaket 10: Erstellung eines Marketing Mix}{50}{subsubsection.3.4.3}

@@ -18,7 +18,7 @@ Der Grund für eine zweite CSS ist der, dass auch auf Smartphones und Tablets di
 \end{figure}
 
 Mit Tablets wird man damit nicht so große Probleme haben, dennoch muss auch für Tablets das Layout geändert werden. 
-Mobile Geräte werden nicht mit einer externen Maus bedient sondern durch eine Touch-Funktion. Das verhindert die Darstellung von Dropdown-Menüs oder Popups durch die CSS-Formatierung ‚hover‘. Dieses Problem wird gelöst, in dem zusätzliche Seiten geschrieben werden, die dann das Dropdown-Menü und Popups ersetzen sollen.
+Mobile Geräte werden nicht mit einer externen Maus bedient sondern durch eine Touch-Funktion. Das verhindert die Darstellung von Dropdown-Menüs oder Popups durch die CSS-Formatierung ‚hover‘. Dieses Problem wurde gelöst, in dem zusätzliche Seiten geschrieben wurden, die dann das Dropdown-Menü und die Popups bzw. die Flyouts ersetzen.
 
 \newpage
 \textbf{Layoutgestaltung:}
@@ -48,7 +48,7 @@ Zunächst musste die Website beim Öffnen zwischen einen Desktop-System und eine
 
 Wenn die Methode ‚check\_mobile()‘ den Wert ‚false‘ ausgibt, handelt es sich um Desktop-System. Andern falls ist das Endgerät ein mobiles und zu der schon vorhandenen ‚style.css‘ wird die neue ‚mobile.css‘ importiert. Alle Änderungen, die notwendig für die Darstellung auf einem mobilen Gerät sind, werden hier gespeichert und überschreiben ggf. die Formatierungen in der ‚style.css‘. \\ \\
 
-\textit{Anpassen der Größen:}
+\textbf{Anpassen der Größen:}
 \\
 Es ist klar, dass die Website, so wie sie  vom ursprünglichen Desktop-Layout erzeugt wird, auf einem Smartphone viel zu klein dargestellt wird, das heißt die komplette Breite der Seite ist im Bild. Um das zu beheben, benötigt es nur eine Zeile in der ‚index.php‘.
 
@@ -59,8 +59,8 @@ Es ist klar, dass die Website, so wie sie  vom ursprünglichen Desktop-Layout er
 \end{center}
 
 Mit diesem Ausdruck wird die Seite auf angenehme Größe heran gezoomt und kann nicht von Benutzer skaliert werden. 
-Um das Benutzen der Website praktischer zu gestalten, sollte die Website auf einem mobilen Gerät nur in der vertikalen scrollbar sein. Das gilt sowohl für Handys als auch für Tablets. Im Grunde heißt das, dass die Breite der Website an die Breite des mobilen Gerätes angepasst werden muss. Da in der ‚style.css‘ viel mit Pixel-Breiten gearbeitet wird, bedeutet das, dass alle entsprechenden Elemente umformatiert werden müssen.
-Zudem wurden außer Größen auch Anordnungen von Elementen und Farben geändert. Der Grund hierfür ist einfach, das die Website an einigen Stellen zu starke Farben hat und das evtl. unangenehm für den Benutzer werden kann. 
+Um das Benutzen der Website praktischer zu gestalten, sollte die Website auf einem mobilen Gerät nur in der vertikalen scrollbar sein. Das gilt sowohl für Handys als auch für Tablets. Im Grunde heißt das, dass die Breite der Website an die Breite des mobilen Gerätes angepasst werden muss. Da in der ‚style.css‘ viel mit Pixel-Breiten gearbeitet wurde, bedeutet das, dass alle entsprechenden Elemente umformatiert werden mussten.
+Zudem wurden außer Größenangaben auch die Anordnungen von Elementen und Farben geändert. Der Grund hierfür ist einfach, das die Website an einigen Stellen zu starke Farben hat und das evtl. unangenehm für den Benutzer werden kann. 
 
 
 
@@ -73,7 +73,7 @@ Zudem wurden außer Größen auch Anordnungen von Elementen und Farben geändert
 \end{figure}
 \textbf{Menü}
 \\
-Ein großer Punkt bei der Gestaltung von mobilfähigen Websites ist das Menü. Das Menü kann auf einem Smartphone meist nicht so dargestellt werden, wie es auf der Desktop-Seite der Fall ist. Dort sind alle Menüpunkte in einer Reihe und dafür fehlt der Platz auf mobilen Geräten. Wenn die Menüpunkte untereinander angeordnet werden, ist der Header der Website zu großflächig. Es ist kaum was von dem Inhalt der Seite zu sehen. Aus diesem Grund ist ein Dropdown-Menü genau das richtige. So kann per Druck auf einen Button das Menü aus-, beziehungsweise eingefahren werden. Um den Platz noch sinnvoller zu nutzen, werden die drei Headerfunktionen, die Suche, der Warenkorb und die Kontofunktion, ebenfalls in das Dropdown-Menü versetzt.
+Ein großer Punkt bei der Gestaltung von mobilfähigen Websites ist das Menü. Das Menü kann auf einem Smartphone meist nicht so dargestellt werden, wie es auf der Desktop-Seite der Fall ist. Dort sind alle Menüpunkte in einer Reihe und dafür fehlt der Platz auf mobilen Geräten. Wenn die Menüpunkte untereinander angeordnet werden, ist der Header der Website zu großflächig. Es ist kaum was von dem Inhalt der Seite zu sehen. Aus diesem Grund ist ein Dropdown-Menü genau das Richtige. So kann per Druck auf einen Button das Menü aus-, beziehungsweise eingefahren werden. Um den Platz noch sinnvoller zu nutzen, wurden die drei Headerfunktionen, die Suche, der Warenkorb und die Kontofunktion, ebenfalls in das Dropdown-Menü versetzt.
 
 \begin{figure}[H]
 \begin{center}
@@ -87,17 +87,17 @@ Der Header ist auf den Parameter ‚position: fixed‘ eingestellt, das heißt e
 \\ \\
 \textbf{Neue Seiten:}
 \\
-Im Laufe der Entwicklung der mobilen CSS wurden mehrere neue Seiten geschrieben. Das liegt daran, dass Funktionen, die auf dem Desktop-System recht praktisch sind, auf mobilen Geräten eher stören. Dazu zählen alle Popups als auch das Untermenü, welches erscheint, wenn man mit der Maus über den Menüpunkt ‚Fahrrad‘ geht. Um trotzdem nicht eingeschränkt zu sein, müssen folgende drei Seiten zusätzlich geschrieben werden:
+Im Laufe der Entwicklung der mobilen CSS wurden mehrere neue Seiten geschrieben. Das liegt daran, dass Funktionen, die auf dem Desktop-System recht praktisch sind, auf mobilen Geräten eher stören. Dazu zählen alle Popups als auch das Untermenü, welches erscheint, wenn man mit der Maus über den Menüpunkt ‚Fahrrad‘ geht. Um trotzdem nicht eingeschränkt zu sein, mussten folgende drei Seiten zusätzlich geschrieben werden:
 \begin{enumerate}
-\item Die Übersicht der Fahrradkategorien 
+\item Die Übersichtseite der Fahrradkategorien 
 \item Eine Login-Seite
-\item Eine Übersicht der Kontofunktionen
+\item Eine Übersichtseite der Kontofunktionen
 \end{enumerate}
-Die Übersicht der Fahrradkategorien:
+\textbf{Die Übersichtseite der Fahrradkategorien:}
 \\
-Die Übersicht ist tatsächlich nur eine Auflistung aller Fahrradkategorien. Diese erreicht man, wenn der Menüpunkt ‚Fahrrad‘ geklickt wird. 
+Die Übersichtseite ist tatsächlich nur eine Auflistung aller Fahrradkategorien. Diese erreicht man, wenn der Menüpunkt ‚Fahrrad‘ geklickt wird. 
 \\ \\
-Eine Login-Seite
+\textbf{Eine Login-Seite:}
 \\
 Da Popups auf mobilen Geräten nicht angezeigt werden, gibt es sonst keine Möglichkeit sich anzumelden. Deswegen musste eine separate Seite geschrieben werden, auf die man gelangt, wenn man im Menü den Login-Button betätigt. Die Login-Seite bietet ebenfalls eine Weiterleitung zu der Registrierungs-Seite.
 
@@ -109,7 +109,7 @@ Da Popups auf mobilen Geräten nicht angezeigt werden, gibt es sonst keine Mögl
 \end{center}
 \end{figure}
 
-Eine Übersicht der Kontofunktionen
+\textbf{Eine Übersichtseite der Kontofunktionen}
 \\
 Wie im vorherigen Punkt gibt es auch hier keine Möglichkeit, ohne Popup auf die Kontofunktionen zuzugreifen. Die neue Seite ‚(Name der Seite)‘ zeigt eine Übersicht dieser und kann durch Druck auf den Konto-Button erreicht werden.
 
@@ -131,7 +131,7 @@ Ein Problem bei der Bearbeitung dieses Arbeitspaketes war die stetige Veränderu
 Die Bewertung ist in einem Webshop eine große Hilfe bei der Findung guter Produkte. Deshalb soll diese Funktion in GBI-Webshop auch nicht fehlen. 
 In diesem Abschnitt wird alles rund um die Bewertung von Produkten beschrieben. Dabei wird auf das Ansehen und auf das Verfassen einer solchen eingegangen.
 \\ \\
-Popup zur Bewertung
+\textbf{Popup zur Bewertung}
 \\
 Um sofort für jeden ersichtlich zu machen, wie ein Artikel bewertet wurde, befindet sich in der Artikelbeschreibung ein Feld mit der Durchschnittlichen Sternebewertung und dahinter eine Angabe, wie viele Bewertungen abgegeben wurden. So kann der Benutzer von vornherein sehen, ob dieser Artikel sich lohnt oder nicht. Will man genau wissen, wie die Aufteilung der Bewertungen auf die Sterne ist, bietet das Feld ein Popupfenster, welches erscheint, wenn man mit der Maus darüber fährt. Zusätzlich befindet sich in diesem Popup ein Link, über den man zu allen Rezensionen dieses Artikels weitergeleitet wird.
 
@@ -142,9 +142,9 @@ Um sofort für jeden ersichtlich zu machen, wie ein Artikel bewertet wurde, befi
 \caption{Bewertung Popup}
 \end{figure}
 
-Einen Artikel bewerten
+\textbf{Einen Artikel bewerten}
 \\
-Um selber eine Rezension zu diesem Artikel zu verfassen, befindet sich auf der Artikelseite der Link „Artikel bewerten“, über den man zu der Bewertungsseite gelangt. 
+Um selber eine Rezension zu einem Artikel zu verfassen, befindet sich auf der Artikelseite der Link \glqq Artikel bewerten\grqq{}, über den man zu der Bewertungsseite gelangt. 
 Voraussetzung um eine Bewertung abgeben zu können, ist sich zuvor angemeldet zu haben. Ist das nicht der Fall, soll auf die Login-Seite weitergeleitet werden mit einem Hinweis sich anzumelden.
 
 \begin{figure}[H]
@@ -165,11 +165,11 @@ Die Idee der Bewertungsfunktion ist angelehnt an die von Amazon. Der Benutzer mu
 \end{figure}
 
 \newpage
-Wird der Submit-Button geklickt, wird, wie auch bei der Suche oder Registrierung, über JavaScript überprüft, ob die Eingabe gültig ist. Dabei kommt es nicht auf den Inhalt des Geschriebenen an, sondern einfach nur dass alle Felder ausgefüllt sind. Sind alle Angaben gemacht worden, werden die Daten in die Datenbank geladen. Dazu wird die dafür zuständige Methode in der Klasse „Kommentar“ aufgerufen. Es wird sowohl die Produkt-ID als auch die Kunden-ID gespeichert. Das ermöglicht es, alle Bewertungen eines Produktes anzeigen zu lassen, als auch alle Bewertungen eines Kunden. Wenn ein Benutzer einen Artikel bewerten will, welcher schon zuvor von ihm bewertet wurde, wird seine ursprüngliche Bewertung angezeigt. Diese kann er dann nach Belieben ändern.
+Wird der Submit-Button geklickt, wird, wie auch bei der Suche oder Registrierung, über JavaScript überprüft, ob die Eingabe gültig ist. Dabei kommt es nicht auf den Inhalt des Geschriebenen an, sondern einfach nur dass alle Felder ausgefüllt sind. Sind alle Angaben gemacht worden, werden die Daten in die Datenbank geladen. Dazu wird die dafür zuständige Methode in der Klasse „Kommentar“ aufgerufen. Es wird sowohl die Produkt-ID als auch die Kunden-ID gespeichert. Das ermöglicht es, alle Bewertungen eines Produktes anzeigen zu lassen, als auch alle Bewertungen eines Kunden. Wenn ein Benutzer einen Artikel bewerten will, welcher schon zuvor von ihm bewertet wurde, wird seine ursprüngliche Bewertung angezeigt. Diese kann er dann nach Belieben ändern.\\
+
+\textbf{Der Menüpunkt \glqq Meine Rezensionen\grqq{}}
 \\
-Der Menüpunkt „Meine Rezensionen“
-\\
-Dem Benutzer soll es ermöglicht werden, all seine Rezensionen zu verwalten. Dazu wird in dem Menü zur Übersicht der Kontofunktionen ein neuer Menüpunkt erstellt: Meine Rezensionen. 
+Dem Benutzer soll es ermöglicht werden, all seine Rezensionen zu verwalten. Dazu wurde in dem Menü zur Übersicht der Kontofunktionen ein neuer Menüpunkt erstellt: Meine Rezensionen. 
 
 %\begin{figure}[H]
 %\begin{center}
@@ -192,10 +192,9 @@ Dem Benutzer soll es ermöglicht werden, all seine Rezensionen zu verwalten. Daz
 \subsubsection{Arbeitspaket 12: Die Gestaltung einer Bestätigungs-Email}
 
 Wenn sich ein neuer Benutzer auf der Webseite registriert hat, wird, wie es bei den meisten Online-Shops der Fall ist, eine Bestätigungsmail an die E-Mail-Adresse gesendet, die bei der Registrierung angegeben wird. Dieses Verfahren ist notwendig, um die Korrektheit der E-Mail zu bestätigen. 
-Solange die E-Mail vom Benutzer nicht bestätigt wurde, kann der Benutzer sich nicht im GBI-Webshop einloggen. Die Tabelle „kunde“ in der Datenbank enthält eine Spalte „aktiviert“, in die der Status steht. Sobald der Benutzer die E-Mail bestätigt, wird der Kunde aktiviert und kann sich nun im Webshop anmelden.
-\\
-Vorgehen:
-\\
+Solange die E-Mail vom Benutzer nicht bestätigt wurde, kann der Benutzer sich nicht im GBI-Webshop einloggen. Die Tabelle „kunde“ in der Datenbank enthält eine Spalte „aktiviert“, in die der Status steht. Sobald der Benutzer die E-Mail bestätigt, wird der Kunde aktiviert und kann sich nun im Webshop anmelden.\\
+
+\textbf{Vorgehen:}\\
 Die E-Mail wird versandt, nachdem die Eingabe bei der Registrierung auf dessen Gültigkeit überprüft worden ist und der Kunde zur Datenbank hinzugefügt wurde. 
 
 %\begin{figure}[H]
