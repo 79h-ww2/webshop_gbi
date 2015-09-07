@@ -1480,3 +1480,9 @@ ul.werte_bestellvorgang_uebersicht{
 	padding-top:15px;
 	border-top: solid #D56509;
 }
+
+#meldung_art_geloescht{
+	color: red;
+	font-weight: bold;
+	text-decoration: underline;
+}

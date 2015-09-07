@@ -33,7 +33,8 @@
 						produkte p 
 							left join bauart b on (b.BId = p.bauart)
 					where
-						
+							p.geloescht = 'nein'
+						and 
 			";
 			
 			$teilbedingung = "";
