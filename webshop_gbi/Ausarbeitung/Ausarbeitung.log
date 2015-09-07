@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.5.5)  7 SEP 2015 10:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.5.5)  7 SEP 2015 16:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -689,7 +689,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 2.
 
-<Bilder/HS_OWL_RGB_Rot.jpg, id=233, 5019.75375pt x 1002.74625pt>
+<Bilder/HS_OWL_RGB_Rot.jpg, id=237, 5019.75375pt x 1002.74625pt>
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
 
 <use Bilder/HS_OWL_RGB_Rot.jpg>
@@ -830,7 +830,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 31.
 
-<Bilder/Abbildung1-Geschaeftsprozess.png, id=262, 249.93375pt x 1114.1625pt>
+<Bilder/Abbildung1-Geschaeftsprozess.png, id=267, 249.93375pt x 1114.1625pt>
 File: Bilder/Abbildung1-Geschaeftsprozess.png Graphic file (type png)
 
 <use Bilder/Abbildung1-Geschaeftsprozess.png>
@@ -883,7 +883,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 42.
 
-<Bilder/Risikoanalyse1.png, id=276, 606.01407pt x 231.11343pt>
+<Bilder/Risikoanalyse1.png, id=281, 606.01407pt x 231.11343pt>
 File: Bilder/Risikoanalyse1.png Graphic file (type png)
 
 <use Bilder/Risikoanalyse1.png>
@@ -902,7 +902,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 64.
  [6 <./Bilder/Risikoanalyse1.png>]
-<Bilder/Risikoanalyse2.png, id=284, 559.33969pt x 232.61906pt>
+<Bilder/Risikoanalyse2.png, id=289, 559.33969pt x 232.61906pt>
 File: Bilder/Risikoanalyse2.png Graphic file (type png)
 
 <use Bilder/Risikoanalyse2.png>
@@ -977,7 +977,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 83.
 
-<Bilder/ordnerstruktur.png, id=291, 200.58612pt x 398.22244pt>
+<Bilder/ordnerstruktur.png, id=296, 200.58612pt x 398.22244pt>
 File: Bilder/ordnerstruktur.png Graphic file (type png)
 
 <use Bilder/ordnerstruktur.png>
@@ -1043,7 +1043,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 100.
 
-<Bilder/Abbildung16_Zeitplan.png, id=302, 817.55438pt x 175.40532pt>
+<Bilder/Abbildung16_Zeitplan.png, id=307, 817.55438pt x 175.40532pt>
 File: Bilder/Abbildung16_Zeitplan.png Graphic file (type png)
 
 <use Bilder/Abbildung16_Zeitplan.png>
@@ -1051,7 +1051,7 @@ Package pdftex.def Info: Bilder/Abbildung16_Zeitplan.png used on input line 105
 .
 (pdftex.def)             Requested size: 455.24408pt x 97.67227pt.
 
-<Bilder/Abbildung17_GanttDiagramm.png, id=303, 554.82281pt x 279.29344pt>
+<Bilder/Abbildung17_GanttDiagramm.png, id=308, 554.82281pt x 279.29344pt>
 File: Bilder/Abbildung17_GanttDiagramm.png Graphic file (type png)
 
 <use Bilder/Abbildung17_GanttDiagramm.png>
@@ -1072,14 +1072,14 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 114.
 
 [10 <./Bilder/Abbildung16_Zeitplan.png>]
-<Bilder/projektstand1.png, id=310, 358.33875pt x 363.60844pt>
+<Bilder/projektstand1.png, id=315, 358.33875pt x 363.60844pt>
 File: Bilder/projektstand1.png Graphic file (type png)
 
 <use Bilder/projektstand1.png>
 Package pdftex.def Info: Bilder/projektstand1.png used on input line 118.
 (pdftex.def)             Requested size: 284.52756pt x 288.72888pt.
 
-<Bilder/projektstand3.png, id=311, 373.395pt x 336.50719pt>
+<Bilder/projektstand3.png, id=316, 373.395pt x 336.50719pt>
 File: Bilder/projektstand3.png Graphic file (type png)
 
 <use Bilder/projektstand3.png>
@@ -1098,14 +1098,14 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 129.
  [11 <./Bilder/Abbildung17_GanttDiagramm.png> <./Bilder/projektstand1.png>]
-<Bilder/projektstand5.png, id=320, 351.56343pt x 313.17pt>
+<Bilder/projektstand5.png, id=325, 351.56343pt x 313.17pt>
 File: Bilder/projektstand5.png Graphic file (type png)
 
 <use Bilder/projektstand5.png>
 Package pdftex.def Info: Bilder/projektstand5.png used on input line 134.
 (pdftex.def)             Requested size: 284.52756pt x 253.45126pt.
 
-<Bilder/projektstand7.png, id=321, 347.04657pt x 226.59656pt>
+<Bilder/projektstand7.png, id=326, 347.04657pt x 226.59656pt>
 File: Bilder/projektstand7.png Graphic file (type png)
 
 <use Bilder/projektstand7.png>
@@ -1208,7 +1208,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 82.
 
-<Bilder/Abbildung2-GroberDesignEntwurfDesWebshops.png, id=358, 612.8496pt x 606
+<Bilder/Abbildung2-GroberDesignEntwurfDesWebshops.png, id=363, 612.8496pt x 606
 .1044pt>
 File: Bilder/Abbildung2-GroberDesignEntwurfDesWebshops.png Graphic file (type p
 ng)
@@ -1238,7 +1238,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 103.
  [16 <./Bilder/Abbildung2-GroberDesignEntwurfDesWebshops.png>]
-<Bilder/Abbildung3-Seitenprototyp.png, id=365, 515.80942pt x 550.52736pt>
+<Bilder/Abbildung3-Seitenprototyp.png, id=370, 515.80942pt x 550.52736pt>
 File: Bilder/Abbildung3-Seitenprototyp.png Graphic file (type png)
 
 <use Bilder/Abbildung3-Seitenprototyp.png>
@@ -1246,7 +1246,7 @@ Package pdftex.def Info: Bilder/Abbildung3-Seitenprototyp.png used on input lin
 e 106.
 (pdftex.def)             Requested size: 426.79134pt x 455.53471pt.
 
-<Bilder/Abbildung4-SeitenprototypMitDropDownMenue.png, id=366, 517.22647pt x 55
+<Bilder/Abbildung4-SeitenprototypMitDropDownMenue.png, id=371, 517.22647pt x 55
 0.52736pt>
 File: Bilder/Abbildung4-SeitenprototypMitDropDownMenue.png Graphic file (type p
 ng)
@@ -1296,7 +1296,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 129.
 
-<Bilder/Abbildung5-StartseiteDesWebshops.png, id=380, 637.47594pt x 550.8883pt>
+<Bilder/Abbildung5-StartseiteDesWebshops.png, id=385, 637.47594pt x 550.8883pt>
 File: Bilder/Abbildung5-StartseiteDesWebshops.png Graphic file (type png)
 <use Bilder/Abbildung5-StartseiteDesWebshops.png>
 Package pdftex.def Info: Bilder/Abbildung5-StartseiteDesWebshops.png used on in
@@ -1321,14 +1321,14 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 142.
 
-<Bilder/Abbildung6-ImpressumDesWebshops.png, id=413, 731.11981pt x 432.91835pt>
+<Bilder/Abbildung6-ImpressumDesWebshops.png, id=418, 731.11981pt x 432.91835pt>
 File: Bilder/Abbildung6-ImpressumDesWebshops.png Graphic file (type png)
 <use Bilder/Abbildung6-ImpressumDesWebshops.png>
 Package pdftex.def Info: Bilder/Abbildung6-ImpressumDesWebshops.png used on inp
 ut line 148.
 (pdftex.def)             Requested size: 284.52756pt x 168.48076pt.
 
-<Bilder/Abbildung7-AGBDesWebshops.png, id=414, 731.11981pt x 468.00087pt>
+<Bilder/Abbildung7-AGBDesWebshops.png, id=419, 731.11981pt x 468.00087pt>
 File: Bilder/Abbildung7-AGBDesWebshops.png Graphic file (type png)
 
 <use Bilder/Abbildung7-AGBDesWebshops.png>
@@ -1336,7 +1336,7 @@ Package pdftex.def Info: Bilder/Abbildung7-AGBDesWebshops.png used on input lin
 e 155.
 (pdftex.def)             Requested size: 284.52756pt x 182.13397pt.
 
-<Bilder/Abbildung8-DatenschutzDesWebshops.png, id=415, 690.79703pt x 537.22832p
+<Bilder/Abbildung8-DatenschutzDesWebshops.png, id=420, 690.79703pt x 537.22832p
 t>
 File: Bilder/Abbildung8-DatenschutzDesWebshops.png Graphic file (type png)
  <use Bilder/Abbildung8-DatenschutzDesWebshops.png>
@@ -1378,7 +1378,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 168.
 
-<Bilder/Abbildung9-DynamischeNaviagtionDesWebshops.png, id=432, 733.9264pt x 39
+<Bilder/Abbildung9-DynamischeNaviagtionDesWebshops.png, id=437, 733.9264pt x 39
 3.62592pt>
 File: Bilder/Abbildung9-DynamischeNaviagtionDesWebshops.png Graphic file (type 
 png)
@@ -1427,7 +1427,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 193.
 
-<Bilder/Abbildung10-DynamischeArtikelauflistungAllerCitybikes.png, id=481, 733.
+<Bilder/Abbildung10-DynamischeArtikelauflistungAllerCitybikes.png, id=486, 733.
 9264pt x 316.44437pt>
 File: Bilder/Abbildung10-DynamischeArtikelauflistungAllerCitybikes.png Graphic 
 file (type png)
@@ -1441,7 +1441,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 206.
 
-<Bilder/Abbildung11-DynamischeDetailierteArtikelbeschreibung.png, id=482, 542.0
+<Bilder/Abbildung11-DynamischeDetailierteArtikelbeschreibung.png, id=487, 542.0
 25pt x 407.27156pt>
 File: Bilder/Abbildung11-DynamischeDetailierteArtikelbeschreibung.png Graphic f
 ile (type png)
@@ -1464,7 +1464,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 218.
  [24 <./Bilder/Abbildung10-DynamischeArtikelauflistungAllerCitybikes.png>]
-<Bilder/Abbildung12-DynamischeDetailierteArtikelbeschreibungFertig.png, id=490,
+<Bilder/Abbildung12-DynamischeDetailierteArtikelbeschreibungFertig.png, id=495,
  701.62125pt x 385.44pt>
 File: Bilder/Abbildung12-DynamischeDetailierteArtikelbeschreibungFertig.png Gra
 phic file (type png)
@@ -1474,7 +1474,7 @@ Package pdftex.def Info: Bilder/Abbildung12-DynamischeDetailierteArtikelbeschre
 ibungFertig.png used on input line 225.
 (pdftex.def)             Requested size: 284.52756pt x 156.30818pt.
 
-<Bilder/Abbildung13-Lightbox.png, id=491, 734.04819pt x 453.33pt>
+<Bilder/Abbildung13-Lightbox.png, id=496, 734.04819pt x 453.33pt>
 File: Bilder/Abbildung13-Lightbox.png Graphic file (type png)
 
 <use Bilder/Abbildung13-Lightbox.png>
@@ -1504,7 +1504,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 247.
 
-<Bilder/Abbildung14-StartseiteAngebotDesTages.png, id=500, 549.55313pt x 484.81
+<Bilder/Abbildung14-StartseiteAngebotDesTages.png, id=505, 549.55313pt x 484.81
 125pt>
 File: Bilder/Abbildung14-StartseiteAngebotDesTages.png Graphic file (type png)
  <use Bilder/Abbildung14-StartseiteAngebotDesTages.png>
@@ -1570,7 +1570,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 278.
  [28]
-<Bilder/Abbildung10-erd_alt.jpg, id=532, 1035.87pt x 651.43375pt>
+<Bilder/Abbildung10-erd_alt.jpg, id=537, 1035.87pt x 651.43375pt>
 File: Bilder/Abbildung10-erd_alt.jpg Graphic file (type jpg)
 
 <use Bilder/Abbildung10-erd_alt.jpg>
@@ -1590,14 +1590,14 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 290.
  [29 <./Bilder/Abbildung10-erd_alt.jpg>]
-<Bilder/Abbildung11-erd.jpg, id=538, 1489.565pt x 875.27pt>
+<Bilder/Abbildung11-erd.jpg, id=543, 1489.565pt x 875.27pt>
 File: Bilder/Abbildung11-erd.jpg Graphic file (type jpg)
 
 <use Bilder/Abbildung11-erd.jpg>
 Package pdftex.def Info: Bilder/Abbildung11-erd.jpg used on input line 296.
 (pdftex.def)             Requested size: 426.79134pt x 250.77673pt.
 
-<Bilder/Abbildung12-mysql_apis.png, id=539, 676.5275pt x 433.62pt>
+<Bilder/Abbildung12-mysql_apis.png, id=544, 676.5275pt x 433.62pt>
 File: Bilder/Abbildung12-mysql_apis.png Graphic file (type png)
 
 <use Bilder/Abbildung12-mysql_apis.png>
@@ -1662,7 +1662,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 337--338
 
  []
 
-<Bilder/Abbildung13_Reg_Vorgang.png, id=575, 330.48468pt x 924.45375pt>
+<Bilder/Abbildung13_Reg_Vorgang.png, id=580, 330.48468pt x 924.45375pt>
 File: Bilder/Abbildung13_Reg_Vorgang.png Graphic file (type png)
 
 <use Bilder/Abbildung13_Reg_Vorgang.png>
@@ -1753,7 +1753,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 368--373
 
  []
 
-<Bilder/Abbildung14_Loginbereich.png, id=625, 510.90875pt x 342.27875pt>
+<Bilder/Abbildung14_Loginbereich.png, id=630, 510.90875pt x 342.27875pt>
 File: Bilder/Abbildung14_Loginbereich.png Graphic file (type png)
 
 <use Bilder/Abbildung14_Loginbereich.png>
@@ -1777,7 +1777,7 @@ Package babel Info: Redefining ngerman shorthand "~
 File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
 )
 (./Quellcode/flylayout.css)
-<Bilder/Abbildung15_Menue_Profil_aendern.png, id=630, 278.03876pt x 308.15125pt
+<Bilder/Abbildung15_Menue_Profil_aendern.png, id=635, 278.03876pt x 308.15125pt
 >
 File: Bilder/Abbildung15_Menue_Profil_aendern.png Graphic file (type png)
  <use Bilder/Abbildung15_Menue_Profil_aendern.png>
@@ -1798,7 +1798,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 399.
  [38 <./Bilder/Abbildung14_Loginbereich.png>]
-<Bilder/formulare_profil_aendern.png, id=651, 547.78566pt x 486.51326pt>
+<Bilder/formulare_profil_aendern.png, id=656, 547.78566pt x 486.51326pt>
 File: Bilder/formulare_profil_aendern.png Graphic file (type png)
 
 <use Bilder/formulare_profil_aendern.png>
@@ -1864,7 +1864,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 417.
  [41]
-<Bilder/erweiterte_suche.png, id=668, 647.41875pt x 475.7775pt>
+<Bilder/erweiterte_suche.png, id=673, 647.41875pt x 475.7775pt>
 File: Bilder/erweiterte_suche.png Graphic file (type png)
 
 <use Bilder/erweiterte_suche.png>
@@ -1883,7 +1883,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 432.
  [42 <./Bilder/erweiterte_suche.png>]
-<Bilder/suchergebnis.png, id=675, 735.97408pt x 319.31541pt>
+<Bilder/suchergebnis.png, id=680, 735.97408pt x 319.31541pt>
 File: Bilder/suchergebnis.png Graphic file (type png)
 
 <use Bilder/suchergebnis.png>
@@ -1915,7 +1915,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 444--446
 
  []
 
-<Bilder/warenkorb_eingabepruefung.png, id=683, 258.9675pt x 116.68594pt>
+<Bilder/warenkorb_eingabepruefung.png, id=688, 258.9675pt x 116.68594pt>
 File: Bilder/warenkorb_eingabepruefung.png Graphic file (type png)
 
 <use Bilder/warenkorb_eingabepruefung.png>
@@ -1923,7 +1923,7 @@ Package pdftex.def Info: Bilder/warenkorb_eingabepruefung.png used on input lin
 e 449.
 (pdftex.def)             Requested size: 156.49014pt x 70.51419pt.
 
-<Bilder/warenkorb.png, id=684, 631.60968pt x 255.20343pt>
+<Bilder/warenkorb.png, id=689, 631.60968pt x 255.20343pt>
 File: Bilder/warenkorb.png Graphic file (type png)
 
 <use Bilder/warenkorb.png>
@@ -1942,7 +1942,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 467.
  [44 <./Bilder/warenkorb_eingabepruefung.png> <./Bilder/warenkorb.png>]
-<Bilder/mengenaenderung.png, id=693, 405.515pt x 233.87375pt>
+<Bilder/mengenaenderung.png, id=698, 405.515pt x 233.87375pt>
 File: Bilder/mengenaenderung.png Graphic file (type png)
 
 <use Bilder/mengenaenderung.png>
@@ -1961,7 +1961,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 478.
  [45 <./Bilder/mengenaenderung.png>]
-<Bilder/sicherheitsfrage_artikel_loeschen.png, id=699, 404.51125pt x 169.63374p
+<Bilder/sicherheitsfrage_artikel_loeschen.png, id=704, 404.51125pt x 169.63374p
 t>
 File: Bilder/sicherheitsfrage_artikel_loeschen.png Graphic file (type png)
  <use Bilder/sicherheitsfrage_artikel_loeschen.png>
@@ -1973,7 +1973,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 486.
 
-<Bilder/bestelluebersicht.png, id=700, 649.42625pt x 965.6075pt>
+<Bilder/bestelluebersicht.png, id=705, 649.42625pt x 965.6075pt>
 File: Bilder/bestelluebersicht.png Graphic file (type png)
 
 <use Bilder/bestelluebersicht.png>
@@ -2006,7 +2006,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 497.
 
 [47 <./Bilder/bestelluebersicht.png>]
-<Bilder/email.png, id=713, 648.00076pt x 556.29681pt>
+<Bilder/email.png, id=718, 648.00076pt x 556.29681pt>
 File: Bilder/email.png Graphic file (type png)
  <use Bilder/email.png>
 Package pdftex.def Info: Bilder/email.png used on input line 500.
@@ -2052,7 +2052,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
  []
 
-<Bilder/warenkorb_flyout.png, id=721, 395.97937pt x 238.64156pt>
+<Bilder/warenkorb_flyout.png, id=726, 395.97937pt x 238.64156pt>
 File: Bilder/warenkorb_flyout.png Graphic file (type png)
 
 <use Bilder/warenkorb_flyout.png>
@@ -2063,7 +2063,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--14
 
  []
 
-<Bilder/Warenkorb_symbol.png, id=722, 88.07906pt x 73.02281pt>
+<Bilder/Warenkorb_symbol.png, id=727, 88.07906pt x 73.02281pt>
 File: Bilder/Warenkorb_symbol.png Graphic file (type png)
 
 <use Bilder/Warenkorb_symbol.png>
@@ -2118,7 +2118,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 38.
  [50 <./Bilder/Warenkorb_symbol.png>]
-<Bilder/umsatz_fahrrad_verkaeufe_de.png, id=737, 783.92876pt x 493.845pt>
+<Bilder/umsatz_fahrrad_verkaeufe_de.png, id=742, 783.92876pt x 493.845pt>
 File: Bilder/umsatz_fahrrad_verkaeufe_de.png Graphic file (type png)
 
 <use Bilder/umsatz_fahrrad_verkaeufe_de.png>
@@ -2170,7 +2170,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--84
 
  []
 
-<Bilder/vertriebskanaele.png, id=750, 435.6275pt x 265.99374pt>
+<Bilder/vertriebskanaele.png, id=755, 435.6275pt x 265.99374pt>
 File: Bilder/vertriebskanaele.png Graphic file (type png)
 
 <use Bilder/vertriebskanaele.png>
@@ -2189,7 +2189,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 94.
  [53]
-<Bilder/Werbemoeglichkeiten.png, id=755, 573.14125pt x 409.53pt>
+<Bilder/Werbemoeglichkeiten.png, id=760, 573.14125pt x 409.53pt>
 File: Bilder/Werbemoeglichkeiten.png Graphic file (type png)
 
 <use Bilder/Werbemoeglichkeiten.png>
@@ -2263,7 +2263,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 7.
 
-<Bilder/Michael_Abbildung1-DarstellungDerWebsiteOhneMobileCSS.png, id=778, 209.
+<Bilder/Michael_Abbildung1-DarstellungDerWebsiteOhneMobileCSS.png, id=783, 209.
 583pt x 214.8828pt>
 File: Bilder/Michael_Abbildung1-DarstellungDerWebsiteOhneMobileCSS.png Graphic 
 file (type png)
@@ -2286,7 +2286,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 23.
  [57 <./Bilder/Michael_Abbildung1-DarstellungDerWebsiteOhneMobileCSS.png>]
-<Bilder/Michael_Abbildung2-Desingentwurf.png, id=785, 153.6942pt x 217.2918pt>
+<Bilder/Michael_Abbildung2-Desingentwurf.png, id=790, 153.6942pt x 217.2918pt>
 File: Bilder/Michael_Abbildung2-Desingentwurf.png Graphic file (type png)
 
 <use Bilder/Michael_Abbildung2-Desingentwurf.png>
@@ -2294,7 +2294,7 @@ Package pdftex.def Info: Bilder/Michael_Abbildung2-Desingentwurf.png used on in
 put line 33.
 (pdftex.def)             Requested size: 201.25876pt x 284.52756pt.
 
-<Bilder/Michael_Abbildung3-DesingentwurfMitDropDownMenue.png, id=786, 154.6578p
+<Bilder/Michael_Abbildung3-DesingentwurfMitDropDownMenue.png, id=791, 154.6578p
 t x 217.2918pt>
 File: Bilder/Michael_Abbildung3-DesingentwurfMitDropDownMenue.png Graphic file 
 (type png)
@@ -2348,7 +2348,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 64.
  [59]
-<Bilder/Michael_Abbildung4-FarbaenderungenFuerBessereLesbarkeit1.png, id=827, 1
+<Bilder/Michael_Abbildung4-FarbaenderungenFuerBessereLesbarkeit1.png, id=832, 1
 58.994pt x 222.5916pt>
 File: Bilder/Michael_Abbildung4-FarbaenderungenFuerBessereLesbarkeit1.png Graph
 ic file (type png)
@@ -2358,7 +2358,7 @@ Package pdftex.def Info: Bilder/Michael_Abbildung4-FarbaenderungenFuerBessereLe
 sbarkeit1.png used on input line 69.
 (pdftex.def)             Requested size: 162.59628pt x 227.62204pt.
 
-<Bilder/Michael_Abbildung4-FarbaenderungenFuerBessereLesbarkeit2.png, id=828, 1
+<Bilder/Michael_Abbildung4-FarbaenderungenFuerBessereLesbarkeit2.png, id=833, 1
 58.994pt x 222.5916pt>
 File: Bilder/Michael_Abbildung4-FarbaenderungenFuerBessereLesbarkeit2.png Graph
 ic file (type png)
@@ -2368,7 +2368,7 @@ Package pdftex.def Info: Bilder/Michael_Abbildung4-FarbaenderungenFuerBessereLe
 sbarkeit2.png used on input line 70.
 (pdftex.def)             Requested size: 162.59628pt x 227.62204pt.
 
-<Bilder/Michael_Abbildung5-DasDropDownMenue.png, id=829, 131.5314pt x 200.4288p
+<Bilder/Michael_Abbildung5-DasDropDownMenue.png, id=834, 131.5314pt x 200.4288p
 t>
 File: Bilder/Michael_Abbildung5-DasDropDownMenue.png Graphic file (type png)
  <use Bilder/Michael_Abbildung5-DasDropDownMenue.png>
@@ -2376,7 +2376,7 @@ Package pdftex.def Info: Bilder/Michael_Abbildung5-DasDropDownMenue.png used on
  input line 80.
 (pdftex.def)             Requested size: 142.26378pt x 216.80545pt.
 
-<Bilder/Michael_Abbildung6-HeaderMitFesterPosition.png, id=830, 131.5314pt x 20
+<Bilder/Michael_Abbildung6-HeaderMitFesterPosition.png, id=835, 131.5314pt x 20
 2.8378pt>
 File: Bilder/Michael_Abbildung6-HeaderMitFesterPosition.png Graphic file (type 
 png)
@@ -2409,7 +2409,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 96--103
  []
 
 
-<Bilder/Michael_Abbildung7-AuflistungDerFahrradkategorien.png, id=841, 156.585p
+<Bilder/Michael_Abbildung7-AuflistungDerFahrradkategorien.png, id=847, 156.585p
 t x 220.1826pt>
 File: Bilder/Michael_Abbildung7-AuflistungDerFahrradkategorien.png Graphic file
  (type png)
@@ -2419,7 +2419,7 @@ Package pdftex.def Info: Bilder/Michael_Abbildung7-AuflistungDerFahrradkategori
 en.png used on input line 106.
 (pdftex.def)             Requested size: 161.88167pt x 227.62204pt.
 
-<Bilder/Michael_Abbildung8-DieLogin-Seite.png, id=842, 171.039pt x 198.5016pt>
+<Bilder/Michael_Abbildung8-DieLogin-Seite.png, id=848, 171.039pt x 198.5016pt>
 File: Bilder/Michael_Abbildung8-DieLogin-Seite.png Graphic file (type png)
 
 <use Bilder/Michael_Abbildung8-DieLogin-Seite.png>
@@ -2441,7 +2441,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 111.
  [61 <./Bilder/Michael_Abbildung5-DasDropDownMenue.png> <./Bilder/Michael_Abbil
 dung6-HeaderMitFesterPosition.png>]
-<Bilder/Michael_Abbildung9-UebersichtDerKontofunktionen.png, id=856, 168.1482pt
+<Bilder/Michael_Abbildung9-UebersichtDerKontofunktionen.png, id=861, 168.1482pt
  x 148.3944pt>
 File: Bilder/Michael_Abbildung9-UebersichtDerKontofunktionen.png Graphic file (
 type png)
@@ -2476,14 +2476,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 131--137
  []
 
 
-<Bilder/Michael_Abbildung10-BewertungPopup.png, id=868, 464.937pt x 171.5208pt>
+<Bilder/Michael_Abbildung10-BewertungPopup.png, id=873, 464.937pt x 171.5208pt>
 File: Bilder/Michael_Abbildung10-BewertungPopup.png Graphic file (type png)
 <use Bilder/Michael_Abbildung10-BewertungPopup.png>
 Package pdftex.def Info: Bilder/Michael_Abbildung10-BewertungPopup.png used on 
 input line 140.
 (pdftex.def)             Requested size: 341.43306pt x 125.9655pt.
 
-<Bilder/Michael_Abbildung11-ArtikelBewertenOhneAnmeldung.png, id=869, 354.123pt
+<Bilder/Michael_Abbildung11-ArtikelBewertenOhneAnmeldung.png, id=874, 354.123pt
  x 181.1568pt>
 File: Bilder/Michael_Abbildung11-ArtikelBewertenOhneAnmeldung.png Graphic file 
 (type png)
@@ -2506,7 +2506,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 156.
  [63 <./Bilder/Michael_Abbildung10-BewertungPopup.png>]
-<Bilder/Michael_Abbildung12-ArtikelBewertenMitAnmeldung.png, id=876, 354.123pt 
+<Bilder/Michael_Abbildung12-ArtikelBewertenMitAnmeldung.png, id=881, 354.123pt 
 x 274.626pt>
 File: Bilder/Michael_Abbildung12-ArtikelBewertenMitAnmeldung.png Graphic file (
 type png)
@@ -2534,7 +2534,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 168--169
  []
 
 
-<Bilder/Michael_Abbildung14-AnzeigeAllerRezensionenEinesBenutzers.png, id=885, 
+<Bilder/Michael_Abbildung14-AnzeigeAllerRezensionenEinesBenutzers.png, id=890, 
 465.86354pt x 145.10023pt>
 File: Bilder/Michael_Abbildung14-AnzeigeAllerRezensionenEinesBenutzers.png Grap
 hic file (type png)
@@ -2699,6 +2699,10 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 12.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 16.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 42.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 42.
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 211.
 File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
@@ -2715,19 +2719,33 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 211.
  [70]
+File: Bilder/HS_OWL_RGB_Rot.jpg Graphic file (type jpg)
+ <use Bilder/HS_OWL_RGB_Rot.jpg>
+Package pdftex.def Info: Bilder/HS_OWL_RGB_Rot.jpg used on input line 211.
+(pdftex.def)             Requested size: 113.81102pt x 22.72147pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 211.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 211.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 211.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 211.
+ [71]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 211.
- (./Ausarbeitung.aux)
+
+(./Ausarbeitung.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 211.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 211.
 Package rerunfilecheck Info: File `Ausarbeitung.out' has not changed.
-(rerunfilecheck)             Checksum: A6F138EA75A53EC872E71A111E47C09B;4029.
+(rerunfilecheck)             Checksum: C55E904DADE1B32D5B3BF8D1D6BAA7CE;4094.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 211.
  ) 
 Here is how much of TeX's memory you used:
- 12296 strings out of 494927
- 186372 string characters out of 6177950
+ 12299 strings out of 494927
+ 186399 string characters out of 6177950
  639287 words of memory out of 5000000
- 14836 multiletter control sequences out of 15000+600000
+ 14837 multiletter control sequences out of 15000+600000
  19842 words of font info for 50 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
  34i,18n,52p,2038b,3407s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2748,10 +2766,10 @@ t/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
 eurosym/feymr10.pfb>
-Output written on Ausarbeitung.pdf (71 pages, 7520426 bytes).
+Output written on Ausarbeitung.pdf (72 pages, 7522815 bytes).
 PDF statistics:
- 1717 PDF objects out of 1728 (max. 8388607)
- 898 compressed objects within 9 object streams
- 402 named destinations out of 1000 (max. 500000)
- 659 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1731 PDF objects out of 2073 (max. 8388607)
+ 907 compressed objects within 10 object streams
+ 404 named destinations out of 1000 (max. 500000)
+ 667 words of extra memory for PDF output out of 10000 (max. 10000000)
 
