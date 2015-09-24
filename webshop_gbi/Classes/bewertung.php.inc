@@ -1,7 +1,7 @@
 <?php
 	class Bewertung{
 		
-		private $arg_sterne;
+		private $arr_sterne;
 		
 		/**
 		 * Konstruktor

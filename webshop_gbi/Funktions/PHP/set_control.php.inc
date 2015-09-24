@@ -30,12 +30,17 @@
 				include_once './Funktions/PHP/vorcheck_erweiterte_suche.php.inc';
 			break;
 			
-			//Bearbeitet die Aufgaben ab, die mit dem Bestellvorgang zu tun haben
+			//arbeitet die Aufgaben ab, die mit dem Bestellvorgang zu tun haben
 			case 'bestellvorgang_versandart':
 			case 'bestellvorgang_zahlungsart':
 			case 'bestellvorgang_lieferart':
 			case 'bestellvorgang_agb':
 				include_once 'Funktions/PHP/bestellvorgang.php.inc';
+			break;
+			
+			//speichert Bewertungen
+			case 'kommentar':
+				include_once 'Funktions/PHP/kommentar_hochladen.php.inc';
 			break;
 		}
 	}

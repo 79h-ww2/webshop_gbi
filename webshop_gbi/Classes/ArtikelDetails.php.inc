@@ -2,32 +2,6 @@
 include_once 'Classes/bewertung.php.inc';
 class ArtikelDetails extends  Artikelauflistung{
 	
-	/**
-	 * Überprüft, ob der Artikel gelöscht wurde
-	 * @param String $pid
-	 * @return boolean
-	 */
-	public function istArtikelGeloescht($pid){
-		
-		//Verbindung zur Datenbank aufbauen
-		$db = datenbank_verbindung_aufbauen();
-		if ( !($db->db_connect()) ) die ("Es konnte keine Verbindung zur Datenbank aufgebaut werden");
-		
-		$pid = $db->db_real_escape_string($pid); //Sonderzeichen aus $pid entfernen
-		
-		$query = "select count(*) from produkte where pid='$pid' and geloescht='ja';";
-		
-		$result = $db->db_query($query);
-		
-		$rueckgabe = false;
-		while ($wert = $db->db_fetch_array($result)) $rueckgabe = ($wert[0] == '1') ? true : false;
-		
-		//Verbindung zur Datenbank schließen
-		$db->db_close();
-		
-		return  $rueckgabe;
-	}
-	
 	public function beschreibungAnzeigen($pid){
 		$query = $this->anfangszeilenSQLQuery(); //Vordefinierten Kopf abspeichern
 		//Verbindung zur Datenbank aufbauen

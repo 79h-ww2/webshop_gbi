@@ -11,31 +11,32 @@
 
  
     <?php
-				/*
-				 * function check_mobile() {
-				 * $agents = array(
-				 * 'Windows CE', 'Pocket', 'Mobile',
-				 * 'Portable', 'Smartphone', 'SDA',
-				 * 'PDA', 'Handheld', 'Symbian',
-				 * 'WAP', 'Palm', 'Avantgo',
-				 * 'cHTML', 'BlackBerry', 'Opera Mini',
-				 * 'Nokia'
-				 * );
-				 *
-				 * // Prüfen der Browserkennung
-				 * for ($i=0; $i<count($agents); $i++) {
-				 * if(isset($_SERVER["HTTP_USER_AGENT"]) && strpos($_SERVER["HTTP_USER_AGENT"], $agents[$i]) !== false)
-				 * return true;
-				 * }
-				 *
-				 * return false;
-				 * }
-				 * if (check_mobile()) {
-				 * ?>
-				 * <link rel="stylesheet" href="Styles/mobile.css" type="text/css"/>
-				 * <?php
-				 * }
-				 */
+				
+				  function check_mobile() {
+				  $agents = array(
+				  'Windows CE', 'Pocket', 'Mobile',
+				  'Portable', 'Smartphone', 'SDA',
+				  'PDA', 'Handheld', 'Symbian',
+				  'WAP', 'Palm', 'Avantgo',
+				  'cHTML', 'BlackBerry', 'Opera Mini',
+				  'Nokia'
+				  );
+				 
+				  // Prüfen der Browserkennung
+				  for ($i=0; $i<count($agents); $i++) {
+				  if(isset($_SERVER["HTTP_USER_AGENT"]) && strpos($_SERVER["HTTP_USER_AGENT"], $agents[$i]) !== false)
+				  return true;
+				  }
+				 
+				  return false;
+				  }
+				  if (check_mobile()) {
+				  ?>
+				  <meta name="viewport" content="width=device-width, minimum-scale=2, initial-scale=1.0, user-scalable=no">
+				  <link rel="stylesheet" href="Styles/mobile.css" type="text/css"/>
+				  <?php
+				  }
+				 
 				?>
 </head>
 
@@ -69,19 +70,6 @@
 	include_once 'Classes/artikel.php.inc';
 	include_once 'Classes/navigation.php.inc';
 	?>
-
-	 <div id="HeaderLeisteMobile">
-		<div class="show-nav"></div>
-		<div class="aktPageName"></div>
-		<div class="show-search"
-			onclick="einblenden('SearchLeisteMobile'); return false;"></div>
-	</div>
-	<div id="SearchLeisteMobile">
-		<div class="search-zurueck"
-			onclick="einblenden('SearchLeisteMobile'); return false;"></div>
-		<input type="text" class="search-textfeld" />
-		<div class="search-go"></div>
-	</div>
 	<header class="mainHeader">
 
 		<div class="HeaderContent">
@@ -107,10 +95,6 @@
 
 					<!-- Anzahl Artikel im Warenkorb -->
 				</div>
-				<div class="mobilewarenkorbCell">
-					<a href="./?page=warenkorb" class=mobilewarenkorbCell_WarenkorbLink>
-					</a>
-				</div>
 
 				<div class="accountCell"
 					onclick="if(document.getElementById('popupRegistrierung').style.visibility == 'visible') document.getElementById('popupRegistrierung').style.visibility = '';">
@@ -135,10 +119,47 @@ else {
 
 		</div>
 
-
+		<div class="mobileHeader">
+			<a class="menu-trigger">Menu</a>
+		<div class="logoCell">
+					<a href="./"> <img src="Images/Design/Logo/fahrrad.png" alt="Starseite" class="logo" /></a>
+				</div>
+		</div>
 
 		<!-- NAVIGATION -->
 		<nav class="nav">
+		      <div class="mobileMenuHeader">
+    	 <ul>
+             <div class="warenkorbCell">
+           			<?php
+					$warenkorb1 = new warenkorb ();
+					echo '<span class="warenkorbCellMengeHeader" href=".?page=warenkorb">'.$warenkorb1->menge_im_warenkorb ().'</span>';
+					?>
+ 
+
+					<!-- Anzahl Artikel im Warenkorb -->
+				</div>
+            <div class="accountCell" onclick="if(document.getElementById('popupRegistrierung').style.visibility == 'visible') document.getElementById('popupRegistrierung').style.visibility = '';">
+                	<?php
+					// wenn der Kunde noch nicht angemeldet ist, wird hier das Anmelde-Popup angezeigt
+					if (! (isset ( $_SESSION ['angemeldet'] ))) {
+					?>
+					 <a href="./?page=login"> </a>
+					<?php 
+					}  // wenn er angemeldet ist bekommt der Kunde ein Popup zur Verwaltung seines Profils angezeigt
+					else {
+					?>
+					 <a href="./?page=konto_uebersicht"> </a>
+					<?php 
+					}
+					?>											
+            </div>
+             <div class="mobileSearchCell">
+              <a href="./?page=suche_erweitert" ></a>
+             </div>     
+               
+                </ul>
+    	</div>
 			<ul class="navigation">
         	<?php
 									$navi = new Navigation ();
@@ -148,7 +169,12 @@ else {
 										$kategorie = $arr_kategorie [$i];
 										if ($i != 0) {
 											echo '<li><a href="./?page=uebersicht&PTId=' . htmlspecialchars ( $kategorie->PTId, ENT_QUOTES, 'UTF-8' ) . '">' . htmlspecialchars ( $kategorie->Bezeichnung, ENT_QUOTES, 'UTF-8' ) . '</a></li>';
+										
 										} else {
+											if (check_mobile()) {
+												echo '<li><a href="./?page=fahrrad_katg">' . htmlspecialchars ( $kategorie->Bezeichnung, ENT_QUOTES, 'UTF-8' ) . '</a>';
+											}
+											else{
 											echo '<li><a href="./?page=#">' . htmlspecialchars ( $kategorie->Bezeichnung, ENT_QUOTES, 'UTF-8' ) . '</a>';
 											echo '<ul>';
 											
@@ -168,6 +194,7 @@ else {
 												echo '</div>';
 											
 											echo '</ul>';
+											}
 										}
 									}
 									?>
@@ -216,6 +243,8 @@ else {
 												?>
         </ul>
 		</nav>
+		
+		
 		<div style="clear: left"></div>
     <?php if (isset($_SESSION['angemeldet'])) {include_once 'Pages/status_leiste.php.inc';} ?>
     </header>
@@ -269,7 +298,9 @@ else {
 		</ul>
 	</footer>
 	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="Funktions/JS/show-nav.js"></script>
+	<script src="Funktions/JS/sternbewertung.js"></script>
 	<script src="Funktions/JS/lightbox-plus-jquery.min.js"></script>
 </body>
 

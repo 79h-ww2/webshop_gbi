@@ -47,8 +47,17 @@ if (isset ( $_GET ['page'] ) && $_GET ['page'] != "") {
 		case 'bestellung':
 			include_once './Pages/bestellvorgang.php.inc';
 			break;
-		case 'bestellungen':
-			include_once './Pages/bestellungen.php.inc';
+		case 'fahrrad_katg':
+			include_once './Pages/uebersicht_fahrradkategorien.php.inc';
+			break;
+		case 'konto_uebersicht':
+			include_once './Pages/uebersicht_konto.php.inc';
+			break;
+		case 'rezensionen':
+			include_once './Pages/meine_rezensionen.php.inc';
+			break;
+		case 'produkt_rezensionen_uebersicht':
+			include_once './Pages/produkt_rezensionen.php.inc';
 			break;
 		default :
 			echo "<br/><h2>Gewünschte Seite wurde nicht gefunden.</h2>";

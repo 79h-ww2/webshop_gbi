@@ -64,6 +64,21 @@ if ($anzahlBewertungen > 0)
 			</div>
 		</div>
 		<div class="popupBewertungLinkAlleBewertungen">
+			<?php
+			if (!$pid)
+				$pid = $_GET['pid'];
+			if ($anzahlBewertungen == 1)
+			{
+				?>
+				<a href="./?page=produkt_rezensionen_uebersicht&pid=<?php echo $pid ?>">Eine Bewertung ansehen</a>
+				<?php 
+			}
+			else if ($anzahlBewertungen > 1){
+				?>
+				<a href="./?page=produkt_rezensionen_uebersicht&pid=<?php echo $pid ?>">Alle <?php echo $anzahlBewertungen; ?> Bewertungen ansehen</a>
+				<?php 
+			}
+			?>
 		</div>
 	</div>
 </div>

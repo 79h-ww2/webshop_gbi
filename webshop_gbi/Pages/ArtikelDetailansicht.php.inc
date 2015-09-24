@@ -123,10 +123,6 @@ $seitenaufrufe1 = new MeistAngeseheneArtikel();
     		</div>
     		
     		<div class="warenkorbFeld">
-    			<?php
-    				//Zeigt das Wartenkorbformular nur an, wenn der Arikel nicht gelöscht wurde 
-    				if ($artikelDetails->istArtikelGeloescht($_GET['pid']) == false) {
-    			?>
     			<script type="text/javascript" src="./Funktions/JS/vorcheck_std_funktionen.js" >
     			</script>
     			<script type="text/javascript" src="Funktions/JS/vorcheck_warenkorb.js">
@@ -156,13 +152,6 @@ $seitenaufrufe1 = new MeistAngeseheneArtikel();
 					?>
 				</div>
 				</form>
-				<?php
-					}
-					//gibt eine Meldung aus, wenn der Artikel gelöscht wurde
-					else{
-						echo "<h3 id=\"meldung_art_geloescht\" >Dieser Artikel wird zur Zeit nicht beim Webshop angeboten.</h3>";
-					} 
-				?>
     		</div>
     		<div class="artikeldetails_bewertung" >
     			<?php $artikelDetails->bewertungZeigen($_GET['pid']); ?>
@@ -236,7 +225,7 @@ $seitenaufrufe1 = new MeistAngeseheneArtikel();
 		?>
 		        
     </content>
-    <a href="./?page=artBewerten" title="ArtikelBewerten">Artikel bewerten</a>
+    <a href="./?page=artBewerten&pid=<?php echo $_GET['pid']?>" title="ArtikelBewerten">Artikel bewerten</a>
     
     <?php }else{echo "<h2>Artikel nicht gefunden !!!</h2>";} }else{echo "Keine Artikelnummer übergeben !!!";} ?>
 </article>

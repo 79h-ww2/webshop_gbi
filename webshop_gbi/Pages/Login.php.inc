@@ -63,7 +63,7 @@ $eingabe_ungueltig_login = isset ( $eingabe_ungueltig_login ) ? $eingabe_unguelt
 						Passwort vergessen
 					</a>-->
 				<div id="reg_link">
-					Sie haben noch kein Konto? Registrieren Sie sich <a	href="./?page=reg" title="Registrierung" style="color:black"> hier </a>
+					Sie haben noch kein Konto? Registrieren Sie sich <a	href="./?page=reg" title="Registrierung" > hier </a>
 				</div>
 
 				<div class="clear_right"></div>

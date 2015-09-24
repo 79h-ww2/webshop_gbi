@@ -33,8 +33,7 @@
 						produkte p 
 							left join bauart b on (b.BId = p.bauart)
 					where
-							p.geloescht = 'nein'
-						and 
+						
 			";
 			
 			$teilbedingung = "";
@@ -72,6 +71,7 @@
 			$db->db_close();
 			
 			//gibt das Array mit den Datenbankrückgabewerten aus
+			
 			return $werte;
 		}
 		

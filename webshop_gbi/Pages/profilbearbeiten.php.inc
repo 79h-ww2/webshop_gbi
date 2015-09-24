@@ -54,7 +54,7 @@
 		            
 		            <p class="reg_form_zeile" >
 		                <label for="strasse" >Stra&szlig;e:</label>
-		                <input type="text" name="strasse" maxlength="50"  value="<?php if ($eingabe_ungueltig_adresse) { echo htmlspecialchars($_POST['strasse'],ENT_QUOTES,'UTF-8');}else{ echo htmlspecialchars($profil->get_strasse_from_kid($kid),ENT_QUOTES,'UTF-8'); } ?>" class="std_reg" <?php if( $eingabe_ungueltig_adresse && $eingabe_check_result_adresse->get_feldstatus('strasse') ) echo 'style="border-color:red; border-style: solid"';  ?> />
+		                <input type="text" name="strasse" maxlength="50" value="<?php if ($eingabe_ungueltig_adresse) { echo htmlspecialchars($_POST['strasse'],ENT_QUOTES,'UTF-8');}else{ echo htmlspecialchars($profil->get_strasse_from_kid($kid),ENT_QUOTES,'UTF-8'); } ?>" class="std_reg" <?php if( $eingabe_ungueltig_adresse && $eingabe_check_result_adresse->get_feldstatus('strasse') ) echo 'style="border-color:red; border-style: solid"';  ?> />
 		                <label for="hausnr" class="hausnr" >Haus Nr.:</label>
 		                <input type="text" name="hausnr" maxlength="5"  value="<?php if ($eingabe_ungueltig_adresse) {echo  htmlspecialchars($_POST['hausnr'],ENT_QUOTES,'UTF-8'); }else{ echo htmlspecialchars($profil->get_hausnr_from_kid($kid),ENT_QUOTES,'UTF-8'); } ?>" class="hausnr" <?php if( $eingabe_ungueltig_adresse && $eingabe_check_result_adresse->get_feldstatus('hausnr') ) echo 'style="border-color:red; border-style: solid"';  ?> />
 		            </p>

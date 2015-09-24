@@ -69,7 +69,6 @@ body {
    padding-top:40px;
    font-size:13px;
    color:white;
-   
 }
 .warenkorbCell:hover{
 	background-image: url('../Images/Design/warenkorb_hover.png');
@@ -200,7 +199,7 @@ img.account {
     /*aktivieren, zwalls Sidebars erw�nscht sind
     float: left;
     */
-    margin-top: 125px;
+    margin-top: 150px;
     background-color: #fff;
     padding: 15px;
 }
@@ -426,7 +425,7 @@ img.BildMustermodell{
     margin: 0px auto;
     width: 640px;
     padding: 0px;
-    margin-top:20px;
+    margin-top:40px;
 }
 
 #registrierung h2, #suche_erweitert h2, #form_adresse_aendern h2, #form_email_passwort_aendern h2, #login h2, #form_bestellung h2 {
@@ -903,6 +902,84 @@ input[type="text"], input[type="email"], input[type="password"], select, input[t
 	background: #d56509; 
     text-shadow: none;
     background: linear-gradient(to  bottom, #d56509  , orange 15%, #d56509); 
+}
+/* ##################################### Meine Rezensionen ################################## */
+.TitelRezension, .BewertungRezension, .ArtikelRezension, .BearbeitenRezension, .LöschenRezension{
+	display: table-cell;
+	text-align: center;
+	padding-left: 10px;
+	padding-top: 10px;
+	vertical-align: middle;
+	border-bottom: solid 1px;
+}
+
+.ArtikelnameWarenkorb{
+	width: 250px;
+	
+}
+.ArtikelnameWarenkorbhyper{
+	color: white;
+	text-decoration: none;
+}
+.ArtikelnameWarenkorbhyper:hover{
+	color: #FFBF00;
+}
+
+.bereich_button_warenkorb_volle_uebersicht{
+	margin: 20px auto;
+	width: 800px;
+}
+
+.loeschen_link{
+	display: inline-block;
+	width: 20px;
+	height: 21px;
+	background-image: url("../Images/Design/loeschen.png");
+	background-repeat: no-repeat;
+	background-position: 0px auto;
+	margin-top: 5px;
+}
+
+.link_menge_aendern{
+	display: inline-block;
+	width: 20px;
+	height: 21px;
+	background-image: url("../Images/Design/stift.png");
+	background-repeat: no-repeat;
+	background-position: 0px auto;
+	margin-left: 5px;
+}
+
+.button_warenkorb_volle_uebersicht_rechts_ausrichten{
+	float: right;
+}
+
+.link_menge_aendern:hover{
+	background-image: url("../Images/Design/stift_hover.png");
+}
+
+.loeschen_link:hover{
+	background-image: url("../Images/Design/loeschen_hover.png");
+}
+
+.ArtikelbildWarenkorb{
+	width: 100px;
+}
+.UeberschriftWarenkorb{
+	font-weight: bold;
+	
+}
+#keineArtikelimWarenkorb{
+text-align: center;
+font-size: 14px;	
+}
+.Artikelbild{
+	width: 100px;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    background-color: white;
+    padding: 4px;
 }
 /* ##################################### Login ################################## */
 #reg_link{
@@ -1481,8 +1558,35 @@ ul.werte_bestellvorgang_uebersicht{
 	border-top: solid #D56509;
 }
 
-#meldung_art_geloescht{
-	color: red;
-	font-weight: bold;
-	text-decoration: underline;
+.mobileHeader{
+	display: none;
+}
+.mobileMenuHeader{
+	display: none;
+}
+
+/*Produkt Rezensionen*/
+.rezensionen_tabelle{
+	display: block;
+	margin: 20px;
+}
+.rezension_eintrag_bezeichnung{
+	padding: 20px;
+	width: 200px;
+}
+.rezension_eintrag_ueberschrift{
+	padding: 20px;
+	width: 150px;
+}
+.rezension_eintrag_rezension{
+	padding: 20px;
+	width: 550px;
+}
+.rezension_eintrag_bewertung{
+	padding: 20px;
+	width: 100px;
+}
+.produkt_rezensionen_trennstrich{
+	border-bottom: 1px solid black;
+	text-align: center;
 }
