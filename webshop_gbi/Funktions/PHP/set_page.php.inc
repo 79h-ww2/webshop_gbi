@@ -47,6 +47,9 @@ if (isset ( $_GET ['page'] ) && $_GET ['page'] != "") {
 		case 'bestellung':
 			include_once './Pages/bestellvorgang.php.inc';
 			break;
+		case 'bestellungen':
+			include_once './Pages/bestellungen.php.inc';
+		break;
 		case 'fahrrad_katg':
 			include_once './Pages/uebersicht_fahrradkategorien.php.inc';
 			break;

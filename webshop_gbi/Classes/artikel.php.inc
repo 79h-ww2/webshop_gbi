@@ -274,7 +274,7 @@
 								left join produktbilder pb using (PId)
 						where
 							(pb.Art = 'Liste' or pb.Art is null)
-				
+							and p.geloescht = 'nein'
 				";
 			
 			return $query;
