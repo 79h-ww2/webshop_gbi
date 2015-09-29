@@ -133,7 +133,10 @@ else {
              <div class="warenkorbCell">
            			<?php
 					$warenkorb1 = new warenkorb ();
-					echo '<span class="warenkorbCellMengeHeader" href=".?page=warenkorb">'.$warenkorb1->menge_im_warenkorb ().'</span>';
+					?>
+					<a href=".?page=warenkorb"> </a>
+					<?php 
+					echo '<span class="warenkorbCellMengeHeader" >'.$warenkorb1->menge_im_warenkorb ().'</span>';
 					?>
  
 
@@ -297,8 +300,8 @@ else {
 			<li><a href="./?page=datenschutz">Datenschutz</a></li>
 		</ul>
 	</footer>
-	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="Funktions/JS/jquery-1.11.2.min.js"></script>
+	<script src="Funktions/JS/jquery.min.js"></script>
 	<script src="Funktions/JS/show-nav.js"></script>
 	<script src="Funktions/JS/sternbewertung.js"></script>
 	<script src="Funktions/JS/lightbox-plus-jquery.min.js"></script>
