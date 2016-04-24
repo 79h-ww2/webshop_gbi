@@ -250,7 +250,7 @@
 			//ließt die für die Auflistung benötigten Felder aus und bestimmt wie oft das Produkt welche Sterne bekommen hat durch zählen, wie oft welche Bewertungsziffer für das Produkt angegeben wurde
 			$query = "
 						select
-							distinct p.Bezeichnung bezeichnung,
+							p.Bezeichnung bezeichnung,
 							b.Bezeichnung kategorie,
 							`Verfuegbare Menge` exemplare,
 							Preis preis,

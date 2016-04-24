@@ -27,7 +27,7 @@
 			//Generierung der Suchabfrage
 			$query = "
 					select 
-						distinct p.Bezeichnung,
+						p.Bezeichnung,
 						b.Bezeichnung
 					from
 						produkte p 
@@ -53,6 +53,7 @@
 			}
 			
 			$query .= $teilbedingung." order by p.Beschreibung asc;";
+			
 			
 			//die Suchabfrage durchführen
 			$result = $db->db_query($query);
@@ -184,8 +185,7 @@
 				$query .= $teilbedingung_.$teilbedingung." order by p.Beschreibung asc";
 		
 				$query_mit_seitennr = $query." limit $seite_sql, 10;";
-				
-				
+								
 				//die Suchabfrage durchführen
 				$result = $db->db_query($query_mit_seitennr);
 					
